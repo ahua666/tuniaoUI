@@ -1,0 +1,418 @@
+{
+  "easycom": {
+  	"^tn-(.*)": "@/tuniao-ui/components/tn-$1/tn-$1.vue"
+  },
+  "pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "Tuniao UI",
+        "enablePullDownRefresh": false
+      }
+    }
+  ],
+  "subPackages": [{
+    "root": "basicPage",
+    "pages": [
+      {
+        "path": "test/test",
+        "style": {
+          "navigationStyle":"default",
+          "navigationBarTitleText": "测试页面",
+          "enablePullDownRefresh": false
+        }
+      },
+      {
+        "path": "flex-layout/flex-layout",
+        "style": {
+          "navigationBarTitleText": "Flex布局",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "grid-layout/grid-layout",
+        "style": {
+          "navigationBarTitleText": "Grid布局",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "color/color",
+        "style": {
+          "navigationBarTitleText": "配色",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "icon/icon",
+        "style": {
+          "navigationBarTitleText": "图标",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "button/button",
+        "style": {
+          "navigationBarTitleText": "按钮",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "tag/tag",
+        "style": {
+          "navigationBarTitleText": "标签",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "border/border",
+        "style": {
+          "navigationBarTitleText": "边框",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "shadow/shadow",
+        "style": {
+          "navigationBarTitleText": "阴影",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "badge/badge",
+        "style": {
+          "navigationBarTitleText": "微标",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "avatar/avatar",
+        "style": {
+          "navigationBarTitleText": "头像",
+          "enablePullDownRefresh": false
+        }
+      }
+    ]
+  },{
+    "root": "componentsPage",
+    "pages": [
+      {
+        "path": "list/list",
+        "style": {
+          "navigationBarTitleText": "列表",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "popup/popup",
+        "style": {
+          "navigationBarTitleText": "弹出层",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "modal/modal",
+        "style": {
+          "navigationBarTitleText": "模态框",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "toast/toast",
+        "style": {
+          "navigationBarTitleText": "Toast",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "tips/tips",
+        "style": {
+          "navigationBarTitleText": "提示信息",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "form/form",
+        "style": {
+          "navigationBarTitleText": "Form表单",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "action-sheet/action-sheet",
+        "style": {
+          "navigationBarTitleText": "操作菜单",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "picker/picker",
+        "style": {
+          "navigationBarTitleText": "Picker选择器",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "select/select",
+        "style": {
+          "navigationBarTitleText": "Select列选择器",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "verification-code/verification-code",
+        "style": {
+          "navigationBarTitleText": "验证码倒计时",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "loading/loading",
+        "style": {
+          "navigationBarTitleText": "Loading加载",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "switch/switch",
+        "style": {
+          "navigationBarTitleText": "Switch开关",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "progress/progress",
+        "style": {
+          "navigationBarTitleText": "Progress进度条",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "image-upload/image-upload",
+        "style": {
+          "navigationBarTitleText": "图片上传",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "rate/rate",
+        "style": {
+          "navigationBarTitleText": "rate评分",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "slider/slider",
+        "style": {
+          "navigationBarTitleText": "slider滑动条",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "number-box/number-box",
+        "style": {
+          "navigationBarTitleText": "numberBox步进输入",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "keyboard/keyboard",
+        "style": {
+          "navigationBarTitleText": "keyboard键盘",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "tabs/tabs",
+        "style": {
+          "navigationBarTitleText": "tabs标签",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "count-down/count-down",
+        "style": {
+          "navigationBarTitleText": "countDown倒计时",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "count-to/count-to",
+        "style": {
+          "navigationBarTitleText": "countTo数字跳转",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "count-scroll/count-scroll",
+        "style": {
+          "navigationBarTitleText": "countTo数字滚动",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "sticky/sticky",
+        "style": {
+          "navigationBarTitleText": "sticky吸顶",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "nav-bar/nav-bar",
+        "style": {
+          "navigationBarTitleText": "navBar导航栏",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "notice-bar/notice-bar",
+        "style": {
+          "navigationBarTitleText": "noticeBar通知栏",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "swiper/swiper",
+        "style": {
+          "navigationBarTitleText": "swiper轮播图",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "collapse/collapse",
+        "style": {
+          "navigationBarTitleText": "collapse折叠面板",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "read-more/read-more",
+        "style": {
+          "navigationBarTitleText": "readMore查看更多",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "steps/steps",
+        "style": {
+          "navigationBarTitleText": "steps步骤条",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "time-line/time-line",
+        "style": {
+          "navigationBarTitleText": "timeLine时间轴",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "index-list/index-list",
+        "style": {
+          "navigationBarTitleText": "indexList索引列表",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "calendar/calendar",
+        "style": {
+          "navigationBarTitleText": "calendar日历",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "scroll-list/scroll-list",
+        "style": {
+          "navigationBarTitleText": "scrollList横向滚动",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "swipe-action/swipe-action",
+        "style": {
+          "navigationBarTitleText": "swipeAction滑动菜单",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "sign-board/sign-board",
+        "style": {
+          "navigationBarTitleText": "signBoard签名板",
+          "enablePullDownRefresh": false
+          // "pageOrientation": "landscape"
+        }
+      }
+    ]
+  },{
+    "root":"templatePage",
+    "pages": [
+      {
+        "path": "login/demo1/demo1",
+        "style": {
+          "navigationBarTitleText": "火箭登录",
+          "enablePullDownRefresh": false
+        }
+      },{
+        "path": "login/demo2/demo2",
+        "style": {
+          "navigationBarTitleText": "粒子登录",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "health/qrcode/qrcode",
+        "style": {
+          "navigationBarTitleText": "健康码",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "home/course/course",
+        "style": {
+          "navigationBarTitleText": "课程首页",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "home/music/music",
+        "style": {
+          "navigationBarTitleText": "音乐首页",
+          "enablePullDownRefresh": false
+        }
+      },{
+        "path": "home/design/design",
+        "style": {
+          "navigationBarTitleText": "设计首页",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "home/job/job",
+        "style": {
+          "navigationBarTitleText": "招聘首页",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "home/screen/screen",
+        "style": {
+          "navigationBarTitleText": "投屏首页",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "home/wallpaper/wallpaper",
+        "style": {
+          "navigationBarTitleText": "壁纸首页",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "life/fullpage/fullpage",
+        "style": {
+          "navigationBarTitleText": "全屏轮播",
+          "enablePullDownRefresh": false
+        }
+      },{
+        "path": "life/plus/plus",
+        "style": {
+          "navigationBarTitleText": "会员协议",
+          "enablePullDownRefresh": false
+        }
+      },{
+        "path": "life/browser/browser",
+        "style": {
+          "navigationBarTitleText": "浏览器",
+          "enablePullDownRefresh": false
+        }
+      },{
+        "path": "animate/loading/loading",
+        "style": {
+          "navigationBarTitleText": "加载动效",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "animate/particle/particle",
+        "style": {
+          "navigationBarTitleText": "随机粒子",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "animate/photo/photo",
+        "style": {
+          "navigationBarTitleText": "相册图集",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "animate/hollow/hollow",
+        "style": {
+          "navigationBarTitleText": "镂空效果",
+          "enablePullDownRefresh": false
+        }
+      }
+    ]
+  }],
+  "preloadRule": {
+    "pages/index/index": {
+      "network":"all",
+      "packages": ["basicPage","componentsPage","templatePage"]
+    }
+  },
+  "globalStyle": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Tuniao UI",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
+}

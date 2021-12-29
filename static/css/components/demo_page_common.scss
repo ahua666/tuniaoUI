@@ -1,0 +1,193 @@
+/* 顶部 start */
+.header {
+  padding: 80rpx 60rpx 40rpx 60rpx;
+  
+  .title {
+    font-size: 36rpx;
+    color: $tn-font-color;
+    font-weight: bold;
+  }
+  
+  .sub-title {
+    font-size: 28rpx;
+    color: $tn-content-color;
+    padding-top: 18rpx;
+  }
+  
+  .tips-title {
+    font-size: 24rpx;
+    color: $tn-font-sub-color;
+    padding-top: 5rpx;
+  }
+}
+/* 顶部 end */
+
+/* 展示内容容器 start */
+.show-content-container {
+  
+  /* 标题容器 start */
+  .title-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100rpx;
+    
+    // 标题样式
+    .title {
+      height: 100%;
+      max-width: 100%;
+      margin: 0 20rpx;
+      font-size: 30rpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      // 标题前面小点
+      &:before {
+        content: " ";
+        background-color: $tn-main-color;
+        width: 15rpx;
+        height: 15rpx;
+        border-radius: 10rpx;
+        margin-right: 18rpx;
+      }
+    }
+  }
+  /* 标题容器 end */
+  
+  /* 内容 start */
+  .content {
+    padding: 20rpx;
+  }
+  /* 内容 end */
+  
+}
+/* 展示内容容器 end */
+
+/* 内容容器 start */
+.demo-content-container {
+  border: 1rpx dashed $tn-main-color;
+  margin: 20rpx;
+  margin-top: 0rpx;
+  
+  position: fixed;
+  width: 95%;
+  z-index: 10;
+  
+  transition: all 0.15s ease-out;
+  
+  &.top {
+    width: 100%;
+    margin: 0;
+  }
+  
+  &.no-fixed {
+    position: relative !important;
+  }
+  
+  /* 标题容器 start */
+  .title-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    min-height: 100rpx;
+    
+    // 标题样式
+    .title {
+      height: 100%;
+      max-width: 100%;
+      margin: 0 30rpx;
+      font-size: 30rpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  /* 标题容器 end */
+  
+  /* 内容 start */
+  .content {
+    padding: 30rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* 内容 end */
+  
+}
+/* 内容容器 end */
+
+/* 可选项内容容器 start */
+.demo-section-container {
+  margin: 20rpx;
+  height: 100%;
+  
+  /* 标题容器 start */
+  .title-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    min-height: 100rpx;
+    margin-bottom: 10rpx;
+    
+    // 标题样式
+    .title {
+      height: 100%;
+      max-width: 100%;
+      margin: 0 30rpx;
+      font-size: 30rpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    &::after {
+      content: " ";
+      box-sizing: border-box;
+      width: 90%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-bottom: 1rpx solid $tn-border-solid-color;
+    }
+  }
+  /* 标题容器 end */
+  
+  /* 参数内容 start*/
+  .content {
+    padding: 0 20rpx 10rpx 20rpx;
+    
+    // 标题样式
+    .title {
+      padding-left: 20rpx;
+      height: 100%;
+      position: relative;
+      
+      &::before {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 4rpx;
+        height: 90%;
+        background-color: $tn-main-color;
+        border-radius: 6rpx;
+        transform: translateY(-50%);
+      }
+    }
+    
+    // 参数样式
+    .section {
+      margin-top: 15rpx;
+      margin-bottom: 20rpx;
+    }
+  }
+  /* 参数内容 end*/
+  
+}
+/* 可选项内容容器 end */
