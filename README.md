@@ -62,3 +62,8 @@
     <img alt="图鸟UI" src="https://tnuiimage.tnkjapp.com/gitee_introduce_file/bottom.jpg" width="380" />
 </p>
 
+
+
+# 版权信息
+
+`TuniaoUI开源版`遵循`Apache`协议，意味着您无需支付任何费用，也无需授权，即可将TuniaoUI开源版应用到您的产品中，但是需要保留TuniaoUI的信息。

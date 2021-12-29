@@ -57,7 +57,7 @@
             <view class="tn-margin-left-sm tn-color-cyan tn-icon-link"></view>
           </view>
         </tn-list-cell>
-        <tn-list-cell :hover="true" :unlined="true" :radius="true" :fontSize="30">
+        <tn-list-cell :hover="true" :unlined="true" :radius="true" :fontSize="30" @click="copyGitee">
           <view class="tn-flex tn-flex-col-center">
             <view class="icon1__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-cool-bg-color-1 tn-color-white"> 
               <view class="tn-icon-gitee"></view>
@@ -157,7 +157,14 @@
         uni.navigateTo({
           url: '/templatePage/life/plus/plus'
         })
-      }
+      },
+      
+      // 复制Gitee地址
+      copyGitee() {
+        uni.setClipboardData({
+          data: "https://gitee.com/TSpecific/tuniao-ui",
+        })
+      },
     }
   }
 </script>

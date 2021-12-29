@@ -35,7 +35,7 @@
       </view>
       
       <view class="plus-text">
-        <view class="tn-text-bold">图鸟北北，微信号：<text class="tn-text-bold tn-text-xxl">tnkewo</text> </view>
+        <view class="tn-text-bold">图鸟北北，微信号：<text class="tn-text-bold tn-text-xxl" @click="copyWechat">tnkewo</text> </view>
         <view class="">（如需入群，可备注：进微信群）</view>
         <view class="">（如需合作，可备注：商业合作）</view>
         <view class="tn-margin-bottom-xl">（如需会员，可备注：咨询会员）</view>
@@ -63,7 +63,7 @@
       
       <view class="plus-text">
         <view class="tn-text-bold">使用手册 + 图片素材 + 意见反馈 + Bug提交</view>
-        <view class="tn-margin-bottom-xl">（https://www.yuque.com/tuniao）</view>
+        <view class="tn-margin-bottom-xl" @click="copyYuque">（https://www.yuque.com/tuniao）</view>
       </view>
       
       <view class="plus-text">
@@ -113,7 +113,18 @@
       return {}
     },
     methods: {
-      
+      // 复制语雀地址
+      copyYuque() {
+        uni.setClipboardData({
+          data: "https://www.yuque.com/tuniao",
+        })
+      },
+      // 复制微信号
+      copyWechat() {
+        uni.setClipboardData({
+          data: "tnkewo",
+        })
+      },
     }
   }
 </script>
