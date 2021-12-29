@@ -1,5 +1,5 @@
 <p align="center">
-	<img alt="图鸟UI" src="https://tnuiimage.tnkjapp.com/gitee_introduce_file/top.jpg" />
+	<img alt="图鸟UI" src="https://tnuiimage.tnkjapp.com/gitee_introduce_file/top.jpg" width="60%" />
 </p>
 
 
@@ -40,6 +40,12 @@
 
 - [图鸟社区](https://www.yuque.com/tuniao)
 - [使用手册](https://tuniaoui.tuniaokj.com/components/introduce.html)
+
+
+
+# 安装
+
+下载地址 ------> [图鸟UI - DCloud 插件市场](https://ext.dcloud.net.cn/plugin?id=7088)
 
 
 
