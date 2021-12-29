@@ -19,7 +19,7 @@ export default {
       url: '/basicPage/color/color'
     },
     {
-      icon: 'topics',
+      icon: 'font',
       title: '图标',
       url: '/basicPage/icon/icon'
     },

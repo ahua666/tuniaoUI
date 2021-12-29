@@ -110,12 +110,12 @@
           </view>
           <view class="tn-padding-sm tn-margin-xs">
             <view class="login__way__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-shadow-blur tn-bg-red tn-color-white">
-              <view class="tn-icon-discover-fill"></view>
+              <view class="tn-icon-sina"></view>
             </view>
           </view>
           <view class="tn-padding-sm tn-margin-xs">
-            <view class="login__way__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-shadow-blur tn-bg-cyan tn-color-white">
-              <view class="tn-icon-gloves-fill"></view>
+            <view class="login__way__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-shadow-blur tn-bg-blue tn-color-white">
+              <view class="tn-icon-qq"></view>
             </view>
           </view>
         </view>

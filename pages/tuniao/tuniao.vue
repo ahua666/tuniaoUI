@@ -51,24 +51,25 @@
         <tn-list-cell :hover="true" :unlined="true" :radius="true" :fontSize="30" @click="navTuniaoWebsite">
           <view class="tn-flex tn-flex-col-center">
             <view class="icon1__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-cool-bg-color-5 tn-color-white" > 
-              <view class="tn-icon-discover-fill"></view>
+              <view class="tn-icon-logo-tuniao"></view>
             </view>
-            <view class="tn-margin-left-sm">图鸟官网</view>
+            <view class="tn-margin-left-sm tn-flex-1">图鸟官网</view>
+            <view class="tn-margin-left-sm tn-color-cyan tn-icon-link"></view>
           </view>
         </tn-list-cell>
         <tn-list-cell :hover="true" :unlined="true" :radius="true" :fontSize="30">
           <view class="tn-flex tn-flex-col-center">
             <view class="icon1__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-cool-bg-color-1 tn-color-white"> 
-              <view class="tn-icon-moon-fill"></view>
+              <view class="tn-icon-gitee"></view>
             </view>
             <view class="tn-margin-left-sm tn-flex-1">Gitee地址</view>
-            <view class="tn-margin-left-sm tn-color-gray">整理文件中</view>
+            <view class="tn-margin-left-sm tn-color-blue tn-icon-copy-fill"></view>
           </view>
         </tn-list-cell>
         <tn-list-cell :hover="true" :unlined="true" :radius="true" :fontSize="30" @click="navPlus">
           <view class="tn-flex tn-flex-col-center">
-            <view class="icon1__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-cool-bg-color-12 tn-color-white"> 
-              <view class="tn-icon-trust-fill"></view>
+            <view class="icon1__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-cool-bg-color-6 tn-color-white"> 
+              <view class="tn-icon-safe-fill"></view>
             </view>
             <view class="tn-margin-left-sm tn-flex-1">会员协议</view>
             <view class="tn-margin-left-sm tn-color-red tn-icon-fire-fill"></view>
@@ -96,7 +97,7 @@
         </tn-list-cell>
         <tn-list-cell :hover="true" :unlined="true" :radius="true" :fontSize="30">
           <button class="tn-flex tn-flex-col-center tn-button--clear-style" open-type="feedback">
-            <view class="icon1__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-cool-bg-color-7 tn-color-white"> 
+            <view class="icon1__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-cool-bg-color-13 tn-color-white"> 
               <view class="tn-icon-comment-fill"></view>
             </view>
             <view class="tn-margin-left-sm">问题反馈</view>
@@ -118,25 +119,25 @@
         tuniaoData: [
           {
             title: 'View',
-            icon: 'eye-fill',
+            icon: 'eye',
             color: 'indigo',
             value: '1.22 W'
           },
           {
             title: 'Star',
-            icon: 'star-fill',
+            icon: 'star',
             color: 'orange',
             value: '406'
           },
           {
             title: 'Fork',
-            icon: 'group-circle',
+            icon: 'fork',
             color: 'purplered',
             value: '129'
           },
           {
             title: 'Version',
-            icon: 'trusty-fill',
+            icon: 'trusty',
             color: 'green',
             value: '1.0.0'
           }
