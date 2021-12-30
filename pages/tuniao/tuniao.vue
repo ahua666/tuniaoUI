@@ -57,6 +57,15 @@
             <view class="tn-margin-left-sm tn-color-cyan tn-icon-link"></view>
           </view>
         </tn-list-cell>
+        <tn-list-cell :hover="true" :unlined="true" :radius="true" :fontSize="30" @click="navTuniaoUI">
+          <view class="tn-flex tn-flex-col-center">
+            <view class="icon1__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-cool-bg-color-16 tn-color-white" > 
+              <view class="tn-icon-vip-fill"></view>
+            </view>
+            <view class="tn-margin-left-sm tn-flex-1">图鸟UI</view>
+            <view class="tn-margin-left-sm tn-color-orangeyellow">会员版</view>
+          </view>
+        </tn-list-cell>
         <tn-list-cell :hover="true" :unlined="true" :radius="true" :fontSize="30" @click="copyGitee">
           <view class="tn-flex tn-flex-col-center">
             <view class="icon1__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-cool-bg-color-1 tn-color-white"> 
@@ -149,6 +158,12 @@
       navTuniaoWebsite() {
         uni.navigateToMiniProgram({
           appId: 'wxa698b1eee960632f'
+        })
+      },
+      // 跳转到图鸟UI会员版
+      navTuniaoUI() {
+        uni.navigateToMiniProgram({
+          appId: 'wxf3d81a452b88ff4b'
         })
       },
       
