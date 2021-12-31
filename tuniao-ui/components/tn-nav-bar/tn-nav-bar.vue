@@ -175,16 +175,7 @@
     },
     mounted() {
       // 获取vuex中的自定义顶栏的高度
-      let customBarHeight = this.vuex_custom_bar_height
-      let statusBarHeight = this.vuex_status_bar_height
-      // 如果获取失败则重新获取
-      if (!customBarHeight) {
-        this.$t.updateCustomBar()
-        customBarHeight = this.vuex_custom_bar_height
-        statusBarHeight = this.vuex_status_bar_height
-      }
-      this.customBarHeight = customBarHeight
-      this.statusBarHeight = statusBarHeight
+      this.updateNavBarInfo()
     },
     created() {
       // 获取胶囊信息
@@ -196,6 +187,32 @@
       // #endif
     },
     methods: {
+      // 更新导航栏的高度
+      async updateNavBarInfo() {
+        // 获取vuex中的自定义顶栏的高度
+        let customBarHeight = this.vuex_custom_bar_height
+        let statusBarHeight = this.vuex_status_bar_height
+        // 如果获取失败则重新获取
+        if (!customBarHeight) {
+          try {
+            const navBarInfo = await this.$t.updateCustomBar()
+            customBarHeight = navBarInfo.customBarHeight
+            statusBarHeight = navBarInfo.statusBarHeight
+          } catch(e) {
+            setTimeout(() => {
+              this.updateNavBarInfo()
+            }, 10)
+            return
+          }
+        }
+        
+        // 更新vuex中的导航栏信息
+        this && this.$t.vuex('vuex_status_bar_height', statusBarHeight)
+        this && this.$t.vuex('vuex_custom_bar_height', customBarHeight)
+        
+        this.customBarHeight = customBarHeight
+        this.statusBarHeight = statusBarHeight
+      },
       // 处理返回事件
       async handlerBack() {
         if (this.beforeBack && typeof(this.beforeBack) === 'function') {

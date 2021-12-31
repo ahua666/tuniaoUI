@@ -1,8 +1,8 @@
 /**
  * 更新自定义顶部导航栏的高度
  */
-async function updateCustomBarInfo () {
-  return await new Promise((resolve, reject) => {
+function updateCustomBarInfo () {
+  return new Promise((resolve, reject) => {
     uni.getSystemInfo({
       success: (e) => {
         let statusBarHeight = 0
@@ -27,8 +27,6 @@ async function updateCustomBarInfo () {
         statusBarHeight = e.statusBarHeight
         customBarHeight = e.statusBarHeight + e.titleBarHeight
         // #endif
-        this && this.$t.vuex('vuex_status_bar_height', statusBarHeight)
-        this && this.$t.vuex('vuex_custom_bar_height', customBarHeight)
         resolve({
           statusBarHeight,
           customBarHeight
@@ -36,8 +34,6 @@ async function updateCustomBarInfo () {
       },
       fail: (err) => {
         console.log("获取设备信息失败", err);
-        this && this.$t.vuex('vuex_status_bar_height', 0)
-        this && this.$t.vuex('vuex_custom_bar_height', 0)
         reject()
       }
     })
