@@ -168,6 +168,14 @@ Vue.mixin(vuexStore)
 </p>
 
 
+### 微信群聊二维码
+
+<p>
+    <img alt="图鸟UI" src="https://tnuiimage.tnkjapp.com/gitee_introduce_file/group_code.jpg" width="380" />
+</p>
+
+
+
 
 ## 版权信息
 
