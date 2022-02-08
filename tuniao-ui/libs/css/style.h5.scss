@@ -21,14 +21,11 @@
     &:first-child {
       border-top-right-radius: 0rpx;
       border-bottom-right-radius: 0rpx;
-      color: #FFFFFF;
-      background-color: $tn-main-color !important;
     }
     
     &:last-child {
       
       &::after {
-        border-color: $tn-main-color !important;
         border-top-left-radius: 0rpx;
         border-bottom-left-radius: 0rpx;
       }

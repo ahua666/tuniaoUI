@@ -15,14 +15,6 @@
     "root": "basicPage",
     "pages": [
       {
-        "path": "test/test",
-        "style": {
-          "navigationStyle":"default",
-          "navigationBarTitleText": "测试页面",
-          "enablePullDownRefresh": false
-        }
-      },
-      {
         "path": "flex-layout/flex-layout",
         "style": {
           "navigationBarTitleText": "Flex布局",
@@ -298,6 +290,13 @@
           "enablePullDownRefresh": false
           // "pageOrientation": "landscape"
         }
+      }, {
+        "path": "fab/fab",
+        "style": {
+          "navigationBarTitleText": "fab悬浮按钮",
+          "enablePullDownRefresh": false
+          // "pageOrientation": "landscape"
+        }
       }
     ]
   },{
@@ -315,7 +314,19 @@
           "navigationBarTitleText": "粒子登录",
           "enablePullDownRefresh": false
         }
-      }, {
+      },{
+        "path": "login/demo3/demo3",
+        "style": {
+          "navigationBarTitleText": "背景登录",
+          "enablePullDownRefresh": false
+        }
+      },{
+        "path": "login/demo4/demo4",
+        "style": {
+          "navigationBarTitleText": "简约登录",
+          "enablePullDownRefresh": false
+        }
+      },{
         "path": "health/qrcode/qrcode",
         "style": {
           "navigationBarTitleText": "健康码",
@@ -364,15 +375,27 @@
           "enablePullDownRefresh": false
         }
       },{
+        "path": "life/pano/pano",
+        "style": {
+          "navigationBarTitleText": "3D全景",
+          "enablePullDownRefresh": false
+        }
+      },{
         "path": "life/plus/plus",
         "style": {
           "navigationBarTitleText": "会员协议",
           "enablePullDownRefresh": false
         }
       },{
-        "path": "life/browser/browser",
+        "path": "life/candle/candle",
         "style": {
-          "navigationBarTitleText": "浏览器",
+          "navigationBarTitleText": "敬请期待",
+          "enablePullDownRefresh": false
+        }
+      },{
+        "path": "time/clock/clock",
+        "style": {
+          "navigationBarTitleText": "时钟",
           "enablePullDownRefresh": false
         }
       },{

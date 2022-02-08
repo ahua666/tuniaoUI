@@ -58,7 +58,7 @@
           <tn-checkbox v-model="model.agreement" @change="agreementCheckChange"></tn-checkbox>
           <view class="agreement-text">勾选同意当前协议</view>
         </view>
-        <tn-button width="100%" @click="submit">提交</tn-button>
+        <tn-button backgroundColor="#01BEFF" fontColor="#FFFFFF" width="100%" @click="submit">提交</tn-button>
       </dynamic-demo-template>
       
       <!-- 性别选项 -->

@@ -131,7 +131,7 @@
       
       
       <!-- 图文 -->
-      <view class="tn-bg-white tn-flex tn-flex-direction-column"  style="padding: 0 0 60rpx 0;">
+      <view class="tn-bg-white tn-flex tn-flex-direction-column" style="padding-bottom: 170rpx;">
         
         <block v-for="(item,index) in content" :key="index">
           <view class="tn-blogger-content__wrap">
@@ -144,7 +144,7 @@
               <!-- 方式二 -->
               <image 
                 class="tn-blogger-content__main-image tn-blogger-content__main-image--1 tn-margin-bottom"
-                :src="item.mainImage"
+                :src="item.mainImage[0]"
                 mode="aspectFill"
               ></image>
             </view>
@@ -177,6 +177,36 @@
         </block>
       </view>
       
+      
+    </view>
+    
+    
+    <!-- 底部tabbar start-->
+    <view class="tabbar footerfixed">
+      <view class="action">
+        <view class="bar-icon">
+          <view class="tn-icon-home-smile tn-color-gray--dark">
+          </view>
+          <!-- <image class="" src='https://tnuiimage.tnkjapp.com/tabbar/home_tnnew.png'></image> -->
+        </view>
+        <view class="tn-color-gray">首页</view>
+      </view>
+      <view class="action">
+        <view class="bar-circle tn-shadow-blur">
+          <view class="tn-icon-qr-code tn-color-white">
+          </view>
+          <!-- <image class="" src='https://tnuiimage.tnkjapp.com/tabbar/information_tn.png'></image> -->
+        </view>
+        <view class="tn-color-gray">粤码通城</view>
+      </view>
+      <view class="action">
+        <view class="bar-icon">
+          <view class="tn-icon-emoji-good tn-color-gray--dark">
+          </view>
+          <!-- <image class="" src='https://tnuiimage.tnkjapp.com/tabbar/my_tn.png'></image> -->
+        </view>
+        <view class="tn-color-gray">我的</view>
+      </view>
     </view>
     
   </view>
@@ -516,4 +546,76 @@
     }
   }
   /* 移动背景部分 end*/
+  
+  /* 底部tabbar start*/
+  .footerfixed{
+   position: fixed;
+   width: 100%;
+   bottom: 0;
+   z-index: 999;
+   background-color: #FFFFFF;
+   box-shadow: 0rpx 0rpx 30rpx 0rpx rgba(0, 0, 0, 0.07);
+  }
+  
+  .tabbar {
+    display: flex;
+    align-items: center;
+    min-height: 110rpx;
+    justify-content: space-between;
+  	padding: 0;
+  	height: calc(110rpx + env(safe-area-inset-bottom) / 2);
+  	padding-bottom: calc(env(safe-area-inset-bottom) / 2);
+  }
+  
+  .tabbar .action {
+  	font-size: 22rpx;
+  	position: relative;
+  	flex: 1;
+  	text-align: center;
+  	padding: 0;
+  	display: block;
+  	height: auto;
+  	line-height: 1;
+  	margin: 0;
+  	overflow: initial;
+  }
+  
+  .tabbar .action .bar-icon {
+  	width: 100rpx;
+  	position: relative;
+  	display: block;
+  	height: auto;
+  	margin: 0 auto 10rpx;
+  	text-align: center;
+  	font-size: 42rpx;
+    // line-height: 50rpx;
+  }
+  
+  .tabbar .action .bar-icon image {
+  	width: 50rpx;
+  	height: 50rpx;
+  	display: inline-block;
+  }
+  
+  .tabbar .action .bar-circle {
+    position: relative;
+    display: block;
+    margin: -60rpx auto 20rpx;
+    text-align: center;
+    font-size: 52rpx;
+    line-height: 90rpx;
+    background-color: #01BEFF;
+    width: 90rpx !important;
+    height: 90rpx !important;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0rpx 0rpx 20rpx 0rpx rgba(1, 190, 255, 0.5);
+  }
+  
+  .tabbar .action .bar-circle image {
+    width: 60rpx;
+  	height: 60rpx;
+  	display: inline-block;
+    margin: 15rpx auto 15rpx;
+  }
 </style>

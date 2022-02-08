@@ -10,7 +10,7 @@
       
       <dynamic-demo-template ref="demoTemplate" :tips="tips" :sectionList="sectionList" :full="false" @click="click">
         <view class="tn-flex tn-flex-wrap tn-flex-col-center tn-flex-row-center">
-          <tn-button style="width: 100%;" width="100%" fontColor="tn-color-white" @click="showCalendar">弹出日历</tn-button>
+          <tn-button style="width: 100%;" width="100%" backgroundColor="#01BEFF" fontColor="tn-color-white" @click="showCalendar">弹出日历</tn-button>
           <view v-if="result !== ''" class="calendar-result tn-border-dashed">
             {{ result }}
           </view>

@@ -1,6 +1,6 @@
 <template>
 
-  <view class="basic-badge">
+  <view class="basic-badge tn-safe-area-inset-bottom">
 
     <!-- 顶部自定义导航 -->
     <tn-nav-bar fixed>微标</tn-nav-bar>
@@ -8,40 +8,66 @@
     <!-- 页面内容 -->
     <view :style="{paddingTop: vuex_custom_bar_height + 'px'}">
       
-      <dynamic-demo-template ref="demoTemplate" :tips="tips" :sectionList="sectionList" :full="false" @click="click">
-        <block v-if="!absolute">
-          <tn-badge
-            :backgroundColor="backgroundColor"
-            :fontColor="fontColor"
-            :fontSize="fontSize"
-            :radius="radius"
-            :dot="dot"
-            :padding="padding"
-            :margin="margin"
-          >
-            <text v-if="dot === false">{{ value }}</text>
-          </tn-badge>
-        </block>
-        <block v-else>
-          <view class="badge-container">
-            <tn-badge
-              :backgroundColor="backgroundColor"
-              :fontColor="fontColor"
-              :fontSize="fontSize"
-              :radius="radius"
-              :dot="dot"
-              :padding="padding"
-              :margin="margin"
-              :absolute="true"
-              :top="top"
-              :right="right"
-              :translateCenter="translateCenter"
-            >
-              <text v-if="dot === false">{{ value }}</text>
+      <demo-title title="基础">
+        <view class="tn-flex tn-flex-col-center tn-flex-row-left tn-flex-wrap">
+          <tn-badge :dot="true" margin="10rpx 10rpx"><text>0</text></tn-badge>
+          <tn-badge margin="10rpx 10rpx"><text>0</text></tn-badge>
+          <tn-badge margin="10rpx 10rpx"><text>99</text></tn-badge>
+          <tn-badge margin="10rpx 10rpx"><text>99+</text></tn-badge>
+        </view>
+      </demo-title>
+      
+      <demo-title title="大小">
+        <view class="tn-flex tn-flex-col-center tn-flex-row-left tn-flex-wrap">
+          <tn-badge :dot="true" :radius="30" margin="10rpx 10rpx"><text>0</text></tn-badge>
+          <tn-badge :radius="40" margin="10rpx 10rpx"><text>0</text></tn-badge>
+          <tn-badge :radius="60" :fontSize="30" margin="10rpx 10rpx"><text>99</text></tn-badge>
+          <tn-badge :fontSize="30" padding="10rpx 30rpx" margin="10rpx 10rpx"><text>99+</text></tn-badge>
+        </view>
+      </demo-title>
+      
+      <demo-title title="颜色">
+        <view class="tn-flex tn-flex-col-center tn-flex-row-left tn-flex-wrap">
+          <tn-badge backgroundColor="#01BEFF" :dot="true" :radius="30" margin="10rpx 10rpx"><text>0</text></tn-badge>
+          <tn-badge backgroundColor="rgba(1, 190, 255, 0.8)" fontColor="#FFFFFF" :radius="40" margin="10rpx 10rpx"><text>0</text></tn-badge>
+          <tn-badge backgroundColor="tn-bg-teal" fontColor="tn-color-white" :radius="40" margin="10rpx 10rpx"><text>0</text></tn-badge>
+          <tn-badge backgroundColor="tn-cool-bg-color-7" fontColor="tn-color-white" :radius="40" margin="10rpx 10rpx"><text>0</text></tn-badge>
+          <tn-badge backgroundColor="tn-main-gradient-indigo" :radius="40" margin="10rpx 10rpx"><text>0</text></tn-badge>
+        </view>
+      </demo-title>
+      
+      <demo-title title="微标使用">
+        <view class="tn-flex tn-flex-col-center tn-flex-row-left tn-flex-wrap">
+          <view class="badge-demo">
+            <tn-badge backgroundColor="#01BEFF" fontColor="#FFFFFF" :absolute="true" >
+              <text>99+</text>
             </tn-badge>
           </view>
-        </block>
-      </dynamic-demo-template>
+          <view class="badge-demo">
+            <tn-badge backgroundColor="#01BEFF" fontColor="#FFFFFF" :absolute="true" :translateCenter="false">
+              <text>99+</text>
+            </tn-badge>
+          </view>
+          <view class="badge-demo">
+            <tn-badge backgroundColor="#01BEFF" fontColor="#FFFFFF" :absolute="true" top="-18rpx" right="20rpx">
+              <text>99+</text>
+            </tn-badge>
+          </view>
+        </view>
+        <view class="tn-flex tn-flex-col-center tn-flex-row-left tn-flex-wrap tn-margin-top">
+          <view class="badge-demo">
+            <tn-badge backgroundColor="#01BEFF" fontColor="#FFFFFF" :dot="true" :radius="30" :absolute="true" ></tn-badge>
+          </view>
+          <view class="badge-demo">
+            <tn-badge backgroundColor="#01BEFF" fontColor="#FFFFFF" :dot="true" :radius="30" :absolute="true" :translateCenter="false"></tn-badge>
+          </view>
+          <view class="badge-demo">
+            <tn-badge backgroundColor="#01BEFF" fontColor="#FFFFFF" :dot="true" :radius="30" :absolute="true" top="-18rpx" right="20rpx"></tn-badge>
+          </view>
+        </view>
+      </demo-title>
+      
+      <view class="tn-padding-bottom-lg"></view>
 
     </view>
 
@@ -50,151 +76,30 @@
 </template>
 
 <script>
-  import dynamicDemoTemplate from '@/libs/components/dynamic-demo-template.vue'
+  import demoTitle from '@/libs/components/demo-title.vue'
   export default {
     name: 'basicBadge',
-    components: {dynamicDemoTemplate},
+    components: {demoTitle},
     data() {
       return {
-        value: '0',
-        backgroundColor: '',
-        fontColor: '',
-        fontSize: 0,
-        radius: 0,
-        dot: false,
-        padding: '',
-        margin: '',
-        absolute: false,
-        top: '',
-        right: '',
-        translateCenter: true,
-        
-        tips: ['无需依赖额外的样式文件','使用tn-badge组件'],
-        sectionList: [
-          {
-            name: '参数切换',
-            section: [
-              {
-                title: '数值',
-                optional: ['0','99','100','1024'],
-                methods: 'valueChange'
-              },
-              {
-                title: '点微标',
-                optional: ['是','否'],
-                methods: 'dotChange',
-                current: 1
-              },
-              {
-                title: '自定义颜色',
-                optional: ['默认','自定义'],
-                methods: 'colorChange'
-              },
-              {
-                title: '自定义大小',
-                optional: ['默认','自定义'],
-                methods: 'sizeChange'
-              },
-              {
-                title: '绝对定位',
-                optional: ['是','否'],
-                methods: 'absoluteChange',
-                current: 1
-              },
-              {
-                title: '自定义绝对定位位置',
-                optional: ['默认','自定义'],
-                methods: 'absolutePositionChange',
-                show: false
-              },
-              {
-                title: '居中绝对定位原点',
-                optional: ['是','否'],
-                methods: 'absoluteCenterChange',
-                show: false
-              }
-            ]
-          }
-        ]
       }
     },
     methods: {
-      click(event) {
-        this[event.methods] && this[event.methods](event)
-      },
-      // 切换值
-      valueChange(event) {
-        this.value = this.$t.number.formatNumberString(event.name)
-      },
-      // 切换点显示状态
-      dotChange(event) {
-        if (event.index === 0) {
-          this.dot = true
-          this.$refs.demoTemplate.updateSectionBtnsState(0, false)
-        } else {
-          this.dot = false
-          this.$refs.demoTemplate.updateSectionBtnsState(0, true)
-        }
-      },
-      // 切换自定义颜色
-      colorChange(event) {
-        if (event.index === 0) {
-          this.backgroundColor = ''
-          this.fontColor = ''
-        } else {
-          this.backgroundColor = 'tn-bg-red'
-          this.fontColor = '#FFFFFF'
-        }
-      },
-      // 切换自定义大小
-      sizeChange(event) {
-        if (event.index === 0) {
-          this.radius = 0
-          this.fontSize = 0
-          this.padding = ''
-          this.margin = ''
-        } else {
-          this.radius = 48
-          this.fontSize = 30
-          this.padding = '10rpx 25rpx'
-          this.margin = '30rpx'
-        }
-      },
-      // 切换绝对定位状态
-      absoluteChange(event) {
-        if (event.index === 0) {
-          this.absolute = true
-          this.$refs.demoTemplate.updateSectionBtnsState([5,6], true)
-        } else {
-          this.absolute = false
-          this.$refs.demoTemplate.updateSectionBtnsState([5,6], false)
-        }
-      },
-      // 切换绝对定位的位置
-      absolutePositionChange(event) {
-        if (event.index === 0) {
-          this.top = ''
-          this.right = ''
-        } else {
-          this.top = '20rpx'
-          this.right = '100%'
-        }
-      },
-      // 切换绝对定位居中原点
-      absoluteCenterChange(event) {
-        this.translateCenter = event.index === 0
-      }
-    },
-
+    }
   }
 </script>
 
 <style lang="scss" scoped>
-  .badge-container {
-    // 防止越过父级
+  .basic-badge {
+    background-color: $tn-bg-gray-color;
+    min-height: 100vh;
+  }
+  
+  .badge-demo {
     position: relative;
-    width: 80rpx;
-    height: 80rpx;
-    background-color: $tn-font-sub-color;
+    width: 160rpx;
+    height: 160rpx;
+    background-color: #FFFFFF;
+    margin: 18rpx 20rpx;
   }
 </style>

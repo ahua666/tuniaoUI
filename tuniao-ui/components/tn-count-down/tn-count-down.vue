@@ -11,7 +11,7 @@
       </view>
     </view>
     <view 
-      v-if="showDays && (hideZeroDay || (!hideZeroDay && d != '00'))"
+      v-if="showHours && (hideZeroDay || (!hideZeroDay && d != '00'))"
       class="tn-countdown__separator"
       :style="{
         fontSize: separatorSize + 'rpx',
@@ -33,7 +33,7 @@
       </view>
     </view>
     <view 
-      v-if="showHours"
+      v-if="showMinutes"
       class="tn-countdown__separator"
       :style="{
         fontSize: separatorSize + 'rpx',
@@ -55,7 +55,7 @@
       </view>
     </view>
     <view 
-      v-if="showMinutes"
+      v-if="showSeconds"
       class="tn-countdown__separator"
       :style="{
         fontSize: separatorSize + 'rpx',

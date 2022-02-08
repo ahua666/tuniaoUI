@@ -2,7 +2,7 @@
   <view class="dynamic-demo">
 
     <!-- 效果预览窗口 -->
-    <view class="demo-container" :class="{'demo-container--full': full}">
+    <view v-if="!noDemo" class="demo-container" :class="{'demo-container--full': full}">
       <view class="demo">
         <slot></slot>
       </view>
@@ -89,6 +89,11 @@
       },
       // 是否全屏滚动
       fullWindowsScroll: {
+        type: Boolean,
+        default: false
+      },
+      // 没有演示内容
+      noDemo: {
         type: Boolean,
         default: false
       }
@@ -217,15 +222,19 @@
                 }
               }).exec()
             } else {
-              uni.createSelectorQuery().in(this).select('.demo-container').boundingClientRect(data => {
-                if (data.bottom >= systemInfo.safeArea.height) {
-                  this.sectionScrollFlag = false
-                } else {
-                  this.sectionScrollFlag = true
-                  const containerBaseHeight = systemInfo.safeArea.height - data.bottom
-                  this.sectionScrollViewStyle.height = (containerBaseHeight - navBarHeight) + systemInfo.statusBarHeight - uni.upx2px(75) + 'px'
-                }
-              }).exec()
+              if (!this.noDemo) {
+                uni.createSelectorQuery().in(this).select('.demo-container').boundingClientRect(data => {
+                  if (data.bottom >= systemInfo.safeArea.height) {
+                    this.sectionScrollFlag = false
+                  } else {
+                    this.sectionScrollFlag = true
+                    const containerBaseHeight = systemInfo.safeArea.height - data.bottom
+                    this.sectionScrollViewStyle.height = (containerBaseHeight - navBarHeight) + systemInfo.statusBarHeight - uni.upx2px(75) + 'px'
+                  }
+                }).exec()
+              } else {
+                this.sectionScrollFlag = false
+              }
             }
             
           }
@@ -544,7 +553,7 @@
             display: block;
             
             &:last-child {
-              padding-bottom: calc(40rpx + env(safe-area-inset-bottom));
+              padding-bottom: calc(70rpx + env(safe-area-inset-bottom));
             }
           }
 

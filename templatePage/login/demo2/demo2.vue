@@ -79,7 +79,7 @@
                 <input placeholder-class="input-placeholder" placeholder="请输入验证码" />
               </view>
               <view class="login__info__item__input__right-verify-code" @tap.stop="getCode">
-                <tn-button size="sm" padding="5rpx 10rpx" width="100%" shape="round">{{ tips }}</tn-button>
+                <tn-button backgroundColor="#01BEFF" fontColor="#FFFFFF" size="sm" padding="5rpx 10rpx" width="100%" shape="round">{{ tips }}</tn-button>
               </view>
             </view>
             
@@ -131,7 +131,7 @@
     <!-- 验证码倒计时 -->
     <tn-verification-code
       ref="code"
-      uniqueKey="login-demo-1"
+      uniqueKey="login-demo-2"
       :seconds="60"
       @change="codeChange">
     </tn-verification-code>

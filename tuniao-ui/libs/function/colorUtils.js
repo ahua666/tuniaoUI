@@ -20,6 +20,9 @@ let color = [
   'gray'
 ]
 
+// 酷炫颜色的数量
+const COOL_BG_COLOR_COUNT = 16
+
 /**
  * 获取图鸟配色颜色列表
  */
@@ -42,7 +45,7 @@ function getRandomColorClass(type = 'bg') {
  * 随机获取酷炫背景对应的类
  */
 function getRandomCoolBgClass() {
-  const index = (Math.random() * 16) + 1
+  const index = (Math.random() * COOL_BG_COLOR_COUNT) + 1
   return 'tn-cool-bg-color-' + Math.floor(index)
 }
 
@@ -54,7 +57,7 @@ function getRandomCoolBgClass() {
 function getBackgroundColorInternalClass(backgroundColor = '') {
   if (!backgroundColor) return ''
   
-  if (['tn-bg', 'tn-dynamic-bg'].some(item => {
+  if (['tn-bg', 'tn-dynamic-bg', 'tn-main-gradient', 'tn-cool-bg'].some(item => {
     return backgroundColor.includes(item)
   })) {
     return backgroundColor
@@ -252,6 +255,7 @@ function colorToRGBA(color, alpha = 0.3) {
 }
 
 export default {
+  COOL_BG_COLOR_COUNT: COOL_BG_COLOR_COUNT,
   getTuniaoColorList,
   getRandomColorClass,
   getRandomCoolBgClass,

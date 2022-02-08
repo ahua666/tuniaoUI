@@ -28,12 +28,10 @@
               <view class="background__left__picker__item__select-wrapper" :style="[colorSelectItemStyle]">
                 <view class="circle-wrapper right">
                   <view class="circle-progress right-circle"
-                    :class="{'circle-progress--active': colorSelectFlag}"
                     :style="{borderColor: currentColorIndex === 0 ? '#01BEFF' : colorList[currentColorIndex - 1]['value']['dark']}"></view>
                 </view>
                 <view class="circle-wrapper left">
                   <view class="circle-progress left-circle"
-                    :class="{'circle-progress--active': colorSelectFlag}"
                     :style="{borderColor: currentColorIndex === 0 ? '#01BEFF' : colorList[currentColorIndex - 1]['value']['dark']}"></view>
                 </view>
               </view>
@@ -41,8 +39,18 @@
           </scroll-view>
         </view>
         <view class="background__right-container">
-          <scroll-view :style="[scrollViewStyle]" scroll-y>
-            <view class="background__right__show" :class="{'background__right__show--visible': colorSelectFlag}">
+          <scroll-view
+            v-if="!isUpdateColorInfo"
+            :style="[scrollViewStyle]"
+            scroll-y
+            :refresher-enabled="true"
+            lower-threshold="20"
+            :refresher-triggered="containerRefreshFlag"
+            @scroll="containerScroll"
+            @scrolltolower="containerScrollLower"
+            @refresherrefresh="containerRefresh"
+          >
+            <view class="background__right__show">
               <block v-if="currentColorIndex === 0">
                 <view class="background__right__show--title">图鸟基础配色</view>
                 <!-- 色盘 start-->
@@ -342,18 +350,23 @@
         },
         // 当前选中的颜色序号
         currentColorIndex: 0,
-        colorSelectFlag: false,
+        // 内容容器滚动容器滚动的位置
+        containerScrollTop: 0,
+        // 标记是否正在更新数据
+        isUpdateColorInfo: false,
+        // 内容区域刷新标志
+        containerRefreshFlag: false,
         // 当前选中颜色的色值信息
         selectColorInfo: {}
       }
     },
     onLoad() {
-      this.initScrollViewHeight()
+      
     },
     onReady() {
       // 等待加载组件完成
       setTimeout(() => {
-        this.getPickerColorItemInfo()
+        this.initScrollViewHeight()
       }, 10)
     },
     methods: {
@@ -362,10 +375,38 @@
         // 获取当前屏幕的安全高度
         uni.getSystemInfo({
           success: (systemInfo) => {
-            this.scrollViewStyle.height = systemInfo.safeArea.height - this.vuex_custom_bar_height + systemInfo
-              .statusBarHeight + 'px'
+            this.scrollViewStyle.height = (systemInfo.safeArea.height - this.vuex_custom_bar_height + systemInfo.statusBarHeight) + 'px'
+            this.getPickerColorItemInfo()
           }
         })
+      },
+      // 内容容器滚动事件
+      containerScroll(e) {
+        // console.log(e);
+        // this.containerScrollTop = e.detail.scrollTop
+      },
+      // 内容scroll-view下拉刷新事件
+      containerRefresh(e) {
+        // console.log(e);
+        if (this.containerRefreshFlag) return
+        this.containerRefreshFlag = true
+        setTimeout(() => {
+          this.containerRefreshFlag = false
+        }, 10)
+        if (this.currentColorIndex - 1 < 0 || this.isUpdateColorInfo) return
+        this.pickerColorClick(this.currentColorIndex - 1)
+        
+      },
+      // 内容scroll-view滚动到底部触发事件
+      containerScrollLower(e) {
+        // console.log(e);
+        if (e.detail.direction === 'bottom') {
+          // console.log(e.detail.direction);
+          // 触发底部
+          // if (this.currentColorIndex + 1 > this.colorList.length || this.isUpdateColorInfo) return
+          // console.log('update');
+          // this.pickerColorClick(this.currentColorIndex + 1)
+        }
       },
       // 获取色值列表的位置信息
       getPickerColorItemInfo() {
@@ -399,7 +440,7 @@
       },
       // 色值选择
       pickerColorClick(index) {
-        if (this.colorSelectFlag === false || index === this.currentColorIndex) {
+        if (index === this.currentColorIndex) {
           return
         }
         this.currentColorIndex = index
@@ -408,23 +449,27 @@
       },
       // 设置选中圆环信息
       updatePickerColorSelectItem() {
-        // 先设置已选中状态为false，然后再设置选中圆环的位置信息，等待动画执行完毕后在设置已选中状态为true
-        this.colorSelectFlag = false
-        
         const colorInfos = this.pickerColorInfos[this.currentColorIndex]
         this.colorSelectItemStyle.top = colorInfos.x - uni.upx2px(40) + 'px'
         this.colorSelectItemStyle.left = colorInfos.y - uni.upx2px(40) + 'px'
-        
-        setTimeout(() => {
-          this.colorSelectFlag = true
-        }, 10)
       },
       // 设置选中颜色的信息
       updateSelectColorInfo() {
         if (this.currentColorIndex === 0) {
           return
         }
-        this.selectColorInfo = this.colorList[this.currentColorIndex - 1]
+        this.isUpdateColorInfo = true
+        this.$t.messageUtils.loading('加载中...')
+        // this.containerScrollTop = Math.random()
+        setTimeout(() => {
+          // this.containerScrollTop = 0
+          this.selectColorInfo = this.colorList[this.currentColorIndex - 1]
+          this.$t.messageUtils.closeLoading()
+          this.isUpdateColorInfo = false
+        }, 10)
+        // setTimeout(() => {
+          
+        // }, 1000)
       }
     }
   }
@@ -580,7 +625,8 @@
                   border-radius: 50%;
                   position: absolute;
                   top: 0;
-                  transform: rotate(225deg);
+                  // transform: rotate(225deg);
+                  transform: rotate(45deg);
                   
                   &.right-circle {
                     right: 0;
@@ -596,9 +642,9 @@
                     // transition: transform 0.3s cubic-bezier(0,.13,0,1.43);
                   }
                   
-                  &--active {
-                    transform: rotate(45deg);
-                  }
+                  // &--active {
+                  //   transform: rotate(45deg);
+                  // }
                 }
               }
             }
@@ -619,6 +665,8 @@
           padding: 30rpx;
           overflow: hidden;
           transform-origin: 0 50%;
+          // opacity: 0;
+          // transition: opacity 0.2s ease;
           // transform: scaleX(0) rotate(-90deg);
           // transform: rotateY(-90deg);
           // transform: scaleX(0);
@@ -628,6 +676,7 @@
             // transform: scaleX(1) rotate(0deg);
             // transform: rotateY(0deg);
             // transform: scaleX(1);
+            opacity: 1;
           }
           
           &--title {

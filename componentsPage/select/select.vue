@@ -9,7 +9,7 @@
     <view :style="{paddingTop: vuex_custom_bar_height + 'px'}">
       
       <dynamic-demo-template ref="demoTemplate" :tips="tips" :sectionList="sectionList" :full="false" @click="click">
-        <view class="tn-flex tn-flex-row-center"><tn-button fontColor="tn-color-white" @click="showSelect">弹出Select</tn-button></view>
+        <view class="tn-flex tn-flex-row-center"><tn-button backgroundColor="#01BEFF" fontColor="tn-color-white" @click="showSelect">弹出Select</tn-button></view>
         <view class="select-result tn-border-dashed">
           {{ result }}
         </view>

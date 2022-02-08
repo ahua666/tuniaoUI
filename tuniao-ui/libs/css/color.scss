@@ -50,7 +50,7 @@
 
 @mixin getShadowColor($type: box, $color: #FFFFFF) {
   @if $type == box {
-    box-shadow: 6rpx 6rpx 8rpx #{$color};
+    box-shadow: 12rpx 12rpx 16rpx #{$color};
   } @else if $type == text {
     text-shadow: 6rpx 6rpx 8rpx #{$color};
   }

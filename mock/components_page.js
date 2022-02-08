@@ -76,6 +76,11 @@ export default {
           icon: 'star',
           title: 'swipeAction滑动菜单',
           url: '/componentsPage/swipe-action/swipe-action'
+        },
+        {
+          icon: 'star',
+          title: 'fab悬浮按钮',
+          url: '/componentsPage/fab/fab'
         }
       ]
     },

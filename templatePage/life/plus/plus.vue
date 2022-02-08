@@ -18,10 +18,14 @@
       <view class="plus-text">
         <view class="tn-text-bold">图鸟UI Plus会员，初步定价</view>
         <view class="tn-text-bold">
-          <text class="tn-text-xl-xxl">699￥ / </text>
+          <text class="tn-text-xl-xxl">399￥</text>
+          <text class="tn-text-xl" style="">699￥</text>
+          <!-- 为什么不用text-decoration 因为这里面加了骚操作，不生效，你试试就知道了吖-->
+          <text class="" style="margin: -10rpx 10rpx 0 -115rpx;">————</text>
+          <text class="tn-text-xl-xxl"> / </text>
           <text class="tn-text-xxl tn-padding-left-sm">终身</text>
         </view>
-        <view class="tn-margin-bottom-xl">（大约等于两个前端页面价格）</view>
+        <view class="tn-margin-bottom-xl">（大约等于1个前端页面价格）</view>
       </view>
       
       <view class="plus-text">
@@ -53,7 +57,7 @@
       
       <view class="plus-text">
         <view class="tn-text-bold">也希望大家能喜欢这个项目</view>
-        <view class="tn-margin-bottom-xl">（不喜勿喷，东东还在努力成长）</view>
+        <view class="tn-margin-bottom-xl">（不喜勿喷，北北还在努力成长）</view>
       </view>
       
       <view class="plus-text">
@@ -70,31 +74,33 @@
         <view class="tn-text-bold">项目正式开始于2021年10月，于12月30上线</view>
         <view class="tn-margin-bottom-xl">（期间断断续续的在接单恰饭）</view>
       </view>
+      
       <view class="plus-text">
         <view class="tn-text-bold">灵感来源于我的上一个原创项目</view>
         <view class="tn-margin-bottom-xl">（项目初衷是拓展业务，寻求商务合作）</view>
       </view>
+      
       <view class="plus-text">
-        <view class="tn-text-bold">感恩你的支持</view>
+        <view class="tn-text-bold">会员特权</view>
+        <view class="">①会员尊享更多酷炫模板，模板持续更新</view>
+        <view class="">②优先响应会员页面模板需求，icon需求</view>
+        <view class="">③会员版本更新，在会员群进行代码发送</view>
+        <view class="tn-margin-bottom-xl">④有什么好的建议，可以提出来，多沟通</view>
+      </view>
+      
+      <view class="plus-text">
+        <view class="tn-text-bold">关于作者</view>
+        <view class="">蔡北北，95年，广州</view>
+        <view class="">浮夸UI设计</view>
+        <view class="">菜鸡软件开发</view>
+        <view class="">祭天产品经理</view>
+        <view class="">背锅项目经理</view>
+        <view class="tn-margin-bottom-xl">努力往CTO去发展</view>
+      </view>
+      
+      <view class="plus-text">
+        <view class="tn-text-bold">北北感恩你的支持</view>
         <view class="tn-margin-bottom-xl"></view>
-      </view>
-      <view class="plus-text">
-        <view class="tn-text-bold">待补充....</view>
-      </view>
-      <view class="plus-text">
-        <view class="tn-text-bold">待补充....</view>
-      </view>
-      <view class="plus-text">
-        <view class="tn-text-bold">待补充....</view>
-      </view>
-      <view class="plus-text">
-        <view class="tn-text-bold">待补充....</view>
-      </view>
-      <view class="plus-text">
-        <view class="tn-text-bold">待补充....</view>
-      </view>
-      <view class="plus-text">
-        <view class="tn-text-bold">待补充....</view>
       </view>
       
     </view>
@@ -161,6 +167,5 @@
     font-variant-numeric: tabular-nums;
     align-self: flex-start;
   }
-  
   
 </style>

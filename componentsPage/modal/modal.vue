@@ -9,7 +9,7 @@
     <view :style="{paddingTop: vuex_custom_bar_height + 'px'}">
       
       <dynamic-demo-template ref="demoTemplate" :tips="tips" :sectionList="sectionList" :full="false" @click="click">
-        <tn-button fontColor="tn-color-white" @click="showModal">弹出模态框</tn-button>
+        <tn-button backgroundColor="#01BEFF" fontColor="tn-color-white" @click="showModal">弹出模态框</tn-button>
       </dynamic-demo-template>
 
     </view>
@@ -41,7 +41,7 @@
             <tn-form-item label="验证码" :borderBottom="false">
               <tn-input placeholder="请输入验证码"></tn-input>
               <view slot="right" class="tn-flex tn-flex-col-center tn-flex-row-center">
-                <tn-button :fontSize="20" padding="10rpx" height="46rpx" fontColor="tn-color-white">获取验证码</tn-button>
+                <tn-button :fontSize="20" padding="10rpx" height="46rpx" backgroundColor="#01BEFF" fontColor="tn-color-white">获取验证码</tn-button>
               </view>
             </tn-form-item>
           </tn-form>
@@ -77,7 +77,7 @@
           },
           {
             text: '确定',
-            backgroundColor: 'tn-bg-red',
+            backgroundColor: 'tn-bg-indigo',
             fontColor: '#FFFFFF'
           }
         ],

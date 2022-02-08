@@ -332,7 +332,7 @@
       validation(trigger, callback = ()=>{}) {
         // 校验之前先获取需要校验的值
         this.fieldValue = this.parent.model[this.prop]
-        // blur和唱歌是否有当前方式的校验规则
+        // blur和change是否有当前方式的校验规则
         let rules = this.getFilterRule(trigger)
         // 判断是否有验证规则，如果没有规则，也调用回调方法，否则父组件tn-form会因为
         // 对count变量的统计错误而无法进入上一层的回调 

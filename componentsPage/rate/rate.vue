@@ -1,6 +1,6 @@
 <template>
 
-  <view class="components-rate">
+  <view class="components-rate tn-safe-area-inset-bottom">
 
     <!-- 顶部自定义导航 -->
     <tn-nav-bar fixed>rate评分</tn-nav-bar>
@@ -8,21 +8,43 @@
     <!-- 页面内容 -->
     <view :style="{paddingTop: vuex_custom_bar_height + 'px'}">
       
-      <dynamic-demo-template ref="demoTemplate" :tips="tips" :sectionList="sectionList" :full="false" @click="click">
-        <tn-rate
-          v-model="value"
-          :count="count"
-          :disabled="disabled"
-          :allowHalf="allowHalf"
-          :size="size"
-          :activeIcon="activeIcon"
-          :inactiveIcon="inactiveIcon"
-          :activeColor="activeColor"
-          :inactiveColor="inactiveColor"
-          :colors="colors"
-          :icons="icons"
-        ></tn-rate>
-      </dynamic-demo-template>
+      <demo-title title="基本使用">
+        <tn-rate v-model="value1"></tn-rate>
+        <view class="tn-margin-top">
+          <tn-rate v-model="value2" :count="8"></tn-rate>
+        </view>
+        <view class="tn-margin-top">
+          <tn-rate v-model="value2" :count="8" :disabled="true"></tn-rate>
+        </view>
+      </demo-title>
+      
+      <demo-title title="设置尺寸">
+        <tn-rate v-model="value3" :size="24"></tn-rate>
+        <view class="tn-margin-top">
+          <tn-rate v-model="value4"></tn-rate>
+        </view>
+        <view class="tn-margin-top">
+          <tn-rate v-model="value5" :size="68"></tn-rate>
+        </view>
+      </demo-title>
+      
+      <demo-title title="可以选择半星">
+        <tn-rate v-model="value6" :size="80" :allowHalf="true"></tn-rate>
+      </demo-title>
+      
+      <demo-title title="自定义颜色">
+        <tn-rate v-model="value7" inactiveColor="#E83A30" activeColor="#31E749"></tn-rate>
+      </demo-title>
+      
+      <demo-title title="自定义图标">
+        <tn-rate v-model="value8" inactiveIcon="emoji-sad" activeIcon="emoji-good-fill"></tn-rate>
+      </demo-title>
+      
+      <demo-title title="根据选择数量显示不同信息">
+        <tn-rate v-model="value9" :colors="colors" :icons="icons"></tn-rate>
+      </demo-title>
+      
+      <view class="tn-padding-bottom-lg"></view>
 
     </view>
 
@@ -31,147 +53,32 @@
 </template>
 
 <script>
-  import dynamicDemoTemplate from '@/libs/components/dynamic-demo-template.vue'
+  import demoTitle from '@/libs/components/demo-title.vue'
   export default {
     name: 'componentsRate',
-    components: {dynamicDemoTemplate},
+    components: {demoTitle},
     data() {
       return {
-        value: 0,
-        count: 5,
-        disabled: false,
-        allowHalf: false,
-        size: 32,
-        activeIcon: 'star-fill',
-        inactiveIcon: 'star',
-        activeColor: '#01BEFF',
-        inactiveColor: '#AAAAAA',
-        colors: [],
-        icons: [],
-        
-        tips: ['无需依赖额外的样式文件','使用tn-rate组件'],
-        sectionList: [
-          {
-            name: '参数切换',
-            section: [
-              {
-                title: '初始值',
-                optional: ['0','1','2.5','3','4','5'],
-                methods: 'valueChange'
-              },
-              {
-                title: '半星状态',
-                optional: ['是','否'],
-                methods: 'allowHalfChange',
-                current: 1
-              },
-              {
-                title: '禁用状态',
-                optional: ['是','否'],
-                methods: 'disabledChange',
-                current: 1
-              },
-              {
-                title: '尺寸',
-                optional: ['24','32','68'],
-                methods: 'sizeChange',
-                current: 1
-              },
-              {
-                title: '图标数量',
-                optional: ['3','4','5','6'],
-                methods: 'countChange',
-                current: 2
-              },
-              {
-                title: '图标',
-                optional: ['默认','自定义'],
-                methods: 'iconChange'
-              },
-              {
-                title: '颜色',
-                optional: ['默认','自定义'],
-                methods: 'colorChange'
-              },
-              {
-                title: '根据选择数显示图标信息',
-                optional: ['是','否'],
-                methods: 'showDiffChange',
-                current: 1
-              }
-            ]
-          }
-        ]
+        value1: 0,
+        value2: 0,
+        value3: 0,
+        value4: 0,
+        value5: 0,
+        value6: 0,
+        value7: 0,
+        value8: 0,
+        value9: 0,
+        colors: ['#01BEFF','#3D7EFF','#31C9E8'],
+        icons: ['star-fill','praise-fill','flower-fill']
       }
     },
     methods: {
-      click(event) {
-        this[event.methods] && this[event.methods](event)
-      },
-      // 切换初始值
-      valueChange(event) {
-        this.value = Number(event.name)
-      },
-      // 切换半星状态
-      allowHalfChange(event) {
-        this.allowHalf = event.index === 0 ? true : false
-      },
-      // 切换禁用状态
-      disabledChange(event) {
-        this.disabled = event.index === 0 ? true : false
-      },
-      // 切换尺寸
-      sizeChange(event) {
-        this.size = Number(event.name)
-      },
-      // 切换图标数量
-      countChange(event) {
-        this.count = Number(event.name)
-      },
-      // 切换图标
-      iconChange(event) {
-        switch (event.index) {
-          case 0:
-            this.activeIcon = 'star-fill'
-            this.inactiveIcon = 'star'
-            break
-          case 1:
-            this.activeIcon = 'emoji-good-fill'
-            this.inactiveIcon = 'emoji-good'
-            break
-        }
-      },
-      // 切换颜色
-      colorChange(event) {
-        switch (event.index) {
-          case 0:
-            this.activeColor = '#01BEFF'
-            this.inactiveColor = '#AAAAAA'
-            break
-          case 1:
-            this.activeColor = '#31E749'
-            this.inactiveColor = '#E7D5FA'
-            break
-        }
-      },
-      // 切换不同状态显示不同的图标信息
-      showDiffChange(event) {
-        switch (event.index) {
-          case 0:
-            this.colors = ['#01BEFF','#3D7EFF','#31C9E8']
-            this.icons = ['star-fill','praise-fill','flower-fill']
-            break
-          case 1:
-            this.colors = []
-            this.icons = []
-            break
-        }
-      }
-
-    },
-
+    }
   }
 </script>
 
 <style lang="scss" scoped>
+  .components-rate {
+    min-height: 100vh;
+  }
 </style>

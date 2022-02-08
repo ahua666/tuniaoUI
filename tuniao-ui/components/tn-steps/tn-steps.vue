@@ -10,26 +10,27 @@
       :key="index"
       class="tn-steps__item"
       :class="[`tn-steps__item--${direction}`]"
+      @tap="clickStepItem(index)"
     >
       <!-- 数值模式 -->
       <view
         v-if="mode === 'number'"
         class="tn-steps__item__number"
         :style="{
-          backgroundColor: current <= index ? 'transparent' : activeColor,
-          borderColor: current <= index ? inActiveColor : activeColor
+          backgroundColor: currentIndex <= index ? 'transparent' : activeColor,
+          borderColor: currentIndex <= index ? inActiveColor : activeColor
         }"
       >
         <text
           class="tn-steps__item__number__text"
-          :class="[{'tn-steps__item__number__text--visible': current <= index}]"
+          :class="[{'tn-steps__item__number__text--visible': currentIndex <= index}]"
           :style="{
-            color: current <= index ? inActiveColor : activeColor
+            color: currentIndex <= index ? inActiveColor : activeColor
           }"
         >
           {{ index + 1}}
         </text>
-        <view class="tn-steps__item__number__icon" :class="[`tn-icon-${item.icon || icon}`,{'tn-steps__item__number__icon--visible': current > index}]"></view>
+        <view class="tn-steps__item__number__icon" :class="[`tn-icon-${item.icon || icon}`,{'tn-steps__item__number__icon--visible': currentIndex > index}]"></view>
       </view>
       
       <!-- 点模式 -->
@@ -37,7 +38,7 @@
         v-if="mode === 'dot'"
         class="tn-steps__item__dot"
         :style="{
-          backgroundColor: current <= index ? inActiveColor : activeColor
+          backgroundColor: currentIndex <= index ? inActiveColor : activeColor
         }"
       ></view>
       
@@ -47,13 +48,13 @@
         class="tn-steps__item__icon"
         :class="[iconModeClass(index)]"
         :style="{
-          color: current <= index ? inActiveColor : activeColor
+          color: currentIndex <= index ? inActiveColor : activeColor
         }"
       ></view>
       
       <!-- 点图标模式 -->
       <view v-if="mode === 'dotIcon'" class="tn-steps__item__dot-icon">
-        <view v-if="current <= index" class="tn-steps__item__dot-icon--dot" :style="{backgroundColor: inActiveColor}"></view>
+        <view v-if="currentIndex <= index" class="tn-steps__item__dot-icon--dot" :style="{backgroundColor: inActiveColor}"></view>
         <view v-else class="tn-steps__item__dot-icon--icon" :class="[iconModeClass(index)]" :style="{color: activeColor}"></view>
       </view>
       
@@ -63,7 +64,7 @@
         class="tn-steps__item__text tn-text-ellipsis"
         :class="[`tn-steps__item__text--${direction}`]"
         :style="{
-          color: current <= index ? inActiveColor : activeColor
+          color: currentIndex <= index ? inActiveColor : activeColor
         }"
       >
         {{ item.name }}
@@ -75,7 +76,7 @@
         class="tn-steps__item__line"
         :class="[`tn-steps__item__line--${mode}`]"
         :style="{
-          borderColor: current <= index + 1 ? inActiveColor : activeColor
+          borderColor: currentIndex <= index + 1 ? inActiveColor : activeColor
         }"
       ></view>
     </view>
@@ -87,7 +88,7 @@
     name: 'tn-steps',
     props: {
       // 模式类型
-      // dot -> 点 number -> 数字 icon -> 图标 dot_icon -> 点图标
+      // dot -> 点 number -> 数字 icon -> 图标 dotIcon -> 点图标
       mode: {
         type: String,
         default: 'dot'
@@ -137,7 +138,7 @@
         return (index) => {
           const item = this.list[index]
           // 状态被选中并且对应数据下存在selectIcon属性
-          if (this.current > index && item.hasOwnProperty('selectIcon')) {
+          if (this.currentIndex > index && item.hasOwnProperty('selectIcon')) {
             return `tn-icon-${item.selectIcon}`
           } else {
             // 未选中
@@ -147,10 +148,25 @@
       }
     },
     data() {
-      return {}
+      return {
+        currentIndex: 0
+      }
+    },
+    watch: {
+      current: {
+        handler(val) {
+          this.currentIndex = val
+        },
+        immediate: true
+      }
     },
     methods: {
-      
+      // 点击了某一个选项
+      clickStepItem(index) {
+        const chooseIndex = index + 1
+        this.currentIndex = chooseIndex
+        this.$emit('click', { index: chooseIndex })
+      }
     }
   }
 </script>

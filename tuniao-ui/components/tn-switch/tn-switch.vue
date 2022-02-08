@@ -124,7 +124,7 @@
         return style
       },
       loadingColor() {
-        return this.value ? this.activeColor : null
+        return this.value ? this.activeColor : ''
       }
     },
     data() {

@@ -121,6 +121,9 @@
         } else {
           this.initObserver()
         }
+      },
+      customNavHeight(val) {
+        this.initObserver()
       }
     },
     mounted() {

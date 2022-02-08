@@ -1,6 +1,6 @@
 <template>
 
-  <view class="components-sticky" style="height: 200vh;">
+  <view class="components-sticky tn-safe-area-inset-bottom" style="height: 200vh;">
 
     <!-- 顶部自定义导航 -->
     <tn-nav-bar fixed>sticky吸顶</tn-nav-bar>
@@ -8,11 +8,24 @@
     <!-- 页面内容 -->
     <view :style="{paddingTop: vuex_custom_bar_height + 'px'}">
       
-      <dynamic-demo-template ref="demoTemplate" :tips="tips" :sectionList="sectionList" :full="true" :fullWindowsScroll="true" @click="click">
-        <tn-sticky :offsetTop="offsetTop" :enabled="enabled" :customNavHeight="vuex_custom_bar_height" @fixed="fixed" @unfixed="unfixed">
-          <view class="sticky-content">图鸟科技</view>
+      <demo-title title="吸顶">
+        <tn-sticky :offsetTop="0" :customNavHeight="vuex_custom_bar_height">
+          <view class="sticky-content tn-bg-orangered tn-color-white">普通吸顶</view>
         </tn-sticky>
-      </dynamic-demo-template>
+        <view style="margin-top: 200rpx;">
+          <tn-sticky :offsetTop="100" :customNavHeight="vuex_custom_bar_height">
+            <view class="sticky-content tn-bg-indigo tn-color-white">有距离吸顶</view>
+          </tn-sticky>
+        </view>
+      </demo-title>
+      
+      <demo-title title="取消吸顶">
+        <tn-sticky :offsetTop="0" :enabled="false" :customNavHeight="vuex_custom_bar_height">
+          <view class="sticky-content tn-bg-red tn-color-white">不允许吸顶</view>
+        </tn-sticky>
+      </demo-title>
+      
+      <view class="tn-padding-bottom-lg"></view>
 
     </view>
 
@@ -21,61 +34,27 @@
 </template>
 
 <script>
-  import dynamicDemoTemplate from '@/libs/components/dynamic-demo-template.vue'
+  import demoTitle from '@/libs/components/demo-title.vue'
   export default {
     name: 'componentsSticky',
-    components: {dynamicDemoTemplate},
+    components: {demoTitle},
     data() {
       return {
-        offsetTop: 0,
-        enabled: true,
         
-        tips: ['无需依赖额外的样式文件','使用tn-sticky组件'],
-        sectionList: [
-          {
-            name: '参数切换',
-            section: [
-              {
-                title: '吸顶距离',
-                optional: ['0','20','100'],
-                methods: 'offsetTopChange'
-              },
-              {
-                title: '状态',
-                optional: ['允许吸顶', '不吸顶'],
-                methods: 'enabledChange'
-              }
-            ]
-          }
-        ]
       }
     },
     methods: {
-      click(event) {
-        this[event.methods] && this[event.methods](event)
-      },
-      // 切换吸顶距离
-      offsetTopChange(event) {
-        this.offsetTop = Number(event.name)
-      },
-      // 切换吸顶状态
-      enabledChange(event) {
-        this.enabled = event.index === 0 ? true: false
-      },
       
-      // 监听是否吸顶
-      fixed() {
-        this.$t.messageUtils.toast('触发吸顶')
-      },
-      unfixed() {
-        this.$t.messageUtils.toast('取消吸顶')
-      }
-    },
+    }
 
   }
 </script>
 
 <style lang="scss" scoped>
+  
+  .components-sticky {
+    min-height: 100vh;
+  }
   
   .sticky-content {
     height: 80rpx;
@@ -83,7 +62,6 @@
     margin: 0 10rpx;
     line-height: 80rpx;
     text-align: center;
-    background-color: $tn-main-color;
     border-radius: 10rpx;
   }
 </style>

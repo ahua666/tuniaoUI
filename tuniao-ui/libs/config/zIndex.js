@@ -8,5 +8,6 @@ export default {
   tips: 19080,
   sticky: 19075,
   indexListSticky: 19070,
+  fab: 19060,
   mask: 9999,
 }

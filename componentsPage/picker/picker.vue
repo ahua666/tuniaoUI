@@ -9,7 +9,7 @@
     <view :style="{paddingTop: vuex_custom_bar_height + 'px'}">
       
       <dynamic-demo-template ref="demoTemplate" :tips="tips" :sectionList="sectionList" :full="false" @click="click">
-        <view class="tn-flex tn-flex-row-center"><tn-button fontColor="tn-color-white" @click="showPicker">弹出Picker</tn-button></view>
+        <view class="tn-flex tn-flex-row-center"><tn-button backgroundColor="#01BEFF" fontColor="tn-color-white" @tap="showPicker">弹出Picker</tn-button></view>
         <view class="picker-result tn-border-dashed">
           {{ result }}
         </view>

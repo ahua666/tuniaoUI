@@ -13,7 +13,7 @@
           :style="[tabItemStyle(index)]"
           @tap="emit(index)"
         >
-          <tn-badge v-if="item[count] || item['count']" backgroundColor="tn-bg-red" :absolute="true" :top="badgeOffset[0] || 0" :right="badgeOffset[1] || 0">{{ item[count] || item['count']}}</tn-badge>
+          <tn-badge v-if="item[count] || item['count']" backgroundColor="tn-bg-red" fontColor="#FFFFFF" :absolute="true" :top="badgeOffset[0] || 0" :right="badgeOffset[1] || 0">{{ item[count] || item['count']}}</tn-badge>
           {{ item[name] || item['name'] }}
         </view>
         

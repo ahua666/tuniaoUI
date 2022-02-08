@@ -9,7 +9,7 @@
     <view :style="{paddingTop: vuex_custom_bar_height + 'px'}">
       
       <dynamic-demo-template ref="demoTemplate" :tips="tips" :sectionList="sectionList" :full="false" @click="click">
-        <tn-button fontColor="tn-color-white" @click="showTips">弹出Tips</tn-button>
+        <tn-button backgroundColor="#01BEFF" fontColor="tn-color-white" @click="showTips">弹出Tips</tn-button>
       </dynamic-demo-template>
 
     </view>

@@ -195,7 +195,9 @@
       font-size: 30rpx;
       line-height: 1;
       padding: 24rpx 0;
+      padding-left: 24rpx;
       text-align: left;
+      background-color: #FFFFFF;
       
       &__title {
         flex: 1;
@@ -226,6 +228,8 @@
         font-size: 28rpx;
         color: $tn-font-color;
         text-align: left;
+        background-color: #FFFFFF;
+        padding-left: 24rpx;
       }
     }
   }

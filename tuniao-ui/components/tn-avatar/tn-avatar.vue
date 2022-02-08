@@ -112,7 +112,7 @@
       // 设置显示角标后，角标大小
       badgeSize: {
         type: Number,
-        default: 28
+        default: 0
       },
       // 角标背景颜色
       badgeBgColor: {
@@ -226,7 +226,7 @@
     align-items: center;
     justify-content: center;
     background-color: $tn-font-holder-color;
-    color: #FFFFFF;
+    // color: #FFFFFF;
     white-space: nowrap;
     position: relative;
     width: 64rpx;

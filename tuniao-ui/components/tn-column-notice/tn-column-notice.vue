@@ -134,8 +134,8 @@
       fontStyle() {
         return (type) => {
           let style = {}
-          style.color = this.fontColorStyle ? this.fontColorStyle : '#080808'
-          style.fontSize = this.fontSizeStyle ? this.fontSizeStyle : '26rpx'
+          style.color = this.fontColorStyle ? this.fontColorStyle : ''
+          style.fontSize = this.fontSizeStyle ? this.fontSizeStyle : ''
           if (type === 'leftIcon' && this.leftIconSize) {
             style.fontSize = this.leftIconSize + 'rpx'
           }

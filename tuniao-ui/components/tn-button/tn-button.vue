@@ -129,7 +129,7 @@
         
         // 阴影
         if (this.shadow) {
-          if (this.backgroundColorClass !== '') {
+          if (this.backgroundColorClass !== '' && this.backgroundColorClass.indexOf('tn-bg') != -1) {
             const color = this.backgroundColor.slice(this.backgroundColor.lastIndexOf('-') + 1)
             clazz += ` tn-shadow-${color}`
           } else {
@@ -202,15 +202,20 @@
         
         if (!this.backgroundColorClass) {
           if (this.plain) {
-            style.borderColor = this.backgroundColorStyle || '#01BEFF'
+            style.borderColor = this.backgroundColorStyle || '#080808'
           } else {
-            style.backgroundColor = this.backgroundColorStyle || '#01BEFF'
+            style.backgroundColor = this.backgroundColorStyle || '#FFFFFF'
           }
         }
         
         // 设置阴影
         if (this.shadow && !this.backgroundColorClass) {
-          style.boxShadow = `6rpx 6rpx 8rpx ${(this.backgroundColorStyle || '#01BEFF')}10`
+          if (this.backgroundColorStyle.indexOf('#') != -1) {
+            style.boxShadow = `6rpx 6rpx 8rpx ${(this.backgroundColorStyle || '#000000')}10`
+          } else if (this.backgroundColorStyle.indexOf('rgb') != -1 || this.backgroundColorStyle.indexOf('rgba') != -1 || !this.backgroundColorStyle) {
+            style.boxShadow = `6rpx 6rpx 8rpx ${(this.backgroundColorStyle || 'rgba(0, 0, 0, 0.1)')}`
+          }
+          
         }
         
         return style
@@ -278,12 +283,11 @@
     text-align: center;
     text-decoration: none;
     overflow: visible;
-    margin-left: inherit;
     transform: translate(0rpx, 0rpx);
-    margin-right: inherit;
     // background-color: $tn-mai
     border-radius: 12rpx;
-    color: #FFFFFF;
+    // color: $tn-font-color;
+    margin: 0;
     
     &--plain {
       background-color: transparent !important;

@@ -128,7 +128,7 @@
             break
         }
         
-        style.width = this.width || '100%'
+        style.width = this.width || '120rpx'
         style.height = this.height || style.height
         
         style.padding = this.padding || style.padding
@@ -144,8 +144,13 @@
         }
 
         if (!this.backgroundColorClass) {
-          style.backgroundColor = !this.plain ? (this.backgroundColorStyle || '#01BEFF') : ''
+          style.backgroundColor = !this.plain ? (this.backgroundColorStyle || '#FFFFFF') : ''
+          if (this.plain) {
+            style.borderColor = (this.backgroundColorStyle || '#080808')
+          }
         }
+        
+        
         
         return style
       },
@@ -179,7 +184,7 @@
     box-sizing: border-box;
     font-family: Helvetica Neue, Helvetica, sans-serif;
     white-space: nowrap;
-    color: #FFFFFF;
+    // color: #FFFFFF;
     
     &--fillet-left {
       border-radius: 50rpx 0 0 50rpx;

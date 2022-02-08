@@ -1,6 +1,6 @@
 <template>
 
-  <view class="components-read-more">
+  <view class="components-read-more tn-safe-area-inset-bottom">
 
     <!-- 顶部自定义导航 -->
     <tn-nav-bar fixed>ReadMore查看更多</tn-nav-bar>
@@ -8,22 +8,31 @@
     <!-- 页面内容 -->
     <view :style="{paddingTop: vuex_custom_bar_height + 'px'}">
       
-      <dynamic-demo-template ref="demoTemplate" :tips="tips" :sectionList="sectionList" :full="true" :fullWindowsScroll="fullWindowsScroll" @click="click">
-        <tn-read-more
-          :showHeight="showHeight"
-          :closeBtn="closeBtn"
-          :openText="openText"
-          :closeText="closeText"
-          :openIcon="openIcon"
-          :closeIcon="closeIcon"
-          :fontColor="fontColor"
-          :fontSize="fontSize"
-          :shadowStyle="shadowStyle"
-          @open="open"
-          @closed="closed">
+      <demo-title title="基本使用">
+        <tn-read-more>
           <rich-text :nodes="content"></rich-text>
         </tn-read-more>
-      </dynamic-demo-template>
+      </demo-title>
+      
+      <demo-title title="允许展开后收起">
+        <tn-read-more :closeBtn="true">
+          <rich-text :nodes="content"></rich-text>
+        </tn-read-more>
+      </demo-title>
+      
+      <demo-title title="修改显示内容的高度">
+        <tn-read-more :closeBtn="true" :showHeight="200">
+          <rich-text :nodes="content"></rich-text>
+        </tn-read-more>
+      </demo-title>
+      
+      <demo-title title="自定义展开收起文本和图标">
+        <tn-read-more :closeBtn="true" openText="付费查看剩余内容" openIcon="lucky-money" closeText="下次再看" closeIcon="close">
+          <rich-text :nodes="content"></rich-text>
+        </tn-read-more>
+      </demo-title>
+      
+      <view class="tn-padding-bottom-lg"></view>
 
     </view>
 
@@ -32,10 +41,10 @@
 </template>
 
 <script>
-  import dynamicDemoTemplate from '@/libs/components/dynamic-demo-template.vue'
+  import demoTitle from '@/libs/components/demo-title.vue'
   export default {
     name: 'componentsReadMore',
-    components: {dynamicDemoTemplate},
+    components: {demoTitle},
     data() {
       return {
         content: `噫吁嚱，危乎高哉！
@@ -62,114 +71,10 @@
                   朝避猛虎，夕避长蛇，磨牙吮血，杀人如麻。
                   锦城虽云乐，不如早还家。
                   蜀道之难，难于上青天，侧身西望长咨嗟！`,
-        showHeight: 400,
-        closeBtn: false,
-        openText: '展开阅读全文',
-        closeText: '收起',
-        openIcon: 'down',
-        closeIcon: 'up',
-        fontColor: '',
-        fontSize: 0,
-        shadowStyle: {
-          backgroundImage: "linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, #fff 80%)",
-          paddingTop: "300rpx",
-          marginTop: "-300rpx"
-        },
-        
-        fullWindowsScroll: false,
-        tips: ['无需依赖额外的样式文件','使用tn-read-more组件'],
-        sectionList: [
-          {
-            name: '参数切换',
-            section: [
-              {
-                title: '默认高度',
-                optional: ['200','400', '600'],
-                methods: 'showHeightChange',
-                current: 1
-              },
-              {
-                title: '显示收起按钮',
-                optional: ['显示','隐藏'],
-                methods: 'closeBtnChange',
-                current: 1
-              },
-              {
-                title: '自定义样式',
-                optional: ['默认','自定义'],
-                methods: 'customChange'
-              }
-            ]
-          }
-        ]
-
       }
-    },
-    onReady() {
-      setTimeout(() => {
-        this.$refs.demoTemplate.updateSectionScrollView()
-      }, 100)
     },
     methods: {
-      click(event) {
-        this[event.methods] && this[event.methods](event)
-      },
-      // 切换默认高度
-      showHeightChange(event) {
-        this.showHeight = Number(event.name)
-      },
-      // 切换收起按钮模式
-      closeBtnChange(event) {
-        this.closeBtn = event.index === 0 ? true : false
-      },
-      // 切换自定义样式
-      customChange(event) {
-        switch (event.index) {
-          case 0:
-            this.openText = '展开阅读全文'
-            this.closeText = '收起'
-            this.openIcon = 'down'
-            this.closeIcon = 'up'
-            this.fontColor = ''
-            this.fontSize = 0
-            this.shadowStyle = {
-              backgroundImage: "linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, #fff 80%)",
-              paddingTop: "300rpx",
-              marginTop: "-300rpx"
-            }
-            break
-          case 1:
-            this.openText = '付费解锁剩余内容'
-            this.closeText = '折起来'
-            this.openIcon = 'money'
-            this.closeIcon = 'close-circle'
-            this.fontSize = 30
-            this.shadowStyle = {
-              backgroundImage: "linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, #AAA 100%)",
-              paddingTop: "300rpx",
-              marginTop: "-300rpx"
-            }
-            break
-        }
-      },
-      
-      
-      // 展开
-      open() {
-        // setTimeout(() => {
-        //   this.$refs.demoTemplate.updateSectionScrollView()
-        // }, 350)
-        this.fullWindowsScroll = true
-      },
-      // 收起
-      closed() {
-        setTimeout(() => {
-          this.fullWindowsScroll = false
-          this.$refs.demoTemplate.updateSectionScrollView()
-        }, 350)
-      }
-
-    },
+    }
 
   }
 </script>

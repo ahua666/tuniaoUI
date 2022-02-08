@@ -145,7 +145,7 @@
 <style lang="scss" scoped>
   
   .tn-list-view {
-    background-color: transparent;
+    background-color: #FFFFFF;
     
     &__title {
       width: 100%;
@@ -155,25 +155,28 @@
       box-sizing: border-box;
       
       &--card {
-        margin: 0rpx 30rpx;
+        // margin: 0rpx 30rpx;
       }
     }
     
     &__content {
       width: 100%;
       position: relative;
+      border-radius: 0;
       
       &--card {
-        width: auto;
-        overflow: hidden;
-        margin-right: 30rpx;
-        margin-left: 30rpx;
-        border-radius: 20rpx
+        // width: auto;
+        // overflow: hidden;
+        // margin-right: 30rpx;
+        // margin-left: 30rpx;
+        // border-radius: 20rpx
       }
     }
     
     &--card {
-      padding-bottom: 30rpx;
+      // padding-bottom: 30rpx;
+      border-radius: 20rpx;
+      overflow: hidden;
     }
     
   }

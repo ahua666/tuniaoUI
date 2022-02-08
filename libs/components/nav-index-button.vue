@@ -44,7 +44,7 @@
         if (pages && pages.length > 0) {
           const indexPath = this.indexPath || '/pages/index/index'
           const firstPage = pages[0]
-          if (!firstPage.route || firstPage.route != indexPath.substring(1, indexPath.length)) {
+          if (pages.length == 1 && (!firstPage.route || firstPage.route != indexPath.substring(1, indexPath.length))) {
             uni.reLaunch({
               url: indexPath
             })

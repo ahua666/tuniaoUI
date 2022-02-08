@@ -1,51 +1,52 @@
 <template>
   <view v-if="!disabled" class="tn-image-upload-class tn-image-upload">
-    <view
-      v-if="showUploadList"
-      v-for="(item, index) in lists"
-      :key="index"
-      class="tn-image-upload__item tn-image-upload__item-preview"
-      :style="{
-        width: $t.string.getLengthUnitValue(width),
-        height: $t.string.getLengthUnitValue(height)
-      }"
-    >
-      <!-- 删除按钮 -->
+    <block v-if="showUploadList">
       <view
-        v-if="deleteable"
-        class="tn-image-upload__item-preview__delete"
-        @tap.stop="deleteItem(index)"
+        v-for="(item, index) in lists"
+        :key="index"
+        class="tn-image-upload__item tn-image-upload__item-preview"
         :style="{
-          borderTopColor: deleteBackgroundColor
+          width: $t.string.getLengthUnitValue(width),
+          height: $t.string.getLengthUnitValue(height)
         }"
       >
+        <!-- 删除按钮 -->
         <view
-          class="tn-image-upload__item-preview__delete--icon"
-          :class="[`tn-icon-${deleteIcon}`]"
+          v-if="deleteable"
+          class="tn-image-upload__item-preview__delete"
+          @tap.stop="deleteItem(index)"
           :style="{
-            color: deleteColor
+            borderTopColor: deleteBackgroundColor
           }"
-        ></view>
+        >
+          <view
+            class="tn-image-upload__item-preview__delete--icon"
+            :class="[`tn-icon-${deleteIcon}`]"
+            :style="{
+              color: deleteColor
+            }"
+          ></view>
+        </view>
+        <!-- 进度条 -->
+        <tn-line-progress
+          v-if="showProgress && item.progress > 0 && !item.error"
+          class="tn-image-upload__item-preview__progress"
+          :percent="item.progress"
+          :showPercent="false"
+          :round="false"
+          :height="8"
+        ></tn-line-progress>
+        <!-- 重试按钮 -->
+        <view v-if="item.error" class="tn-image-upload__item-preview__error-btn" @tap.stop="retry(index)">点击重试</view>
+        <!-- 图片信息 -->
+        <image
+          class="tn-image-upload__item-preview__image"
+          :src="item.url || item.path"
+          :mode="imageMode"
+          @tap.stop="doPreviewImage(item.url || item.path, index)"
+        ></image>
       </view>
-      <!-- 进度条 -->
-      <tn-line-progress
-        v-if="showProgress && item.progress > 0 && !item.error"
-        class="tn-image-upload__item-preview__progress"
-        :percent="item.progress"
-        :showPercent="false"
-        :round="false"
-        :height="8"
-      ></tn-line-progress>
-      <!-- 重试按钮 -->
-      <view v-if="item.error" class="tn-image-upload__item-preview__error-btn" @tap.stop="retry(index)">点击重试</view>
-      <!-- 图片信息 -->
-      <image
-        class="tn-image-upload__item-preview__image"
-        :src="item.url || item.path"
-        :mode="imageMode"
-        @tap.stop="doPreviewImage(item.url || item.path, index)"
-      ></image>
-    </view>
+    </block>
     <!-- <view v-if="$slots.file || $slots.$file" style="width: 100%;">
       
     </view> -->
@@ -320,7 +321,7 @@
               this.showToast('超出可允许文件大小')
             } else {
               if (maxCount <= lists.length) {
-                this.$emit('on-exceed', val, list, this.index)
+                this.$emit('on-exceed', val, lists, this.index)
                 this.showToast('超出最大允许的文件数')
                 return
               }
@@ -426,7 +427,7 @@
             this.$t.messageUtils.closeLoading()
             this.uploading = false
             this.uploadFile(index + 1)
-            this.$emit('on-change', res, index, this.list, this.index)
+            this.$emit('on-change', res, index, this.lists, this.index)
           }
         })
         this.lists[index].uploadTask = task

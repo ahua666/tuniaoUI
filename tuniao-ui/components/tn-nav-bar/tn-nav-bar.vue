@@ -21,7 +21,7 @@
           </view>
         </view>
         <view v-else class="tn-custom-nav-bar__bar__action" @tap="handlerBack">
-        	<text class="tn-custom-nav-bar__bar__action--nav-back"></text>
+        	<text class="tn-custom-nav-bar__bar__action--nav-back" :class="[`tn-icon-${backIcon}`]"></text>
         	<text class="tn-custom-nav-bar__bar__action--nav-back-text" v-if="backTitle">{{ backTitle }}</text>
         </view>
       </view>
@@ -60,6 +60,11 @@
       isBack: {
         type: Boolean,
         default: true
+      },
+      // 返回按钮的图标
+      backIcon: {
+        type: String,
+        default: 'left'
       },
       // 返回按钮旁显示的文字
       backTitle: {
@@ -108,6 +113,9 @@
         if (this.backgroundColorClass) {
           clazz += ` ${this.backgroundColorClass}`
         }
+        if (this.fontColorClass) {
+          clazz += `${this.fontColorClass}`
+        }
         if (this.fixed) {
           clazz += ' tn-custom-nav-bar__bar--fixed'
         }
@@ -130,6 +138,9 @@
         
         if(!this.backgroundColorClass) {
           style.backgroundColor = this.backgroundColor !== '' ? this.backgroundColor : '#FFFFFF'
+        }
+        if (!this.fontColorClass && this.fontColor) {
+          style.color= this.fontColor
         }
         
         style.zIndex = this.elZIndex
@@ -240,7 +251,7 @@
         const pages = getCurrentPages()
         if (pages && pages.length > 0) {
           const firstPage = pages[0]
-          if (!firstPage.route || firstPage.route != 'pages/index/index') {
+          if (pages.length == 1 && (!firstPage.route || firstPage.route != 'pages/index/index')) {
             uni.reLaunch({
               url: '/pages/index/index'
             })
@@ -308,13 +319,15 @@
           /* top: 50%; */
           /* left: 20rpx; */
           /* margin-top: -15rpx; */
-          width: 25rpx;
-          height: 25rpx;
-          margin-left: 25rpx;
-          border-width: 0 0 4rpx 4rpx;
-          border-color: #000000;
-          border-style: solid;
-          transform: matrix(0.5, 0.5, -0.5, 0.5, 0, 0);
+          // width: 25rpx;
+          // height: 25rpx;
+          margin-left: 20rpx;
+          font-size: 38rpx;
+          line-height: 100%;
+          // border-width: 0 0 4rpx 4rpx;
+          // border-color: #000000;
+          // border-style: solid;
+          // transform: matrix(0.5, 0.5, -0.5, 0.5, 0, 0);
         }
         
         &--nav-back-text {

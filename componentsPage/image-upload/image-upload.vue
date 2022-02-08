@@ -57,7 +57,7 @@
           </view>
         </tn-image-upload>
         <view class="tn-flex tn-margin-top-xs tn-flex-row-center">
-          <tn-button fontColor="tn-color-white" @tap="upload">上传</tn-button>
+          <tn-button backgroundColor="#01BEFF" fontColor="tn-color-white" @tap="upload">上传</tn-button>
           <tn-button fontColor="tn-color-white" backgroundColor="tn-bg-red" margin="0rpx 0rpx 0rpx 20rpx" @tap="clear">清空列表</tn-button>
         </view>
       </dynamic-demo-template>

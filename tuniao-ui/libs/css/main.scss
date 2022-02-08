@@ -653,6 +653,15 @@ button::after {
 	-webkit-box-orient: vertical;
 }
 
+.tn-text-clip {
+  -webkit-background-clip: text;
+  color: transparent !important;
+}
+
+.tn-text-break-word {
+  word-wrap: break-word;
+}
+
 /* 文本 end */
 
 /* hover 点击效果 start */

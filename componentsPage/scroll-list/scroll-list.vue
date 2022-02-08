@@ -1,6 +1,6 @@
 <template>
 
-  <view class="components-toast">
+  <view class="components-scroll-list tn-safe-area-inset-bottom">
 
     <!-- 顶部自定义导航 -->
     <tn-nav-bar fixed>ScrollList横向滚动</tn-nav-bar>
@@ -8,14 +8,8 @@
     <!-- 页面内容 -->
     <view :style="{paddingTop: vuex_custom_bar_height + 'px'}">
       
-      <dynamic-demo-template ref="demoTemplate" :tips="tips" :sectionList="sectionList" :full="true" @click="click">
-        <tn-scroll-list
-          :indicator="indicator"
-          :indicatorWidth="indicatorWidth"
-          :indicatorBarWidth="indicatorBarWidth"
-          :indicatorColor="indicatorColor"
-          :indicatorActiveColor="indicatorActiveColor"
-        >
+      <demo-title title="基本使用">
+        <tn-scroll-list>
           <view class="tn-flex tn-margin-sm">
             <block v-for="(item, index) in 14" :key="index">
               <view class="tn-flex-1 tn-padding-sm tn-margin-xs tn-radius">
@@ -31,7 +25,47 @@
             </block>
           </view>
         </tn-scroll-list>
-      </dynamic-demo-template>
+      </demo-title>
+      
+      <demo-title title="隐藏指示器">
+        <tn-scroll-list :indicator="false">
+          <view class="tn-flex tn-margin-sm">
+            <block v-for="(item, index) in 14" :key="index">
+              <view class="tn-flex-1 tn-padding-sm tn-margin-xs tn-radius">
+                <view class="tn-flex tn-flex-direction-column tn-flex-row-center tn-flex-col-center">
+                  <view class="icon3__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-shadow-blur" :class="[$t.colorUtils.getRandomCoolBgClass(index)]">
+                    <view class="tn-icon-gloves-fill"></view>
+                  </view>  
+                  <view class="tn-color-black tn-text-lg tn-text-center">
+                    <text class="tn-text-ellipsis">傻北</text>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </view>
+        </tn-scroll-list>
+      </demo-title>
+      
+      <demo-title title="自定义指示器样式">
+        <tn-scroll-list :indicatorWidth="100" :indicatorBarWidth="30" indicatorColor="#D6F4FA" indicatorActiveColor="#27A1BA">
+          <view class="tn-flex tn-margin-sm">
+            <block v-for="(item, index) in 14" :key="index">
+              <view class="tn-flex-1 tn-padding-sm tn-margin-xs tn-radius">
+                <view class="tn-flex tn-flex-direction-column tn-flex-row-center tn-flex-col-center">
+                  <view class="icon3__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-shadow-blur" :class="[$t.colorUtils.getRandomCoolBgClass(index)]">
+                    <view class="tn-icon-gloves-fill"></view>
+                  </view>  
+                  <view class="tn-color-black tn-text-lg tn-text-center">
+                    <text class="tn-text-ellipsis">傻北</text>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </view>
+        </tn-scroll-list>
+      </demo-title>
+      
+      <view class="tn-padding-bottom-lg"></view>
 
     </view>
 
@@ -40,72 +74,25 @@
 </template>
 
 <script>
-  import dynamicDemoTemplate from '@/libs/components/dynamic-demo-template.vue'
+  import demoTitle from '@/libs/components/demo-title.vue'
   export default {
     name: 'componentsScrollList',
-    components: {dynamicDemoTemplate},
+    components: {demoTitle},
     data() {
       return {
-        indicator: true,
-        indicatorWidth: 50,
-        indicatorBarWidth: 20,
-        indicatorColor: '#E6E6E6',
-        indicatorActiveColor: '#01BEFF',
-        
-        tips: ['无需依赖额外的样式文件','使用tn-scroll-list组件'],
-        sectionList: [
-          {
-            name: '参数切换',
-            section: [
-              {
-                title: '指示条',
-                optional: ['显示','隐藏'],
-                methods: 'indicatorChange'
-              },
-              {
-                title: '指示条样式',
-                optional: ['默认','自定义'],
-                methods: 'customChange'
-              }
-            ]
-          }
-        ]
-
       }
     },
     methods: {
-      click(event) {
-        this[event.methods] && this[event.methods](event)
-      },
-      // 切换指示条状态
-      indicatorChange(event) {
-        this.indicator = event.index === 0 ? true : false
-        this.$refs.demoTemplate.updateSectionScrollView()
-      },
-      // 切换自定义指示条
-      customChange(event) {
-        switch (event.index) {
-          case 0:
-            this.indicatorWidth = 50
-            this.indicatorBarWidth = 20
-            this.indicatorColor = '#E6E6E6'
-            this.indicatorActiveColor = '#01BEFF'
-            break
-          case 1:
-            this.indicatorWidth = 100
-            this.indicatorBarWidth = 30
-            this.indicatorColor = '#D6F4FA'
-            this.indicatorActiveColor = '#27A1BA'
-            break
-        }
-      }
-
-    },
+    }
 
   }
 </script>
 
 <style lang="scss" scoped>
+  
+  .components-scroll-list {
+    min-height: 100vh;
+  }
 
   .icon3 {
     &__item {

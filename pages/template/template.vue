@@ -1,5 +1,6 @@
 <template>
-  <view class="template">
+  <view class="vip">
+  
     <view class="top-backgroup">
       <image src='https://tnuiimage.tnkjapp.com/index_bg/template_new.jpg' mode='widthFix' class='backgroud-image'></image>
     </view>
@@ -20,11 +21,19 @@
               getRandomCoolBg(content_index)
             ]"
           >
-            <view class="nav-link">
-              <view class='title'>{{ content_item.title }}</view>
+            <view class="tn-flex tn-flex-col-center tn-flex-row-between">
+              <view class="nav-link">
+                <view class='title'>{{ content_item.title }}</view>
+              </view>
+              <view class="icon">
+                <view :class="['tn-icon-' + content_item.icon]"></view>
+              </view>
             </view>
-            <view class="icon">
-              <view :class="['tn-icon-' + content_item.icon]"></view>
+            <view class="author">
+              <view class='name tn-text-sm tn-color-gray' style="margin-left: -10rpx;">
+                <text class="tn-icon-code tn-padding-right-xs"></text>
+                <text class=""> {{ content_item.author }} </text>
+              </view>
             </view>
           </navigator>
         </block>
@@ -32,7 +41,7 @@
     </block>
     
     <view class="tn-padding-bottom"></view>
-    
+  
   </view>
 </template>
 
@@ -109,19 +118,40 @@
     padding: 0rpx 12rpx 0rpx;
     justify-content: space-between;
     
+
+    
     /* 列表元素 start */
     .nav-list-item {
       padding: 50rpx 30rpx 36rpx 30rpx;
       border-radius: 12rpx;
       width: 100%;
-      margin: 0 18rpx 40rpx;
+      margin: 0 18rpx 90rpx;
       background-size: cover;
       background-position: center;
       position: relative;
       z-index: 99;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      // display: flex;
+      // align-items: center;
+      // justify-content: space-between;
+      
+
+      .author-title{
+        position: absolute;
+        z-index: -1;
+        background-color: #FFFFFF;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: -100%;
+        border-radius: 10upx;
+        opacity: 1;
+        transform: scale(1);  
+        
+        .title {
+          color: #000000;
+          text-align: left;
+        }
+      }
       
       /* 元素标题 start */
       .nav-link {
@@ -160,6 +190,22 @@
         border-radius: 5000rpx;
       }
       /* 元素图标 end */
+      
+      /* 作者信息 start*/
+      .author {
+        // background-color: red;
+        box-shadow: 0rpx 0rpx 30rpx 0rpx rgba(0, 0, 0, 0.12);
+        border-radius: 0 0 15rpx 15rpx;
+        position: absolute;
+        width: 85%;
+        line-height: 50rpx;
+        left: 50%;
+        bottom: -50rpx;
+        transform: translateX(-50%);
+        z-index: -1;
+        text-align: center;
+      }
+      /* 作者信息 end*/
     }
     /* 列表元素 end */
   }

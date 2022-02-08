@@ -54,6 +54,7 @@
             v-if="!item.out && (item.count || item.dot)"
             :dot="item.dot || false"
             backgroundColor="tn-bg-red"
+            fontColor="#FFFFFF"
             :radius="item.dot ? 14 : 0"
             :fontSize="14"
             padding="2rpx 4rpx"

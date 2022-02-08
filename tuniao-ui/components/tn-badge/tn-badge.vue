@@ -37,7 +37,7 @@
       // 外边距
       margin: {
         type: String,
-        default: '0'
+        default: ''
       },
       // 是否为一个点
       dot: {
@@ -52,12 +52,12 @@
       // top
       top: {
         type: [String, Number],
-        default: '0'
+        default: ''
       },
       // right
       right: {
         type: [String, Number],
-        default: '0'
+        default: ''
       },
       // 居中 对齐右上角
       translateCenter: {
@@ -87,6 +87,7 @@
         if (this.radius !== 0) {
           style.width = this.radius + 'rpx'
           style.height = this.radius + 'rpx'
+          style.lineHeight = this.radius + 'rpx'
           
           // style.borderRadius = (this.radius * 8) + 'rpx'
         }
@@ -142,17 +143,17 @@
   .tn-badge {
     width: auto;
     height: auto;
-    line-height: 1;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10;
-    font-size: 18rpx;
-    background-color: $tn-main-color;
-    color: #FFFFFF;
+    font-size: 20rpx;
+    background-color: #FFFFFF;
+    // color: #FFFFFF;
     border-radius: 100rpx;
     padding: 4rpx 8rpx;
+    line-height: initial;
     
     &--dot {
       width: 8rpx;

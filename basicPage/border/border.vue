@@ -1,6 +1,6 @@
 <template>
 
-  <view class="basic-border">
+  <view class="basic-border tn-safe-area-inset-bottom">
 
     <!-- 顶部自定义导航 -->
     <tn-nav-bar fixed>边框</tn-nav-bar>
@@ -8,13 +8,100 @@
     <!-- 页面内容 -->
     <view :style="{paddingTop: vuex_custom_bar_height + 'px'}">
       
-      <dynamic-demo-template ref="demoTemplate" :tips="tips" :sectionList="sectionList" :full="true" @click="click">
-        <view
-          class="border-content"
-          :class="[borderClass]"
-        ></view>
-        <view style="visibility: hidden;height: 1px;">tuniao</view>
-      </dynamic-demo-template>
+      <demo-title title="普通边框">
+        <view class="border-content tn-border-solid">
+          <view>四周边框</view>
+        </view>
+        <view class="border-content tn-border-solid-top">
+          <view>顶部边框</view>
+        </view>
+        <view class="border-content tn-border-solid-right">
+          <view>右边边框</view>
+        </view>
+        <view class="border-content tn-border-solid-bottom">
+          <view>下面边框</view>
+        </view>
+        <view class="border-content tn-border-solid-left">
+          <view>左边边框</view>
+        </view>
+      </demo-title>
+      
+      <demo-title title="加粗边框">
+        <view class="border-content tn-border-solids">
+          <view>四周边框</view>
+        </view>
+        <view class="border-content tn-border-solids-top">
+          <view>顶部边框</view>
+        </view>
+        <view class="border-content tn-border-solids-right">
+          <view>右边边框</view>
+        </view>
+        <view class="border-content tn-border-solids-bottom">
+          <view>下面边框</view>
+        </view>
+        <view class="border-content tn-border-solids-left">
+          <view>左边边框</view>
+        </view>
+      </demo-title>
+      
+      <demo-title title="虚线边框">
+        <view class="border-content tn-border-dashed">
+          <view>四周边框</view>
+        </view>
+        <view class="border-content tn-border-dashed-top">
+          <view>顶部边框</view>
+        </view>
+        <view class="border-content tn-border-dashed-right">
+          <view>右边边框</view>
+        </view>
+        <view class="border-content tn-border-dashed-bottom">
+          <view>下面边框</view>
+        </view>
+        <view class="border-content tn-border-dashed-left">
+          <view>左边边框</view>
+        </view>
+      </demo-title>
+      
+      <demo-title title="隐藏某一边框">
+        <view class="border-content tn-border-solid tn-none-border-top">
+          <view>隐藏上边框</view>
+        </view>
+        <view class="border-content tn-border-solid tn-none-border-right">
+          <view>隐藏右边框</view>
+        </view>
+        <view class="border-content tn-border-solid tn-none-border-bottom">
+          <view>隐藏下边框</view>
+        </view>
+        <view class="border-content tn-border-solid tn-none-border-left">
+          <view>隐藏左边框</view>
+        </view>
+        <view class="border-content tn-border-dashed tn-none-border-top">
+          <view>隐藏上边框</view>
+        </view>
+        <view class="border-content tn-border-dashed tn-none-border-right">
+          <view>隐藏右边框</view>
+        </view>
+        <view class="border-content tn-border-dashed tn-none-border-bottom">
+          <view>隐藏下边框</view>
+        </view>
+        <view class="border-content tn-border-dashed tn-none-border-left">
+          <view>隐藏左边框</view>
+        </view>
+      </demo-title>
+      
+      <demo-title title="颜色">
+        <view class="border-content tn-border-solid tn-border-indigo">
+          
+        </view>
+        <view class="border-content tn-border-solids tn-border-green">
+          
+        </view>
+        <view class="border-content tn-border-dashed tn-border-purplered">
+          
+        </view>
+      </demo-title>
+      
+      <view class="tn-padding-bottom-lg"></view>
 
     </view>
 
@@ -23,117 +110,32 @@
 </template>
 
 <script>
-  import dynamicDemoTemplate from '@/libs/components/dynamic-demo-template.vue'
+  import demoTitle from '@/libs/components/demo-title.vue'
   export default {
     name: 'basicBorder',
-    components: {dynamicDemoTemplate},
+    components: {demoTitle},
     data() {
       return {
-        borderType: 'solid',
-        borderPosition: '',
-        borderColor: '',
-        borderBold: false,
-        
-        tips: ['无需依赖额外的样式文件','不使用任何组件'],
-        sectionList: [
-          {
-            name: '参数切换',
-            section: [
-              {
-                title: '样式',
-                optional: ['实线','虚线'],
-                methods: 'typeChange'
-              },
-              {
-                title: '位置',
-                optional: ['全部','上','下','左','右'],
-                methods: 'positionChange'
-              },
-              {
-                title: '颜色',
-                optional: ['默认','自定义'],
-                methods: 'colorChange'
-              },
-              {
-                title: '加粗',
-                optional: ['默认','加粗'],
-                methods: 'boldChange'
-              }
-            ]
-          }
-        ]
-
-      }
-    },
-    computed: {
-      borderClass() {
-        let clazz = ''
-        if (this.borderPosition === '') {
-          clazz += ` tn-border-${this.borderType}`
-        } else {
-          clazz += ` tn-border-${this.borderType}-${this.borderPosition}`
-        }
-        
-        if (this.borderColor) {
-          clazz += ` ${this.borderColor}`
-        }
-        
-        if (this.borderBold) {
-          clazz += ' tn-bold-border'
-        }
-        
-        return clazz
       }
     },
     methods: {
-      click(event) {
-        this[event.methods] && this[event.methods](event)
-        this.$refs.demoTemplate.updateSectionScrollView()
-      },
-      // 切换边框样式
-      typeChange(event) {
-        this.borderType = event.index === 0 ? 'solid' : 'dashed'
-      },
-      // 切换边框位置
-      positionChange(event) {
-        switch (event.index) {
-          case 0:
-            this.borderPosition = ''
-            break
-          case 1:
-            this.borderPosition = 'top'
-            break
-          case 2:
-            this.borderPosition = 'bottom'
-            break
-          case 3:
-            this.borderPosition = 'left'
-            break
-          case 4:
-            this.borderPosition = 'right'
-            break
-        }
-      },
-      // 切换边框颜色
-      colorChange(event) {
-        this.borderColor = event.index === 0 ? '' : 'tn-border-red'
-      },
-      // 切换边框加粗状态
-      boldChange(event) {
-        this.borderBold = event.index === 0 ? false : true
-      }
-
-    },
+    }
 
   }
 </script>
 
 <style lang="scss" scoped>
+  .basic-border {
+    min-height: 100vh;
+  }
+  
   
   .border-content {
-    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 80rpx;
     background-color: #FFFFFF;
-    margin: 0 auto;
+    margin: 30rpx 0rpx;
   }
 </style>

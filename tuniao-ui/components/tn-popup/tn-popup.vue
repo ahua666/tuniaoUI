@@ -281,6 +281,11 @@
     watch: {
       value(val) {
         if (val) {
+          // console.log(this.visibleSync);
+          if (this.visibleSync) {
+            this.visibleSync = false
+            return
+          }
           this.open()
         } else if (!this.closeFromInner) {
           this.close()
@@ -327,7 +332,8 @@
           this.timer = setTimeout(() => {
             this[param2] = status
             this.$emit(status ? 'open' : 'close')
-          }, 50)
+            clearTimeout(this.timer)
+          }, 10)
           // #endif
           // #ifndef H5 || MP
           this.$nextTick(() => {
@@ -339,6 +345,7 @@
           this.timer = setTimeout(() => {
             this[param2] = status
             this.$emit(status ? 'open' : 'close')
+            clearTimeout(this.timer)
           }, 250)
         }
       }
@@ -472,7 +479,7 @@
       right: 0;
       border: 0;
       background-color: $tn-mask-bg-color;
-      transition: 0.25s ease-in-out;
+      transition: 0.25s linear;
       transition-property: opacity;
       opacity: 0;
       

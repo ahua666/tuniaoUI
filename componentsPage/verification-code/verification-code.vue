@@ -15,7 +15,7 @@
               <tn-form-item label="验证码">
                 <tn-input></tn-input>
                 <view slot="right">
-                  <tn-button fontColor="tn-color-white" @click="getCode">{{ tips }}</tn-button>
+                  <tn-button backgroundColor="#01BEFF" fontColor="tn-color-white" size="sm" @click="getCode">{{ tips }}</tn-button>
                 </view>
               </tn-form-item>
             </tn-form>

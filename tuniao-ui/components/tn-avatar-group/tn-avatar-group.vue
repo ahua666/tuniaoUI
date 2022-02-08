@@ -1,6 +1,6 @@
 <template>
   <view class="tn-avatar-group-class tn-avatar-group">
-    <view v-for="(item, index) in lists" :key="index" class="tn-avatar-group__item" :style="[itemStyle]">
+    <view v-for="(item, index) in lists" :key="index" class="tn-avatar-group__item" :style="[itemStyle(index)]">
       <tn-avatar
         :src="item.src || ''"
         :text="item.text || ''"
@@ -54,24 +54,26 @@
     },
     computed: {
       itemStyle() {
-        let style = {}
-        if (this._checkSizeIsInline()) {
-          switch(this.size) {
-            case 'sm':
-              style.marginLeft = `${-48 * this.gap}rpx`
-              break
-            case 'lg':
-              style.marginLeft = `${-96 * this.gap}rpx`
-              break
-            case 'xl':
-              style.marginLeft = `${-128 * this.gap}rpx`
-              break
+        return (index) => {
+          let style = {}
+          if (this._checkSizeIsInline()) {
+            switch(this.size) {
+              case 'sm':
+                style.marginLeft = index != 0 ? `${-48 * this.gap}rpx` : ''
+                break
+              case 'lg':
+                style.marginLeft = index != 0 ? `${-96 * this.gap}rpx` : ''
+                break
+              case 'xl':
+                style.marginLeft = index != 0 ? `${-128 * this.gap}rpx` : ''
+                break
+            }
+          } else {
+            const size = Number(this.size.replace(/(px|rpx)/g, '')) || 64
+            style.marginLeft = index != 0 ? `-${size * this.gap}rpx` : ''
           }
-        } else {
-          const size = Number(this.size.replace(/(px|rpx)/g, '')) || 64
-          style.marginLeft = `-${size * this.gap}rpx`
+          return style
         }
-        return style
       }
     },
     data() {
