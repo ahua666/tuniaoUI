@@ -62,7 +62,7 @@
  - ##### 必要文件夹
 
    - 复制tuniao-ui文件夹
-   - 复制stoer文件夹
+   - 复制store文件夹
 
 - ##### 如果使用了模板页面则需要复制以下文件夹
 
@@ -84,6 +84,16 @@ Vue.use(TuniaoUI)
 
 
 #### 3.引入TuniaoUI提供的vuex
+在项目根目录的`main.js`中引入store
+```js
+// 引入store
+import store from './store'
+...
+const app = new Vue({
+  store,
+  ...App
+})
+```
 
 在项目根目录中的`main.js`中，引入并使用TuniaoUI的vuex，注意这两行配置代码要放在import Vue之后。
 
