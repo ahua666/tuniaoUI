@@ -1,5 +1,5 @@
 <template>
-  <view class="template-screen">
+  <view class="template-screen tn-safe-area-inset-bottom">
     <!-- 顶部自定义导航 -->
     <!-- <tn-nav-bar fixed alpha customBack>
       <view slot="back" class='tn-custom-nav-bar__back'
@@ -134,7 +134,7 @@
       <!-- 方式7 end-->
       
       <!-- 图文 -->
-      <view class="tn-bg-white tn-flex tn-flex-direction-column tn-padding-bottom" style="padding-bottom: 170rpx;">
+      <view class="tn-bg-white tn-flex tn-flex-direction-column tn-padding-bottom" style="padding-bottom: 110rpx;">
         
         <block v-for="(item,index) in content" :key="index">
           <view class="tn-blogger-content__wrap">

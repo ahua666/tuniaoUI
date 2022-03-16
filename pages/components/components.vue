@@ -1,5 +1,5 @@
 <template>
-  <view class="components">
+  <view class="components tn-safe-area-inset-bottom">
   
     <view class="top-backgroup">
       <image src='https://tnuiimage.tnkjapp.com/index_bg/components_new.jpg' mode='widthFix' class='backgroud-image'></image>
@@ -34,7 +34,7 @@
       </view>
     </block>
     
-    <view class="tn-padding-bottom"></view>
+    <view class="tn-padding-bottom-xs"></view>
 
   </view>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <view class="template-design">
+  <view class="template-design tn-safe-area-inset-bottom">
     <!-- 顶部自定义导航 -->
     <!-- <tn-nav-bar fixed alpha customBack>
       <view slot="back" class='tn-custom-nav-bar__back'
@@ -71,7 +71,7 @@
     
     
     <!-- 图文 -->
-    <view class="tn-flex tn-flex-direction-column tn-margin-bottom">
+    <view class="tn-flex tn-flex-direction-column">
       
       <block v-for="(item,index) in content" :key="index">
         <view class="tn-blogger-content__wrap">
@@ -154,6 +154,7 @@
         <view class="tn-color-gray">我的</view>
       </view>
     </view>
+    <view class="tn-padding-xl"></view>
     
     <!-- 回到首页悬浮按钮-->
     <nav-index-button></nav-index-button>
@@ -353,7 +354,6 @@
 <style lang="scss" scoped>
   @import '@/static/css/templatePage/custom_nav_bar.scss';
   .template-design{
-    margin-bottom: calc(110rpx + env(safe-area-inset-bottom) / 2);;
   }
     /* 图标容器10 start */
       .icon10 {

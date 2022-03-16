@@ -81,6 +81,31 @@ export default {
           icon: 'star',
           title: 'fab悬浮按钮',
           url: '/componentsPage/fab/fab'
+        },
+        {
+          icon: 'star',
+          title: '懒加载',
+          url: '/componentsPage/lazy-load/lazy-load'
+        },
+        {
+          icon: 'star',
+          title: '加载更多',
+          url: '/componentsPage/load-more/load-more'
+        },
+        {
+          icon: 'star',
+          title: '骨架屏',
+          url: '/componentsPage/skeleton/skeleton'
+        },
+        {
+          icon: 'star',
+          title: '空页面',
+          url: '/componentsPage/empty/empty'
+        },
+        {
+          icon: 'star',
+          title: '商品导航',
+          url: '/componentsPage/goods-nav/goods-nav'
         }
       ]
     },
@@ -108,6 +133,11 @@ export default {
           title: '提示信息框',
           url: '/componentsPage/tips/tips'
         },
+        {
+          icon: 'creative',
+          title: '压屏窗',
+          url: '/componentsPage/landscape/landscape'
+        }
       ]
     },
     {
@@ -118,6 +148,21 @@ export default {
           icon: 'image-text',
           title: 'Form表单',
           url: '/componentsPage/form/form'
+        },
+        {
+          icon: 'image-text',
+          title: 'Input输入框',
+          url: '/componentsPage/input/input'
+        },
+        {
+          icon: 'image-text',
+          title: 'Radio单选框',
+          url: '/componentsPage/radio/radio'
+        },
+        {
+          icon: 'image-text',
+          title: 'Checkbox复选框',
+          url: '/componentsPage/check-box/check-box'
         },
         {
           icon: 'ticket',
@@ -159,6 +204,16 @@ export default {
           title: '签名板',
           url: '/componentsPage/sign-board/sign-board'
         },
+        {
+          icon: 'edit-write',
+          title: '验证码输入',
+          url: '/componentsPage/verification-code-input/verification-code-input'
+        },
+        {
+          icon: 'edit-write',
+          title: '分段器',
+          url: '/componentsPage/subsection/subsection'
+        }
       ]
     },
     {

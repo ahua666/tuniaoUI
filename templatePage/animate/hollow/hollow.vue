@@ -67,8 +67,7 @@
     </view>
     <view class="hollow">
       <view class="tn-text-xxl">
-        <text class="">Hi，</text>
-        <open-data type="userNickName"></open-data>
+        <text class="">Hi，图鸟的小伙伴</text>
       </view>
       <view class="tn-text-xl tn-padding-top">
         技术的友情，有你真好

@@ -1,5 +1,5 @@
 <template>
-  <view class="template-course">
+  <view class="template-course tn-safe-area-inset-bottom">
     <!-- 顶部自定义导航 -->
     <!-- <tn-nav-bar fixed alpha customBack>
       <view slot="back" class='tn-custom-nav-bar__back'
@@ -129,7 +129,7 @@
       </view>       
        
       <!-- 比例 start-->
-      <view class="tn-flex tn-flex-wrap tn-margin-sm tn-padding-bottom-xl" style="padding-bottom: 170rpx;">
+      <view class="tn-flex tn-flex-wrap tn-margin-sm">
         <block v-for="(item, index) in content" :key="index">
           <view class="" style="width: 50%;">
             <view class="tn-blogger-content__wrap">
@@ -195,6 +195,7 @@
         <view class="tn-color-gray">我的</view>
       </view>
     </view>
+    <view class="tn-padding-xl"></view>
     
     <!-- 回到首页悬浮按钮-->
     <nav-index-button></nav-index-button>

@@ -1,5 +1,5 @@
 <template>
-  <view class="vip">
+  <view class="template tn-safe-area-inset-bottom">
   
     <view class="top-backgroup">
       <image src='https://tnuiimage.tnkjapp.com/index_bg/template_new.jpg' mode='widthFix' class='backgroud-image'></image>
@@ -40,7 +40,7 @@
       </view>
     </block>
     
-    <view class="tn-padding-bottom"></view>
+    <view class="tn-padding-bottom-xs"></view>
   
   </view>
 </template>
@@ -133,25 +133,6 @@
       // display: flex;
       // align-items: center;
       // justify-content: space-between;
-      
-
-      .author-title{
-        position: absolute;
-        z-index: -1;
-        background-color: #FFFFFF;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        bottom: -100%;
-        border-radius: 10upx;
-        opacity: 1;
-        transform: scale(1);  
-        
-        .title {
-          color: #000000;
-          text-align: left;
-        }
-      }
       
       /* 元素标题 start */
       .nav-link {

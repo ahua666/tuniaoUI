@@ -1,5 +1,5 @@
 <template>
-  <view class="basic">
+  <view class="basic tn-safe-area-inset-bottom">
 
     <view class="top-backgroup">
       <image src='https://tnuiimage.tnkjapp.com/index_bg/basic_new.jpg' mode='widthFix' class='backgroud-image'></image>
@@ -9,7 +9,7 @@
       <view class="nav_title tn-cool-bg-color-15">基 / 础 / 元 / 素</view>
     </view>
     
-    <view class='nav-list tn-margin-bottom'>
+    <view class='nav-list'>
       
       <block v-for="(item, index) in navList" :key="index">
         <navigator
@@ -32,7 +32,7 @@
       
     </view>
     
-    
+    <view class="tn-padding-bottom-xs"></view>
 
   </view>
 </template>

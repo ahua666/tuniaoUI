@@ -39,6 +39,14 @@
         </tn-slider>
       </demo-title>
       
+      <demo-title title="配合formItem使用">
+        <tn-form>
+          <tn-form-item label="价格区间" :labelWidth="140">
+            <tn-slider v-model="value8"></tn-slider>
+          </tn-form-item>
+        </tn-form>
+      </demo-title>
+      
       <view class="tn-padding-bottom-lg"></view>
       
     </view>
@@ -60,7 +68,8 @@
         value4: 0,
         value5: 0,
         value6: 0,
-        value7: 0
+        value7: 0,
+        value8: 0
       }
     },
     methods: {

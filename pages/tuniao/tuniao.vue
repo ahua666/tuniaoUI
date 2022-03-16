@@ -1,5 +1,5 @@
 <template>
-  <view class="about">
+  <view class="about tn-safe-area-inset-bottom">
   
     <view class="top-backgroup">
       <image src='https://tnuiimage.tnkjapp.com/index_bg/about_new.jpg' mode='widthFix' class='backgroud-image'></image>
@@ -8,20 +8,10 @@
     <view class="about__wrap">
       <!-- 头像用户信息 -->
       <view class="user-info__container tn-flex tn-flex-direction-column tn-flex-col-center tn-flex-row-center">
-        <!-- #ifdef H5 -->
         <view class="user-info__avatar tn-bg-grey--light tn-flex tn-flex-col-center tn-flex-row-center">
           <view class="tn-icon-logo-tuniao" style="font-size: 140rpx;color: #01BEFF;"></view>
         </view>
-        <view class="user-info__nick-name">图鸟科技</view>
-        <!-- #endif -->
-        <!-- #ifdef MP-WEIXIN -->
-        <view class="user-info__avatar">
-          <open-data type="userAvatarUrl"></open-data>
-        </view>
-        <view class="user-info__nick-name" style="height: 50rpx;">
-          <open-data type="userNickName"></open-data>
-        </view>
-        <!-- #endif -->
+        <view class="user-info__nick-name">图鸟小伙伴</view>
       </view>
       
       <!-- 数据信息 -->
@@ -106,7 +96,7 @@
       </view>
     </view>
     
-    <view class="tn-padding-bottom"></view>
+    <view class="tn-padding-bottom-xs"></view>
   
   </view>
 </template>

@@ -25,7 +25,7 @@
           <text class="tn-text-xl-xxl"> / </text>
           <text class="tn-text-xxl tn-padding-left-sm">终身</text>
         </view>
-        <view class="tn-margin-bottom-xl">（大约等于1个前端页面价格）</view>
+        <view class="tn-margin-bottom-xl">（大约等于1个前端页面价格💕）</view>
       </view>
       
       <view class="plus-text">
@@ -61,7 +61,7 @@
       </view>
       
       <view class="plus-text">
-        <view class="tn-text-bold">期待你的5星好评</view>
+        <view class="tn-text-bold">期待你的5星(⭐⭐⭐⭐⭐)好评</view>
         <view class="tn-margin-bottom-xl">（尽管图鸟UI不是我最完美的作品）</view>
       </view>
       
@@ -71,7 +71,7 @@
       </view>
       
       <view class="plus-text">
-        <view class="tn-text-bold">项目正式开始于2021年10月，于12月30上线</view>
+        <view class="tn-text-bold">项目正式开始于2021年10月，12月30开源公测，2022年1月30上线正式版</view>
         <view class="tn-margin-bottom-xl">（期间断断续续的在接单恰饭）</view>
       </view>
       
@@ -81,7 +81,7 @@
       </view>
       
       <view class="plus-text">
-        <view class="tn-text-bold">会员特权</view>
+        <view class="tn-text-bold tn-text-xxl"> <text class="tn-icon-vip-fill tn-padding-right-xs"></text> 会员特权 <text class="tn-icon-vip-fill tn-padding-left-xs"></text></view>
         <view class="">①会员尊享更多酷炫模板，模板持续更新</view>
         <view class="">②优先响应会员页面模板需求，icon需求</view>
         <view class="">③会员版本更新，在会员群进行代码发送</view>
@@ -89,7 +89,7 @@
       </view>
       
       <view class="plus-text">
-        <view class="tn-text-bold">关于作者</view>
+        <view class="tn-text-bold tn-text-xxl"> <text class="tn-icon-moon-fill tn-padding-right-xs"></text> 关于作者 <text class="tn-icon-moon-fill tn-padding-left-xs"></text></view>
         <view class="">蔡北北，95年，广州</view>
         <view class="">浮夸UI设计</view>
         <view class="">菜鸡软件开发</view>

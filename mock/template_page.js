@@ -34,6 +34,30 @@ export default {
       ]
     },
     {
+      title: '个人中心',
+      backgroundColor: 'tn-cool-bg-color-1',
+      list: [
+        {
+          icon: 'send',
+          title: '夏天个人',
+          author: '可我会像',
+          url: '/templatePage/my/demo1/demo1'
+        },
+        {
+          icon: 'send',
+          title: '图鸟个人',
+          author: '可我会像',
+          url: '/templatePage/my/demo2/demo2'
+        },
+        {
+          icon: 'send',
+          title: '外卖个人',
+          author: '可我会像',
+          url: '/templatePage/my/demo3/demo3'
+        }
+      ]
+    },
+    {
       title: '常用首页',
       backgroundColor: 'tn-cool-bg-color-1',
       list: [
@@ -94,6 +118,12 @@ export default {
         },
         {
           icon: 'like-break',
+          title: '浏览器',
+          author: '可我会像',
+          url: '/templatePage/life/browser/browser'
+        },
+        {
+          icon: 'like-break',
           title: '时钟',
           author: '可我会像',
           url: '/templatePage/time/clock/clock'
@@ -136,19 +166,25 @@ export default {
         list: [
           {
             icon: 'send',
-            title: '3D全景',
+            title: '3D全景(第三方，约120￥一年)',
             author: '可我会像 & 芊云全景',
             url: '/templatePage/life/pano/pano'
           },
           {
             icon: 'like-break',
-            title: '隔壁的小生',
+            title: 'Ucharts图表(第三方，免费开源)',
+            author: '可我会像 & Ucharts秋云',
+            url: '/templatePage/life/candle/candle'
+          },
+          {
+            icon: 'like-break',
+            title: '隔壁的小生(第三方，赞赏6￥可商用)',
             author: '隔壁的小生',
             url: '/templatePage/life/candle/candle'
           },
           {
             icon: 'like-break',
-            title: '阿凡提·污克西西',
+            title: '阿凡提·污克西西(第三方，免费开源)',
             author: '阿凡提·污克西西',
             url: '/templatePage/life/candle/candle'
           },

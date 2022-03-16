@@ -97,7 +97,7 @@
       }
     },
     methods: {
-    },
+    }
   }
 </script>
 

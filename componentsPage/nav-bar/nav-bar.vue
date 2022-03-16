@@ -29,7 +29,7 @@
       </view>
       <view class="custom-nav-content">
         <view class="search-content">
-          <tn-input class="search-input" v-model="searchValue" placeholder="请输入要搜索的内容" :border="true" :height="50" :showLeftIcon="true" leftIcon="search"></tn-input>
+          <tn-input class="search-input" v-model="searchValue" placeholder="请输入要搜索的内容" :border="true" :height="50" :showRightIcon="true" rightIcon="search"></tn-input>
         </view>
       </view>
     </tn-nav-bar>
@@ -46,7 +46,7 @@
     >
       <view class="custom-nav-content">
         <view class="search-content">
-          <tn-input class="search-input" v-model="searchValue" placeholder="请输入要搜索的内容" :border="true" :height="50" :showLeftIcon="true" leftIcon="search"></tn-input>
+          <tn-input class="search-input" v-model="searchValue" placeholder="请输入要搜索的内容" :border="true" :height="50" :showRightIcon="true" rightIcon="search"></tn-input>
         </view>
       </view>
     </tn-nav-bar>

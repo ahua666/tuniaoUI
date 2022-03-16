@@ -85,7 +85,7 @@
             <tn-avatar :badge="true" badgeIcon="vip" :src="src"></tn-avatar>
           </view>
           <view class="tn-margin-sm">
-            <tn-avatar :badge="true" badgeIcon="vip" badgeBgColor="transparent" badgeColor="tn-color-orange" badgeSize="40" :badgePosition="[-8, 18]" :src="src"></tn-avatar>
+            <tn-avatar :badge="true" badgeIcon="vip" badgeBgColor="transparent" badgeColor="tn-color-orange" :badgeSize="40" :badgePosition="[-8, 18]" :src="src"></tn-avatar>
           </view>
         </view>
       </demo-title>
