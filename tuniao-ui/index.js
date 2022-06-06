@@ -16,9 +16,9 @@ function wranning(str) {
 // 更新自定义状态栏的信息
 import updateCustomBarInfo from './libs/function/updateCustomBarInfo.js'
 // 获取颜色工具
-import colorUtils from './libs/function/colorUtils.js'
+import color from './libs/function/color.js'
 // 消息工具
-import messageUtils from './libs/function/messageUtils.js'
+import message from './libs/function/message.js'
 // 获取唯一id
 import uuid from './libs/function/uuid.js'
 // 数组工具
@@ -38,13 +38,13 @@ import deepClone from './libs/function/deepClone.js'
 // z-index配置信息
 import zIndex from './libs/config/zIndex.js'
 // 主题颜色信息
-import color from './libs/config/color.js'
+import colorInfo from './libs/config/color.js'
 
 const $t = {
   http: new Request(),
   updateCustomBar: updateCustomBarInfo,
-  colorUtils,
-  messageUtils,
+  color,
+  message,
   uuid,
   array,
   test,
@@ -53,7 +53,7 @@ const $t = {
   number,
   deepClone,
   zIndex,
-  color,
+  colorInfo,
 }
 
 // 挂载到uni对象上

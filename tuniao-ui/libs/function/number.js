@@ -50,7 +50,7 @@ function formatNumberAddZero(value) {
  * @param {Object} value 待格式化的数值
  * @param {Object} digits 保留位数
  */
-function formatNumberAddUnit(value, digits = 2) {
+function formatNumberAddPriceUnit(value, digits = 2) {
   // 数值分割点
   const unitSplit = [
     { value: 1, symbol: ''},
@@ -90,12 +90,27 @@ function getDigit(number) {
 }
 
 /**
- * 获取指定范围的随机数
+ * 获取指定范围的随机数(返回整数)
  
  * @param {Object} min 最小值
  * @param {Object} max 最大值
  */
 function random(min, max) {
+  if (min >= 0 && max > 0 && max >= min) {
+    let gab = max - min
+    return Math.random() * gab + min
+  } else {
+    return 0
+  }
+}
+
+/**
+ * 获取指定范围的随机数(返回整数)
+ 
+ * @param {Object} min 最小值
+ * @param {Object} max 最大值
+ */
+function randomInt(min, max) {
   if (min >= 0 && max > 0 && max >= min) {
     let gab = max - min + 1
     return Math.floor(Math.random() * gab + min)
@@ -107,6 +122,7 @@ function random(min, max) {
 export default {
   formatNumberString,
   formatNumberAddZero,
-  formatNumberAddUnit,
-  random
+  formatNumberAddPriceUnit,
+  random,
+  randomInt
 }

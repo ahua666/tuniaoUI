@@ -20,7 +20,7 @@
             <!-- #endif-->
             <!-- #ifdef MP-WEIXIN -->
             <tn-grid-item :style="{width: gridItemWidth}">
-              <view class="icon__item--icon tn-cool-color-icon" :class="[$t.colorUtils.getRandomCoolBgClass(index)]">
+              <view class="icon__item--icon tn-cool-color-icon" :class="[$t.color.getRandomCoolBgClass(index)]">
                 <view class="tn-margin-top-sm" :class="['tn-icon-' + item]"></view>
               </view>
             </tn-grid-item>

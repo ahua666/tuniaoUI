@@ -459,12 +459,12 @@
           return
         }
         this.isUpdateColorInfo = true
-        this.$t.messageUtils.loading('加载中...')
+        this.$t.message.loading('加载中...')
         // this.containerScrollTop = Math.random()
         setTimeout(() => {
           // this.containerScrollTop = 0
           this.selectColorInfo = this.colorList[this.currentColorIndex - 1]
-          this.$t.messageUtils.closeLoading()
+          this.$t.message.closeLoading()
           this.isUpdateColorInfo = false
         }, 10)
         // setTimeout(() => {

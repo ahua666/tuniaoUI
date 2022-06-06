@@ -6,74 +6,116 @@
     {
       "path": "pages/index/index",
       "style": {
-        "navigationBarTitleText": "Tuniao UI",
-        "enablePullDownRefresh": false
+        "mp-weixin": {
+        },
+        "app-plus": {
+          "bounce": "none"
+        },
+        "mp-alipay": {
+          "allowsBounceVertical": "NO"
+        },
+        "mp-baidu": {
+          "disableScroll": true
+        }
       }
     }
   ],
   "subPackages": [{
     "root": "basicPage",
     "pages": [{
-      "path": "flex-layout/flex-layout",
-      "style": {
-        "navigationBarTitleText": "Flex布局",
-        "enablePullDownRefresh": false
+        "path": "test/test",
+        "style": {
+          "navigationStyle": "default",
+          "navigationBarTitleText": "测试页面",
+          "enablePullDownRefresh": false
+        }
+      },
+      {
+        "path": "flex-layout/flex-layout",
+        "style": {
+          "navigationBarTitleText": "Flex布局",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "grid-layout/grid-layout",
+        "style": {
+          "navigationBarTitleText": "Grid布局",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "color/color",
+        "style": {
+          "navigationBarTitleText": "配色",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "icon/icon",
+        "style": {
+          "navigationBarTitleText": "图标",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "button/button",
+        "style": {
+          "navigationBarTitleText": "按钮",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "tag/tag",
+        "style": {
+          "navigationBarTitleText": "标签",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "border/border",
+        "style": {
+          "navigationBarTitleText": "边框",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "shadow/shadow",
+        "style": {
+          "navigationBarTitleText": "阴影",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "badge/badge",
+        "style": {
+          "navigationBarTitleText": "微标",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "avatar/avatar",
+        "style": {
+          "navigationBarTitleText": "头像",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "utils/string/index",
+        "style": {
+          "navigationBarTitleText": "String工具",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "utils/number/index",
+        "style": {
+          "navigationBarTitleText": "Number工具",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "utils/message/index",
+        "style": {
+          "navigationBarTitleText": "Message工具",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "utils/color/index",
+        "style": {
+          "navigationBarTitleText": "Color工具",
+          "enablePullDownRefresh": false
+        }
       }
-    }, {
-      "path": "grid-layout/grid-layout",
-      "style": {
-        "navigationBarTitleText": "Grid布局",
-        "enablePullDownRefresh": false
-      }
-    }, {
-      "path": "color/color",
-      "style": {
-        "navigationBarTitleText": "配色",
-        "enablePullDownRefresh": false
-      }
-    }, {
-      "path": "icon/icon",
-      "style": {
-        "navigationBarTitleText": "图标",
-        "enablePullDownRefresh": false
-      }
-    }, {
-      "path": "button/button",
-      "style": {
-        "navigationBarTitleText": "按钮",
-        "enablePullDownRefresh": false
-      }
-    }, {
-      "path": "tag/tag",
-      "style": {
-        "navigationBarTitleText": "标签",
-        "enablePullDownRefresh": false
-      }
-    }, {
-      "path": "border/border",
-      "style": {
-        "navigationBarTitleText": "边框",
-        "enablePullDownRefresh": false
-      }
-    }, {
-      "path": "shadow/shadow",
-      "style": {
-        "navigationBarTitleText": "阴影",
-        "enablePullDownRefresh": false
-      }
-    }, {
-      "path": "badge/badge",
-      "style": {
-        "navigationBarTitleText": "微标",
-        "enablePullDownRefresh": false
-      }
-    }, {
-      "path": "avatar/avatar",
-      "style": {
-        "navigationBarTitleText": "头像",
-        "enablePullDownRefresh": false
-      }
-    }]
+    ]
   }, {
     "root": "componentsPage",
     "pages": [{
@@ -460,6 +502,18 @@
         "enablePullDownRefresh": false
       }
     }, {
+      "path": "life/browser/browser",
+      "style": {
+        "navigationBarTitleText": "浏览器",
+        "enablePullDownRefresh": false
+      }
+    }, {
+      "path": "life/share/share",
+      "style": {
+        "navigationBarTitleText": "会员分享",
+        "enablePullDownRefresh": false
+      }
+    }, {
       "path": "life/candle/candle",
       "style": {
         "navigationBarTitleText": "敬请期待",
@@ -474,7 +528,7 @@
     }, {
       "path": "animate/loading/loading",
       "style": {
-        "navigationBarTitleText": "加载动效",
+        "navigationBarTitleText": "加载动画",
         "enablePullDownRefresh": false
       }
     }, {
@@ -511,6 +565,54 @@
       "path": "my/demo3/demo3",
       "style": {
         "navigationBarTitleText": "外卖个人",
+        "enablePullDownRefresh": false
+      }
+    }, {
+      "path": "my/demo4/demo4",
+      "style": {
+        "navigationBarTitleText": "高端个人",
+        "enablePullDownRefresh": false
+      }
+    }, {
+      "path": "animate/suspended/suspended",
+      "style": {
+        "navigationBarTitleText": "流星悬浮",
+        "enablePullDownRefresh": false
+      }
+    }, {
+      "path": "animate/bubble/bubble",
+      "style": {
+        "navigationBarTitleText": "泡泡飘出",
+        "enablePullDownRefresh": false
+      }
+    }, {
+      "path": "article/demo1/demo1",
+      "style": {
+        "navigationBarTitleText": "资讯左图",
+        "enablePullDownRefresh": false
+      }
+    }, {
+      "path": "article/demo2/demo2",
+      "style": {
+        "navigationBarTitleText": "资讯右图",
+        "enablePullDownRefresh": false
+      }
+    }, {
+      "path": "life/about/about",
+      "style": {
+        "navigationBarTitleText": "关于我们",
+        "enablePullDownRefresh": false
+      }
+    }, {
+      "path": "animate/wave/wave",
+      "style": {
+        "navigationBarTitleText": "css波浪",
+        "enablePullDownRefresh": false
+      }
+    }, {
+      "path": "life/outset/outset",
+      "style": {
+        "navigationBarTitleText": "全新出发",
         "enablePullDownRefresh": false
       }
     }]

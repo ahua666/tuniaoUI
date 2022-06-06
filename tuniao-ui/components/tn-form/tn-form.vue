@@ -122,7 +122,7 @@
                 if (this.errorType.indexOf('none') === -1 && 
                     this.errorType.indexOf('toast') >= 0 &&
                     errors.length > 0) {
-                  this.$t.messageUtils.toast(errors[0])
+                  this.$t.message.toast(errors[0])
                 }
                 // 调用回调方法
                 if (typeof callback == 'function') callback(valid)

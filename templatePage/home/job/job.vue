@@ -63,7 +63,7 @@
         <view class=" " style="width: 25%;">
           <view class="tn-flex tn-flex-direction-column tn-flex-row-center tn-flex-col-center  tn-padding-xl">
             <view class="icon16__item--icon tn-flex tn-flex-row-center tn-flex-col-center">
-              <view class="tn-cool-color-icon16" :class="[$t.colorUtils.getRandomCoolBgClass(index) + ' tn-icon-' + item.icon]"></view>
+              <view class="tn-cool-color-icon16" :class="[$t.color.getRandomCoolBgClass(index) + ' tn-icon-' + item.icon]"></view>
             </view>  
             <view class="tn-color-black tn-text-lg tn-text-center">
               <text class="tn-text-ellipsis">{{item.title}}</text>

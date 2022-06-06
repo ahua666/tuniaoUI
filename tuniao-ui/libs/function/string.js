@@ -45,11 +45,17 @@ function humpConvertChar(string, replace = '_') {
   return string.replace(/([A-Z])/g, `${replace}$1`).toLowerCase()
 }
 
+/**
+ * 将用指定连接符来进行连接的字符串转为驼峰命名的字符串
+ * 
+ * @param {Object} string 待转换的字符串
+ * @param {Object} replace 进行连接的字符
+ */
 function charConvertHump(string, replace = '_') {
   if (!string || !replace) {
     return ''
   }
-  let reg = RegExp("//" + replace + "(/w)/", "g")
+  let reg = RegExp(replace + "(\\w)", "g")
   return string.replace(reg, function(all, letter) {
     return letter.toUpperCase()
   })

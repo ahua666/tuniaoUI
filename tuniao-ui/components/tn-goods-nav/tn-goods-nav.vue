@@ -5,7 +5,8 @@
       backgroundColorClass,
       {
         'tn-goods-nav--fixed': fixed,
-        'tn-safe-area-inset-bottom': safeAreaInsetBottom
+        'tn-safe-area-inset-bottom': safeAreaInsetBottom,
+        'tn-goods-nav--shadow': shadow
       }
     ]"
     :style="[backgroundColorStyle, navStyle]"
@@ -114,6 +115,11 @@
         type: Number,
         default: 0
       },
+      // 显示阴影
+      shadow: {
+        type: Boolean,
+        default: false
+      },
       // 导航的层级
       zIndex: {
         type: Number,
@@ -138,10 +144,10 @@
     },
     computed: {
       backgroundColorStyle() {
-        return this.$t.colorUtils.getBackgroundColorStyle(this.backgroundColor)
+        return this.$t.color.getBackgroundColorStyle(this.backgroundColor)
       },
       backgroundColorClass() {
-        return this.$t.colorUtils.getBackgroundColorInternalClass(this.backgroundColor)
+        return this.$t.color.getBackgroundColorInternalClass(this.backgroundColor)
       },
       navStyle() {
         let style = {}
@@ -254,12 +260,12 @@
         this.buttonGroupsData = this.buttonGroups.map((item) => {
           let button = {...item}
           if (item.hasOwnProperty('backgroundColor')) {
-            button.backgroundColorClass = this.$t.colorUtils.getBackgroundColorInternalClass(item.backgroundColor)
-            button.backgroundColorStyle = this.$t.colorUtils.getBackgroundColorStyle(item.backgroundColor)
+            button.backgroundColorClass = this.$t.color.getBackgroundColorInternalClass(item.backgroundColor)
+            button.backgroundColorStyle = this.$t.color.getBackgroundColorStyle(item.backgroundColor)
           }
           if (item.hasOwnProperty('color')) {
-            button.colorClass = this.$t.colorUtils.getBackgroundColorInternalClass(item.color)
-            button.colorStyle = this.$t.colorUtils.getBackgroundColorStyle(item.color)
+            button.colorClass = this.$t.color.getBackgroundColorInternalClass(item.color)
+            button.colorStyle = this.$t.color.getBackgroundColorStyle(item.color)
           }
           return button
         })
@@ -277,6 +283,23 @@
     height: 88rpx;
     width: 100%;
     box-sizing: content-box;
+    
+    &--shadow {
+      box-shadow: 0rpx -10rpx 30rpx 0rpx rgba(0, 0, 0, 0.05);
+      
+      &::before {
+        content: " ";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: transparent;
+        z-index: -1;
+      }
+    }
     
     &--fixed {
       position: fixed;

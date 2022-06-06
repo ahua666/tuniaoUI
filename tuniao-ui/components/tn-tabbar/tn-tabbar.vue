@@ -220,13 +220,13 @@
           }
           // 判断是否获取内部样式
           if (style) {
-            if (this.$t.colorUtils.getFontColorStyle(color) !== '') {
+            if (this.$t.color.getFontColorStyle(color) !== '') {
               return color
             } else {
               return ''
             }
           } else {
-            if (this.$t.colorUtils.getFontColorStyle(color) === '') {
+            if (this.$t.color.getFontColorStyle(color) === '') {
               return color
             } else {
               return ''
@@ -246,13 +246,13 @@
           }
           // 判断是否获取内部样式
           if (style) {
-            if (this.$t.colorUtils.getFontColorStyle(color) !== '') {
+            if (this.$t.color.getFontColorStyle(color) !== '') {
               return color
             } else {
               return ''
             }
           } else {
-            if (this.$t.colorUtils.getFontColorStyle(color) === '') {
+            if (this.$t.color.getFontColorStyle(color) === '') {
               return color + ' tn-tabbar__content__item__icon--clip'
             } else {
               return ''
@@ -277,7 +277,7 @@
           let clazz = ''
           if (this.list[index]['out']) {
             clazz += 'tn-tabbar__content__item__button--out'
-            if (this.$t.colorUtils.getFontColorStyle(this.activeIconColor) === '') {
+            if (this.$t.color.getFontColorStyle(this.activeIconColor) === '') {
               clazz += ` ${this.activeIconColor}`
             }
             if (this.value === index) {
@@ -297,7 +297,7 @@
         return (index) => {
           let style = {}
           if (this.list[index]['out']) {
-            if (this.$t.colorUtils.getFontColorStyle(this.activeIconColor) !== '') {
+            if (this.$t.color.getFontColorStyle(this.activeIconColor) !== '') {
               style.backgroundColor = this.activeIconColor
             }
             style.width = `${this.outHeight - 35}rpx`

@@ -159,8 +159,15 @@
       // 按钮点击
       buttonClickHandler(item, index) {
         this.$emit('click', {
-          index,
-          name: item.name
+          type: 'button',
+          index
+        })
+      },
+      // item点击
+      handlerItemClick() {
+        this.$emit('click', {
+          type: 'item',
+          name: this.name
         })
       },
       // 关闭时执行
@@ -184,7 +191,7 @@
   .tn-swipe-action-item {
     position: relative;
     overflow: hidden;
-    touch-action: none;
+    // touch-action: none;
     
     &__right {
       display: flex;

@@ -71,7 +71,7 @@
       // 点击图标
       clickIcon(index, name) {
         this.currentIconIndex = index
-        this.$t.messageUtils.toast(name, false, null, 'none', 5000)
+        this.$t.message.toast(name, false, null, 'none', 5000)
       },
     }
   }

@@ -116,7 +116,7 @@
       // 点击了选项
       clickActionSheetItem(index) {
         if (index === 1) {
-          this.$t.messageUtils.toast('选择正确')
+          this.$t.message.toast('选择正确')
         }
         this.closedActionSheet()
       },

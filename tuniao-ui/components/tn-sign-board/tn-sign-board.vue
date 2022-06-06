@@ -290,14 +290,14 @@
               this.getRotateImage(res.tempFilePath).then((res) => {
                 this.$emit('save', res)
               }).catch(err => {
-                this.$t.messageUtils.toast('旋转图片失败')
+                this.$t.message.toast('旋转图片失败')
               })
             } else {
               this.$emit('save', res.tempFilePath)
             }
           },
           fail: () => {
-            this.$t.messageUtils.toast('保存失败')
+            this.$t.message.toast('保存失败')
           }
         }, this)
       },
@@ -315,7 +315,7 @@
                   urls: [res]
                 })
               }).catch(err => {
-                this.$t.messageUtils.toast('旋转图片失败')
+                this.$t.message.toast('旋转图片失败')
               })
             } else {
               uni.previewImage({
@@ -324,13 +324,13 @@
             }
           },
           fail: (e) => {
-            this.$t.messageUtils.toast('预览失败')
+            this.$t.message.toast('预览失败')
           }
         }, this)
       },
       // 关闭签名板
       closeBoard() {
-        this.$t.messageUtils.modal('提示信息','关闭后内容将被清除，是否确认关闭',() => {
+        this.$t.message.modal('提示信息','关闭后内容将被清除，是否确认关闭',() => {
           this.$emit('closed')
         }, true)
       },

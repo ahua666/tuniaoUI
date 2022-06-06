@@ -7,35 +7,39 @@
     <!-- 页面内容 -->
     <view :style="{paddingTop: vuex_custom_bar_height + 'px'}">
       
-      <demo-title title="基础">
+      <demo-title title="基础" :contentPadding="false">
         <tn-goods-nav></tn-goods-nav>
       </demo-title>
       
-      <demo-title title="选项设置为头像">
+      <demo-title title="显示阴影" :contentPadding="false">
+        <tn-goods-nav :shadow="true"></tn-goods-nav>
+      </demo-title>
+      
+      <demo-title title="选项设置为头像" :contentPadding="false">
         <tn-goods-nav :options="avatarOptions"></tn-goods-nav>
       </demo-title>
       
-      <demo-title title="设置角标">
+      <demo-title title="设置角标" :contentPadding="false">
         <tn-goods-nav :options="countOptions"></tn-goods-nav>
       </demo-title>
       
-      <demo-title title="设置边距按钮">
+      <demo-title title="设置边距按钮" :contentPadding="false">
         <tn-goods-nav buttonType="paddingRect"></tn-goods-nav>
       </demo-title>
       
-      <demo-title title="设置圆角按钮">
+      <demo-title title="设置圆角按钮" :contentPadding="false">
         <tn-goods-nav buttonType="round"></tn-goods-nav>
       </demo-title>
       
-      <demo-title title="不设置选项">
+      <demo-title title="不设置选项" :contentPadding="false">
         <tn-goods-nav :options="[]"></tn-goods-nav>
       </demo-title>
       
-      <demo-title title="自定义颜色">
+      <demo-title title="自定义颜色" :contentPadding="false">
         <tn-goods-nav :options="customOptions" buttonType="round" :buttonGroups="customButtonGroups"></tn-goods-nav>
       </demo-title>
       
-      <demo-title title="固定在底部">
+      <demo-title title="固定在底部" :contentPadding="false">
         <tn-goods-nav :fixed="true" :safeAreaInsetBottom="true" @optionClick="onOptionClick" @buttonClick="onButtonClick"></tn-goods-nav>
       </demo-title>
       
@@ -104,11 +108,11 @@
     methods: {
       // 选项点击事件
       onOptionClick(e) {
-        this.$t.messageUtils.toast(`点击了第${e.index}个选项`)
+        this.$t.message.toast(`点击了第${e.index}个选项`)
       },
       // 按钮点击事件
       onButtonClick(e) {
-        this.$t.messageUtils.toast(`点击了第${e.index}个按钮`)
+        this.$t.message.toast(`点击了第${e.index}个按钮`)
       }
     }
   }

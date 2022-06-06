@@ -245,7 +245,7 @@
           this.setScrollViewToCenter()
         })
         // 获取渐变颜色数组
-        this.colorGradientArr = this.$t.colorUtils.colorGradient(this.inactiveColor, this.activeColor, this.colorStep)
+        this.colorGradientArr = this.$t.color.colorGradient(this.inactiveColor, this.activeColor, this.colorStep)
       },
       // 发送事件
       emit(index) {

@@ -72,7 +72,7 @@
         this.status = 'loading'
         setTimeout(() => {
           for (let i = 0; i < 10; i++) {
-            index = this.$t.number.random(0, this.data.length - 1)
+            index = this.$t.number.randomInt(0, this.data.length - 1)
             this.list.push({
               src: this.data[index].src
             })

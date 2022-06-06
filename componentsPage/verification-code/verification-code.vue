@@ -119,15 +119,15 @@
       // 获取验证码
       getCode() {
         if (this.$refs.code.canGetCode) {
-          this.$t.messageUtils.loading('正在获取验证码')
+          this.$t.message.loading('正在获取验证码')
           setTimeout(() => {
-            this.$t.messageUtils.closeLoading()
-            this.$t.messageUtils.toast('验证码已经发送')
+            this.$t.message.closeLoading()
+            this.$t.message.toast('验证码已经发送')
             // 通知组件开始计时
             this.$refs.code.start()
           }, 2000)
         } else {
-          this.$t.messageUtils.toast(this.$refs.code.secNum + '秒后再重试')
+          this.$t.message.toast(this.$refs.code.secNum + '秒后再重试')
         }
       },
       
@@ -138,11 +138,11 @@
       
       // 开始倒计时
       codeStart() {
-        this.$t.messageUtils.toast('倒计时开始')
+        this.$t.message.toast('倒计时开始')
       },
       // 结束倒计时
       codeEnd() {
-        this.$t.messageUtils.toast('倒计时结束')
+        this.$t.message.toast('倒计时结束')
       },
       // 正在倒计时
       codeChange(event) {

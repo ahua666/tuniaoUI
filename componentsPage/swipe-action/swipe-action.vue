@@ -9,23 +9,24 @@
     <view :style="{paddingTop: vuex_custom_bar_height + 'px'}">
       
       <demo-title title="基本使用">
-        <tn-swipe-action>
-          <tn-swipe-action-item :options="options1">
-            <view class="swipe-action__item tn-flex tn-flex-direction-row tn-flex-col-top tn-flex-row-left">
-              <view class="swipe-action__item__image">
-                <image src="https://tnuiimage.tnkjapp.com/shop/card.jpg" mode="scaleToFill"></image>
+        <!-- <tn-swipe-action>
+          
+        </tn-swipe-action> -->
+        <tn-swipe-action-item :options="options1" name="0" @click="onSwiperItemClick">
+          <view class="swipe-action__item tn-flex tn-flex-direction-row tn-flex-col-top tn-flex-row-left">
+            <view class="swipe-action__item__image">
+              <image src="https://tnuiimage.tnkjapp.com/shop/card.jpg" mode="scaleToFill"></image>
+            </view>
+            <view class="swipe-action__item__info tn-flex tn-flex-direction-column tn-flex-col-top tn-flex-row-right">
+              <view class="swipe-action__item__info__title">
+                基本使用
               </view>
-              <view class="swipe-action__item__info tn-flex tn-flex-direction-column tn-flex-col-top tn-flex-row-right">
-                <view class="swipe-action__item__info__title">
-                  基本使用
-                </view>
-                <view class="swipe-action__item__info__desc">
-                  向左滑动即可看到
-                </view>
+              <view class="swipe-action__item__info__desc">
+                向左滑动即可看到
               </view>
             </view>
-          </tn-swipe-action-item>
-        </tn-swipe-action>
+          </view>
+        </tn-swipe-action-item>
       </demo-title>
       
       <demo-title title="多菜单">
@@ -201,6 +202,14 @@
       }
     },
     methods: {
+      // 处理swiperActionItem点击事件
+      onSwiperItemClick(e) {
+        if (e.type === 'button') {
+          this.$t.message.toast(`点击了第${e.index}个按钮`)
+        } else if (e.type === 'item') {
+          this.$t.message.toast(`点击了item标签,name为${e.name}`)
+        }
+      }
     }
   }
 </script>

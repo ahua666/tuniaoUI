@@ -241,7 +241,7 @@
       // 点击按钮
       clickBtn(event) {
         this.show = false
-        this.$t.messageUtils.toast('点击了第'+(event.index + 1)+'个按钮')
+        this.$t.message.toast('点击了第'+(event.index + 1)+'个按钮')
       }
 
     },

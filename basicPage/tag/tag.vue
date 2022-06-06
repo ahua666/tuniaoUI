@@ -60,7 +60,9 @@
       <demo-title title="标签使用">
         <view class="tn-flex tn-flex-col-center tn-flex-row-left">
           <view class="origin-demo">
-            <tn-tag class="origin-demo__tag" backgroundColor="#01BEFF" fontColor="#FFFFFF" width="auto" height="30rpx" shape="circle">99+</tn-tag>
+            <view class="origin-demo__tag">
+              <tn-tag backgroundColor="#01BEFF" fontColor="#FFFFFF" width="auto" height="30rpx" shape="circle">99+</tn-tag>
+            </view>
           </view>
           
           <!-- #ifdef H5 -->
@@ -83,6 +85,13 @@
             </tn-tag>
           </view>
           <!-- #endif -->
+          
+          <tn-tag :plain="true" backgroundColor="#01BEFF" width="auto" margin="0px 30rpx">
+            <view class="tn-flex tn-flex-direction-row tn-flex-col-center tn-flex-row-center">
+              <view>带关闭按钮</view>
+              <view class="tn-icon-close tn-margin-left-xs"></view>
+            </view>
+          </tn-tag>
         </view>
       </demo-title>
       

@@ -21,4 +21,8 @@ const app = new Vue({
   store,
   ...App
 })
+
+// 引入请求封装
+require('./util/request/index')(app)
+
 app.$mount()

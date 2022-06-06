@@ -67,10 +67,10 @@
         <view class="icon tn-icon-close"></view>
       </view>
       <view
-        v-else-if="type === 'text' && !focused && showLeftIcon && leftIcon !== ''"
+        v-else-if="type === 'text' && !focused && showRightIcon && rightIcon !== ''"
         class="tn-input__right-icon__item tn-input__right-icon__clear"
       >
-        <view class="icon" :class="[`tn-icon-${leftIcon}`]"></view>
+        <view class="icon" :class="[`tn-icon-${rightIcon}`]"></view>
       </view>
       <!-- 显示密码按钮 -->
       <view
@@ -219,12 +219,12 @@
         default: true
       },
       // 是否在输入框内最右边显示图标
-      showLeftIcon: {
+      showRightIcon: {
         type: Boolean,
         default: false
       },
       // 最右边图标的名称
-      leftIcon: {
+      rightIcon: {
         type: String,
         default: ''
       }

@@ -110,7 +110,7 @@ Vue.mixin(vuexStore)
 在项目根目录的`uni.scss`中引入此文件。
 
 ```scss
-@import 'tuniao-ui/theme.scss'
+@import 'tuniao-ui/theme.scss';
 ```
 
 

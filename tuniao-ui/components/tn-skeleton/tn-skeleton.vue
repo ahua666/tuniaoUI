@@ -75,10 +75,10 @@
     },
     computed: {
       elBackgroundColorStyle() {
-        return this.$t.colorUtils.getBackgroundColorStyle(this.elBackgroundColor)
+        return this.$t.color.getBackgroundColorStyle(this.elBackgroundColor)
       },
       elBackgroundColorClass() {
-        return this.$t.colorUtils.getBackgroundColorInternalClass(this.elBackgroundColor)
+        return this.$t.color.getBackgroundColorInternalClass(this.elBackgroundColor)
       },
       // 骨架屏样式
       skeletonStyle() {

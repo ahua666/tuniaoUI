@@ -72,16 +72,16 @@
         return style
       },
       backgroundColorStyle() {
-        return this.$t.colorUtils.getBackgroundColorStyle(this.backgroundColor)
+        return this.$t.color.getBackgroundColorStyle(this.backgroundColor)
       },
       backgroundColorClass() {
-        return this.$t.colorUtils.getBackgroundColorInternalClass(this.backgroundColor)
+        return this.$t.color.getBackgroundColorInternalClass(this.backgroundColor)
       },
       fontColorStyle() {
-        return this.$t.colorUtils.getFontColorStyle(this.fontColor)
+        return this.$t.color.getFontColorStyle(this.fontColor)
       },
       fontColorClass() {
-        return this.$t.colorUtils.getFontColorInternalClass(this.fontColor)
+        return this.$t.color.getFontColorInternalClass(this.fontColor)
       },
     },
     data() {

@@ -5,32 +5,34 @@
       <image src='https://tnuiimage.tnkjapp.com/index_bg/basic_new.jpg' mode='widthFix' class='backgroud-image'></image>
     </view>
     
-    <view class="nav_title--wrap tn-margin-bottom-sm">
-      <view class="nav_title tn-cool-bg-color-15">基 / 础 / 元 / 素</view>
-    </view>
-    
-    <view class='nav-list'>
+    <block v-for="(item, index) in navList" :key="index">
+      <view class="nav_title--wrap tn-margin-bottom-sm">
+        <view class="nav_title tn-cool-bg-color-15">{{ item.title | titleFilter}}</view>
+      </view>
       
-      <block v-for="(item, index) in navList" :key="index">
-        <navigator
-          open-type="navigate"
-          hover-class='none'
-          :url="item.url"
-          class="nav-list-item tn-shadow-blur tn-cool-bg-image"
-          :class="[
-            getRandomCoolBg(index)
-          ]"
-        >
-          <view class="nav-link">
-            <view class='title'>{{ item.title }}</view>
-          </view>
-          <view class="icon">
-            <view :class="['tn-icon-' + item.icon]"></view>
-          </view>
-        </navigator>
-      </block>
-      
-    </view>
+      <view class='nav-list'>
+        
+        <block v-for="(content_item, content_index) in item.list" :key="content_index">
+          <navigator
+            open-type="navigate"
+            hover-class='none'
+            :url="content_item.url"
+            class="nav-list-item tn-shadow-blur tn-cool-bg-image tn-flex tn-flex-direction-column tn-flex-col-center tn-flex-row-between"
+            :class="[
+              getRandomCoolBg(content_index)
+            ]"
+          >
+            <view class="icon">
+              <view :class="['tn-icon-' + content_item.icon]"></view>
+            </view>
+            <view class="nav-link">
+              <view class='title'>{{ content_item.title }}</view>
+            </view>
+          </navigator>
+        </block>
+        
+      </view>
+    </block>
     
     <view class="tn-padding-bottom-xs"></view>
 
@@ -42,6 +44,21 @@
   
   export default {
     name: 'Basic',
+    filters: {
+      titleFilter(value) {
+        if (value.length === 0) {
+          return ''
+        }
+        let newString = ''
+        for (let i = 0; i < value.length; i++) {
+          if (i !== 0) {
+            newString += ' / '
+          }
+          newString += value[i]
+        }
+        return newString
+      }
+    },
     data() {
       return {
         // nav菜单列表
@@ -50,7 +67,7 @@
     },
     methods: {
       getRandomCoolBg() {
-        return this.$t.colorUtils.getRandomCoolBgClass()
+        return this.$t.color.getRandomCoolBgClass()
       }
     }
   }
@@ -98,7 +115,7 @@
     
     /* 列表元素 start */
     .nav-list-item {
-      padding: 95rpx 30rpx 5rpx 30rpx;
+      padding: 20rpx 30rpx;
       border-radius: 12rpx;
       width: 45%;
       margin: 0 18rpx 40rpx;
@@ -118,7 +135,7 @@
         
         .title {
           color: #FFFFFF;
-          margin-top: 30rpx;
+          margin-top: 20rpx;
           text-align: center;
         }
       }
@@ -127,10 +144,6 @@
       /* 元素图标 start */
       .icon {
         font-variant: small-caps;
-        position: absolute;
-        top: 20rpx;
-        right: 50rpx;
-        left: 37%;
         width: 90rpx;
         height: 90rpx;
         line-height: 90rpx;

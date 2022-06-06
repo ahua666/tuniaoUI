@@ -21,7 +21,11 @@
       </view>
     </block>
     <!-- 背景 -->
-    <view class="tn-subsection__bg" :style="[itemBarStyle]"></view>
+    <view
+      class="tn-subsection__bg"
+      :class="[itemBarClass]"
+      :style="[itemBarStyle]"
+    ></view>
   </view>
 </template>
 
@@ -35,7 +39,7 @@
       // button 按钮模式 subsection 分段模式
       mode: {
         type: String,
-        default: 'button'
+        default: 'subsection'
       },
       // 组件高度
       height: {
@@ -78,10 +82,21 @@
         type: String,
         default: '#01BEFF'
       },
+      // 当mode为button时生效，圆角的值，单位rpx
+      borderRadius: {
+        type: Number,
+        default: 10
+      },
       // 是否开启动画
       animation: {
         type: Boolean,
         default: true
+      },
+      // 动画类型
+      // cubic-bezier -> 贝塞尔曲线
+      animationType: {
+        type: String,
+        default: ''
       },
       // 滑动滑块的是否，是否触发震动
       vibrateShort: {
@@ -98,13 +113,11 @@
           width: 0,
           left: 0,
           backgroundColor: '#ffffff',
-          height: '100%',
-          transition: ''
+          height: '100%'
         },
         // 当前选中的滑块
         currentIndex: this.current,
         buttonPadding: 3,
-        borderRadius: 5,
         // 组件初始化的是否current变换不应该震动
         firstVibrateShort: true
       }
@@ -153,18 +166,10 @@
         return index => {
           let style = {}
           // 设置字体颜色
-          if (this.mode === 'subsection') {
-            if (index === this.currentIndex) {
-              style.color = '#FFFFFF'
-            } else {
-              style.color = this.inactiveColor
-            }
+          if (index === this.currentIndex) {
+            style.color = this.activeColor
           } else {
-            if (index === this.currentIndex) {
-              style.color = this.activeColor
-            } else {
-              style.color = this.inactiveColor
-            }
+            style.color = this.inactiveColor
           }
           // 字体加粗
           if (index === this.currentIndex && this.bold) style.fontWeight = 'bold'
@@ -177,9 +182,12 @@
       itemStyle() {
         return index => {
           let style = {}
+          if (this.fontSizeStyle) {
+            style.fontSize = this.fontSizeStyle
+          }
           if (this.mode === 'subsection') {
             // 设置border的样式
-            style.borderColor = this.inactiveColor
+            style.borderColor = this.buttonColor
             style.borderWidth = '1rpx'
             style.borderStyle = 'solid'
           }
@@ -193,7 +201,7 @@
         if (this.mode === 'button') {
           style.backgroundColor = this.backgroundColorStyle
           style.padding = `${this.buttonPadding}px`
-          style.borderRadius = `${this.borderRadius}px`
+          style.borderRadius = `${this.borderRadius}rpx`
         }
         return style
       },
@@ -205,14 +213,30 @@
         }
         return clazz
       },
+      itemBarClass() {
+        let clazz = ''
+        const buttonBgClass = this.$t.color.getBackgroundColorInternalClass(this.buttonColor)
+        if (this.animation) {
+          clazz += ' tn-subsection__bg__animation'
+          if (this.animationType) {
+            clazz += ` tn-subsection__bg__animation--${this.animationType}`
+          }
+        }
+        if (buttonBgClass) {
+          clazz += ` ${buttonBgClass}`
+        }
+        return clazz
+      },
       // 滑块样式
       itemBarStyle() {
         let style = {}
-        style.backgroundColor = this.buttonColor
+        const buttonBgStyle = this.$t.color.getBackgroundColorStyle(this.buttonColor)
+        if (buttonBgStyle) {
+          style.backgroundColor = this.buttonColor
+        }
         style.zIndex = 1
         if (this.mode === 'button') {
-          style.backgroundColor = this.buttonColor
-          style.borderRadius = `${this.borderRadius}px`
+          style.borderRadius = `${this.borderRadius}rpx`
           style.bottom = `${this.buttonPadding}px`
           style.height = (this.height - (this.buttonPadding * 4)) + 'rpx'
           style.zIndex = 0
@@ -284,13 +308,6 @@
       },
       // 设置滑块的位置
       itemBgLeft() {
-        // 是否开启动画
-        if(this.animation) {
-          this.itemBgStyle.transition = 'all 0.3s'
-        } else {
-          this.itemBgStyle.transition = 'all 0s'
-        }
-        
         let left = 0
         // 计算当前活跃item到组件左边的距离
         this.listInfo.map((item, index) => {
@@ -344,8 +361,9 @@
       color: #FFFFFF;
       padding: 0 6rpx;
       
+      
       &--text {
-        transform: all 0.3s;
+        transition: all 0.3s;
         color: #FFFFFF;
         /* #ifndef APP-PLUS */
         display: flex;
@@ -375,6 +393,17 @@
       background-color: $tn-main-color;
       position: absolute;
       z-index: -1;
+      transition-property: all;
+      transition-duration: 0s;
+      transition-timing-function: linear;
+      
+      &__animation {
+        transition-duration: 0.25s !important;
+        
+        &--cubic-bezier {
+          transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+        }
+      }
     }
   }
   

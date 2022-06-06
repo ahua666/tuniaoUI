@@ -120,7 +120,7 @@
       },
       // 关闭Tips
       closeTips() {
-        this.$t.messageUtils.toast('tips提示框关闭了')
+        this.$t.message.toast('tips提示框关闭了')
       }
 
     },

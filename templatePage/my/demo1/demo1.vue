@@ -9,22 +9,40 @@
       </view>
     </tn-nav-bar> -->
     
+
+    
     
     <view class="top-backgroup">
       <image src='https://tnuiimage.tnkjapp.com/swiper/summer.jpg' mode='widthFix' class='backgroud-image'></image>
+    </view>
+    
+    <view class="tnwave waveAnimation">
+      <view class="waveWrapperInner bgTop">
+        <view class="wave waveTop" style="background-image: url('https://tnuiimage.tnkjapp.com/wave/wave-2.png')"></view>
+      </view>
+      <view class="waveWrapperInner bgMiddle">
+        <view class="wave waveMiddle" style="background-image: url('https://tnuiimage.tnkjapp.com/wave/wave-2.png')"></view>
+      </view>
+      <view class="waveWrapperInner bgBottom">
+        <view class="wave waveBottom" style="background-image: url('https://tnuiimage.tnkjapp.com/wave/wave-1.png')"></view>
+      </view>
     </view>
     
     <view class="about__wrap">
       <!-- 头像用户信息 -->
       <view class="user-info__container tn-flex tn-flex-direction-column tn-flex-col-center tn-flex-row-center">
         <view class="user-info__avatar tn-bg-grey--light tn-flex tn-flex-col-center tn-flex-row-center">
-          <view class="tn-icon-logo-tuniao" style="font-size: 140rpx;color: #01BEFF;"></view>
+          <view class="tn-shadow-blur" style="background-image:url('https://tnuiimage.tnkjapp.com/blogger/avatar_2.jpeg');width: 170rpx;height: 170rpx;background-size: cover;">
+          </view>
+          <!-- <view class="tn-icon-logo-tuniao" style="font-size: 140rpx;color: #01BEFF;"></view> -->
         </view>
         <view class="user-info__nick-name">图鸟科技</view>
       </view>
       
+
+      
       <!-- 消息&数据 -->
-      <view class="tn-shadow-warp" style="margin-top: 100rpx;border-radius: 12rpx;background-color: rgba(255,255,255,1);">
+      <view class="tn-shadow-warp" style="margin-top: 100rpx;background-color: rgba(255,255,255,1);">
         <view class="tn-flex">
           <view class="tn-flex-1 tn-padding-sm tn-margin-xs">
             <view class="tn-flex tn-flex-direction-column tn-flex-row-center tn-flex-col-center">
@@ -64,7 +82,7 @@
       
       
       <!-- 更多信息-->
-      <view class="about-shadow tn-margin-top-xl tn-padding-top-sm tn-padding-bottom-sm">
+      <view class="about-shadow tn-margin-top-xl tn-padding-top-sm tn-padding-bottom-sm tn-margin-left tn-margin-right">
         <tn-list-cell :hover="true" :unlined="true" :radius="true" :fontSize="30">
           <view class="tn-flex tn-flex-col-center">
             <view class="icon1__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-cool-bg-color-5 tn-color-white" > 
@@ -95,7 +113,7 @@
       </view>
       
       <!-- 更多信息-->
-      <view class="about-shadow tn-margin-top-xl tn-padding-top-sm tn-padding-bottom-sm">
+      <view class="about-shadow tn-margin-top-xl tn-padding-top-sm tn-padding-bottom-sm tn-margin-left tn-margin-right">
         <tn-list-cell :hover="true" :unlined="true" :radius="true" :fontSize="30">
           <view class="tn-flex tn-flex-col-center">
             <view class="icon1__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-cool-bg-color-16 tn-color-white" > 
@@ -207,11 +225,80 @@
   
     .backgroud-image {
       width: 100%;
-      height: 667rpx;
+      height: 450rpx;
       // z-index: -1;
     }
   }
   /* 顶部背景图 end */
+  
+  /* 波浪*/
+  @keyframes move_wave {
+      0% {
+          transform: translateX(0) translateZ(0) scaleY(1)
+      }
+      50% {
+          transform: translateX(-25%) translateZ(0) scaleY(1)
+      }
+      100% {
+          transform: translateX(-50%) translateZ(0) scaleY(1)
+      }
+  }
+  .tnwave {
+      overflow: hidden;
+      position: absolute;
+      z-index: 9999;
+      height: 200rpx;
+      left: 0;
+      right: 0;
+      top: 290rpx;
+      bottom: auto;
+  }
+  .waveWrapperInner {
+      position: absolute;
+      width: 100%;
+      overflow: hidden;
+      height: 100%;
+  }
+  .wave {
+      position: absolute;
+      left: 0;
+      width: 200%;
+      height: 100%;
+      background-repeat: repeat no-repeat;
+      background-position: 0 bottom;
+      transform-origin: center bottom;
+  }
+  
+  .bgTop {
+      opacity: 0.4;
+  }
+  .waveTop {
+      background-size: 50% 45px;
+  }
+  .waveAnimation .waveTop {
+    animation: move_wave 4s linear infinite;
+  }
+  
+  .bgMiddle {
+      opacity: 0.6;
+  }
+  .waveMiddle {
+      background-size: 50% 40px;
+  }
+  .waveAnimation .waveMiddle {
+      animation: move_wave 3.5s linear infinite;
+  }
+  
+  .bgBottom {
+      opacity: 0.95;
+  }
+  .waveBottom {
+      background-size: 50% 35px;
+  }
+  .waveAnimation .waveBottom {
+      animation: move_wave 2s linear infinite;
+  }
+  /* 波浪*/
   
   /* 页面 start*/
   .about-shadow{
@@ -224,7 +311,7 @@
     &__wrap {
       position: relative;
       z-index: 1;
-      margin: 20rpx 30rpx;
+      // margin: 20rpx 30rpx;
       margin-top: -330rpx;
     }
   }

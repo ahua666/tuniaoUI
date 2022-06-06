@@ -22,7 +22,7 @@
         :style="[boxStyle]"
       >
         <!-- 不是自定义弹框内容 -->
-        <!-- <view v-if="!custom">
+        <view v-if="!custom">
           <view class="tn-modal__box__title" v-if="title && title !== ''">{{ title }}</view>
           <view
             class="tn-modal__box__content"
@@ -57,42 +57,7 @@
         </view>
         <view v-else>
           <slot></slot>
-        </view> -->
-        <slot>
-          <view v-if="!custom">
-            <view class="tn-modal__box__title" v-if="title && title !== ''">{{ title }}</view>
-            <view
-              class="tn-modal__box__content"
-              :class="[
-                fontColorClass,
-                contentClass
-              ]"
-              :style="contentStyle"
-            >{{ content }}</view>
-            <view v-if="button && button.length" class="tn-modal__box__btn-box" :class="[button.length != 2 ? 'tn-flex-direction-column' : '']">
-              <block v-for="(item, index) in button" :key="index">
-                <tn-button
-                  width="100%"
-                  height="68rpx"
-                  :fontSize="26"
-                  :backgroundColor="item.backgroundColor || ''"
-                  :fontColor="item.fontColor || ''"
-                  :plain="item.plain || false"
-                  :shape="item.shape || 'round'"
-                  :class="[
-                    button.length > 2 ? 'tn-margin-bottom' : ''
-                  ]"
-                  @click="handleClick(index)"
-                  :style="{
-                    width: button.length != 2 ? '80%' : '46%'
-                  }"
-                >
-                  {{ item.text }}
-                </tn-button>
-              </block>
-            </view>
-          </view>
-        </slot>
+        </view>
       </view>
     </tn-popup>
   </view>

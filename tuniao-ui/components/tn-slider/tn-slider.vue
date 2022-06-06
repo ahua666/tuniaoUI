@@ -215,6 +215,7 @@
 
 <style lang="scss" scoped>
   .tn-slider {
+    width: 100%;
     position: relative;
     border-radius: 1000rpx;
     // 增加点击的范围

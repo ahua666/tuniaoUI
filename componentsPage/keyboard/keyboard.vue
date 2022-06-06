@@ -195,14 +195,14 @@
         } else if (this.mode === 'car') {
           // 判断输入的值是否正确
           if (this.currentLicensePlateIndex === 0 && !this.$t.test.chinese(e)) {
-            this.$t.messageUtils.toast('车牌归属地选择错误')
+            this.$t.message.toast('车牌归属地选择错误')
             return
           } else if (this.currentLicensePlateIndex === 1 && !this.$t.test.letter(e)) {
-            this.$t.messageUtils.toast('车牌归属地字母选择错误')
+            this.$t.message.toast('车牌归属地字母选择错误')
             return
           }
           if (this.currentLicensePlateIndex !== 0 && !this.$t.test.enOrNum(e)) {
-            this.$t.messageUtils.toast('车牌号码选择错误')
+            this.$t.message.toast('车牌号码选择错误')
             return
           }
           // this.licensePlateValue[this.currentLicensePlateIndex] = e
@@ -216,11 +216,11 @@
       },
       // 点击了取消按钮
       onCancel() {
-        this.$t.messageUtils.toast('点击了取消按钮')
+        this.$t.message.toast('点击了取消按钮')
       },
       // 点击了确认按钮
       onConfirm() {
-        this.$t.messageUtils.toast('点击了确认按钮')
+        this.$t.message.toast('点击了确认按钮')
         this.value = false
       },
       // 点击了退格按钮

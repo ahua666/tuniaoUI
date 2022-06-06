@@ -12,4 +12,6 @@ export default {
   indexListSticky: 19070,
   fab: 19060,
   mask: 9999,
+  tableTr: 1001,
+  tableTd: 1000
 }

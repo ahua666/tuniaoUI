@@ -120,7 +120,7 @@
     data() {
       return {
         // 图鸟颜色列表
-        tuniaoColorList: this.$t.colorUtils.getTuniaoColorList(),
+        tuniaoColorList: this.$t.color.getTuniaoColorList(),
         // 保存选项列表信息（由于prop中的数据时不能被修改的）
         _sectionList: [],
         // 模式列表信息

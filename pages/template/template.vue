@@ -73,7 +73,7 @@
     },
     methods: {
       getRandomCoolBg() {
-        return this.$t.colorUtils.getRandomCoolBgClass()
+        return this.$t.color.getRandomCoolBgClass()
       }
     }
   }

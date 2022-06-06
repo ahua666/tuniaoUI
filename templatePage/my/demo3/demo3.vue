@@ -11,7 +11,7 @@
     
     
     <view class="top-backgroup">
-      <image src='https://tnuiimage.tnkjapp.com/my/my-bg2.png' mode='widthFix' class='backgroud-image'></image>
+      <image src='https://tnuiimage.tnkjapp.com/my/my-bg3.png' mode='widthFix' class='backgroud-image'></image>
     </view>
     
     
@@ -48,7 +48,9 @@
             <!-- 图标logo -->
             <view class="logo-pic tn-shadow" >
               <view class="logo-image">
-                <view class="tn-icon-logo-tuniao" style="font-size: 140rpx;color: #01BEFF;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"></view>
+                <view class="tn-shadow-blur" style="background-image:url('https://tnuiimage.tnkjapp.com/blogger/avatar_2.jpeg');width: 120rpx;height: 120rpx;background-size: cover;">
+                </view>
+                <!-- <view class="tn-icon-logo-tuniao" style="font-size: 140rpx;color: #01BEFF;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"></view> -->
               </view>
             </view>
             <view class="tn-padding-right tn-color-white">
@@ -343,7 +345,7 @@
   
     .backgroud-image {
       width: 100%;
-      height: 667rpx;
+      height: 450rpx;
       // z-index: -1;
     }
   }

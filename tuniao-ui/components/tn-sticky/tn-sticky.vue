@@ -67,10 +67,10 @@
         return this.zIndex ? this.zIndex : this.$t.zIndex.sticky
       },
       backgroundColorStyle() {
-        return this.$t.colorUtils.getBackgroundColorStyle(this.backgroundColor)
+        return this.$t.color.getBackgroundColorStyle(this.backgroundColor)
       },
       backgroundColorClass() {
-        return this.$t.colorUtils.getBackgroundColorInternalClass(this.backgroundColor)
+        return this.$t.color.getBackgroundColorInternalClass(this.backgroundColor)
       },
       stickyClass() {
         let clazz = ''

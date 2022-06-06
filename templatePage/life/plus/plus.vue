@@ -18,14 +18,14 @@
       <view class="plus-text">
         <view class="tn-text-bold">图鸟UI Plus会员，初步定价</view>
         <view class="tn-text-bold">
-          <text class="tn-text-xl-xxl">399￥</text>
-          <text class="tn-text-xl" style="">699￥</text>
+          <text class="tn-text-xl-xxl">699￥</text>
+          <text class="tn-text-xl" style="">1299￥</text>
           <!-- 为什么不用text-decoration 因为这里面加了骚操作，不生效，你试试就知道了吖-->
           <text class="" style="margin: -10rpx 10rpx 0 -115rpx;">————</text>
           <text class="tn-text-xl-xxl"> / </text>
           <text class="tn-text-xxl tn-padding-left-sm">终身</text>
         </view>
-        <view class="tn-margin-bottom-xl">（大约等于1个前端页面价格💕）</view>
+        <view class="tn-margin-bottom-xl">（大约等于2个酷炫前端页面价格💕）</view>
       </view>
       
       <view class="plus-text">

@@ -239,7 +239,7 @@
           } else {
             // 超出最大可选项，弹出提示
             if (this.parentData.value.length >= this.parentData.max) {
-              return this.$t.messageUtils.toast(`最多可选${this.parent.max}项`)
+              return this.$t.message.toast(`最多可选${this.parent.max}项`)
             }
             // 如果原来为未选中状态，需要选中的数量少于父组件中设置的max值，才可以选中
             this.emitEvent();

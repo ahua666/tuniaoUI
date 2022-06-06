@@ -342,7 +342,7 @@
       // 提示用户信息
       showToast(message, force = false) {
         if (this.showTips || force) {
-          this.$t.messageUtils.toast(message)
+          this.$t.message.toast(message)
         }
       },
       // 手动上传，通过ref进行调用
@@ -354,7 +354,7 @@
         this.lists[index].progress = 0
         this.lists[index].error = false
         this.lists[index].response = null
-        this.$t.messageUtils.loading('重新上传')
+        this.$t.message.loading('重新上传')
         this.uploadFile(index)
       },
       // 上传文件
@@ -424,7 +424,7 @@
             this.uploadError(index, err)
           },
           complete: res => {
-            this.$t.messageUtils.closeLoading()
+            this.$t.message.closeLoading()
             this.uploading = false
             this.uploadFile(index + 1)
             this.$emit('on-change', res, index, this.lists, this.index)
@@ -449,7 +449,7 @@
       // 删除一个图片
       deleteItem(index) {
         if (!this.deleteable) return
-        this.$t.messageUtils.modal(
+        this.$t.message.modal(
           '提示',
           '您确定要删除吗？',
           async () => {

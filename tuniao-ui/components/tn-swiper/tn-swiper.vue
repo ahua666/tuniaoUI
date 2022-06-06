@@ -27,6 +27,7 @@
             transform: effect3d && swiperIndex !== index ? 'scaleY(0.9)' : 'scaleY(1)',
             margin: effect3d && swiperIndex !== index ? '0 20rpx' : 0
           }"
+          @click="click(index)"
         >
           <image class="tn-swiper__item__image" :src="item[name] || item" :mode="imageMode"></image>
           <view
@@ -176,10 +177,10 @@
     },
     computed: {
       backgroundColorStyle() {
-        return this.$t.colorUtils.getBackgroundColorStyle(this.backgroundColor)
+        return this.$t.color.getBackgroundColorStyle(this.backgroundColor)
       },
       backgroundColorClass() {
-        return this.$t.colorUtils.getBackgroundColorInternalClass(this.backgroundColor)
+        return this.$t.color.getBackgroundColorInternalClass(this.backgroundColor)
       },
       swiperStyle() {
         let style = {}

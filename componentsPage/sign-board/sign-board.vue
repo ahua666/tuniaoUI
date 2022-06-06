@@ -106,7 +106,7 @@
             resolve()
             return
           }
-          this.$t.messageUtils.modal('操作提示','当前已经打开了签名板，是否确认需要关闭', () => {
+          this.$t.message.modal('操作提示','当前已经打开了签名板，是否确认需要关闭', () => {
             resolve()
           }, true, () => {
             reject()

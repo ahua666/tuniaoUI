@@ -6,7 +6,7 @@
     <view
       class="tn-line-progress--active"
       :class="[
-        $t.colorUtils.getBackgroundColorInternalClass(activeColor),
+        $t.color.getBackgroundColorInternalClass(activeColor),
         striped ? stripedAnimation ? 'tn-line-progress__striped tn-line-progress__striped--active' : 'tn-line-progress__striped' : '',
       ]"
       :style="[progressActiveStyle]"
@@ -80,8 +80,8 @@
       progressActiveStyle() {
         let style = {}
         style.width = this.percent + '%'
-        if (this.$t.colorUtils.getBackgroundColorStyle(this.activeColor)) {
-          style.backgroundColor = this.$t.colorUtils.getBackgroundColorStyle(this.activeColor)
+        if (this.$t.color.getBackgroundColorStyle(this.activeColor)) {
+          style.backgroundColor = this.$t.color.getBackgroundColorStyle(this.activeColor)
         }
         return style
       }

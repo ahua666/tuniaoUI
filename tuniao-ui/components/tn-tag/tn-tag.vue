@@ -17,6 +17,10 @@
   import componentsColorMixin from '../../libs/mixin/components_color.js'
   export default {
     mixins: [ componentsColorMixin ],
+    options: {
+    	// 在微信小程序中将组件节点渲染为虚拟节点，更加接近Vue组件的表现(不会出现shadow节点下再去创建元素)
+    	virtualHost: true
+    },
     name: 'tn-tag',
     props: {
       // 序号，用于区分多个标签
