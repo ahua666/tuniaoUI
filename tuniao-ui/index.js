@@ -1,7 +1,5 @@
 // 引入全局mixin
 import mixin from './libs/mixin/mixin.js'
-// 全局挂载引入http相关请求拦截插件
-import Request from './libs/luch-request'
 
 // 调试输出信息
 function wranning(str) {
@@ -41,7 +39,6 @@ import zIndex from './libs/config/zIndex.js'
 import colorInfo from './libs/config/color.js'
 
 const $t = {
-  http: new Request(),
   updateCustomBar: updateCustomBarInfo,
   color,
   message,

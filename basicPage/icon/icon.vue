@@ -29,8 +29,9 @@
         </block>
       </view>
       <view class="tn-text-center tn-margin-bottom-xl">
-        <view>目前300+，里面缺少你想要的吗？</view>
-        <view>请前往图鸟语雀留言写下你的需求叭</view>
+        <view>icon目前400+，里面缺少你想要的吗？</view>
+        <view>UI期待你的需求留言</view>
+        <view>后续图标多了，加上分类</view>
       </view>
       
       <view class="tn-padding-bottom"></view>

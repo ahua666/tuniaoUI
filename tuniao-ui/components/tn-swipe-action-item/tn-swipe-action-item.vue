@@ -160,7 +160,8 @@
       buttonClickHandler(item, index) {
         this.$emit('click', {
           type: 'button',
-          index
+          index,
+          name: this.name
         })
       },
       // item点击
