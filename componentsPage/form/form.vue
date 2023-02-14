@@ -201,7 +201,7 @@
             {
             	// 此为同步验证，可以直接返回true或者false，如果是异步验证，稍微不同，见下方说明
             	validator: (rule, value, callback) => {
-            		return this.$t.test.chinese(value);
+            		return this.$tn.test.chinese(value);
             	},
             	message: '姓名必须为中文',
             	// 触发器可以同时用blur和change，二者之间用英文逗号隔开
@@ -448,7 +448,7 @@
           if (valid) {
             // 验证通过
             if (!this.model.agreement) {
-              this.$t.message.toast('请勾选协议')
+              this.$tn.message.toast('请勾选协议')
               return
             }
           } else {
@@ -480,15 +480,15 @@
       // 获取验证码
       getCode() {
         if (this.$refs.code.canGetCode) {
-          this.$t.message.loading('正在获取验证码')
+          this.$tn.message.loading('正在获取验证码')
           setTimeout(() => {
-            this.$t.message.closeLoading()
-            this.$t.message.toast('验证码已经发送')
+            this.$tn.message.closeLoading()
+            this.$tn.message.toast('验证码已经发送')
             // 通知组件开始计时
             this.$refs.code.start()
           }, 2000)
         } else {
-          this.$t.message.toast(this.$refs.code.secNum + '秒后再重试')
+          this.$tn.message.toast(this.$refs.code.secNum + '秒后再重试')
         }
       },
       // 验证码倒计时时间改变

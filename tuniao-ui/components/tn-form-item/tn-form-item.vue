@@ -250,7 +250,7 @@
     mounted() {
       // 组件创建完成后，保存当前实例到form组件中
       // 支付宝、头条小程序不支持provide/inject，所以使用这个方法获取整个父组件，在created定义，避免循环应用\
-      this.parent = this.$t.$parent.call(this, 'tn-form')
+      this.parent = this.$tn.$parent.call(this, 'tn-form')
       if (this.parent) {
         // 遍历parentData属性，将parent中同名的属性赋值给parentData
         Object.keys(this.parentData).map(key => {

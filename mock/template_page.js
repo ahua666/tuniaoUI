@@ -237,9 +237,9 @@ export default {
           },
           {
             icon: 'rocket',
-            title: '期待你的加入',
-            author: '期待你的加入',
-            url: '/templatePage/life/candle/candle'
+            title: '微信红包封面',
+            author: '微信红包封面',
+            url: '/templatePage/life/cover/cover'
           }
         ]
       }

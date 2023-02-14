@@ -1,9 +1,31 @@
 <template>
   <view class="index">
-    <Basic v-if="tabberPageLoadFlag[0]" :style="{display: currentIndex === 0 ? '' : 'none'}" ref="basic"></Basic>
-    <components v-if="tabberPageLoadFlag[1]" :style="{display: currentIndex === 1 ? '' : 'none'}" ref="components"></components>
-    <templatePage v-if="tabberPageLoadFlag[2]" :style="{display: currentIndex === 2 ? '' : 'none'}" ref="template"></templatePage>
-    <tuniao v-if="tabberPageLoadFlag[3]" :style="{display: currentIndex === 3 ? '' : 'none'}" ref="about"></tuniao>
+            
+    <view v-if="tabberPageLoadFlag[0]" :style="{display: currentIndex === 0 ? '' : 'none'}">
+      <scroll-view class="custom-tabbar-page" scroll-y enable-back-to-top @scrolltolower="tabbarPageScrollLower">
+        <Basic ref="basic"></Basic>
+      </scroll-view>
+    </view>
+    <view v-if="tabberPageLoadFlag[1]" :style="{display: currentIndex === 1 ? '' : 'none'}">
+      <scroll-view class="custom-tabbar-page" scroll-y enable-back-to-top @scrolltolower="tabbarPageScrollLower">
+        <components ref="components"></components>
+      </scroll-view>
+    </view>
+    <view v-if="tabberPageLoadFlag[2]" :style="{display: currentIndex === 2 ? '' : 'none'}">
+      <scroll-view class="custom-tabbar-page" scroll-y enable-back-to-top @scrolltolower="tabbarPageScrollLower">
+        <vip ref="vip"></vip>
+      </scroll-view>
+    </view>
+    <view v-if="tabberPageLoadFlag[3]" :style="{display: currentIndex === 3 ? '' : 'none'}">
+      <scroll-view class="custom-tabbar-page" scroll-y enable-back-to-top @scrolltolower="tabbarPageScrollLower">
+        <templatePage ref="template"></templatePage>
+      </scroll-view>
+    </view>
+    <view v-if="tabberPageLoadFlag[4]" :style="{display: currentIndex === 4 ? '' : 'none'}">
+      <scroll-view class="custom-tabbar-page" scroll-y enable-back-to-top @scrolltolower="tabbarPageScrollLower">
+        <tuniao ref="about"></tuniao>
+      </scroll-view>
+    </view>
     
     <tn-tabbar
       v-model="currentIndex"
@@ -23,6 +45,7 @@
   import Basic from '../basic/basic.vue'
   import Components from '../components/components.vue'
   import TemplatePage from '../template/template.vue'
+  import Vip from '../vip/vip.vue'
   import Tuniao from '../tuniao/tuniao.vue'
   
   export default {
@@ -30,6 +53,7 @@
       Basic,
       Components,
       TemplatePage,
+      Vip,
       Tuniao
     },
     data() {
@@ -47,9 +71,19 @@
             inactiveIcon: 'honor'
           },
           {
-            title: '页面',
-            activeIcon: 'discover',
-            inactiveIcon: 'discover'
+            title: '会员',
+            activeIcon: 'vip-fill',
+            inactiveIcon: 'vip',
+            activeIconColor: '#FFFFFF',
+            inactiveIconColor: '#FFFFFF',
+            iconSize: 50,
+            out: true
+          },
+          {
+            title: '发现',
+            activeIcon: 'discover-fill',
+            inactiveIcon: 'discover',
+            count: 100
           },
           {
             title: '图鸟',
@@ -71,10 +105,6 @@
         return index === tabbar_index
       })
       this.switchTabbar(index)
-    },
-    onPageScroll(e) {
-    },
-    onReachBottom() {
     },
     methods: {
       // 切换导航

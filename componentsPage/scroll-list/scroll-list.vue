@@ -14,7 +14,7 @@
             <block v-for="(item, index) in 14" :key="index">
               <view class="tn-flex-1 tn-padding-sm tn-margin-xs tn-radius">
                 <view class="tn-flex tn-flex-direction-column tn-flex-row-center tn-flex-col-center">
-                  <view class="icon3__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-shadow-blur" :class="[$t.color.getRandomCoolBgClass(index)]">
+                  <view class="icon3__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-shadow-blur" :class="[$tn.color.getRandomCoolBgClass(index)]">
                     <view class="tn-icon-gloves-fill"></view>
                   </view>  
                   <view class="tn-color-black tn-text-lg tn-text-center">
@@ -33,7 +33,7 @@
             <block v-for="(item, index) in 14" :key="index">
               <view class="tn-flex-1 tn-padding-sm tn-margin-xs tn-radius">
                 <view class="tn-flex tn-flex-direction-column tn-flex-row-center tn-flex-col-center">
-                  <view class="icon3__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-shadow-blur" :class="[$t.color.getRandomCoolBgClass(index)]">
+                  <view class="icon3__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-shadow-blur" :class="[$tn.color.getRandomCoolBgClass(index)]">
                     <view class="tn-icon-gloves-fill"></view>
                   </view>  
                   <view class="tn-color-black tn-text-lg tn-text-center">
@@ -52,7 +52,7 @@
             <block v-for="(item, index) in 14" :key="index">
               <view class="tn-flex-1 tn-padding-sm tn-margin-xs tn-radius">
                 <view class="tn-flex tn-flex-direction-column tn-flex-row-center tn-flex-col-center">
-                  <view class="icon3__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-shadow-blur" :class="[$t.color.getRandomCoolBgClass(index)]">
+                  <view class="icon3__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-shadow-blur" :class="[$tn.color.getRandomCoolBgClass(index)]">
                     <view class="tn-icon-gloves-fill"></view>
                   </view>  
                   <view class="tn-color-black tn-text-lg tn-text-center">

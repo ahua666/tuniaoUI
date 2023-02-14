@@ -67,21 +67,21 @@
         if ((this.position === 'top' || this.position === '') && this.top) {
           style.top = this.top + 'px'
         }
-        style.zIndex = (this.zIndex ? this.zIndex : this.$t.zIndex.tips) + 1
+        style.zIndex = (this.zIndex ? this.zIndex : this.$tn.zIndex.tips) + 1
         
         return style
       },
       backgroundColorStyle() {
-        return this.$t.color.getBackgroundColorStyle(this.backgroundColor)
+        return this.$tn.color.getBackgroundColorStyle(this.backgroundColor)
       },
       backgroundColorClass() {
-        return this.$t.color.getBackgroundColorInternalClass(this.backgroundColor)
+        return this.$tn.color.getBackgroundColorInternalClass(this.backgroundColor)
       },
       fontColorStyle() {
-        return this.$t.color.getFontColorStyle(this.fontColor)
+        return this.$tn.color.getFontColorStyle(this.fontColor)
       },
       fontColorClass() {
-        return this.$t.color.getFontColorInternalClass(this.fontColor)
+        return this.$tn.color.getFontColorInternalClass(this.fontColor)
       },
     },
     data() {

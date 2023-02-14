@@ -293,7 +293,7 @@
       handleInput(event) {
         let value = event.detail.value
         // 是否需要去掉空格
-        if (this.trim) value = this.$t.string.trim(value)
+        if (this.trim) value = this.$tn.string.trim(value)
         // 原生事件
         this.$emit('input', value)
         // model赋值
@@ -304,7 +304,7 @@
         setTimeout(() => {
           // 头条小程序由于自身bug，导致中文下，每按下一个键(尚未完成输入)，都会触发一次@input，导致错误，这里进行判断处理
           // #ifdef MP-TOUTIAO
-          if (this.$t.string.trim(value) === this.lastValue) return
+          if (this.$tn.string.trim(value) === this.lastValue) return
           this.lastValue = value
           // #endif
           
@@ -331,7 +331,7 @@
         setTimeout(() => {
           // 头条小程序由于自身bug，导致中文下，每按下一个键(尚未完成输入)，都会触发一次@input，导致错误，这里进行判断处理
           // #ifdef MP-TOUTIAO
-          if (this.$t.string.trim(value) === this.lastValue) return
+          if (this.$tn.string.trim(value) === this.lastValue) return
           this.lastValue = value
           // #endif
           

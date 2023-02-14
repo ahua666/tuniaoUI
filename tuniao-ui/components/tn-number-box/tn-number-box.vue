@@ -10,7 +10,7 @@
       ]"
       :style="{
         backgroundColor: backgroundColorStyle,
-        height: $t.string.getLengthUnitValue(inputHeight),
+        height: $tn.string.getLengthUnitValue(inputHeight),
         color: fontColorStyle,
         fontSize: fontSizeStyle
       }"
@@ -31,8 +31,8 @@
         {'tn-number-box__input--disabled': disabledInput || disabled}
       ]"
       :style="{
-        width: $t.string.getLengthUnitValue(inputWidth),
-        height: $t.string.getLengthUnitValue(inputHeight),
+        width: $tn.string.getLengthUnitValue(inputWidth),
+        height: $tn.string.getLengthUnitValue(inputHeight),
         color: fontColorStyle,
         fontSize: fontSizeStyle,
         backgroundColor: backgroundColorStyle
@@ -51,7 +51,7 @@
       ]"
       :style="{
         backgroundColor: backgroundColorStyle,
-        height: $t.string.getLengthUnitValue(inputHeight),
+        height: $tn.string.getLengthUnitValue(inputHeight),
         color: fontColorStyle,
         fontSize: fontSizeStyle
       }"
@@ -170,7 +170,7 @@
         if (newVal === '') return
         let value = 0
         // 首先判断是否数值，并且在min和max之间，如果不是，使用原来值
-        let isNumber = this.$t.test.number(newVal)
+        let isNumber = this.$tn.test.number(newVal)
         if (isNumber && newVal >= this.min && newVal <= this.max) value = newVal
         else value = oldVal
         

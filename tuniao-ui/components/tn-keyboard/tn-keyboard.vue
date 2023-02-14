@@ -139,7 +139,7 @@
     },
     computed: {
       elZIndex() {
-        return this.zIndex ? this.zIndex : this.$t.zIndex.popup
+        return this.zIndex ? this.zIndex : this.$tn.zIndex.popup
       }
     },
     data() {

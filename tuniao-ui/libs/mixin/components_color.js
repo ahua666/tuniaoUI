@@ -26,19 +26,19 @@ module.exports = {
   },
   computed: {
     backgroundColorStyle() {
-      return this.$t.color.getBackgroundColorStyle(this.backgroundColor)
+      return this.$tn.color.getBackgroundColorStyle(this.backgroundColor)
     },
     backgroundColorClass() {
-      return this.$t.color.getBackgroundColorInternalClass(this.backgroundColor)
+      return this.$tn.color.getBackgroundColorInternalClass(this.backgroundColor)
     },
     fontColorStyle() {
-      return this.$t.color.getFontColorStyle(this.fontColor)
+      return this.$tn.color.getFontColorStyle(this.fontColor)
     },
     fontColorClass() {
-      return this.$t.color.getFontColorInternalClass(this.fontColor)
+      return this.$tn.color.getFontColorInternalClass(this.fontColor)
     },
     fontSizeStyle() {
-      return this.$t.string.getLengthUnitValue(this.fontSize, this.fontUnit)
+      return this.$tn.string.getLengthUnitValue(this.fontSize, this.fontUnit)
     }
   },
   methods: {

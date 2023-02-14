@@ -187,7 +187,7 @@
       popupStyle() {
         let style = {}
         if ((this.mode === 'top' || this.mode === 'left' || this.mode === 'right') && this.marginTop) {
-          style.marginTop = this.$t.string.getLengthUnitValue(this.marginTop, 'px')
+          style.marginTop = this.$tn.string.getLengthUnitValue(this.marginTop, 'px')
         }
         
         return style
@@ -198,14 +198,14 @@
         // 如果是左边或者上边弹出时，需要给translate设置为负值，用于隐藏
         if (this.mode === 'left' || this.mode === 'right') {
           style = {
-            width: this.width ? this.$t.string.getLengthUnitValue(this.width) : this.$t.string.getLengthUnitValue(this.length),
+            width: this.width ? this.$tn.string.getLengthUnitValue(this.width) : this.$tn.string.getLengthUnitValue(this.length),
             height: '100%',
             transform: `translate3D(${this.mode === 'left' ? '-100%' : '100%'}, 0px, 0px)`
           }
         } else if (this.mode === 'top' || this.mode === 'bottom') {
           style = {
             width: '100%',
-            height: this.height ? this.$t.string.getLengthUnitValue(this.height) : this.$t.string.getLengthUnitValue(this.length),
+            height: this.height ? this.$tn.string.getLengthUnitValue(this.height) : this.$tn.string.getLengthUnitValue(this.length),
             transform: `translate3D(0px, ${this.mode === 'top' ? '-100%': '100%'}, 0px)`
           }
         }
@@ -238,12 +238,12 @@
       // 中部弹窗的样式
       centerStyle() {
         let style = {}
-        style.width = this.width ? this.$t.string.getLengthUnitValue(this.width) : this.$t.string.getLengthUnitValue(this.length)
+        style.width = this.width ? this.$tn.string.getLengthUnitValue(this.width) : this.$tn.string.getLengthUnitValue(this.length)
         // 中部弹出的模式，如果没有设置高度，就用auto值，由内容撑开
-        style.height = this.height ? this.$t.string.getLengthUnitValue(this.height) : 'auto'
+        style.height = this.height ? this.$tn.string.getLengthUnitValue(this.height) : 'auto'
         style.zIndex = this.elZIndex
         if (this.negativeTop) {
-          style.marginTop = `-${this.$t.string.getLengthUnitValue(this.negativeTop)}`
+          style.marginTop = `-${this.$tn.string.getLengthUnitValue(this.negativeTop)}`
         }
         if (this.borderRadius) {
           style.borderRadius = `${this.borderRadius}rpx`
@@ -267,7 +267,7 @@
         return style
       },
       elZIndex() {
-        return this.zIndex ? this.zIndex : this.$t.zIndex.popup
+        return this.zIndex ? this.zIndex : this.$tn.zIndex.popup
       }
     },
     data() {

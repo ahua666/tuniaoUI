@@ -64,13 +64,13 @@
     },
     computed: {
       elZIndex() {
-        return this.zIndex ? this.zIndex : this.$t.zIndex.sticky
+        return this.zIndex ? this.zIndex : this.$tn.zIndex.sticky
       },
       backgroundColorStyle() {
-        return this.$t.color.getBackgroundColorStyle(this.backgroundColor)
+        return this.$tn.color.getBackgroundColorStyle(this.backgroundColor)
       },
       backgroundColorClass() {
-        return this.$t.color.getBackgroundColorInternalClass(this.backgroundColor)
+        return this.$tn.color.getBackgroundColorInternalClass(this.backgroundColor)
       },
       stickyClass() {
         let clazz = ''
@@ -97,7 +97,7 @@
         // 监听组件别名
         stickyObserverName: 'tnStickyObserver',
         // 组件的唯一编号
-        elClass: this.$t.uuid(),
+        elClass: this.$tn.uuid(),
         // 是否固定
         fixed: false,
         // 高度

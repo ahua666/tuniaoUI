@@ -44,7 +44,7 @@
       </view>
     </view>
     
-    <view class="text-shine tn-flex tn-flex-row-center tn-text-xxl tn-text-bold" style="margin-top: 60vh;">
+    <view class="text-shine tn-flex tn-flex-row-center tn-text-xxl tn-text-bold" style="margin-top: 60vh;overflow-y: hidden;">
       敬请期待
     </view>
     

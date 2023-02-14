@@ -58,13 +58,13 @@
           // style.width = this.content ? '420rpx' : '360rpx'
         }
 
-        style.zIndex = this.zIndex ? this.zIndex : this.$t.zIndex.toast
+        style.zIndex = this.zIndex ? this.zIndex : this.$tn.zIndex.toast
         
         return style
       },
       maskStyle() {
         let style = {}
-        const zIndex = this.zIndex ? this.zIndex : this.$t.zIndex.toast
+        const zIndex = this.zIndex ? this.zIndex : this.$tn.zIndex.toast
         style.zIndex = zIndex - 1
         return style
       },

@@ -167,7 +167,7 @@
         return style
       },
       elZIndex() {
-        return this.zIndex ? this.zIndex : this.$t.zIndex.navbar
+        return this.zIndex ? this.zIndex : this.$tn.zIndex.navbar
       }
     },
     data() {
@@ -206,7 +206,7 @@
         // 如果获取失败则重新获取
         if (!customBarHeight) {
           try {
-            const navBarInfo = await this.$t.updateCustomBar()
+            const navBarInfo = await this.$tn.updateCustomBar()
             customBarHeight = navBarInfo.customBarHeight
             statusBarHeight = navBarInfo.statusBarHeight
           } catch(e) {
@@ -218,8 +218,8 @@
         }
         
         // 更新vuex中的导航栏信息
-        this && this.$t.vuex('vuex_status_bar_height', statusBarHeight)
-        this && this.$t.vuex('vuex_custom_bar_height', customBarHeight)
+        this && this.$tn.vuex('vuex_status_bar_height', statusBarHeight)
+        this && this.$tn.vuex('vuex_custom_bar_height', customBarHeight)
         
         this.customBarHeight = customBarHeight
         this.statusBarHeight = statusBarHeight
@@ -230,7 +230,7 @@
           // 执行回调，同时传入索引当作参数
           // 在微信，支付宝等环境(H5正常)，会导致父组件定义的函数体中的this变成子组件的this
           // 通过bind()方法，绑定父组件的this，让this的this为父组件的上下文
-          let beforeBack = this.beforeBack.bind(this.$t.$parent.call(this))()
+          let beforeBack = this.beforeBack.bind(this.$tn.$parent.call(this))()
           // 判断是否返回了Promise
           if (!!beforeBack && typeof beforeBack.then === 'function') {
             await beforeBack.then(res => {

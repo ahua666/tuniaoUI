@@ -12,25 +12,25 @@
           <tn-list-cell>
             <view class="tn-flex tn-flex-col-center tn-flex-row-between">
               <view>超过2位自动添加'+'号</view>
-              <view>{{ $t.number.formatNumberString(56) }}</view>
+              <view>{{ $tn.number.formatNumberString(56) }}</view>
             </view>
           </tn-list-cell>
           <tn-list-cell>
             <view class="tn-flex tn-flex-col-center tn-flex-row-between">
               <view>超过2位自动添加'+'号</view>
-              <view>{{ $t.number.formatNumberString(100) }}</view>
+              <view>{{ $tn.number.formatNumberString(100) }}</view>
             </view>
           </tn-list-cell>
           <tn-list-cell>
             <view class="tn-flex tn-flex-col-center tn-flex-row-between">
               <view>超过3位自动添加'+'号</view>
-              <view>{{ $t.number.formatNumberString(899, 3) }}</view>
+              <view>{{ $tn.number.formatNumberString(899, 3) }}</view>
             </view>
           </tn-list-cell>
           <tn-list-cell>
             <view class="tn-flex tn-flex-col-center tn-flex-row-between">
               <view>超过3位自动添加'+'号</view>
-              <view>{{ $t.number.formatNumberString(1000, 3) }}</view>
+              <view>{{ $tn.number.formatNumberString(1000, 3) }}</view>
             </view>
           </tn-list-cell>
         </tn-list-view>
@@ -41,19 +41,19 @@
           <tn-list-cell>
             <view class="tn-flex tn-flex-col-center tn-flex-row-between">
               <view>只有一位时会往前面添加'0'</view>
-              <view>{{ $t.number.formatNumberAddZero(6) }}</view>
+              <view>{{ $tn.number.formatNumberAddZero(6) }}</view>
             </view>
           </tn-list-cell>
           <tn-list-cell>
             <view class="tn-flex tn-flex-col-center tn-flex-row-between">
               <view>超过两位时不会往前面添加'0'</view>
-              <view>{{ $t.number.formatNumberAddZero(16) }}</view>
+              <view>{{ $tn.number.formatNumberAddZero(16) }}</view>
             </view>
           </tn-list-cell>
           <tn-list-cell>
             <view class="tn-flex tn-flex-col-center tn-flex-row-between">
               <view>超过两位时不会往前面添加'0'</view>
-              <view>{{ $t.number.formatNumberAddZero(106) }}</view>
+              <view>{{ $tn.number.formatNumberAddZero(106) }}</view>
             </view>
           </tn-list-cell>
         </tn-list-view>
@@ -64,37 +64,37 @@
           <tn-list-cell>
             <view class="tn-flex tn-flex-col-center tn-flex-row-between">
               <view>不带单位</view>
-              <view>{{ $t.number.formatNumberAddPriceUnit(100) }}</view>
+              <view>{{ $tn.number.formatNumberAddPriceUnit(100) }}</view>
             </view>
           </tn-list-cell>
           <tn-list-cell>
             <view class="tn-flex tn-flex-col-center tn-flex-row-between">
               <view>不带单位</view>
-              <view>{{ $t.number.formatNumberAddPriceUnit(100.88) }}</view>
+              <view>{{ $tn.number.formatNumberAddPriceUnit(100.88) }}</view>
             </view>
           </tn-list-cell>
           <tn-list-cell>
             <view class="tn-flex tn-flex-col-center tn-flex-row-between">
               <view>带K单位</view>
-              <view>{{ $t.number.formatNumberAddPriceUnit(1000) }}</view>
+              <view>{{ $tn.number.formatNumberAddPriceUnit(1000) }}</view>
             </view>
           </tn-list-cell>
           <tn-list-cell>
             <view class="tn-flex tn-flex-col-center tn-flex-row-between">
               <view>带K单位</view>
-              <view>{{ $t.number.formatNumberAddPriceUnit(1032.89) }}</view>
+              <view>{{ $tn.number.formatNumberAddPriceUnit(1032.89) }}</view>
             </view>
           </tn-list-cell>
           <tn-list-cell>
             <view class="tn-flex tn-flex-col-center tn-flex-row-between">
               <view>带W单位</view>
-              <view>{{ $t.number.formatNumberAddPriceUnit(10000) }}</view>
+              <view>{{ $tn.number.formatNumberAddPriceUnit(10000) }}</view>
             </view>
           </tn-list-cell>
           <tn-list-cell>
             <view class="tn-flex tn-flex-col-center tn-flex-row-between">
               <view>带W单位</view>
-              <view>{{ $t.number.formatNumberAddPriceUnit(10875.90) }}</view>
+              <view>{{ $tn.number.formatNumberAddPriceUnit(10875.90) }}</view>
             </view>
           </tn-list-cell>
         </tn-list-view>
@@ -141,11 +141,11 @@
     methods: {
       // 获取随机值
       getRandomValue() {
-        this.randomValue = this.$t.number.random(0, 100.99)
+        this.randomValue = this.$tn.number.random(0, 100.99)
       },
       // 获取整数随机值
       getIntRandomValue() {
-        this.intRandomValue = this.$t.number.randomInt(0, 100)
+        this.intRandomValue = this.$tn.number.randomInt(0, 100)
       }
     }
   }

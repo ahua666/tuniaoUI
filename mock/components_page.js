@@ -18,7 +18,7 @@ export default {
           url: '/componentsPage/loading/loading'
         },
         {
-          icon: 'share',
+          icon: 'tag',
           title: 'tabs标签',
           url: '/componentsPage/tabs/tabs'
         },
@@ -73,37 +73,37 @@ export default {
           url: '/componentsPage/scroll-list/scroll-list'
         },
         {
-          icon: 'star',
+          icon: 'brand',
           title: 'swipeAction滑动菜单',
           url: '/componentsPage/swipe-action/swipe-action'
         },
         {
-          icon: 'star',
+          icon: 'pharmacy',
           title: 'fab悬浮按钮',
           url: '/componentsPage/fab/fab'
         },
         {
-          icon: 'star',
+          icon: 'cardbag',
           title: '懒加载',
           url: '/componentsPage/lazy-load/lazy-load'
         },
         {
-          icon: 'star',
+          icon: 'down-double',
           title: '加载更多',
           url: '/componentsPage/load-more/load-more'
         },
         {
-          icon: 'star',
+          icon: 'menu-more',
           title: '骨架屏',
           url: '/componentsPage/skeleton/skeleton'
         },
         {
-          icon: 'star',
+          icon: 'empty-search',
           title: '空页面',
           url: '/componentsPage/empty/empty'
         },
         {
-          icon: 'star',
+          icon: 'share',
           title: '商品导航',
           url: '/componentsPage/goods-nav/goods-nav'
         }
@@ -134,7 +134,7 @@ export default {
           url: '/componentsPage/tips/tips'
         },
         {
-          icon: 'creative',
+          icon: 'reply',
           title: '压屏窗',
           url: '/componentsPage/landscape/landscape'
         }
@@ -150,17 +150,17 @@ export default {
           url: '/componentsPage/form/form'
         },
         {
-          icon: 'image-text',
+          icon: 'square',
           title: 'Input输入框',
           url: '/componentsPage/input/input'
         },
         {
-          icon: 'image-text',
+          icon: 'circle-fill',
           title: 'Radio单选框',
           url: '/componentsPage/radio/radio'
         },
         {
-          icon: 'image-text',
+          icon: 'copy',
           title: 'Checkbox复选框',
           url: '/componentsPage/check-box/check-box'
         },
@@ -205,12 +205,12 @@ export default {
           url: '/componentsPage/sign-board/sign-board'
         },
         {
-          icon: 'edit-write',
+          icon: 'safe',
           title: '验证码输入',
           url: '/componentsPage/verification-code-input/verification-code-input'
         },
         {
-          icon: 'edit-write',
+          icon: 'expand',
           title: '分段器',
           url: '/componentsPage/subsection/subsection'
         }

@@ -68,22 +68,22 @@
     methods: {
       // 获取随机背景颜色
       getRandomBgColor() {
-        this.randomBgColorClass = this.$t.color.getRandomColorClass()
+        this.randomBgColorClass = this.$tn.color.getRandomColorClass()
       },
       // 获取随机颜色
       getRandomColor() {
-        this.randomColorClass = this.$t.color.getRandomColorClass('color')
+        this.randomColorClass = this.$tn.color.getRandomColorClass('color')
       },
       // 获取随机酷炫背景颜色
       getRandomCoolColor() {
-        this.randomCoolBgColorClass = this.$t.color.getRandomCoolBgClass()
+        this.randomCoolBgColorClass = this.$tn.color.getRandomCoolBgClass()
       },
       // 将hex与rgb互转
       convertToRGBOrHex() {
         if (this.rgbFlag) {
-          this.hexRGBValue = this.$t.color.rgbToHex(this.hexRGBValue)
+          this.hexRGBValue = this.$tn.color.rgbToHex(this.hexRGBValue)
         } else {
-          this.hexRGBValue = this.$t.color.hexToRGB(this.hexRGBValue)
+          this.hexRGBValue = this.$tn.color.hexToRGB(this.hexRGBValue)
         }
         this.rgbFlag = !this.rgbFlag
       }

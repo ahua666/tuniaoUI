@@ -97,7 +97,7 @@
     computed: {
       containerStyle() {
         let style = {}
-        style.zIndex = this.zIndex ? this.zIndex : this.$t.zIndex.landsacpe
+        style.zIndex = this.zIndex ? this.zIndex : this.$tn.zIndex.landsacpe
         return style
       },
       closeBtnStyle() {
@@ -131,7 +131,7 @@
       },
       maskStyle() {
         let style = {}
-        style.zIndex = this.zIndex ? this.zIndex - 1 : this.$t.zIndex.landsacpe - 1
+        style.zIndex = this.zIndex ? this.zIndex - 1 : this.$tn.zIndex.landsacpe - 1
         return style
       }
     },

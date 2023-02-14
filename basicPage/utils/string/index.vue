@@ -67,15 +67,15 @@
     methods: {
       // 处理去除空格
       handlerTrim() {
-        this.trimValue = this.$t.string.trim(this.trimValue)
+        this.trimValue = this.$tn.string.trim(this.trimValue)
       },
       // 处理将大写字符串转换为指定的连接符连接的字符串
       handlerHumpChar() {
-        this.humpCharValue = this.$t.string.humpConvertChar(this.humpCharValue, '_')
+        this.humpCharValue = this.$tn.string.humpConvertChar(this.humpCharValue, '_')
       },
       // 处理将指定的连接字符连接的字符串转换为大写的字符串
       handlerCharHump() {
-        this.charHumpValue = this.$t.string.charConvertHump(this.charHumpValue, '_')
+        this.charHumpValue = this.$tn.string.charConvertHump(this.charHumpValue, '_')
       }
     }
   }

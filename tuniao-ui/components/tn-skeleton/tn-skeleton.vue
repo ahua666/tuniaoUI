@@ -8,21 +8,21 @@
   >
     <view
       v-for="(item, index) in rectNodes"
-      :key="$t.uuid()"
+      :key="$tn.uuid()"
       class="tn-skeleton__item tn-skeleton__item--rect"
       :class="[elBackgroundColorClass, {'tn-skeleton__item--fade': animation}]"
       :style="[itemStyle('rect', item)]"
     ></view>
     <view
       v-for="(item, index) in circleNodes"
-      :key="$t.uuid()"
+      :key="$tn.uuid()"
       class="tn-skeleton__item tn-skeleton__item--circle"
       :class="[elBackgroundColorClass, {'tn-skeleton__item--fade': animation}]"
       :style="[itemStyle('circle', item)]"
     ></view>
     <view
       v-for="(item, index) in filletNodes"
-      :key="$t.uuid()"
+      :key="$tn.uuid()"
       class="tn-skeleton__item tn-skeleton__item--fillet"
       :class="[elBackgroundColorClass, {'tn-skeleton__item--fade': animation}]"
       :style="[itemStyle('fillet', item)]"
@@ -75,10 +75,10 @@
     },
     computed: {
       elBackgroundColorStyle() {
-        return this.$t.color.getBackgroundColorStyle(this.elBackgroundColor)
+        return this.$tn.color.getBackgroundColorStyle(this.elBackgroundColor)
       },
       elBackgroundColorClass() {
-        return this.$t.color.getBackgroundColorInternalClass(this.elBackgroundColor)
+        return this.$tn.color.getBackgroundColorInternalClass(this.elBackgroundColor)
       },
       // 骨架屏样式
       skeletonStyle() {

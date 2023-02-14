@@ -62,7 +62,7 @@
           if (!this.randomEnabled) {
             return [1, 2, 3, 4, 5, 6, 7, 8, 9, '', 0]
           } else {
-            let data = this.$t.array.random([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
+            let data = this.$tn.array.random([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
             data.splice(-1, 0, '')
             return data
           }
@@ -70,7 +70,7 @@
           if (!this.randomEnabled) {
             return [1, 2, 3, 4, 5, 6, 7, 8, 9, this.dot, 0]
           } else {
-            let data = this.$t.array.random([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
+            let data = this.$tn.array.random([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
             data.splice(-1, 0, this.dot)
             return data
           }
@@ -78,7 +78,7 @@
           if (!this.randomEnabled) {
             return [1, 2, 3, 4, 5, 6, 7, 8, 9, this.cardX, 0]
           } else {
-            let data = this.$t.array.random([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
+            let data = this.$tn.array.random([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
             data.splice(-1, 0, this.cardX)
             return data
           }

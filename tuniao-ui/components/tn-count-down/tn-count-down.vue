@@ -168,7 +168,7 @@
       itemStyle() {
         let style = {}
         if (this.height) {
-          style.height = this.$t.string.getLengthUnitValue(this.height)
+          style.height = this.$tn.string.getLengthUnitValue(this.height)
           style.width = style.height
         }
         if (this.showBorder) {
@@ -250,10 +250,10 @@
         minute = Math.floor(seconds / 60) - (hour * 60) - (day * 24 * 60)
         second = Math.floor(seconds) - (minute * 60) - (hour * 60 * 60) - (day * 24 * 60 * 60)
         // 如果小于0在前面进行补0操作
-        showHour = this.$t.number.formatNumberAddZero(showHour)
-        minute = this.$t.number.formatNumberAddZero(minute)
-        second = this.$t.number.formatNumberAddZero(second)
-        day = this.$t.number.formatNumberAddZero(day)
+        showHour = this.$tn.number.formatNumberAddZero(showHour)
+        minute = this.$tn.number.formatNumberAddZero(minute)
+        second = this.$tn.number.formatNumberAddZero(second)
+        day = this.$tn.number.formatNumberAddZero(day)
         
         this.d = day
         this.h = showHour

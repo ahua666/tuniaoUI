@@ -30,7 +30,14 @@
           >{{ confirmText }}</view>
         </view>
         <!-- 列表内容 -->
+
         <view class="tn-select__content__body">
+          <view v-if="searchShow && mode==='single'">
+               <view class="tn-flex tn-select__content__body__search">
+                 <view class="tn-icon-search tn-padding-sm" ></view>
+                 <input class="tn-select__content__body__search__input" placeholder="搜索" maxlength="255" confirm-type="search" @input="searchInput" @confirm="search"  >
+               </view>
+          </view>
           <picker-view
             class="tn-select__content__body__view"
             :value="defaultSelector"
@@ -38,6 +45,7 @@
             @pickend="pickEnd"
             @change="columnChange"
           >
+
             <picker-view-column v-for="(item, index) in columnData" :key="index">
               <view class="tn-select__content__body__item" v-for="(sub_item, sub_index) in item" :key="sub_index">
                 <view class="tn-text-ellipsis">
@@ -134,11 +142,16 @@
       zIndex: {
         type: Number,
         default: 0
+      },
+      // 是否开启模糊搜索(只在单列模式生效)
+      searchShow:{
+        type:Boolean,
+        default:true
       }
     },
     computed: {
       elZIndex() {
-        return this.zIndex ? this.zIndex : this.$t.zIndex.popup
+        return this.zIndex ? this.zIndex : this.$tn.zIndex.popup
       }
     },
     data() {
@@ -154,7 +167,8 @@
         // 上一次改变时的index
         lastSelectIndex: [],
         // 列数
-        columnNum: 0
+        columnNum: 0,
+
       }
     },
     watch: {
@@ -167,6 +181,33 @@
       }
     },
     methods: {
+      //搜索输入监听
+      searchInput(e){
+        console.log(e.detail.value);
+        this.searchResult(e.detail.value)
+      },
+      //搜索完成监听
+      search(e){
+        console.log(e.detail.value)
+        this.searchResult(e.detail.value)
+      },
+      //执行搜索方法
+      searchResult(value) {
+        let result = [];
+          // console.log(this.list)
+          let data = this.list.filter(item => item.label.indexOf(value) > -1);
+          if (data.length > 0) {
+            result.push(data
+            );
+          }
+        // console.log(result)
+        this.columnData = result;
+        this.selectValue=[]
+        if (this.columnData.length>0){
+          this.setSelectValue()
+        }
+      },
+
       // 标识滑动开始，只有微信小程序才有这样的事件
       pickStart() {
       	// #ifdef MP-WEIXIN
@@ -189,7 +230,7 @@
       setDefaultSelector() {
         // 如果没有传入默认值，生成用0填充长度为columnNum的数组
         this.defaultSelector = this.defaultValue.length === this.columnNum ? this.defaultValue : Array(this.columnNum).fill(0)
-        this.lastSelectIndex = this.$t.deepClone(this.defaultSelector)
+        this.lastSelectIndex = this.$tn.deepClone(this.defaultSelector)
       },
       // 计算列数
       setColumnNum() {
@@ -248,12 +289,13 @@
           if (tmp && tmp.extra) data.extra = tmp.extra
           this.selectValue.push(data)
         }
+        // console.log("默认",this.selectValue)
       },
       // 列选项
       columnChange(event) {
         let index = null
         let columnIndex = event.detail.value
-        
+
         this.selectValue = []
         if (this.mode === 'multi-auto') {
           // 对比前后两个数组，判断变更的是那一列
@@ -314,12 +356,12 @@
 </script>
 
 <style lang="scss" scoped>
-  
+
   .tn-select {
-    
+
     &__content {
       position: relative;
-      
+
       &__header {
         position: relative;
         display: flex;
@@ -332,38 +374,53 @@
         box-sizing: border-box;
         font-size: 30rpx;
         background-color: #FFFFFF;
-        
+
         &__btn {
           padding: 16rpx;
           box-sizing: border-box;
           text-align: center;
           text-decoration: none;
         }
-        
+
         &__title {
           color: $tn-font-color;
         }
-        
+
         &--cancel {
           color: $tn-font-sub-color;
         }
-        
+
         &--confirm {
           color: $tn-main-color;
         }
       }
-      
+
       &__body {
         width: 100%;
         height: 500rpx;
         overflow: hidden;
         background-color: #FFFFFF;
-        
+
+        &__search{
+          z-index: 5;
+          align-items: center;
+          border-radius: 19px;
+          background: #f8f8f8;
+          width: calc(100% - 60rpx);
+          margin: 0 auto;
+          position: relative;
+          top: 15px;
+
+          &__input{
+            width: 600rpx;
+          }
+        }
+
         &__view {
           height: 100%;
           box-sizing: border-box;
         }
-        
+
         &__item {
           display: flex;
           flex-direction: row;
@@ -375,6 +432,6 @@
         }
       }
     }
-    
+
   }
 </style>

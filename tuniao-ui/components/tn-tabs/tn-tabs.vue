@@ -1,5 +1,5 @@
 <template>
-  <view class="tn-tabs-class tn-tabs" :class="[backgroundColorClass]" :style="{backgroundColor: backgroundColorStyle, marginTop: $t.string.getLengthUnitValue(top, 'px')}">
+  <view class="tn-tabs-class tn-tabs" :class="[backgroundColorClass]" :style="{backgroundColor: backgroundColorStyle, marginTop: $tn.string.getLengthUnitValue(top, 'px')}">
     
     <!-- _tgetRect()对组件根节点无效，因为写了.in(this)，故这里获取内层接点尺寸 -->
     <view :id="id">
@@ -140,8 +140,8 @@
       // 底部滑块样式
       tabBarStyle() {
         let style = {
-          width: this.$t.string.getLengthUnitValue(this.barWidth),
-          height: this.$t.string.getLengthUnitValue(this.barHeight),
+          width: this.$tn.string.getLengthUnitValue(this.barWidth),
+          height: this.$tn.string.getLengthUnitValue(this.barHeight),
           borderRadius: `${this.barHeight / 2}rpx`,
           backgroundColor: this.activeColor,
           opacity: this.barMoveFirst ? 0 : 1,
@@ -155,9 +155,9 @@
       tabItemStyle() {
         return index => {
           let style = {
-            width: this.$t.string.getLengthUnitValue(this.itemWidth),
-            height: this.$t.string.getLengthUnitValue(this.height),
-            lineHeight: this.$t.string.getLengthUnitValue(this.height),
+            width: this.$tn.string.getLengthUnitValue(this.itemWidth),
+            height: this.$tn.string.getLengthUnitValue(this.height),
+            lineHeight: this.$tn.string.getLengthUnitValue(this.height),
             fontSize: this.fontSizeStyle || '28rpx',
             padding: this.isScroll ? `0 ${this.gutter}rpx` : '',
             flex: this.isScroll ? 'auto' : '1',
@@ -179,7 +179,7 @@
     data() {
       return {
         // id值
-        id: this.$t.uuid(),
+        id: this.$tn.uuid(),
         // 滚动scroll-view的左边距离
         scrollLeft: 0,
         // 存放查询后tab菜单的节点信息

@@ -1,5 +1,5 @@
 <template>
-  <view class="tn-tabs-swiper-class tn-tabs-swiper" :class="[backgroundColorClass]" :style="{backgroundColor: backgroundColorStyle, marginTop: $t.string.getLengthUnitValue(top, 'px'), zIndex: zIndex}">
+  <view class="tn-tabs-swiper-class tn-tabs-swiper" :class="[backgroundColorClass]" :style="{backgroundColor: backgroundColorStyle, marginTop: $tn.string.getLengthUnitValue(top, 'px'), zIndex: zIndex}">
     
     <scroll-view scroll-x class="tn-tabs-swiper__scroll-view" :scroll-left="scrollLeft" scroll-with-animation :style="{zIndex: zIndex + 1}">
       <view class="tn-tabs-swiper__scroll-view__box" :class="{'tn-tabs-swiper__scroll-view--flex': !isScroll}">
@@ -171,8 +171,8 @@
       tabItemStyle() {
         return index => {
           let style = {
-            height: this.$t.string.getLengthUnitValue(this.height),
-            lineHeight: this.$t.string.getLengthUnitValue(this.height),
+            height: this.$tn.string.getLengthUnitValue(this.height),
+            lineHeight: this.$tn.string.getLengthUnitValue(this.height),
             fontSize: this.fontSizeStyle || '28rpx',
             color: this.tabsInfo.length > 0 ? (this.tabsInfo[index] ? this.tabsInfo[index].color : this.activeColor) : this.inactiveColor,
             padding: this.isScroll ? `0 ${this.gutter}rpx` : '',
@@ -191,8 +191,8 @@
       // 底部滑块样式
       tabBarStyle() {
         let style = {
-          width: this.$t.string.getLengthUnitValue(this.barWidth),
-          height: this.$t.string.getLengthUnitValue(this.barHeight),
+          width: this.$tn.string.getLengthUnitValue(this.barWidth),
+          height: this.$tn.string.getLengthUnitValue(this.barHeight),
           borderRadius: `${this.barHeight / 2}rpx`,
           backgroundColor: this.activeColor,
           left: this.scrollBarLeft + 'px'
@@ -245,7 +245,7 @@
           this.setScrollViewToCenter()
         })
         // 获取渐变颜色数组
-        this.colorGradientArr = this.$t.color.colorGradient(this.inactiveColor, this.activeColor, this.colorStep)
+        this.colorGradientArr = this.$tn.color.colorGradient(this.inactiveColor, this.activeColor, this.colorStep)
       },
       // 发送事件
       emit(index) {

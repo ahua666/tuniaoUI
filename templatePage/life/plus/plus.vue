@@ -9,7 +9,68 @@
       </view>
     </tn-nav-bar>
     
-    <view class="tn-text-center tn-margin tn-text-lg plus-box" :style="{paddingTop: vuex_custom_bar_height + 'px'}">
+    
+    <view class="" :style="{paddingTop: vuex_custom_bar_height + 'px'}">
+      <view class="tn-bdhook-shadow" style="border-radius: 10rpx;overflow: hidden;margin: 50rpx 30rpx 30rpx 30rpx;">
+        <view class="tn-flex tn-flex-row-between tn-padding tn-text-center tn-color-white" style="background: linear-gradient(-120deg, #3E445A, #31374A, #2B3042, #262B3C);">
+          <view class="tn-flex-1">
+            <view class="tn-text-bold tn-text-lg">
+              开源项目
+            </view>
+            <view class="tn-text-sm">
+              不喜勿喷
+            </view>
+          </view>
+          <view class="tn-flex-1">
+            <view class="tn-text-bold tn-text-lg">
+              普通用户
+            </view>
+            <view class="tn-text-sm">
+              免费开源
+            </view>
+          </view>
+          <view class="tn-flex-1">
+            <view class="tn-text-bold tn-text-lg">
+              至尊VIP
+            </view>
+            <view class="tn-text-sm">
+              会员福利
+            </view>
+          </view>
+        </view>
+        
+        <view class="tn-flex tn-flex-row-between tn-flex-col-center tn-strip-bottom-min tn-padding-sm" v-for="(item, index) in setList" :key="index" @click="tn(item.url)">
+          <view class="tn-flex-1 tn-text-center">
+            <view class="">
+              {{ item.title }}
+            </view>
+            <!-- <view class="tn-color-gray tn-text-xs">
+              {{ item.title2 }}
+            </view> -->
+          </view>
+          <view class="tn-flex-1">
+            <view class="">
+              {{ item.common }}
+            </view>
+            <view class="">
+              {{ item.common2 }}
+            </view>
+          </view>
+          <view class="tn-flex-1">
+            <view class="">
+              {{ item.vip }}
+            </view>
+            <view class="">
+              {{ item.vip2 }}
+            </view>
+          </view>
+        </view>
+        
+      </view>
+    
+    </view>
+    
+    <view class="tn-text-center tn-margin tn-text-lg plus-box" style="padding-top: 60rpx;">
       <view class="plus-text">
         <view class="tn-text-bold">图鸟UI小程序，免费开源可商用</view>
         <view class="tn-margin-bottom-xl">（会员有更多福利鸭）</view>
@@ -35,7 +96,7 @@
       
       <view class="plus-text">
         <view class="tn-text-bold">请勿转售，转售是会慢慢追究法律责任的</view>
-        <view class="tn-margin-bottom-xl">（毕竟开发圈子就那么小）</view>
+        <view class="tn-margin-bottom-xl">（毕竟前端开发圈子就那么小）</view>
       </view>
       
       <view class="plus-text">
@@ -51,8 +112,10 @@
       </view>
       
       <view class="plus-text">
-        <view class="tn-text-bold">会员人数会达到50+叭</view>
-        <view class="tn-margin-bottom-xl">（希望够垫付服务器+CDN支出）</view>
+        <view class="tn-text-bold">开源希望能得到理解</view>
+        <view class="">（做开源本身就不是为了赚取）</view>
+        <view class="">（毕竟还不如多找几个会员进行项目合作）</view>
+        <view class="tn-margin-bottom-xl">（会员费用仅垫付服务器+工作室支出）</view>
       </view>
       
       <view class="plus-text">
@@ -67,7 +130,7 @@
       
       <view class="plus-text">
         <view class="tn-text-bold">使用手册 + 图片素材 + 意见反馈 + Bug提交</view>
-        <view class="tn-margin-bottom-xl" @click="copyYuque">（https://www.yuque.com/tuniao）</view>
+        <view class="tn-margin-bottom-xl" @click="copyYuque">（https://www.tuniaokj.com/）</view>
       </view>
       
       <view class="plus-text">
@@ -99,7 +162,7 @@
       </view>
       
       <view class="plus-text">
-        <view class="tn-text-bold">北北感恩你的支持</view>
+        <view class="tn-text-bold">图鸟小小团队感恩你的支持</view>
         <view class="tn-margin-bottom-xl"></view>
       </view>
       
@@ -116,13 +179,64 @@
     name: 'TemplatePlus',
     mixins: [template_page_mixin],
     data(){
-      return {}
+      return {
+        setList: [
+        	{
+        		title: "图鸟UI",
+            title2: "UI组件",
+            common: "免费商用",
+            common2: "插件市场获取",
+            vip: "免费商用",
+            vip2: "会员群直接获取"
+        	},
+        	{
+        		title: "图鸟VUE3 ",
+            title2: "UI组件",
+        		common: "免费商用",
+        		common2: "插件市场获取",
+        		vip: "免费商用",
+        		vip2: "会员群直接获取"
+        	},
+        	{
+        		title: "圈子博客",
+            title2: "纯前端模板",
+        		common: "免费商用",
+        		common2: "插件市场获取",
+        		vip: "免费商用",
+        		vip2: "会员群直接获取"
+        	},
+          {
+          	title: "简约商圈",
+            title2: "纯前端模板",
+          	common: "免费商用",
+          	common2: "插件市场获取",
+          	vip: "免费商用",
+          	vip2: "会员群直接获取"
+          },
+        	{
+        		title: "凶姐壁纸",
+            title2: "纯前端模板",
+        		common: "免费商用",
+        		common2: "插件市场获取",
+        		vip: "免费商用",
+        		vip2: "会员群直接获取"
+        	},
+          {
+          	title: "无名小程序",
+            title2: "前后端项目",
+          	common: "无",
+          	common2: "",
+          	vip: "会员专属",
+          	vip2: "前后端开发ing"
+          }
+        ]
+      }
     },
     methods: {
-      // 复制语雀地址
+      // 复制地址
       copyYuque() {
         uni.setClipboardData({
-          data: "https://www.yuque.com/tuniao",
+          data: "https://www.tuniaokj.com/",
         })
       },
       // 复制微信号
@@ -137,6 +251,24 @@
 
 <style lang="scss" scoped>
   @import '@/static/css/templatePage/custom_nav_bar.scss';
+  
+  /* 间隔线 start*/
+    .tn-strip-bottom-min {
+      width: 100%;
+      border-bottom: 1rpx solid #F8F9FB;
+    }
+    
+    .tn-strip-bottom {
+     width: 100%;
+     border-bottom: 20rpx solid rgba(241, 241, 241, 0.8);
+    }
+     /* 间隔线 end*/
+  
+  /* 页面阴影 start*/
+  .tn-bdhook-shadow {
+    border-radius: 15rpx;
+    box-shadow: 0rpx 0rpx 50rpx 0rpx rgba(0, 0, 0, 0.07);
+  }
   
   /* 内容 开始 */
   .plus-box {

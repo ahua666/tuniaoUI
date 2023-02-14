@@ -4,9 +4,9 @@
       class="tn-fab__box"
       :class="{'tn-fab--right': left === 'auto'}"
       :style="{
-        left: $t.string.getLengthUnitValue(fabLeft || left),
-        right: $t.string.getLengthUnitValue(fabRight || right),
-        bottom: $t.string.getLengthUnitValue(fabBottom || bottom),
+        left: $tn.string.getLengthUnitValue(fabLeft || left),
+        right: $tn.string.getLengthUnitValue(fabRight || right),
+        bottom: $tn.string.getLengthUnitValue(fabBottom || bottom),
         zIndex: elZIndex
       }"
     >
@@ -34,7 +34,7 @@
             :class="[left === 'auto' ? 'tn-fab__item__text--right' : 'tn-fab__item__text--left']"
             :style="{
               color: item.textColor || '#FFF',
-              fontSize: $t.string.getLengthUnitValue(item.textSize || 28)
+              fontSize: $tn.string.getLengthUnitValue(item.textSize || 28)
             }"
           >{{ item.text || '' }}</view>
           
@@ -43,11 +43,11 @@
             class="tn-fab__item__btn"
             :class="[!item.bgColor ? backgroundColorClass : '']"
             :style="{
-              width: $t.string.getLengthUnitValue(width),
-              height: $t.string.getLengthUnitValue(height),
-              lineHeight: $t.string.getLengthUnitValue(height),
+              width: $tn.string.getLengthUnitValue(width),
+              height: $tn.string.getLengthUnitValue(height),
+              lineHeight: $tn.string.getLengthUnitValue(height),
               backgroundColor: item.bgColor || backgroundColorStyle || '#01BEFF',
-              borderRadius: $t.string.getLengthUnitValue(radius)
+              borderRadius: $tn.string.getLengthUnitValue(radius)
             }"
           >
             <!-- 无图片和无图标时只显示文字 -->
@@ -56,7 +56,7 @@
               class="tn-fab__item__btn__title"
               :style="{
                 color: item.textColor || '#fff',
-                fontSize: $t.string.getLengthUnitValue(item.textSize || 28)
+                fontSize: $tn.string.getLengthUnitValue(item.textSize || 28)
               }"
             >{{ item.text || '' }}</view>
             <!-- 图标 -->
@@ -66,7 +66,7 @@
               :class="[`tn-icon-${item.icon}`]"
               :style="{
                 color: item.iconColor || '#fff',
-                fontSize: $t.string.getLengthUnitValue(item.iconSize || iconSize || 64)
+                fontSize: $tn.string.getLengthUnitValue(item.iconSize || iconSize || 64)
               }"
             ></view>
             <!-- 图片 -->
@@ -74,8 +74,8 @@
               v-else-if="!item.icon && item.imgUrl"
               class="tn-fab__item__btn__image"
               :style="{
-                width: $t.string.getLengthUnitValue(item.imgWidth || 64),
-                height: $t.string.getLengthUnitValue(item.imgHeight || 64),
+                width: $tn.string.getLengthUnitValue(item.imgWidth || 64),
+                height: $tn.string.getLengthUnitValue(item.imgHeight || 64),
               }"
               :src="item.imgUrl"
             ></image>
@@ -87,17 +87,17 @@
         class="tn-fab__item__btn tn-fab__item__btn--fab"
         :class="[backgroundColorClass, fontColorClass, {'tn-fab__item__btn--active': showFab}]"
         :style="{
-          width: $t.string.getLengthUnitValue(width),
-          height: $t.string.getLengthUnitValue(height),
+          width: $tn.string.getLengthUnitValue(width),
+          height: $tn.string.getLengthUnitValue(height),
           backgroundColor: backgroundColorStyle || !backgroundColorClass ? '#01BEFF' : '',
           color: fontColorStyle || '#fff',
-          borderRadius: $t.string.getLengthUnitValue(radius),
+          borderRadius: $tn.string.getLengthUnitValue(radius),
           zIndex: elZIndex - 1
         }"
         @tap.stop="fabClick"
       >
         <slot>
-          <view class="tn-fab__item__btn__icon" :class="[`tn-icon-${icon}`]" :style="{fontSize: $t.string.getLengthUnitValue(iconSize || 64)}"></view>
+          <view class="tn-fab__item__btn__icon" :class="[`tn-icon-${icon}`]" :style="{fontSize: $tn.string.getLengthUnitValue(iconSize || 64)}"></view>
         </slot>
       </view>
     </view>
@@ -234,7 +234,7 @@
     },
     computed: {
       elZIndex() {
-        return this.zIndex || this.$t.zIndex.fab
+        return this.zIndex || this.$tn.zIndex.fab
       },
       propsData() {
         return [this.width, this.height, this.left, this.right, this.bottom]

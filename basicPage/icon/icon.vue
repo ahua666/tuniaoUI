@@ -8,30 +8,47 @@
     <!-- 页面内容 -->
     <view :style="{paddingTop: vuex_custom_bar_height + 'px'}">
       
-      <tn-sticky :customNavHeight="vuex_custom_bar_height">
+      <view class="search-fixed">
         <view class="search-content">
           <input class="search-content__input" placeholder-class="search-content__input-placeholder" placeholder="请输入图标名称吖" @input="saerchInput" />
         </view>
-      </tn-sticky>
-      
-      <view class="icon__container tn-flex tn-flex-wrap tn-flex-row-left tn-flex-col-center tn-margin">
-        <block v-for="(item, index) in resultIconList" :key="index">
-          <view
-            class="icon__item tn-flex tn-flex-direction-column tn-flex-row-center tn-flex-col-center icon-shadow"
-            :class="[{'icon__item--active': index === currentIconIndex}]"
-            @click="clickIcon(index, item.name)"
-          >
-            <view class="icon__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-shadow-blur">
-              <view :class="[`tn-icon-${item.name}`]"></view>
-            </view>
-            <view class="icon__item--title tn-text-ellipsis">{{ item.name }}</view>
-          </view>
-        </block>
       </view>
+      
+      
+      <view class="" :style="{marginTop: vuex_custom_bar_height + 'px'}">
+        
+        <block v-for="(item, index) in resultIconList" :key="index">
+        
+        <!-- 分类标题-->
+        <view class="tn-text-center tn-text-xl tn-text-bold tn-margin-lg">
+          <text class="tn-icon-font"></text>
+          <text class="tn-padding-left-sm tn-padding-right-sm">{{ item.title }}</text>
+          <text class="tn-icon-font"></text>
+        </view>
+        
+        <view class="icon__container tn-flex tn-flex-wrap tn-flex-row-left tn-flex-col-center tn-margin">
+          <view v-for="(icons_item, icons_index) in item.icons" :key="icons_index"
+            class="icon__item tn-flex tn-flex-direction-column tn-flex-row-center tn-flex-col-center icon-shadow"
+            :class="[{'icon__item--active': icons_index === currentIconIndex}]"
+            @click="clickIcon(icons_index, icons_item.name)">
+            <view class="icon__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-shadow-blur">
+              <view :class="[`tn-icon-${icons_item.icon}`]"></view>
+            </view>
+            <view class="icon__item--title tn-text-ellipsis">{{ icons_item.name }}</view>
+          </view>
+        </view>
+          
+        </block>
+      </view>  
+      
       <view class="tn-text-center tn-margin-bottom-xl">
-        <view>icon目前400+，里面缺少你想要的吗？</view>
-        <view>UI期待你的需求留言</view>
-        <view>后续图标多了，加上分类</view>
+        <view>icon目前600+，里面缺少你想要的吗？</view>
+        <button class=" tn-button--clear-style" open-type="feedback">
+          <view class="tn-margin tn-text-center">
+            <text>UI期待你的需求</text>
+            <text class="tn-color-blue">留言</text>
+          </view>  
+        </button>
       </view>
       
       <view class="tn-padding-bottom"></view>
@@ -72,13 +89,39 @@
       // 点击图标
       clickIcon(index, name) {
         this.currentIconIndex = index
-        this.$t.message.toast(name, false, null, 'none', 5000)
+        // this.$tn.message.toast(name, false, null, 'none', 5000)
+		//这里点击后直接复制图标名称。
+        uni.setClipboardData({
+          data: name,
+          showToast:false,
+          success: ()=> {
+            console.log('success');//复制成功
+            this.$tn.message.toast('已复制：'+name, false, null, 'none', 5000)
+          }
+        });
+		// const save = function (e) {
+		//         e.clipboardData.setData('text/plain', name)
+		//         e.preventDefault() // 阻止默认行为
+		// }
+		// const once = {
+		//     once: true
+		// }
+		// document.addEventListener('copy', save, once) // 添加一个copy事件,当触发时执行一次,执行完删除
+		// document.execCommand('copy') // 执行copy方法
+
       },
     }
   }
 </script>
 
 <style lang="scss" scoped>
+  
+  .search-fixed{
+    position: fixed;
+    width: 100%;
+    transition: all 0.25s ease-out;
+    z-index: 1;
+  }
   
   /* 搜索框 start */
   .search-content {

@@ -64,7 +64,11 @@
           {
             value: 5,
             label: '胖虎'
-          }
+          },
+          {
+            value: 6,
+            label: '大星'
+          },
         ],
         maskCloseable: true,
         
@@ -326,7 +330,7 @@
       
       // 点击取消按钮
       cancelSelect(event) {
-        this.$t.message.toast('点击了取消按钮')
+        this.$tn.message.toast('点击了取消按钮')
       },
       // 点击确认按钮
       confirmSelect(event) {

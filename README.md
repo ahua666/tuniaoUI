@@ -45,9 +45,9 @@
 ## 链接
 
 - [图鸟社区](https://www.yuque.com/tuniao)
-- [使用手册](https://tuniaoui.tuniaokj.com/components/introduce.html)
-
-
+- [使用手册](https://vue2.tuniaokj.com/)
+- [使用手册(备份)](https://doc.ahuaaa.cn/)
+- [快速上手搭建视频](https://www.bilibili.com/video/BV1Se411F7du/)
 
 ## 安装
 

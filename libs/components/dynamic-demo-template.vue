@@ -120,7 +120,7 @@
     data() {
       return {
         // 图鸟颜色列表
-        tuniaoColorList: this.$t.color.getTuniaoColorList(),
+        tuniaoColorList: this.$tn.color.getTuniaoColorList(),
         // 保存选项列表信息（由于prop中的数据时不能被修改的）
         _sectionList: [],
         // 模式列表信息
@@ -310,7 +310,7 @@
           }
         })
         
-        this._sectionList = this.$t.deepClone(this.sectionList)
+        this._sectionList = this.$tn.deepClone(this.sectionList)
         // 给本地选项按钮列表给默认show属性
         this._sectionList.map((item) => {
           const section = item.section.map((section_item) => {
@@ -353,7 +353,7 @@
       // 更新选项按钮状态信息
       updateSectionBtnsState(sectionIndex = -1, showState = true) {
         // 判断sectionIndex是否为数组
-        if (this.$t.array.isArray(sectionIndex)) {
+        if (this.$tn.array.isArray(sectionIndex)) {
           if (sectionIndex.length === 0) {
             return
           }

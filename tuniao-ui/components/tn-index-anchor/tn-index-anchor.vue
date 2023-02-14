@@ -43,7 +43,7 @@
     },
     data() {
       return {
-        elId: this.$t.uuid(),
+        elId: this.$tn.uuid(),
         // 内容的高度
         height: 0,
         // 内容的top
@@ -59,7 +59,7 @@
       this.parent = false
     },
     mounted() {
-      this.parent = this.$t.$parent.call(this, 'tn-index-list')
+      this.parent = this.$tn.$parent.call(this, 'tn-index-list')
       if (this.parent) {
         this.parent.childrens.push(this)
         this.parent.updateData()

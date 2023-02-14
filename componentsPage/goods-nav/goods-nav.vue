@@ -108,11 +108,11 @@
     methods: {
       // 选项点击事件
       onOptionClick(e) {
-        this.$t.message.toast(`点击了第${e.index}个选项`)
+        this.$tn.message.toast(`点击了第${e.index}个选项`)
       },
       // 按钮点击事件
       onButtonClick(e) {
-        this.$t.message.toast(`点击了第${e.index}个按钮`)
+        this.$tn.message.toast(`点击了第${e.index}个按钮`)
       }
     }
   }

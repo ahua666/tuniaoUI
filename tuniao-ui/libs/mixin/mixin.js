@@ -4,12 +4,12 @@ module.exports = {
   },
   onLoad() {
     // getRect挂载再$t上，用为这个方法需要使用in（this），所以无法把它独立层一个单独的文件导出
-    this.$t.getRect = this._tGetRect
+    this.$tn.getRect = this._tGetRect
   },
   beforeDestory() {
     // 判断当前页面是否存在parent和children
     // 组件销毁时，移除子组件在父组件children数组中的实例，释放资源，避免数据混乱
-    if (this.parent && uni.$t.test.array(this.parent.children)) {
+    if (this.parent && uni.$tn.test.array(this.parent.children)) {
       // 组件销毁时，移除子组件在父组件children数组中的实例
       const childrenList = this.parent.children
       childrenList.map((child, index) => {
@@ -50,7 +50,7 @@ module.exports = {
       // 通过获取父组件实例
       // 将父组件this中对应的参数，赋值给本组件的parentData对象中对应的属性
       // 头条小程序不支持通过this.parent.xxx去监听父组件参数的变化，所以需要本方法进行实现
-      this.parent = this.$t.$parent.call(this, parentName)
+      this.parent = this.$tn.$parent.call(this, parentName)
       if (this.parent) {
         // 遍历parentData中的属性，将parent中同名的属性赋值给parentData
         Object.keys(this.parentData).map(key => {

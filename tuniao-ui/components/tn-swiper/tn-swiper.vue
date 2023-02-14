@@ -177,10 +177,10 @@
     },
     computed: {
       backgroundColorStyle() {
-        return this.$t.color.getBackgroundColorStyle(this.backgroundColor)
+        return this.$tn.color.getBackgroundColorStyle(this.backgroundColor)
       },
       backgroundColorClass() {
-        return this.$t.color.getBackgroundColorInternalClass(this.backgroundColor)
+        return this.$tn.color.getBackgroundColorInternalClass(this.backgroundColor)
       },
       swiperStyle() {
         let style = {}

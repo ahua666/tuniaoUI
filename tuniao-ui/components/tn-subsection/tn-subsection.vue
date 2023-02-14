@@ -215,7 +215,7 @@
       },
       itemBarClass() {
         let clazz = ''
-        const buttonBgClass = this.$t.color.getBackgroundColorInternalClass(this.buttonColor)
+        const buttonBgClass = this.$tn.color.getBackgroundColorInternalClass(this.buttonColor)
         if (this.animation) {
           clazz += ' tn-subsection__bg__animation'
           if (this.animationType) {
@@ -230,7 +230,7 @@
       // 滑块样式
       itemBarStyle() {
         let style = {}
-        const buttonBgStyle = this.$t.color.getBackgroundColorStyle(this.buttonColor)
+        const buttonBgStyle = this.$tn.color.getBackgroundColorStyle(this.buttonColor)
         if (buttonBgStyle) {
           style.backgroundColor = this.buttonColor
         }

@@ -181,7 +181,7 @@
     },
     created() {
       // 支付宝小程序不支持provide/inject，所以使用这个方法获取整个父组件，在created定义，避免循环应用
-      // this.parent = this.$t.$parent.call(this, 'tn-checkbox-group')
+      // this.parent = this.$tn.$parent.call(this, 'tn-checkbox-group')
       // // 如果存在u-checkbox-group，将本组件的this塞进父组件的children中
       // this.parent && this.parent.children.push(this)
       // // 初始化父组件的value值
@@ -239,7 +239,7 @@
           } else {
             // 超出最大可选项，弹出提示
             if (this.parentData.value.length >= this.parentData.max) {
-              return this.$t.message.toast(`最多可选${this.parent.max}项`)
+              return this.$tn.message.toast(`最多可选${this.parent.max}项`)
             }
             // 如果原来为未选中状态，需要选中的数量少于父组件中设置的max值，才可以选中
             this.emitEvent();

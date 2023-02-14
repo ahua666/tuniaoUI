@@ -7,6 +7,7 @@
       "path": "pages/index/index",
       "style": {
         "mp-weixin": {
+          "disableScroll": true
         },
         "app-plus": {
           "bounce": "none"
@@ -510,13 +511,20 @@
     }, {
       "path": "life/share/share",
       "style": {
-        "navigationBarTitleText": "会员分享",
+        "navigationBarTitleText": "",
+        // 图鸟公众号
         "enablePullDownRefresh": false
       }
     }, {
       "path": "life/candle/candle",
       "style": {
         "navigationBarTitleText": "敬请期待",
+        "enablePullDownRefresh": false
+      }
+    }, {
+      "path": "life/cover/cover",
+      "style": {
+        "navigationBarTitleText": "红包封面",
         "enablePullDownRefresh": false
       }
     }, {
@@ -616,11 +624,30 @@
         "enablePullDownRefresh": false
       }
     }]
+  }, {
+    "root": "thirdPage",
+    "pages": [{
+      "path": "short-video/short-video",
+      "style": {
+        "navigationBarTitleText": "短视频",
+        "enablePullDownRefresh": false
+      }
+
+    }]
+  },{
+    "root":"takeOutPage",
+    "pages": [{
+      "path": "walking-route/walking-route",
+      "style": {
+        "navigationBarTitleText": "路线轨迹",
+        "enablePullDownRefresh": false
+      }
+    }]
   }],
   "preloadRule": {
     "pages/index/index": {
       "network": "all",
-      "packages": ["basicPage", "componentsPage", "templatePage"]
+      "packages": ["basicPage", "componentsPage", "templatePage", "vipPage", "thirdPage"]
     }
   },
   "globalStyle": {

@@ -127,7 +127,7 @@
     },
     data() {
       return {
-        elId: this.$t.uuid(),
+        elId: this.$tn.uuid(),
         // 标记是否已经初始化高度完成
         initHeight: false,
         // 是否需要隐藏一部分内容

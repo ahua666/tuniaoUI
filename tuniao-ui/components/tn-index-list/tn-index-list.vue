@@ -96,7 +96,7 @@
     computed: {
       // 选中索引列表弹出提示框的z-index
       selectAlertZIndex() {
-        return this.$t.zIndex.toast
+        return this.$tn.zIndex.toast
       },
       // 吸顶的偏移高度
       stickyOffsetTop() {
@@ -223,7 +223,7 @@
                 anchorStyle = {
                   position: 'fixed',
                   top: `${stickyOffsetTop}px`,
-                  zIndex: `${zIndex ? zIndex : this.$t.zIndex.indexListSticky}`,
+                  zIndex: `${zIndex ? zIndex : this.$tn.zIndex.indexListSticky}`,
                   color: `${activeColor}`
                 }
               }
@@ -239,7 +239,7 @@
               const anchorStyle = {
                 position: 'relative',
                 transform: `translate3d(0, ${translateY}px, 0)`,
-                zIndex: `${zIndex ? zIndex : this.$t.zIndex.indexListSticky}`,
+                zIndex: `${zIndex ? zIndex : this.$tn.zIndex.indexListSticky}`,
                 color: `${activeColor}`
               }
               item.active = false

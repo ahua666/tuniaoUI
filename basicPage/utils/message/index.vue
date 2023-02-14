@@ -107,61 +107,61 @@
     methods: {
       // 弹出toast
       openToast_1() {
-        this.$t.message.toast('弹出toast')
+        this.$tn.message.toast('弹出toast')
       },
       openToast_2() {
-        this.$t.message.toast('弹出toast icon', false, null, 'success')
+        this.$tn.message.toast('弹出toast icon', false, null, 'success')
       },
       openToast_3() {
-        this.$t.message.toast('弹出toast mask', true)
+        this.$tn.message.toast('弹出toast mask', true)
       },
       openToast_4() {
-        this.$t.message.toast('弹出toast duration', false, null, 'none', 3000)
+        this.$tn.message.toast('弹出toast duration', false, null, 'none', 3000)
       },
       openToast_5() {
-        this.$t.message.toast('弹出toast cb', true, () => {
+        this.$tn.message.toast('弹出toast cb', true, () => {
           setTimeout(() => {
-            this.$t.message.toast('执行完毕后弹出', true, null, 'success')
+            this.$tn.message.toast('执行完毕后弹出', true, null, 'success')
           }, 500)
         })
       },
       // 关闭Toast
       closeToast() {
-        this.$t.message.closeToast()
+        this.$tn.message.closeToast()
       },
       
       
       // 弹出loading
       openLoading() {
-        this.$t.message.loading('弹出loading')
+        this.$tn.message.loading('弹出loading')
         setTimeout(() => {
           this.closeLoading()
         }, 3000)
       },
       // 关闭loading
       closeLoading() {
-        this.$t.message.closeLoading()
+        this.$tn.message.closeLoading()
       },
       
       
       // 弹出modal
       openModal_1() {
-        this.$t.message.modal("提示", "请进行登录后进行操作", () => {
-          this.$t.message.toast('点击了确认按钮')
+        this.$tn.message.modal("提示", "请进行登录后进行操作", () => {
+          this.$tn.message.toast('点击了确认按钮')
         }, true, () => {
-          this.$t.message.toast('点击了取消按钮')
+          this.$tn.message.toast('点击了取消按钮')
         })
       },
       openModal_2() {
-        this.$t.message.modal("提示", "请进行登录后进行操作", () => {
-          this.$t.message.toast('点击了确认按钮')
+        this.$tn.message.modal("提示", "请进行登录后进行操作", () => {
+          this.$tn.message.toast('点击了确认按钮')
         }, false, null)
       },
       openModal_3() {
-        this.$t.message.modal("提示", "请进行登录后进行操作", () => {
-          this.$t.message.toast('点击了跳转按钮')
+        this.$tn.message.modal("提示", "请进行登录后进行操作", () => {
+          this.$tn.message.toast('点击了跳转按钮')
         }, true, () => {
-          this.$t.message.toast('点击了拒绝按钮')
+          this.$tn.message.toast('点击了拒绝按钮')
         }, "跳转登录", "拒绝登录")
       }
     }

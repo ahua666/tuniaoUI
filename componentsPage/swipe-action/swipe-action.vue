@@ -205,9 +205,9 @@
       // 处理swiperActionItem点击事件
       onSwiperItemClick(e) {
         if (e.type === 'button') {
-          this.$t.message.toast(`点击了第${e.index}个按钮`)
+          this.$tn.message.toast(`点击了第${e.index}个按钮`)
         } else if (e.type === 'item') {
-          this.$t.message.toast(`点击了item标签,name为${e.name}`)
+          this.$tn.message.toast(`点击了item标签,name为${e.name}`)
         }
       }
     }

@@ -41,7 +41,7 @@ module.exports = {
       // 如果获取失败则重新获取
       if (!customBarHeight) {
         try {
-          const navBarInfo = await this.$t.updateCustomBar()
+          const navBarInfo = await this.$tn.updateCustomBar()
           customBarHeight = navBarInfo.customBarHeight
           statusBarHeight = navBarInfo.statusBarHeight
         } catch(e) {
@@ -53,8 +53,8 @@ module.exports = {
       }
       
       // 更新vuex中的导航栏信息
-      this.$t.vuex('vuex_status_bar_height', statusBarHeight)
-      this.$t.vuex('vuex_custom_bar_height', customBarHeight)
+      this.$tn.vuex('vuex_status_bar_height', statusBarHeight)
+      this.$tn.vuex('vuex_custom_bar_height', customBarHeight)
     }
   }
 }

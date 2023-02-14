@@ -102,7 +102,7 @@
           '警'
         ]
         // 打乱顺序
-        if (this.randomEnabled) data = this.$t.array.random(data)
+        if (this.randomEnabled) data = this.$tn.array.random(data)
         // 切割二维数组
         let showData = []
         showData[0] = data.slice(0, 10)
@@ -151,7 +151,7 @@
           'M'
         ]
         // 打乱顺序
-        if (this.randomEnabled) data = this.$t.array.random(data)
+        if (this.randomEnabled) data = this.$tn.array.random(data)
         // 切割二维数组
         let showData = []
         showData[0] = data.slice(0, 10)

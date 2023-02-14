@@ -1,5 +1,7 @@
 // 引入全局mixin
 import mixin from './libs/mixin/mixin.js'
+// 全局挂载引入http相关请求拦截插件
+import Request from './libs/luch-request'
 
 // 调试输出信息
 function wranning(str) {
@@ -38,7 +40,8 @@ import zIndex from './libs/config/zIndex.js'
 // 主题颜色信息
 import colorInfo from './libs/config/color.js'
 
-const $t = {
+const $tn = {
+  http: new Request(),
   updateCustomBar: updateCustomBarInfo,
   color,
   message,
@@ -54,7 +57,7 @@ const $t = {
 }
 
 // 挂载到uni对象上
-uni.$t = $t
+uni.$tn = $tn
 
 const install = Vue => {
   // 全局混入
@@ -62,7 +65,7 @@ const install = Vue => {
   
   // Filter格式化
   
-  Vue.prototype.$t = $t
+  Vue.prototype.$tn = $tn
 }
 
 export default {

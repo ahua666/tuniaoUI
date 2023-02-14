@@ -1,23 +1,27 @@
 <template>
+  <view class="">
+    <web-view src="https://mp.weixin.qq.com/s/1apBuGcPQXMfz2osv5wwiQ"></web-view>
+  </view>
+</template>
+
+<!-- <template>
   <view class="template-course">
-    <!-- 顶部自定义导航 -->
-    <!-- <tn-nav-bar fixed alpha customBack>
+    <tn-nav-bar fixed alpha customBack>
       <view slot="back" class='tn-custom-nav-bar__back'
         @click="goBack">
         <text class='icon tn-icon-left'></text>
         <text class='icon tn-icon-home-capsule-fill'></text>
       </view>
-    </tn-nav-bar> -->
+    </tn-nav-bar>
     
     <view class="bottom-backgroup">
       <image src='https://tnuiimage.tnkjapp.com/animate/activity.jpg' mode='widthFix' class='backgroud-image'></image>
     </view>    
 
-    <!-- 回到首页悬浮按钮-->
     <nav-index-button></nav-index-button>
     
   </view>
-</template>
+</template> -->
 
 <script>
   import template_page_mixin from '@/libs/mixin/template_page_mixin.js'
@@ -36,8 +40,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '@/static/css/templatePage/custom_nav_bar.scss';
-    /* 背景图 start */
+/*  @import '@/static/css/templatePage/custom_nav_bar.scss';
     .bottom-backgroup {
       height: 700rpx;
       z-index: -1;
@@ -46,8 +49,6 @@
         border-radius: 60rpx 60rpx 0 0;
         width: 100%;
         height: 4100rpx;
-        // z-index: -1;
       }
-    }
-    /* 背景图 end */
+    } */
 </style>

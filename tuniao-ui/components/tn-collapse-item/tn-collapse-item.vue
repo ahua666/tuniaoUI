@@ -101,7 +101,7 @@
     data() {
       return {
         isShow: false,
-        elId: this.$t.uuid(),
+        elId: this.$tn.uuid(),
         // body高度
         height: 0,
         // 头部样式
@@ -133,7 +133,7 @@
     methods: {
       // 异步获取内容或者修改了内容时重新获取内容的信息
       init() {
-        this.parent = this.$t.$parent.call(this, 'tn-collapse')
+        this.parent = this.$tn.$parent.call(this, 'tn-collapse')
         if (this.parent) {
           this.nameSync = this.name ? this.name : this.parent.childrens.length
           // 不存在才添加对应实例

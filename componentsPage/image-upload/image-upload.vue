@@ -203,7 +203,7 @@
         console.log('上传文件列表发生改变', lists, index);
         this.lists.splice(0, this.lists.length)
         this.$nextTick(() => {
-          this.lists = this.$t.deepClone(lists)
+          this.lists = this.$tn.deepClone(lists)
           if (this.customStyle && lists.length > 4) {
             this.fullWindowsScroll = true
           } else {

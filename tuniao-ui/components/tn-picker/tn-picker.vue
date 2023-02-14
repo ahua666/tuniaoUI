@@ -287,7 +287,7 @@
         return [this.year, this.month]
       },
       elZIndex() {
-        return this.zIndex ? this.zIndex : this.$t.zIndex.popup
+        return this.zIndex ? this.zIndex : this.$tn.zIndex.popup
       }
     },
     data() {
@@ -366,7 +366,7 @@
       },
       // 往数字前面补0
       formatNumber(num) {
-        return this.$t.number.formatNumberAddZero(num)
+        return this.$tn.number.formatNumberAddZero(num)
       },
       // 生成递进的数组
       generateArray(start, end) {

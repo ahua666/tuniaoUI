@@ -185,7 +185,7 @@
       
       // 点击悬浮按钮的内容
       clickFabItem(e) {
-        this.$t.message.toast(`点击了第 ${e.index} 个选项`)
+        this.$tn.message.toast(`点击了第 ${e.index} 个选项`)
       }
     }
 

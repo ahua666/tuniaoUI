@@ -6,8 +6,8 @@
         :key="index"
         class="tn-image-upload__item tn-image-upload__item-preview"
         :style="{
-          width: $t.string.getLengthUnitValue(width),
-          height: $t.string.getLengthUnitValue(height)
+          width: $tn.string.getLengthUnitValue(width),
+          height: $tn.string.getLengthUnitValue(height)
         }"
       >
         <!-- 删除按钮 -->
@@ -62,8 +62,8 @@
         hover-class="tn-hover-class"
         hover-stay-time="150"
         :style="{
-          width: $t.string.getLengthUnitValue(width),
-          height: $t.string.getLengthUnitValue(height)
+          width: $tn.string.getLengthUnitValue(width),
+          height: $tn.string.getLengthUnitValue(height)
         }"
       >
         <view class="tn-image-upload__item-add--icon tn-icon-add"></view>
@@ -342,7 +342,7 @@
       // 提示用户信息
       showToast(message, force = false) {
         if (this.showTips || force) {
-          this.$t.message.toast(message)
+          this.$tn.message.toast(message)
         }
       },
       // 手动上传，通过ref进行调用
@@ -354,7 +354,7 @@
         this.lists[index].progress = 0
         this.lists[index].error = false
         this.lists[index].response = null
-        this.$t.message.loading('重新上传')
+        this.$tn.message.loading('重新上传')
         this.uploadFile(index)
       },
       // 上传文件
@@ -378,7 +378,7 @@
           // 通过bind()方法，绑定父组件的this，让this的this为父组件的上下文
           // 因为upload组件可能会被嵌套在其他组件内，比如tn-form，这时this.$parent其实为tn-form的this，
           // 非页面的this，所以这里需要往上历遍，一直寻找到最顶端的$parent，这里用了this.$u.$parent.call(this)
-          let beforeResponse = this.beforeUpload.bind(this.$t.$parent.call(this))(index, this.lists)
+          let beforeResponse = this.beforeUpload.bind(this.$tn.$parent.call(this))(index, this.lists)
           // 判断是否返回了Promise
           if (!!beforeResponse && typeof beforeResponse.then === 'function') {
             await beforeResponse.then(res => {
@@ -410,7 +410,7 @@
           header: this.header,
           success: res => {
             // 判断啊是否为json字符串，将其转换为json格式
-            let data = this.toJson && this.$t.test.jsonString(res.data) ? JSON.parse(res.data) : res.data
+            let data = this.toJson && this.$tn.test.jsonString(res.data) ? JSON.parse(res.data) : res.data
             if (![200, 201, 204].includes(res.statusCode)) {
               this.uploadError(index, data)
             } else {
@@ -424,7 +424,7 @@
             this.uploadError(index, err)
           },
           complete: res => {
-            this.$t.message.closeLoading()
+            this.$tn.message.closeLoading()
             this.uploading = false
             this.uploadFile(index + 1)
             this.$emit('on-change', res, index, this.lists, this.index)
@@ -449,14 +449,14 @@
       // 删除一个图片
       deleteItem(index) {
         if (!this.deleteable) return
-        this.$t.message.modal(
+        this.$tn.message.modal(
           '提示',
           '您确定要删除吗？',
           async () => {
             // 先检查是否有定义before-remove移除前钩子
             // 执行before-remove钩子
             if (this.beforeRemove && typeof(this.beforeRemove) === 'function') {
-              let beforeResponse = this.beforeRemove.bind(this.$t.$parent.call(this))(index, this.lists)
+              let beforeResponse = this.beforeRemove.bind(this.$tn.$parent.call(this))(index, this.lists)
               // 判断是否返回promise 
               if (!!beforeResponse && typeof beforeResponse.then === 'function') {
                 await beforeResponse.then(res => {

@@ -5,7 +5,7 @@
       :key="index"
       class="tn-count-scroll__box"
       :style="{
-        width: $t.string.getLengthUnitValue(width),
+        width: $tn.string.getLengthUnitValue(width),
         height: heightPxValue + 'px'
       }"
     >

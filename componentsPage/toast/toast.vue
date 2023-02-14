@@ -126,7 +126,7 @@
       },
       // 关闭Toast
       closedToast() {
-        this.$t.message.toast('Toast关闭')
+        this.$tn.message.toast('Toast关闭')
       }
 
     },

@@ -66,7 +66,7 @@
       
       // 生成泡泡
       generateBubble() {
-        const image = "https://tnuiimage.tnkjapp.com/bubble/" + this.$t.number.randomInt(1, 33) + ".png"
+        const image = "https://tnuiimage.tnkjapp.com/bubble/" + this.$tn.number.randomInt(1, 33) + ".png"
         uni.getImageInfo({
           src: image,
           success: (res) => {
@@ -103,16 +103,16 @@
           y: height
         }
         const p1 = {
-          x: this.$t.number.random(0.22 * width, 0.33 * width),
-          y: this.$t.number.random(0.5 * height, 0.75 * height)
+          x: this.$tn.number.random(0.22 * width, 0.33 * width),
+          y: this.$tn.number.random(0.5 * height, 0.75 * height)
         }
         const p2 = {
-          x: this.$t.number.random(0, 0.88 * width),
-          y: this.$t.number.random(0.25 * height, 0.5 * height)
+          x: this.$tn.number.random(0, 0.88 * width),
+          y: this.$tn.number.random(0.25 * height, 0.5 * height)
         }
         const p3 = {
-          x: this.$t.number.random(0, 0.88 * width),
-          y: this.$t.number.random(0, 0.125 * height)
+          x: this.$tn.number.random(0, 0.88 * width),
+          y: this.$tn.number.random(0, 0.125 * height)
         }
         return [p0, p1, p2, p3]
       },

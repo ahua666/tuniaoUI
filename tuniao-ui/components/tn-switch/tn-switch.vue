@@ -105,7 +105,7 @@
     computed: {
       switchStyle() {
         let style = {}
-        style.fontSize = this.$t.string.getLengthUnitValue(this.size)
+        style.fontSize = this.$tn.string.getLengthUnitValue(this.size)
         style.backgroundColor = this.value ? 
           this.activeColor ? this.activeColor : '#01BEFF' : 
           this.inactiveColor ? this.inactiveColor : '#AAAAAA'
@@ -113,14 +113,14 @@
       },
       switchNodeStyle() {
         let style = {}
-        style.width = this.$t.string.getLengthUnitValue(this.size)
+        style.width = this.$tn.string.getLengthUnitValue(this.size)
         style.height = style.width
         return style
       },
       iconStyle() {
         let style = {}
-        style.fontSize = this.$t.string.getLengthUnitValue(this.size - 20)
-        style.lineHeight = this.$t.string.getLengthUnitValue(this.size)
+        style.fontSize = this.$tn.string.getLengthUnitValue(this.size - 20)
+        style.lineHeight = this.$tn.string.getLengthUnitValue(this.size)
         return style
       },
       loadingColor() {

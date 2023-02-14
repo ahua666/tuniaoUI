@@ -242,7 +242,7 @@
         return `${this.mode}-${this.minDate}-${this.maxDate}`
       },
       elIndex() {
-        return this.zIndex ? this.zIndex : this.$t.zIndex.popup
+        return this.zIndex ? this.zIndex : this.$tn.zIndex.popup
       },
       colorValue() {
         return (index, type) => {

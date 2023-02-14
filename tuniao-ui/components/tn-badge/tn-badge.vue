@@ -110,10 +110,10 @@
         }
         
         if (this.top) {
-          style.top = this.$t.string.getLengthUnitValue(this.top)
+          style.top = this.$tn.string.getLengthUnitValue(this.top)
         }
         if (this.right) {
-          style.right = this.$t.string.getLengthUnitValue(this.right)
+          style.right = this.$tn.string.getLengthUnitValue(this.right)
         }
         
         return style

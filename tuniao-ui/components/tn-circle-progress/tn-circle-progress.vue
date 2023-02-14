@@ -89,14 +89,14 @@
     },
     data() {
       return {
-        // 微信小程序中不能使用this.$t.uuid()形式动态生成id值，否则会报错
+        // 微信小程序中不能使用this.$tn.uuid()形式动态生成id值，否则会报错
         // #ifdef MP-WEIXIN
         elBgId: 'tCircleProgressBgId',
         elId: 'tCircleProgressElId',
         // #endif
         // #ifndef MP-WEIXIN
-        elBgId: this.$t.uuid(),
-        elId: this.$t.uuid(),
+        elBgId: this.$tn.uuid(),
+        elId: this.$tn.uuid(),
         // #endif
         // 活动圆上下文
         progressContext: null,

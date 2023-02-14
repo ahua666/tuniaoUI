@@ -161,15 +161,15 @@
       // 获取验证码
       getCode() {
         if (this.$refs.code.canGetCode) {
-          this.$t.message.loading('正在获取验证码')
+          this.$tn.message.loading('正在获取验证码')
           setTimeout(() => {
-            this.$t.message.closeLoading()
-            this.$t.message.toast('验证码已经发送')
+            this.$tn.message.closeLoading()
+            this.$tn.message.toast('验证码已经发送')
             // 通知组件开始计时
             this.$refs.code.start()
           }, 2000)
         } else {
-          this.$t.message.toast(this.$refs.code.secNum + '秒后再重试')
+          this.$tn.message.toast(this.$refs.code.secNum + '秒后再重试')
         }
       },
       // 获取验证码倒计时被修改

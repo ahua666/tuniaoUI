@@ -259,7 +259,7 @@
       
       // 点击取消按钮
       cancelPicker(event) {
-        this.$t.message.toast('点击了取消按钮')
+        this.$tn.message.toast('点击了取消按钮')
       },
       // 点击确认按钮
       confirmPicker(event) {

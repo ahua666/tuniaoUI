@@ -144,17 +144,17 @@
     },
     computed: {
       backgroundColorStyle() {
-        return this.$t.color.getBackgroundColorStyle(this.backgroundColor)
+        return this.$tn.color.getBackgroundColorStyle(this.backgroundColor)
       },
       backgroundColorClass() {
-        return this.$t.color.getBackgroundColorInternalClass(this.backgroundColor)
+        return this.$tn.color.getBackgroundColorInternalClass(this.backgroundColor)
       },
       navStyle() {
         let style = {}
         if (this.height) {
           style.height = this.height + 'rpx'
         }
-        style.zIndex = this.zIndex ? this.zIndex : this.$t.zIndex.goodsNav
+        style.zIndex = this.zIndex ? this.zIndex : this.$tn.zIndex.goodsNav
         return style
       },
       // 选项style
@@ -182,7 +182,7 @@
             clazz += ` ${item.colorClass}`
           }
           
-          clazz += ` buttons__item--${this.$t.string.humpConvertChar(this.buttonType, '-')}`
+          clazz += ` buttons__item--${this.$tn.string.humpConvertChar(this.buttonType, '-')}`
           
           return clazz
         }
@@ -245,7 +245,7 @@
           let option = {...item}
           option.showAvatar = item.hasOwnProperty('avatar')
           if (item.hasOwnProperty('count')) {
-            const count = this.$t.number.formatNumberString(item.count, 2)
+            const count = this.$tn.number.formatNumberString(item.count, 2)
             option.showBadge = true
             option.count = typeof count === 'number' ? String(count) : count
             option.countBackgroundColor = item.countBackgroundColor ? item.countBackgroundColor : '#01BEFF'
@@ -260,12 +260,12 @@
         this.buttonGroupsData = this.buttonGroups.map((item) => {
           let button = {...item}
           if (item.hasOwnProperty('backgroundColor')) {
-            button.backgroundColorClass = this.$t.color.getBackgroundColorInternalClass(item.backgroundColor)
-            button.backgroundColorStyle = this.$t.color.getBackgroundColorStyle(item.backgroundColor)
+            button.backgroundColorClass = this.$tn.color.getBackgroundColorInternalClass(item.backgroundColor)
+            button.backgroundColorStyle = this.$tn.color.getBackgroundColorStyle(item.backgroundColor)
           }
           if (item.hasOwnProperty('color')) {
-            button.colorClass = this.$t.color.getBackgroundColorInternalClass(item.color)
-            button.colorStyle = this.$t.color.getBackgroundColorStyle(item.color)
+            button.colorClass = this.$tn.color.getBackgroundColorInternalClass(item.color)
+            button.colorStyle = this.$tn.color.getBackgroundColorStyle(item.color)
           }
           return button
         })

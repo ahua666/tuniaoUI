@@ -101,7 +101,7 @@
         }
         if (this.fontSizeStyle) {
           style.fontSize = this.fontSizeStyle
-          style.lineHeight = this.$t.string.getLengthUnitValue(this.fontSize + 2, this.fontUnit)
+          style.lineHeight = this.$tn.string.getLengthUnitValue(this.fontSize + 2, this.fontUnit)
         }
         return style
       },

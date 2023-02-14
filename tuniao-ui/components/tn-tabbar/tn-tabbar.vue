@@ -61,7 +61,7 @@
             :absolute="true"
             :top="2"
           >
-            {{ $t.number.formatNumberString(item.count) }}
+            {{ $tn.number.formatNumberString(item.count) }}
           </tn-badge>
         </view>
         
@@ -220,13 +220,13 @@
           }
           // 判断是否获取内部样式
           if (style) {
-            if (this.$t.color.getFontColorStyle(color) !== '') {
+            if (this.$tn.color.getFontColorStyle(color) !== '') {
               return color
             } else {
               return ''
             }
           } else {
-            if (this.$t.color.getFontColorStyle(color) === '') {
+            if (this.$tn.color.getFontColorStyle(color) === '') {
               return color
             } else {
               return ''
@@ -246,13 +246,13 @@
           }
           // 判断是否获取内部样式
           if (style) {
-            if (this.$t.color.getFontColorStyle(color) !== '') {
+            if (this.$tn.color.getFontColorStyle(color) !== '') {
               return color
             } else {
               return ''
             }
           } else {
-            if (this.$t.color.getFontColorStyle(color) === '') {
+            if (this.$tn.color.getFontColorStyle(color) === '') {
               return color + ' tn-tabbar__content__item__icon--clip'
             } else {
               return ''
@@ -277,7 +277,7 @@
           let clazz = ''
           if (this.list[index]['out']) {
             clazz += 'tn-tabbar__content__item__button--out'
-            if (this.$t.color.getFontColorStyle(this.activeIconColor) === '') {
+            if (this.$tn.color.getFontColorStyle(this.activeIconColor) === '') {
               clazz += ` ${this.activeIconColor}`
             }
             if (this.value === index) {
@@ -297,7 +297,7 @@
         return (index) => {
           let style = {}
           if (this.list[index]['out']) {
-            if (this.$t.color.getFontColorStyle(this.activeIconColor) !== '') {
+            if (this.$tn.color.getFontColorStyle(this.activeIconColor) !== '') {
               style.backgroundColor = this.activeIconColor
             }
             style.width = `${this.outHeight - 35}rpx`
@@ -378,7 +378,7 @@
           // 执行回调，同时传入索引当作参数
           // 在微信，支付宝等环境(H5正常)，会导致父组件定义的函数体中的this变成子组件的this
           // 通过bind()方法，绑定父组件的this，让this的this为父组件的上下文
-          let beforeSwitch = this.beforeSwitch.bind(this.$t.$parent.call(this))(index)
+          let beforeSwitch = this.beforeSwitch.bind(this.$tn.$parent.call(this))(index)
           // 判断是否返回了Promise
           if (!!beforeSwitch && typeof beforeSwitch.then === 'function') {
             await beforeSwitch.then(res => {

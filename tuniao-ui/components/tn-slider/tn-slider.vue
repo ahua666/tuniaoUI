@@ -13,7 +13,7 @@
       :style="[
         barStyle,
         {
-          height: this.$t.string.getLengthUnitValue(lineHeight),
+          height: this.$tn.string.getLengthUnitValue(lineHeight),
           backgroundColor: activeColor
         }
       ]"
@@ -33,8 +33,8 @@
           v-else
           class="tn-slider__button"
           :style="[blockStyle, {
-            height: this.$t.string.getLengthUnitValue(blockWidth),
-            width: this.$t.string.getLengthUnitValue(blockWidth),
+            height: this.$tn.string.getLengthUnitValue(blockWidth),
+            width: this.$tn.string.getLengthUnitValue(blockWidth),
             backgroundColor: blockColor
           }]"
         ></view>
