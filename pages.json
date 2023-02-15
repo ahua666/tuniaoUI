@@ -647,7 +647,7 @@
   "preloadRule": {
     "pages/index/index": {
       "network": "all",
-      "packages": ["basicPage", "componentsPage", "templatePage", "vipPage", "thirdPage"]
+      "packages": ["basicPage", "componentsPage", "templatePage", "thirdPage"]
     }
   },
   "globalStyle": {
