@@ -36,7 +36,7 @@ function bool(str) {
   return str === 'true' || str === true
 }
 
-function propsChange(prop, oldProp, ownerInstance, instance) {
+function propChange(prop, oldProp, ownerInstance, instance) {
   if (prop && prop !== 'null') {
     var params = prop.split(',')
     var type = +params[0]
@@ -62,9 +62,9 @@ function propsChange(prop, oldProp, ownerInstance, instance) {
     switch(type) {
       case 1:
         setCutCenter(ownerInstance)
-        // 设置裁剪框大小
+        // // 设置裁剪框大小
         computeCutSize(ownerInstance)
-        // 检查裁剪框是否在范围内
+        // // 检查裁剪框是否在范围内
         cutDetectionPosition(ownerInstance)
         break
       case 2:
@@ -165,7 +165,7 @@ function moveStop(ownerInstance) {
 function setCutCenter(ownerInstance) {
   var cutX = (cropper.windowWidth - cropper.canvasWidth) * 0.5
   var cutY = (cropper.windowHeight - cropper.canvasHeight) * 0.5
-  
+
   cropper.imgTop = cropper.imgTop - cropper.cutY + cutY
   cropper.cutY = cutY
   cropper.imgLeft = cropper.imgLeft - cropper.cutX + cutX
@@ -179,7 +179,7 @@ function setCutCenter(ownerInstance) {
 function cutDetectionPosition(ownerInstance) {
   var windowHeight = cropper.windowHeight,
     windowWidth = cropper.windowWidth;
-  
+
   // 检测上边距是否在范围内
   var cutDetectionPositionTop = function() {
     if (cropper.cutY < 0) {
@@ -189,7 +189,7 @@ function cutDetectionPosition(ownerInstance) {
       cropper.cutY = windowHeight - cropper.canvasHeight
     }
   }
-  
+
   // 检测左边距是否在范围内
   var cutDetectionPositionLeft = function() {
     if (cropper.cutX < 0) {
@@ -199,7 +199,7 @@ function cutDetectionPosition(ownerInstance) {
       cropper.cutX = windowWidth - cropper.canvasWidth
     }
   }
-  
+
   // 裁剪框坐标处理（如果只写一个参数则另一个默认为0，都不写默认为居中）
   if (cropper.cutX === null && cropper.cutY === null) {
     var cutX = (windowWidth - cropper.canvasWidth) * 0.5,
@@ -247,12 +247,12 @@ function imgMarginDetectionPosition(ownerInstance, scale, delay) {
     imgWidth = cropper.imgHeight
     imgHeight = cropper.imgWidth
   }
-  
+
   left = cropper.cutX + (imgWidth * scale) / 2 >= left ? left : cropper.cutX + (imgWidth * scale) / 2
   left = cropper.cutX + cropper.canvasWidth - (imgWidth * scale) / 2 <= left ? left : cropper.cutX + cropper.canvasWidth - (imgWidth * scale) / 2
   top = cropper.cutY + (imgHeight * scale) / 2 >= top ? top : cropper.cutY + (imgHeight * scale) / 2
   top = cropper.cutY + cropper.canvasHeight - (imgHeight * scale) / 2 <= top ? top : cropper.cutY + cropper.canvasHeight - (imgHeight * scale) / 2
-  
+
   cropper.imgLeft = left
   cropper.imgTop = top
   cropper.scale = scale
@@ -277,13 +277,17 @@ function computeCutSize(ownerInstance) {
 
 // 图片动画
 function imgTransform(ownerInstance) {
-  var image = ownerInstance.selectComponent('.tn-cropper__image')
-  if (!image) return
-  var x = cropper.imgLeft - cropper.imgWidth / 2,
-    y = cropper.imgTop - cropper.imgHeight / 2;
-  image.setStyle({
-    'transform': 'translate3d('+ x + 'px,' + y + 'px,0) scale(' + cropper.scale +') rotate(' + cropper.angle + 'deg)'
-  })
+  try {
+    var image = ownerInstance.selectComponent('.tn-cropper__image')
+    if (!image) return
+    var x = cropper.imgLeft - cropper.imgWidth / 2,
+      y = cropper.imgTop - cropper.imgHeight / 2;
+    image.setStyle({
+      'transform': 'translate3d('+ x + 'px,' + y + 'px,0) scale(' + cropper.scale +') rotate(' + cropper.angle + 'deg)'
+    })
+  } catch(e) {
+
+  }
 }
 
 // 图片重置
@@ -324,5 +328,5 @@ module.exports = {
   touchStart: touchStart,
   touchMove: touchMove,
   touchEnd: touchEnd,
-  propsChange: propsChange
+  propChange: propChange
 }
