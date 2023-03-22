@@ -11,7 +11,7 @@
       <view class="search-fixed">
         <view class="search-content">
           <input class="search-content__input" placeholder-class="search-content__input-placeholder"
-                 placeholder="请输入图标名称吖" @input="saerchInput" />
+                 placeholder="中文名     /     英文名" @input="saerchInput" />
         </view>
       </view>
 
@@ -31,11 +31,12 @@
             <view v-for="(icons_item, icons_index) in item.icons" :key="icons_index"
                   class="icon__item tn-flex tn-flex-direction-column tn-flex-row-center tn-flex-col-center icon-shadow"
                   :class="[{'icon__item--active': icons_index === currentIconIndex}]"
-                  @click="clickIcon(icons_index, icons_item.name)">
+                  @click="clickIcon(icons_index, icons_item.name, icons_item.icon)">
               <view class="icon__item--icon tn-flex tn-flex-row-center tn-flex-col-center tn-shadow-blur">
                 <view :class="[`tn-icon-${icons_item.icon}`]"></view>
               </view>
-              <view class="icon__item--title tn-text-ellipsis">{{ icons_item.name }}</view>
+              <view class="icon__item--title tn-text-ellipsis tn-text-df tn-color-grey">{{ icons_item.icon }}</view>
+              <!-- <view class="icon__item--title tn-text-ellipsis tn-text-xs tn-color-grey">{{ icons_item.name }}</view> -->
             </view>
           </view>
 
@@ -43,10 +44,14 @@
       </view>
 
       <view class="tn-text-center tn-margin-bottom-xl">
-        <view>icon目前600+，里面缺少你想要的吗？</view>
+        <view>
+          icon目前700+，支持
+          <text class="tn-color-orange tn-text-lg tn-padding-xs">中文、英文</text>
+          搜索
+        </view>
         <button class=" tn-button--clear-style" open-type="feedback">
           <view class="tn-margin tn-text-center">
-            <text>UI期待你的需求</text>
+            <text>里面缺少你想要的吗？UI期待你的需求</text>
             <text class="tn-color-blue">留言</text>
           </view>
         </button>
@@ -71,7 +76,7 @@ export default {
       // 用户输入的内容
       searchValue: '',
       // 当前点击的图标序号
-      currentIconIndex: -1
+      currentIconIndex: -1,
     }
   },
   computed: {
@@ -81,7 +86,7 @@ export default {
       if (!this.searchValue) return iconData.data
       return newArr.filter((item1) => {
         item1.icons = item1.icons.filter((item2) => {
-          if (item2.name.includes(this.searchValue)) {
+          if (item2.name.includes(this.searchValue) || item2.icon.includes(this.searchValue)) {
             return item2
           }
         })
@@ -96,20 +101,22 @@ export default {
   methods: {
     // input输入的内容
     saerchInput(e) {
+      //重新设置为-1，避免选中之前选中的图标
+      this.currentIconIndex=-1;
       this.searchValue = e.target.value;
       this.resultIconList
     },
     // 点击图标
-    clickIcon(index, name) {
+    clickIcon(index, name ,icon) {
       this.currentIconIndex = index
       // this.$tn.message.toast(name, false, null, 'none', 5000)
       //这里点击后直接复制图标名称。
       uni.setClipboardData({
-        data: name,
+        data: icon,
         showToast: false,
         success: () => {
           console.log('success'); //复制成功
-          this.$tn.message.toast('已复制：' + name, false, null, 'none', 5000)
+          this.$tn.message.toast('已复制：' + icon, false, null, 'none', 5000)
         }
       });
       // const save = function (e) {
@@ -215,8 +222,6 @@ export default {
 
     &--title {
       width: 100%;
-      color: #78909C;
-      font-size: 28rpx;
       text-align: center;
     }
   }
