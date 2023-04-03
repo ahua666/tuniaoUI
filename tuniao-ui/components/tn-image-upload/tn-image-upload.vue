@@ -1,5 +1,5 @@
 <template>
-  <view v-if="!disabled" class="tn-image-upload-class tn-image-upload">
+  <view class="tn-image-upload-class tn-image-upload">
     <block v-if="showUploadList">
       <view
         v-for="(item, index) in lists"
