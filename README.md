@@ -34,7 +34,7 @@
 
 - 包含基础常用的布局元素，flex、grid、浮动
 - 完整一体的配色体系，包含4种色深模式，同时包含4套渐变配色
-- 600+风格统一的图标icon，后续可继续增加
+- 700+风格统一的图标icon，后续可继续增加
 - 50+精选组件，让开发者可以快速进行开发
 - 酷炫常用的页面模板，更有让你眼前一亮的界面效果
 - 图片素材语雀便捷下载，图鸟社区共同成长
@@ -99,7 +99,7 @@ const app = new Vue({
 
 ```js
 // 引入TuniaoUI提供的vuex简写方法
-let vuexStore = require('@/store/$t.mixin.js')
+let vuexStore = require('@/store/$tn.mixin.js')
 Vue.mixin(vuexStore)
 ```
 
