@@ -88,6 +88,10 @@
           return []
         }
       },
+	  isUniCloud:{
+		type: Boolean,
+		default: false
+	  },
       // 上传图片地址
       action: {
         type: String,
@@ -312,7 +316,7 @@
           let file = null
           let listOldLength = lists.length
           res.tempFiles.map((val, index) => {
-            if (!this.checkFileExt(val)) return
+			 if (!this.checkFileExt(val)) return
             
             // 是否超出最大限制数量
             if (!multiple && index >= 1) return
@@ -329,7 +333,13 @@
                 url: val.path,
                 progress: 0,
                 error: false,
-                file: val
+                file: val,
+				//#ifdef H5
+				extension: val.name.substring(val.name.lastIndexOf("."))  //图片文件后缀名
+				//#endif
+				//#ifndef H5
+				extension: val.path.substring(val.path.lastIndexOf(".")) //图片文件后缀名
+				//#endif
               })
             }
           })
@@ -359,6 +369,7 @@
       },
       // 上传文件
       async uploadFile(index = 0) {
+		var that=this;
         if (this.disabled) return
         if (this.uploading) return
         // 全部上传完成
@@ -395,48 +406,87 @@
           }
         }
         // 检查上传地址
-        if (!this.action) {
-          this.showToast('请配置上传地址', true)
-          return
-        }
-        this.lists[index].error = false
-        this.uploading = true
-        // 创建上传对象
-        const task = uni.uploadFile({
-          url: this.action,
-          filePath: this.lists[index].url,
-          name: this.name,
-          formData: this.formData,
-          header: this.header,
-          success: res => {
-            // 判断啊是否为json字符串，将其转换为json格式
-            let data = this.toJson && this.$tn.test.jsonString(res.data) ? JSON.parse(res.data) : res.data
-            if (![200, 201, 204].includes(res.statusCode)) {
-              this.uploadError(index, data)
-            } else {
-              this.lists[index].response = data
-              this.lists[index].progress = 100
-              this.lists[index].error = false
-              this.$emit('on-success', data, index, this.lists, this.index)
-            }
-          },
-          fail: err => {
-            this.uploadError(index, err)
-          },
-          complete: res => {
-            this.$tn.message.closeLoading()
-            this.uploading = false
-            this.uploadFile(index + 1)
-            this.$emit('on-change', res, index, this.lists, this.index)
-          }
-        })
-        this.lists[index].uploadTask = task
-        task.onProgressUpdate(res => {
-          if (res.progress > 0) {
-            this.lists[index].progress = res.progress
-            this.$emit('on-progress', res, index, this.lists, this.index)
-          }
-        })
+		if(this.isUniCloud){
+			//如果是uinCloud
+			this.lists[index].error = false
+			this.uploading = true
+			// 创建上传对象
+			const task = uniCloud.uploadFile({
+				filePath: that.lists[index].url,
+				cloudPath: that.$tn.uuid() + that.lists[index].extension, //随机文件名+文件后缀
+				onUploadProgress(progressEvent) {
+					if (progressEvent.loaded > 0) {
+						that.lists[index].progress = Math.round(
+							(progressEvent.loaded * 100) / progressEvent.total
+						);
+						that.$emit('on-progress', progressEvent, index, that.lists, that.index)
+					}
+				},
+				success(res) {
+					if (res.success) {
+						that.lists[index].response = res
+						that.lists[index].progress = 100
+						that.lists[index].error = false
+						that.$emit('success', res, index, that.lists, that.index)
+					} else {
+						that.uploadError(index, res)
+					}
+				},
+				fail: (err) => {
+					that.uploadError(index, err)
+				},
+				complete: (res) => {
+					// this.$t.message.closeLoading()
+					that.uploading = false
+					that.uploadFile(index + 1)
+					that.$emit('on-change', res, index, that.lists, that.index)
+				}
+			});
+			that.lists[index].uploadTask = task
+		}else{
+			if (!this.action) {
+			  this.showToast('请配置上传地址', true)
+			  return
+			}
+			this.lists[index].error = false
+			this.uploading = true
+			// 创建上传对象
+			const task = uni.uploadFile({
+			  url: this.action,
+			  filePath: this.lists[index].url,
+			  name: this.name,
+			  formData: this.formData,
+			  header: this.header,
+			  success: res => {
+			    // 判断啊是否为json字符串，将其转换为json格式
+			    let data = this.toJson && this.$tn.test.jsonString(res.data) ? JSON.parse(res.data) : res.data
+			    if (![200, 201, 204].includes(res.statusCode)) {
+			      this.uploadError(index, data)
+			    } else {
+			      this.lists[index].response = data
+			      this.lists[index].progress = 100
+			      this.lists[index].error = false
+			      this.$emit('on-success', data, index, this.lists, this.index)
+			    }
+			  },
+			  fail: err => {
+			    this.uploadError(index, err)
+			  },
+			  complete: res => {
+			    this.$tn.message.closeLoading()
+			    this.uploading = false
+			    this.uploadFile(index + 1)
+			    this.$emit('on-change', res, index, this.lists, this.index)
+			  }
+			})
+			this.lists[index].uploadTask = task
+			task.onProgressUpdate(res => {
+			  if (res.progress > 0) {
+			    this.lists[index].progress = res.progress
+			    this.$emit('on-progress', res, index, this.lists, this.index)
+			  }
+			})
+		}
       },
       // 上传失败
       uploadError(index, err) {
