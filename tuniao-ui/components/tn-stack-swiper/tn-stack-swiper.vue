@@ -2,8 +2,8 @@
   <view
     class="tn-stack-swiper-class tn-stack-swiper"
     :style="{
-      width: $tn.string.getLengthUnitValue(width),
-      height: $tn.string.getLengthUnitValue(height)
+      width: $t.string.getLengthUnitValue(width),
+      height: $t.string.getLengthUnitValue(height)
     }"
     :list="swiperList"
     :itemData="itemData"
@@ -25,7 +25,7 @@
         :catch:touchmove="touching?wxs.touchMove:''"
         :catch:touchend="touching?wxs.touchEnd:''"
       >
-        <image class="tn-stack-swiper__image" :src="item.image"></image>
+        <image class="tn-stack-swiper__image" mode="aspectFill" :src="item.image"></image>
       </view>
       <!-- #endif -->
       
@@ -39,7 +39,7 @@
         @touchmove="wxs.touchMove"
         @touchend="wxs.touchEnd"
       >
-        <image class="tn-stack-swiper__image" :src="item.image"></image>
+        <image class="tn-stack-swiper__image" mode="aspectFill" :src="item.image"></image>
       </view>
       <!-- #endif -->
     </block>
