@@ -46,13 +46,13 @@
           :style="[closeBtnStyle, {zIndex: elZIndex}]"
           @tap="close"
         ></view>
-        <scroll-view class="tn-popup__content__scroll-view">
+        <scroll-view scroll-y class="tn-popup__content__scroll-view">
           <slot></slot>
         </scroll-view>
       </view>
       
       <!-- 除居中外的其他情况 -->
-      <scroll-view v-else class="tn-popup__content__scroll-view">
+      <scroll-view scroll-y v-else class="tn-popup__content__scroll-view">
         <slot></slot>
       </scroll-view>
       <!-- 关闭按钮 -->
