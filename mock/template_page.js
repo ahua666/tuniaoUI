@@ -225,12 +225,6 @@ export default {
           },
           {
             icon: 'rocket',
-            title: '隔壁的小生(第三方，赞赏6￥可商用)',
-            author: '隔壁的小生',
-            url: '/templatePage/life/candle/candle'
-          },
-          {
-            icon: 'rocket',
             title: '阿凡提·污克西西(第三方，免费开源)',
             author: '阿凡提·污克西西',
             url: '/templatePage/life/candle/candle'
@@ -240,7 +234,13 @@ export default {
             title: '微信红包封面',
             author: '微信红包封面',
             url: '/templatePage/life/cover/cover'
-          }
+          },
+          {
+            icon: 'rocket',
+            title: '营销小游戏-魔方',
+            author: '最帅的你',
+            url: '/templatePage/life/candle/candle'
+          },
         ]
       }
   ]

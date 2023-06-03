@@ -527,6 +527,12 @@
         "navigationBarTitleText": "红包封面",
         "enablePullDownRefresh": false
       }
+    },{
+      "path": "life/cube/cube",
+      "style": {
+        "navigationBarTitleText": "魔方游戏",
+        "enablePullDownRefresh": false
+      }
     }, {
       "path": "time/clock/clock",
       "style": {
