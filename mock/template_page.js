@@ -239,7 +239,7 @@ export default {
             icon: 'rocket',
             title: '营销小游戏-魔方',
             author: '最帅的你',
-            url: '/templatePage/life/candle/candle'
+            url: '/templatePage/life/cube/cube'
           },
         ]
       }
