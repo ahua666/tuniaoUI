@@ -2,8 +2,8 @@
   <view
     class="tn-stack-swiper-class tn-stack-swiper"
     :style="{
-      width: $t.string.getLengthUnitValue(width),
-      height: $t.string.getLengthUnitValue(height)
+      width: $tn.string.getLengthUnitValue(width),
+      height: $tn.string.getLengthUnitValue(height)
     }"
     :list="swiperList"
     :itemData="itemData"
