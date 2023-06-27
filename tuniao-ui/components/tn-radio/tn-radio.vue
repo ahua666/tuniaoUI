@@ -12,7 +12,8 @@
     <view
       class="tn-radio__label"
       :style="{
-        fontSize: labelSize ? labelSize + 'rpx' : ''
+        fontSize: labelSize ? labelSize + 'rpx' : '',
+        color: labelColor ? labelColor : '#080808'
       }"
       @tap="onClickLabel"
     >
@@ -64,6 +65,16 @@
       labelSize: {
         type: Number,
         default: 0
+      },
+      //labelColor 字体颜色
+      labelColor: {
+        type: String,
+        default: '#080808'
+      },
+      //边框颜色
+      borderColor: {
+        type: String,
+        default: '#080808'
       }
     },
     computed: {
@@ -111,7 +122,7 @@
         style.height = style.width
         
         style.fontSize = (this.iconSize ? this.iconSize : (this.parentData.iconSize ? this.parentData.iconSize : 20)) + 'rpx'
-        
+        style.borderColor = this.borderColor
         return style
       },
       radioStyle() {
