@@ -34,6 +34,30 @@ export default {
       ]
     },
     {
+      title: '充值提现',
+      backgroundColor: 'tn-cool-bg-color-1',
+      list: [
+        {
+          icon: 'send',
+          title: '蓝色充值',
+          author: '图鸟北北',
+          url: '/templatePage/money/demo1/demo1'
+        },
+        {
+          icon: 'send',
+          title: '绿色充值',
+          author: '图鸟北北',
+          url: '/templatePage/money/demo2/demo2'
+        },
+        {
+          icon: 'send',
+          title: '暗黑充值',
+          author: '图鸟北北',
+          url: '/templatePage/money/demo3/demo3'
+        }
+      ]
+    },
+    {
       title: '个人中心',
       backgroundColor: 'tn-cool-bg-color-1',
       list: [
@@ -213,34 +237,40 @@ export default {
         list: [
           {
             icon: 'send',
-            title: '3D全景(第三方，约120￥一年)',
+            title: '3D全景(第三方，有免费版付费版)',
             author: '图鸟北北 & 芊云全景',
             url: '/templatePage/life/pano/pano'
           },
           {
-            icon: 'rocket',
-            title: 'Ucharts图表(第三方，免费开源)',
-            author: '图鸟北北 & Ucharts秋云',
-            url: '/templatePage/life/candle/candle'
+            icon: 'send',
+            title: '3D模型(第三方，有免费版付费版)',
+            author: '图鸟北北 & 芊云全景',
+            url: '/templatePage/life/pano/model'
           },
           {
-            icon: 'rocket',
-            title: '阿凡提·污克西西(第三方，免费开源)',
-            author: '阿凡提·污克西西',
-            url: '/templatePage/life/candle/candle'
-          },
-          {
-            icon: 'rocket',
+            icon: 'send',
             title: '微信红包封面',
             author: '微信红包封面',
             url: '/templatePage/life/cover/cover'
           },
           {
-            icon: 'rocket',
+            icon: 'send',
             title: '营销小游戏-魔方',
             author: '最帅的你',
             url: '/templatePage/life/cube/cube'
           },
+          {
+            icon: 'rocket',
+            title: '图鸟图表(待开源，免费开源)',
+            author: '图鸟北北 & Ucharts秋云',
+            url: '/templatePage/life/candle/candle'
+          },
+          {
+            icon: 'rocket',
+            title: '图鸟生态，期待你的加入',
+            author: '合作微信 tnkewo',
+            url: '/templatePage/life/candle/candle'
+          }
         ]
       }
   ]

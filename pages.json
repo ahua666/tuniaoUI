@@ -442,6 +442,24 @@
         "navigationBarTitleText": "简约登录",
         "enablePullDownRefresh": false
       }
+    },{
+      "path": "money/demo1/demo1",
+      "style": {
+        "navigationBarTitleText": "蓝色充值",
+        "enablePullDownRefresh": false
+      }
+    },{
+      "path": "money/demo2/demo2",
+      "style": {
+        "navigationBarTitleText": "绿色充值",
+        "enablePullDownRefresh": false
+      }
+    },{
+      "path": "money/demo3/demo3",
+      "style": {
+        "navigationBarTitleText": "暗黑充值",
+        "enablePullDownRefresh": false
+      }
     }, {
       "path": "health/qrcode/qrcode",
       "style": {
@@ -494,6 +512,12 @@
       "path": "life/pano/pano",
       "style": {
         "navigationBarTitleText": "3D全景",
+        "enablePullDownRefresh": false
+      }
+    },{
+      "path": "life/pano/model",
+      "style": {
+        "navigationBarTitleText": "3D模型",
         "enablePullDownRefresh": false
       }
     }, {
