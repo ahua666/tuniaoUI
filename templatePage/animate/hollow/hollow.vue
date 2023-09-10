@@ -13,14 +13,14 @@
       <view class="tn-flex tn-flex-row-between tn-margin-xl">
         <view class="justify-content-item" style="margin-top: 50rpx;">
           <view class="tn-radius tn-margin-bottom-xl">
-            <view class="image-pic" style="background-image:url('https://tnuiimage.tnkjapp.com/blogger/avatar_3.jpeg')">
+            <view class="image-pic" style="background-image:url('https://resource.tuniaokj.com/images/blogger/avatar_3.jpeg')">
               <view class="image-hollow">
               </view>
             </view>
             <view class="tn-text-center tn-text-bold tn-padding-top-xs">Jaylen</view>
           </view>
           <view class="tn-radius tn-margin-bottom">
-            <view class="image-pic" style="background-image:url('https://tnuiimage.tnkjapp.com/blogger/avatar_2.jpeg')">
+            <view class="image-pic" style="background-image:url('https://resource.tuniaokj.com/images/blogger/avatar_2.jpeg')">
               <view class="image-hollow">
               </view>
             </view>
@@ -29,14 +29,14 @@
         </view>
         <view class="justify-content-item">
           <view class="tn-radius tn-margin-bottom-xl">
-            <view class="image-pic" style="background-image:url('https://tnuiimage.tnkjapp.com/blogger/avatar_1.jpeg')">
+            <view class="image-pic" style="background-image:url('https://resource.tuniaokj.com/images/blogger/avatar_1.jpeg')">
               <view class="image-hollow">
               </view>
             </view>
             <view class="tn-text-center tn-text-bold tn-padding-top-xs">可我会像</view>
           </view>
           <view class="tn-radius tn-margin-bottom">
-            <view class="image-pic" style="background-image:url('https://tnuiimage.tnkjapp.com/blogger/blogger_beibei.jpg')">
+            <view class="image-pic" style="background-image:url('https://resource.tuniaokj.com/images/blogger/blogger_beibei.jpg')">
               <view class="image-hollow">
               </view>
             </view>
@@ -45,14 +45,14 @@
         </view>
         <view class="justify-content-item" style="margin-top: 50rpx;">
           <view class="tn-radius tn-margin-bottom-xl">
-            <view class="image-pic" style="background-image:url('https://tnuiimage.tnkjapp.com/blogger/avatar_4.jpeg')">
+            <view class="image-pic" style="background-image:url('https://resource.tuniaokj.com/images/blogger/avatar_4.jpeg')">
               <view class="image-hollow">
               </view>
             </view>
             <view class="tn-text-center tn-text-bold tn-padding-top-xs">福哥</view>
           </view>
           <view class="tn-radius tn-margin-bottom">
-            <view class="image-pic" style="background-image:url('https://tnuiimage.tnkjapp.com/blogger/content_1.jpeg')">
+            <view class="image-pic" style="background-image:url('https://resource.tuniaokj.com/images/blogger/content_1.jpeg')">
               <view class="image-hollow">
               </view>
             </view>
@@ -63,7 +63,7 @@
     </view>
     
     <view class="bottom-backgroup">
-      <image src='https://tnuiimage.tnkjapp.com/animate/hollow.jpg' mode='widthFix' class='backgroud-image'></image>
+      <image src='https://resource.tuniaokj.com/images/animate/hollow.jpg' mode='widthFix' class='backgroud-image'></image>
     </view>
     <view class="hollow">
       <view class="tn-text-xxl">

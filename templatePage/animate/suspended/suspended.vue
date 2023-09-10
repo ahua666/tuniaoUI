@@ -12,7 +12,7 @@
     <view class="wechat tnxuanfu" @click="navTuniaoUI">
       <view class="bg0 pa">
         <view class="bg1">
-          <image src="https://tnuiimage.tnkjapp.com/my/my7.png" class="button-shop shadow"></image>
+          <image src="https://resource.tuniaokj.com/images/my/my7.png" class="button-shop shadow"></image>
         </view>
       </view>
       <view class="hx-box pa">
@@ -177,7 +177,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    background: url(https://tnuiimage.tnkjapp.com/cool_bg_image/arc4.png) no-repeat center center;
+    background: url(https://resource.tuniaokj.com/images/cool_bg_image/arc4.png) no-repeat center center;
     background-size: 100% 100%;
     animation: hx 4s linear infinite;
   }

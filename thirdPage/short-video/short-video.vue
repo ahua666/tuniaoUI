@@ -96,7 +96,7 @@
           {
             author: {
               name: '小泡泡',
-              avatar: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai2.jpg'
+              avatar: 'https://resource.tuniaokj.com/images/avatar/xiaomai2.jpg'
             },
             desc: '基于图鸟UI开发的第三方插件，图鸟加油，可以的。基于图鸟UI开发的第三方插件，图鸟加油，可以的。基于图鸟UI开发的第三方插件，图鸟加油，可以的。',
             like: {
@@ -115,7 +115,7 @@
           {
             author: {
               name: '小泡泡',
-              avatar: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai2.jpg'
+              avatar: 'https://resource.tuniaokj.com/images/avatar/xiaomai2.jpg'
             },
             desc: '基于图鸟UI开发的第三方插件，图鸟加油，可以的。',
             like: {
@@ -134,7 +134,7 @@
           {
             author: {
               name: '小泡泡',
-              avatar: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai2.jpg'
+              avatar: 'https://resource.tuniaokj.com/images/avatar/xiaomai2.jpg'
             },
             desc: '基于图鸟UI开发的第三方插件，图鸟加油，可以的。',
             like: {
@@ -153,7 +153,7 @@
           {
             author: {
               name: '小泡泡',
-              avatar: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai2.jpg'
+              avatar: 'https://resource.tuniaokj.com/images/avatar/xiaomai2.jpg'
             },
             desc: '基于图鸟UI开发的第三方插件，图鸟加油，可以的。',
             like: {
@@ -172,7 +172,7 @@
           {
             author: {
               name: '小泡泡',
-              avatar: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai2.jpg'
+              avatar: 'https://resource.tuniaokj.com/images/avatar/xiaomai2.jpg'
             },
             desc: '基于图鸟UI开发的第三方插件，图鸟加油，可以的。',
             like: {

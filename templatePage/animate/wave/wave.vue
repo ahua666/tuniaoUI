@@ -15,13 +15,13 @@
     
     <view class="tnwave waveAnimation">
       <view class="waveWrapperInner bgTop">
-        <view class="wave waveTop" style="background-image: url('https://tnuiimage.tnkjapp.com/wave/wave-2.png')"></view>
+        <view class="wave waveTop" style="background-image: url('https://resource.tuniaokj.com/images/wave/wave-2.png')"></view>
       </view>
       <view class="waveWrapperInner bgMiddle">
-        <view class="wave waveMiddle" style="background-image: url('https://tnuiimage.tnkjapp.com/wave/wave-2.png')"></view>
+        <view class="wave waveMiddle" style="background-image: url('https://resource.tuniaokj.com/images/wave/wave-2.png')"></view>
       </view>
       <view class="waveWrapperInner bgBottom">
-        <view class="wave waveBottom" style="background-image: url('https://tnuiimage.tnkjapp.com/wave/wave-1.png')"></view>
+        <view class="wave waveBottom" style="background-image: url('https://resource.tuniaokj.com/images/wave/wave-1.png')"></view>
       </view>
     </view>
 

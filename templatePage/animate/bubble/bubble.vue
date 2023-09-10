@@ -66,7 +66,7 @@
       
       // 生成泡泡
       generateBubble() {
-        const image = "https://tnuiimage.tnkjapp.com/bubble/" + this.$tn.number.randomInt(1, 33) + ".png"
+        const image = "https://resource.tuniaokj.com/images/bubble/" + this.$tn.number.randomInt(1, 33) + ".png"
         uni.getImageInfo({
           src: image,
           success: (res) => {

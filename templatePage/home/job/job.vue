@@ -14,7 +14,7 @@
       <view class="custom-nav tn-flex tn-flex-col-center tn-flex-row-left">
         <!-- 返回按钮 -->
         <view class="custom-nav__back">
-          <view class="logo-pic tn-shadow-blur" style="background-image:url('https://tnuiimage.tnkjapp.com/logo/logo2.png')">
+          <view class="logo-pic tn-shadow-blur" style="background-image:url('https://resource.tuniaokj.com/images/logo/logo2.png')">
             <view class="logo-image">
             </view>
           </view> 
@@ -80,7 +80,7 @@
         <view class="bar-icon">
           <!-- <view class="tn-icon-level">
           </view> -->
-          <image class="" src='https://tnuiimage.tnkjapp.com/tabbar/job-home.png'></image>
+          <image class="" src='https://resource.tuniaokj.com/images/tabbar/job-home.png'></image>
         </view>
         <view class="tn-color-black">职位</view>
       </view>
@@ -88,7 +88,7 @@
         <view class="bar-icon">
           <!-- <view class="tn-icon-level">
           </view> -->
-          <image class="" src='https://tnuiimage.tnkjapp.com/tabbar/job-honor.png'></image>
+          <image class="" src='https://resource.tuniaokj.com/images/tabbar/job-honor.png'></image>
         </view>
         <view class="tn-color-black">简历</view>
       </view>
@@ -96,7 +96,7 @@
         <view class="bar-circle tn-shadow-blur">
           <view class="tn-icon-message-fill tn-color-white">
           </view>
-          <!-- <image class="" src='https://tnuiimage.tnkjapp.com/tabbar/information_tn.png'></image> -->
+          <!-- <image class="" src='https://resource.tuniaokj.com/images/tabbar/information_tn.png'></image> -->
         </view>
         <!-- <view class="tn-color-gray">发布</view> -->
       </view>
@@ -104,7 +104,7 @@
         <view class="bar-icon">
           <!-- <view class="tn-icon-level">
           </view> -->
-          <image class="" src='https://tnuiimage.tnkjapp.com/tabbar/job-up.png'></image>
+          <image class="" src='https://resource.tuniaokj.com/images/tabbar/job-up.png'></image>
         </view>
         <view class="tn-color-black">提升</view>
       </view>
@@ -112,7 +112,7 @@
         <view class="bar-icon">
          <!-- <view class="tn-icon-signpost tn-color-gray--dark">
           </view> -->
-          <image class="" src='https://tnuiimage.tnkjapp.com/tabbar/job-my.png'></image>
+          <image class="" src='https://resource.tuniaokj.com/images/tabbar/job-my.png'></image>
         </view>
         <view class="tn-color-gray">我的</view>
       </view>
@@ -135,13 +135,13 @@
     data(){
       return {
         banner: [{
-          image: 'https://tnuiimage.tnkjapp.com/swiper/tnbanner1.jpg'
+          image: 'https://resource.tuniaokj.com/images/swiper/tnbanner1.jpg'
         }, {
-          image: 'https://tnuiimage.tnkjapp.com/swiper/tnbanner2.jpg'
+          image: 'https://resource.tuniaokj.com/images/swiper/tnbanner2.jpg'
         }, {
-          image: 'https://tnuiimage.tnkjapp.com/swiper/tnbanner3.jpg'
+          image: 'https://resource.tuniaokj.com/images/swiper/tnbanner3.jpg'
         }, {
-          image: 'https://tnuiimage.tnkjapp.com/swiper/tnbanner4.jpg'
+          image: 'https://resource.tuniaokj.com/images/swiper/tnbanner4.jpg'
         }],
         tuniaoData: [
           {
@@ -423,7 +423,7 @@
             opacity: 1;
             transform: scale(1, 1);
             background-size: 100% 100%;
-            background-image: url(https://tnuiimage.tnkjapp.com/cool_bg_image/icon_bg3.png);
+            background-image: url(https://resource.tuniaokj.com/images/cool_bg_image/icon_bg3.png);
           }
         }
         

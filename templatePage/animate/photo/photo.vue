@@ -11,10 +11,10 @@
     
     <!-- 页面内容 -->
     <view class="slideshow">
-      <view class="slideshow-image" style="background-image: url('https://tnuiimage.tnkjapp.com/shop/cup1.jpg')"></view>
-      <view class="slideshow-image" style="background-image: url('https://tnuiimage.tnkjapp.com/shop/phonecase1.jpg')"></view>
-      <view class="slideshow-image" style="background-image: url('https://tnuiimage.tnkjapp.com/shop/card.jpg')"></view>
-      <view class="slideshow-image" style="background-image: url('https://tnuiimage.tnkjapp.com/shop/watch1.jpg')"></view>
+      <view class="slideshow-image" style="background-image: url('https://resource.tuniaokj.com/images/shop/cup1.jpg')"></view>
+      <view class="slideshow-image" style="background-image: url('https://resource.tuniaokj.com/images/shop/phonecase1.jpg')"></view>
+      <view class="slideshow-image" style="background-image: url('https://resource.tuniaokj.com/images/shop/card.jpg')"></view>
+      <view class="slideshow-image" style="background-image: url('https://resource.tuniaokj.com/images/shop/watch1.jpg')"></view>
     </view>
     
   </view>

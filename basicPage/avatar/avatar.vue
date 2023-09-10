@@ -120,14 +120,14 @@
     components: {demoTitle},
     data() {
       return {
-        src: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai4.jpg',
+        src: 'https://resource.tuniaokj.com/images/avatar/xiaomai4.jpg',
         groupList: [
-          {src: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai1.jpg'},
-          {src: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai2.jpg'},
+          {src: 'https://resource.tuniaokj.com/images/avatar/xiaomai1.jpg'},
+          {src: 'https://resource.tuniaokj.com/images/avatar/xiaomai2.jpg'},
           {text: 'TN'},
           {icon: 'logo-tuniao'},
-          {src: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai1.jpg'},
-          {src: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai2.jpg'},
+          {src: 'https://resource.tuniaokj.com/images/avatar/xiaomai1.jpg'},
+          {src: 'https://resource.tuniaokj.com/images/avatar/xiaomai2.jpg'},
         ]
       }
     },

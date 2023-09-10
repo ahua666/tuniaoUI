@@ -54,7 +54,7 @@
     <!-- 头像用户信息 -->
     <view class="user-info__container tn-flex tn-flex-direction-column tn-flex-col-center tn-flex-row-center">
       <view class="user-info__avatar tn-flex tn-flex-col-center tn-flex-row-center">
-        <view class="tn-shadow-blur" style="background-image:url('https://tnuiimage.tnkjapp.com/logo/tuniao.png');width: 170rpx;height: 170rpx;background-size: cover;">
+        <view class="tn-shadow-blur" style="background-image:url('https://resource.tuniaokj.com/images/logo/tuniao.png');width: 170rpx;height: 170rpx;background-size: cover;">
         </view>
       </view>
       <!-- <view class="user-info__nick-name">图鸟UI</view> -->
@@ -75,13 +75,13 @@
     
     <view class="tnwave waveAnimation">
       <view class="waveWrapperInner bgTop">
-        <view class="wave waveTop" style="background-image: url('https://tnuiimage.tnkjapp.com/wave/wave-2.png')"></view>
+        <view class="wave waveTop" style="background-image: url('https://resource.tuniaokj.com/images/wave/wave-2.png')"></view>
       </view>
       <view class="waveWrapperInner bgMiddle">
-        <view class="wave waveMiddle" style="background-image: url('https://tnuiimage.tnkjapp.com/wave/wave-2.png')"></view>
+        <view class="wave waveMiddle" style="background-image: url('https://resource.tuniaokj.com/images/wave/wave-2.png')"></view>
       </view>
       <view class="waveWrapperInner bgBottom">
-        <view class="wave waveBottom" style="background-image: url('https://tnuiimage.tnkjapp.com/wave/wave-1.png')"></view>
+        <view class="wave waveBottom" style="background-image: url('https://resource.tuniaokj.com/images/wave/wave-1.png')"></view>
       </view>
     </view>
 

@@ -12,7 +12,7 @@
     <view class="login">
       <!-- 顶部背景图片-->
       <view class="login__bg login__bg--top">
-        <image class="bg" src="https://tnuiimage.tnkjapp.com/login/2/login-top2.png" mode="widthFix"></image>
+        <image class="bg" src="https://resource.tuniaokj.com/images/login/2/login-top2.png" mode="widthFix"></image>
       </view>
 
       <view class="login__wrapper">
@@ -134,7 +134,7 @@
       
       <!-- 底部背景图片-->
       <view class="login__bg login__bg--bottom">
-        <image src="https://tnuiimage.tnkjapp.com/login/2/login-bottom2.png" mode="widthFix"></image>
+        <image src="https://resource.tuniaokj.com/images/login/2/login-bottom2.png" mode="widthFix"></image>
       </view>
   
     </view>
@@ -402,7 +402,7 @@
           //   opacity: 1;
           //   transform: scale(1, 1);
           //   background-size: 100% 100%;
-          //   background-image: url(https://tnuiimage.tnkjapp.com/cool_bg_image/icon_bg5.png);
+          //   background-image: url(https://resource.tuniaokj.com/images/cool_bg_image/icon_bg5.png);
           // }
         }
       }

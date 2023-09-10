@@ -25,7 +25,7 @@
     
 
     <view class="top-backgroup">
-      <image src='https://tnuiimage.tnkjapp.com/my/my-vip.jpg' mode='widthFix' class='backgroud-image'></image>
+      <image src='https://resource.tuniaokj.com/images/my/my-vip.jpg' mode='widthFix' class='backgroud-image'></image>
     </view>
 
 
@@ -36,7 +36,7 @@
             <!-- 图标logo -->
             <view class="logo-pic tn-shadow">
               <view class="logo-image">
-                <view class="tn-shadow-blur" style="background-image:url('https://tnuiimage.tnkjapp.com/blogger/avatar_2.jpeg');width: 100rpx;height: 100rpx;background-size: cover;">
+                <view class="tn-shadow-blur" style="background-image:url('https://resource.tuniaokj.com/images/blogger/avatar_2.jpeg');width: 100rpx;height: 100rpx;background-size: cover;">
                 </view>
                 <!-- <view class="tn-icon-logo-tuniao" style="font-size: 100rpx;color: #01BEFF;padding: 16rpx 0;"></view> -->
               </view>
@@ -307,8 +307,8 @@
         <view class="bar-icon">
           <!-- <view class="tn-icon-home-smile tn-color-gray--dark">
           </view> -->
-          <image class="" src='https://tnuiimage.tnkjapp.com/tabbar/home_tn.png'></image>
-          <!-- <image class="" src='https://tnuiimage.tnkjapp.com/bless/bless-home.png'></image> -->
+          <image class="" src='https://resource.tuniaokj.com/images/tabbar/home_tn.png'></image>
+          <!-- <image class="" src='https://resource.tuniaokj.com/images/bless/bless-home.png'></image> -->
         </view>
         <view class="tn-color-gray">首页</view>
       </view>
@@ -316,8 +316,8 @@
         <view class="bar-icon">
           <!-- <view class="tn-icon-discover tn-color-gray--dark">
           </view>  -->
-          <image class="" src='https://tnuiimage.tnkjapp.com/tabbar/information_tn.png'></image>
-          <!-- <image class="" src='https://tnuiimage.tnkjapp.com/bless/bless-flower.png'></image> -->
+          <image class="" src='https://resource.tuniaokj.com/images/tabbar/information_tn.png'></image>
+          <!-- <image class="" src='https://resource.tuniaokj.com/images/bless/bless-flower.png'></image> -->
         </view>
         <view class="tn-color-gray">圈子</view>
       </view>
@@ -336,8 +336,8 @@
             <view class="nav-index-button__content--icon tn-flex tn-flex-row-center tn-flex-col-center">
               <!-- <view class="tn-icon-logo-tuniao"></view> -->
               <view class="bar-circle">
-                <!-- <image class="" src='https://tnuiimage.tnkjapp.com/login/1/login_top3.png'></image> -->
-                <image class="" src='https://tnuiimage.tnkjapp.com/bless/bless-tiger.png'></image>
+                <!-- <image class="" src='https://resource.tuniaokj.com/images/login/1/login_top3.png'></image> -->
+                <image class="" src='https://resource.tuniaokj.com/images/bless/bless-tiger.png'></image>
               </view>
             </view>
           </view>
@@ -358,8 +358,8 @@
         <view class="bar-icon">
           <!-- <view class="tn-icon-image-text tn-color-gray--dark">
           </view> -->
-          <image class="" src='https://tnuiimage.tnkjapp.com/tabbar/case_tn.png'></image>
-          <!-- <image class="" src='https://tnuiimage.tnkjapp.com/bless/bless-china.png'></image> -->
+          <image class="" src='https://resource.tuniaokj.com/images/tabbar/case_tn.png'></image>
+          <!-- <image class="" src='https://resource.tuniaokj.com/images/bless/bless-china.png'></image> -->
         </view>
         <view class="tn-color-gray">优选</view>
       </view>
@@ -367,8 +367,8 @@
         <view class="bar-icon">
           <!-- <view class="tn-icon-my tn-color-gray--dark">
           </view> -->
-          <image class="" src='https://tnuiimage.tnkjapp.com/tabbar/my_tnnew.png'></image>
-          <!-- <image class="" src='https://tnuiimage.tnkjapp.com/bless/bless-money.png'></image> -->
+          <image class="" src='https://resource.tuniaokj.com/images/tabbar/my_tnnew.png'></image>
+          <!-- <image class="" src='https://resource.tuniaokj.com/images/bless/bless-money.png'></image> -->
         </view>
         <view class="tn-color-gray">我的</view>
       </view>
@@ -495,7 +495,7 @@
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      background-image: url(https://tnuiimage.tnkjapp.com/title_bg/title44.png);
+      background-image: url(https://resource.tuniaokj.com/images/title_bg/title44.png);
       background-size: cover;
     }
   }
@@ -570,7 +570,7 @@
           opacity: 1;
           transform: scale(1, 1);
           background-size: 100% 100%;
-          background-image: url(https://tnuiimage.tnkjapp.com/cool_bg_image/icon_bg6.png);
+          background-image: url(https://resource.tuniaokj.com/images/cool_bg_image/icon_bg6.png);
             
         }
       }
@@ -609,7 +609,7 @@
           opacity: 1;
           transform: scale(1, 1);
           background-size: 100% 100%;
-          background-image: url(https://tnuiimage.tnkjapp.com/cool_bg_image/icon_bg.png);
+          background-image: url(https://resource.tuniaokj.com/images/cool_bg_image/icon_bg.png);
         }
       }
     }
@@ -745,7 +745,7 @@
           opacity: 1;
           transform: scale(1, 1);
           background-size: 100% 100%;
-          // background-image: url(https://tnuiimage.tnkjapp.com/cool_bg_image/icon_bg6.png);
+          // background-image: url(https://resource.tuniaokj.com/images/cool_bg_image/icon_bg6.png);
         }
       }
     }
@@ -778,7 +778,7 @@
           display: block;
           width: 100%;
           height: 100%;
-          background: url(https://tnuiimage.tnkjapp.com/cool_bg_image/arc1.png) no-repeat center center;
+          background: url(https://resource.tuniaokj.com/images/cool_bg_image/arc1.png) no-repeat center center;
           background-size: 100% 100%;
           animation: arc 4s linear infinite;
         }
@@ -849,7 +849,7 @@
           opacity: 1;
           transform: scale(1, 1);
           background-size: 100% 100%;
-          // background-image: url(https://tnuiimage.tnkjapp.com/cool_bg_image/icon_bg.png);
+          // background-image: url(https://resource.tuniaokj.com/images/cool_bg_image/icon_bg.png);
 
 
         }
@@ -890,7 +890,7 @@
           opacity: 1;
           transform: scale(1, 1);
           background-size: 100% 100%;
-          background-image: url(https://tnuiimage.tnkjapp.com/cool_bg_image/icon_bg.png);
+          background-image: url(https://resource.tuniaokj.com/images/cool_bg_image/icon_bg.png);
         }
       }
     }

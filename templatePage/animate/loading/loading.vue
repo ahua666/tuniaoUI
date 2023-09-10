@@ -70,7 +70,7 @@
     content: "";
     inline-size: var(--size);
     block-size: var(--size);
-    background-image: url("https://tnuiimage.tnkjapp.com/animate/animate1.jpg");
+    background-image: url("https://resource.tuniaokj.com/images/animate/animate1.jpg");
     background-size: var(--bg-size);
     background-repeat: repeat;
     transform: rotate(45deg);

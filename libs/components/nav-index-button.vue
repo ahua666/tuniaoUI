@@ -100,7 +100,7 @@
           opacity: 1;
           transform: scale(1, 1);
           background-size: 100% 100%;
-          background-image: url(https://tnuiimage.tnkjapp.com/cool_bg_image/icon_bg6.png);
+          background-image: url(https://resource.tuniaokj.com/images/cool_bg_image/icon_bg6.png);
         }
       }
     }
@@ -133,7 +133,7 @@
           display: block;
           width: 100%;
           height: 100%;
-          background: url(https://tnuiimage.tnkjapp.com/cool_bg_image/arc3.png) no-repeat center center;
+          background: url(https://resource.tuniaokj.com/images/cool_bg_image/arc3.png) no-repeat center center;
           background-size: 100% 100%;
           animation: arc 4s linear infinite;
         }

@@ -53,97 +53,97 @@
         list: [
           {
             userInfo: {
-              avatar: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai1.jpg',
+              avatar: 'https://resource.tuniaokj.com/images/avatar/xiaomai1.jpg',
               nickName: '图鸟科技-北北'
             },
             content: {
               title: '全新UI框架，tuniaoUI正式发布',
               desc: '基于uniapp开发的UI框架，tuniaoUI现已正式发布，该UI最大的特点就是酷炫，相对于传统的UI框架，不仅仅提供了组件方便用户进行使用同时提供了酷炫的页面模板，让用户直接使用模板就可以做出精美的页面',
-              mainImage: 'https://tnuiimage.tnkjapp.com/shop/sticker.jpg',
+              mainImage: 'https://resource.tuniaokj.com/images/shop/sticker.jpg',
               releaseDate: '2020年12月30日'
             }
           },
           {
             userInfo: {
-              avatar: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai1.jpg',
+              avatar: 'https://resource.tuniaokj.com/images/avatar/xiaomai1.jpg',
               nickName: '图鸟科技-北北'
             },
             content: {
               title: '全新UI框架，tuniaoUI正式发布',
               desc: '基于uniapp开发的UI框架，tuniaoUI现已正式发布，该UI最大的特点就是酷炫，相对于传统的UI框架，不仅仅提供了组件方便用户进行使用同时提供了酷炫的页面模板，让用户直接使用模板就可以做出精美的页面',
-              mainImage: 'https://tnuiimage.tnkjapp.com/shop/sticker.jpg',
+              mainImage: 'https://resource.tuniaokj.com/images/shop/sticker.jpg',
               releaseDate: '2020年12月30日'
             }
           },
           {
             userInfo: {
-              avatar: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai1.jpg',
+              avatar: 'https://resource.tuniaokj.com/images/avatar/xiaomai1.jpg',
               nickName: '图鸟科技-北北'
             },
             content: {
               title: '全新UI框架，tuniaoUI正式发布',
               desc: '基于uniapp开发的UI框架，tuniaoUI现已正式发布，该UI最大的特点就是酷炫，相对于传统的UI框架，不仅仅提供了组件方便用户进行使用同时提供了酷炫的页面模板，让用户直接使用模板就可以做出精美的页面',
-              mainImage: 'https://tnuiimage.tnkjapp.com/shop/sticker.jpg',
+              mainImage: 'https://resource.tuniaokj.com/images/shop/sticker.jpg',
               releaseDate: '2020年12月30日'
             }
           },
           {
             userInfo: {
-              avatar: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai1.jpg',
+              avatar: 'https://resource.tuniaokj.com/images/avatar/xiaomai1.jpg',
               nickName: '图鸟科技-北北'
             },
             content: {
               title: '全新UI框架，tuniaoUI正式发布',
               desc: '基于uniapp开发的UI框架，tuniaoUI现已正式发布，该UI最大的特点就是酷炫，相对于传统的UI框架，不仅仅提供了组件方便用户进行使用同时提供了酷炫的页面模板，让用户直接使用模板就可以做出精美的页面',
-              mainImage: 'https://tnuiimage.tnkjapp.com/shop/sticker.jpg',
+              mainImage: 'https://resource.tuniaokj.com/images/shop/sticker.jpg',
               releaseDate: '2020年12月30日'
             }
           },
           {
             userInfo: {
-              avatar: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai1.jpg',
+              avatar: 'https://resource.tuniaokj.com/images/avatar/xiaomai1.jpg',
               nickName: '图鸟科技-北北'
             },
             content: {
               title: '全新UI框架，tuniaoUI正式发布',
               desc: '基于uniapp开发的UI框架，tuniaoUI现已正式发布，该UI最大的特点就是酷炫，相对于传统的UI框架，不仅仅提供了组件方便用户进行使用同时提供了酷炫的页面模板，让用户直接使用模板就可以做出精美的页面',
-              mainImage: 'https://tnuiimage.tnkjapp.com/shop/sticker.jpg',
+              mainImage: 'https://resource.tuniaokj.com/images/shop/sticker.jpg',
               releaseDate: '2020年12月30日'
             }
           },
           {
             userInfo: {
-              avatar: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai1.jpg',
+              avatar: 'https://resource.tuniaokj.com/images/avatar/xiaomai1.jpg',
               nickName: '图鸟科技-北北'
             },
             content: {
               title: '全新UI框架，tuniaoUI正式发布',
               desc: '基于uniapp开发的UI框架，tuniaoUI现已正式发布，该UI最大的特点就是酷炫，相对于传统的UI框架，不仅仅提供了组件方便用户进行使用同时提供了酷炫的页面模板，让用户直接使用模板就可以做出精美的页面',
-              mainImage: 'https://tnuiimage.tnkjapp.com/shop/sticker.jpg',
+              mainImage: 'https://resource.tuniaokj.com/images/shop/sticker.jpg',
               releaseDate: '2020年12月30日'
             }
           },
           {
             userInfo: {
-              avatar: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai1.jpg',
+              avatar: 'https://resource.tuniaokj.com/images/avatar/xiaomai1.jpg',
               nickName: '图鸟科技-北北'
             },
             content: {
               title: '全新UI框架，tuniaoUI正式发布',
               desc: '基于uniapp开发的UI框架，tuniaoUI现已正式发布，该UI最大的特点就是酷炫，相对于传统的UI框架，不仅仅提供了组件方便用户进行使用同时提供了酷炫的页面模板，让用户直接使用模板就可以做出精美的页面',
-              mainImage: 'https://tnuiimage.tnkjapp.com/shop/sticker.jpg',
+              mainImage: 'https://resource.tuniaokj.com/images/shop/sticker.jpg',
               releaseDate: '2020年12月30日'
             }
           },
           {
             userInfo: {
-              avatar: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai1.jpg',
+              avatar: 'https://resource.tuniaokj.com/images/avatar/xiaomai1.jpg',
               nickName: '图鸟科技-北北'
             },
             content: {
               title: '全新UI框架，tuniaoUI正式发布',
               desc: '基于uniapp开发的UI框架，tuniaoUI现已正式发布，该UI最大的特点就是酷炫，相对于传统的UI框架，不仅仅提供了组件方便用户进行使用同时提供了酷炫的页面模板，让用户直接使用模板就可以做出精美的页面',
-              mainImage: 'https://tnuiimage.tnkjapp.com/shop/sticker.jpg',
+              mainImage: 'https://resource.tuniaokj.com/images/shop/sticker.jpg',
               releaseDate: '2020年12月30日'
             }
           }

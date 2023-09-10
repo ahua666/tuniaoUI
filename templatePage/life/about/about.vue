@@ -12,7 +12,7 @@
     
     <canvas canvas-id="bubble" id="bubble" class="bubble" :style="{width: `${windowWidth}px`, height: `${windowHeight}px`}"></canvas>
     
-    <view class="container about-bg" style="background-image:url('https://tnuiimage.tnkjapp.com/about/about.png')">
+    <view class="container about-bg" style="background-image:url('https://resource.tuniaokj.com/images/about/about.png')">
     </view>
   </view>
 </template>
@@ -68,7 +68,7 @@
       
       // 生成泡泡
       generateBubble() {
-        const image = "https://tnuiimage.tnkjapp.com/bubble/" + this.$tn.number.randomInt(1, 33) + ".png"
+        const image = "https://resource.tuniaokj.com/images/bubble/" + this.$tn.number.randomInt(1, 33) + ".png"
         uni.getImageInfo({
           src: image,
           success: (res) => {

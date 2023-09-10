@@ -131,7 +131,7 @@
           <tn-list-cell :unlined="true">
             <view class="message">
               <view class="message__left">
-                <tn-avatar src="https://tnuiimage.tnkjapp.com/avatar/xiaomai1.jpg"></tn-avatar>
+                <tn-avatar src="https://resource.tuniaokj.com/images/avatar/xiaomai1.jpg"></tn-avatar>
               </view>
               <view class="message__middle">
                 <view class="message__name">小图鸟</view>
@@ -148,7 +148,7 @@
           <tn-list-cell :unlined="true">
             <view class="message">
               <view class="message__left">
-                <tn-avatar src="https://tnuiimage.tnkjapp.com/avatar/xiaomai1.jpg" :badge="true" badgeText="99" badgeBgColor="tn-bg-red" badgeColor="tn-color-white"></tn-avatar>
+                <tn-avatar src="https://resource.tuniaokj.com/images/avatar/xiaomai1.jpg" :badge="true" badgeText="99" badgeBgColor="tn-bg-red" badgeColor="tn-color-white"></tn-avatar>
               </view>
               <view class="message__middle">
                 <view class="message__name">小图鸟</view>
@@ -225,10 +225,10 @@
         cellLineRight: true,
         
         avatarGroupList: [
-          {src: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai1.jpg'},
-          {src: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai2.jpg'},
-          {src: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai1.jpg'},
-          {src: 'https://tnuiimage.tnkjapp.com/avatar/xiaomai2.jpg'},
+          {src: 'https://resource.tuniaokj.com/images/avatar/xiaomai1.jpg'},
+          {src: 'https://resource.tuniaokj.com/images/avatar/xiaomai2.jpg'},
+          {src: 'https://resource.tuniaokj.com/images/avatar/xiaomai1.jpg'},
+          {src: 'https://resource.tuniaokj.com/images/avatar/xiaomai2.jpg'},
         ]
       }
     },

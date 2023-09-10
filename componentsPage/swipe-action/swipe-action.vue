@@ -15,7 +15,7 @@
         <tn-swipe-action-item :options="options1" name="0" @click="onSwiperItemClick">
           <view class="swipe-action__item tn-flex tn-flex-direction-row tn-flex-col-top tn-flex-row-left">
             <view class="swipe-action__item__image">
-              <image src="https://tnuiimage.tnkjapp.com/shop/card.jpg" mode="scaleToFill"></image>
+              <image src="https://resource.tuniaokj.com/images/shop/card.jpg" mode="scaleToFill"></image>
             </view>
             <view class="swipe-action__item__info tn-flex tn-flex-direction-column tn-flex-col-top tn-flex-row-right">
               <view class="swipe-action__item__info__title">
@@ -34,7 +34,7 @@
           <tn-swipe-action-item :options="options2">
             <view class="swipe-action__item tn-flex tn-flex-direction-row tn-flex-col-top tn-flex-row-left">
               <view class="swipe-action__item__image">
-                <image src="https://tnuiimage.tnkjapp.com/shop/card.jpg" mode="scaleToFill"></image>
+                <image src="https://resource.tuniaokj.com/images/shop/card.jpg" mode="scaleToFill"></image>
               </view>
               <view class="swipe-action__item__info tn-flex tn-flex-direction-column tn-flex-col-top tn-flex-row-right">
                 <view class="swipe-action__item__info__title">
@@ -54,7 +54,7 @@
           <tn-swipe-action-item :options="options3">
             <view class="swipe-action__item tn-flex tn-flex-direction-row tn-flex-col-top tn-flex-row-left">
               <view class="swipe-action__item__image">
-                <image src="https://tnuiimage.tnkjapp.com/shop/card.jpg" mode="scaleToFill"></image>
+                <image src="https://resource.tuniaokj.com/images/shop/card.jpg" mode="scaleToFill"></image>
               </view>
               <view class="swipe-action__item__info tn-flex tn-flex-direction-column tn-flex-col-top tn-flex-row-right">
                 <view class="swipe-action__item__info__title">
@@ -74,7 +74,7 @@
           <tn-swipe-action-item :options="options4">
             <view class="swipe-action__item tn-flex tn-flex-direction-row tn-flex-col-top tn-flex-row-left">
               <view class="swipe-action__item__image">
-                <image src="https://tnuiimage.tnkjapp.com/shop/card.jpg" mode="scaleToFill"></image>
+                <image src="https://resource.tuniaokj.com/images/shop/card.jpg" mode="scaleToFill"></image>
               </view>
               <view class="swipe-action__item__info tn-flex tn-flex-direction-column tn-flex-col-top tn-flex-row-right">
                 <view class="swipe-action__item__info__title">
@@ -94,7 +94,7 @@
           <tn-swipe-action-item v-for="(item,index) in 2" :key="index" :name="index" :options="options2">
             <view class="swipe-action__item tn-flex tn-flex-direction-row tn-flex-col-top tn-flex-row-left">
               <view class="swipe-action__item__image">
-                <image src="https://tnuiimage.tnkjapp.com/shop/card.jpg" mode="scaleToFill"></image>
+                <image src="https://resource.tuniaokj.com/images/shop/card.jpg" mode="scaleToFill"></image>
               </view>
               <view class="swipe-action__item__info tn-flex tn-flex-direction-column tn-flex-col-top tn-flex-row-right">
                 <view class="swipe-action__item__info__title">
@@ -114,7 +114,7 @@
           <tn-swipe-action-item v-for="(item,index) in 2" :key="index" :name="index" :options="options2">
             <view class="swipe-action__item tn-flex tn-flex-direction-row tn-flex-col-top tn-flex-row-left">
               <view class="swipe-action__item__image">
-                <image src="https://tnuiimage.tnkjapp.com/shop/card.jpg" mode="scaleToFill"></image>
+                <image src="https://resource.tuniaokj.com/images/shop/card.jpg" mode="scaleToFill"></image>
               </view>
               <view class="swipe-action__item__info tn-flex tn-flex-direction-column tn-flex-col-top tn-flex-row-right">
                 <view class="swipe-action__item__info__title">

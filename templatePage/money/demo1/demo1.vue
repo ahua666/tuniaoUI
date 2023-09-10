@@ -199,7 +199,7 @@
       opacity: 1;
       transform: scale(1, 1);
       background-size: 100% 100%;
-      background-image: url(https://tnuiimage.tnkjapp.com/cool_bg_image/icon_bg4.png);
+      background-image: url(https://resource.tuniaokj.com/images/cool_bg_image/icon_bg4.png);
     }    
   }
   

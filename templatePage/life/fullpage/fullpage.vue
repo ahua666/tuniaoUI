@@ -40,23 +40,23 @@
         swiperList: [{
           id: 0,
           type: 'image',
-          url: 'https://tnuiimage.tnkjapp.com/swiper/fullbg1.jpg',
-          pngurl: 'https://tnuiimage.tnkjapp.com/swiper/full1.png'
+          url: 'https://resource.tuniaokj.com/images/swiper/fullbg1.jpg',
+          pngurl: 'https://resource.tuniaokj.com/images/swiper/full1.png'
         }, {
           id: 1,
           type: 'image',
-          url: 'https://tnuiimage.tnkjapp.com/swiper/fullbg2.jpg',
-          pngurl: 'https://tnuiimage.tnkjapp.com/swiper/full2.png'
+          url: 'https://resource.tuniaokj.com/images/swiper/fullbg2.jpg',
+          pngurl: 'https://resource.tuniaokj.com/images/swiper/full2.png'
         }, {
           id: 2,
           type: 'image',
-          url: 'https://tnuiimage.tnkjapp.com/swiper/fullbg1.jpg',
-          pngurl: 'https://tnuiimage.tnkjapp.com/swiper/full3.png'
+          url: 'https://resource.tuniaokj.com/images/swiper/fullbg1.jpg',
+          pngurl: 'https://resource.tuniaokj.com/images/swiper/full3.png'
         }, {
           id: 3,
           type: 'image',
-          url: 'https://tnuiimage.tnkjapp.com/swiper/fullbg2.jpg',
-          pngurl: 'https://tnuiimage.tnkjapp.com/swiper/full4.png'
+          url: 'https://resource.tuniaokj.com/images/swiper/fullbg2.jpg',
+          pngurl: 'https://resource.tuniaokj.com/images/swiper/full4.png'
         }],
       }
     },

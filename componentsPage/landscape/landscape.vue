@@ -29,7 +29,7 @@
       :maskCloseable="maskCloseable"
       @close="closeLandscape"
     >
-      <image src="https://tnuiimage.tnkjapp.com/landscape/2022-new-year.png" mode="widthFix"></image>
+      <image src="https://resource.tuniaokj.com/images/landscape/2022-new-year.png" mode="widthFix"></image>
     </tn-landscape>
 
   </view>

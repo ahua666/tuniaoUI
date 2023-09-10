@@ -56,10 +56,10 @@
     data() {
       return {
         list: [
-          {image: 'https://tnuiimage.tnkjapp.com/swiper/spring.jpg', title: '春天'},
-          {image: 'https://tnuiimage.tnkjapp.com/swiper/summer.jpg', title: '夏天'},
-          {image: 'https://tnuiimage.tnkjapp.com/swiper/autumn.jpg', title: '秋天'},
-          {image: 'https://tnuiimage.tnkjapp.com/swiper/winter.jpg', title: '冬天'},
+          {image: 'https://resource.tuniaokj.com/images/swiper/spring.jpg', title: '春天'},
+          {image: 'https://resource.tuniaokj.com/images/swiper/summer.jpg', title: '夏天'},
+          {image: 'https://resource.tuniaokj.com/images/swiper/autumn.jpg', title: '秋天'},
+          {image: 'https://resource.tuniaokj.com/images/swiper/winter.jpg', title: '冬天'},
         ]
       }
     },

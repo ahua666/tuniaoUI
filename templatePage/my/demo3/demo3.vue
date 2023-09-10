@@ -11,7 +11,7 @@
     
     
     <view class="top-backgroup">
-      <image src='https://tnuiimage.tnkjapp.com/my/my-bg3.png' mode='widthFix' class='backgroud-image'></image>
+      <image src='https://resource.tuniaokj.com/images/my/my-bg3.png' mode='widthFix' class='backgroud-image'></image>
     </view>
     
     
@@ -48,7 +48,7 @@
             <!-- 图标logo -->
             <view class="logo-pic tn-shadow" >
               <view class="logo-image">
-                <view class="tn-shadow-blur" style="background-image:url('https://tnuiimage.tnkjapp.com/blogger/avatar_2.jpeg');width: 120rpx;height: 120rpx;background-size: cover;">
+                <view class="tn-shadow-blur" style="background-image:url('https://resource.tuniaokj.com/images/blogger/avatar_2.jpeg');width: 120rpx;height: 120rpx;background-size: cover;">
                 </view>
                 <!-- <view class="tn-icon-logo-tuniao" style="font-size: 140rpx;color: #01BEFF;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"></view> -->
               </view>
@@ -231,7 +231,7 @@
         <view class="bar-icon">
           <!-- <view class="tn-icon-home-smile">
           </view> -->
-          <image class="" src='https://tnuiimage.tnkjapp.com/tabbar/home_tn.png'></image>
+          <image class="" src='https://resource.tuniaokj.com/images/tabbar/home_tn.png'></image>
         </view>
         <view class="tn-color-gray">首页</view>
       </view>
@@ -239,7 +239,7 @@
         <view class="bar-icon">
           <!-- <view class="tn-icon-discover">
           </view> -->
-          <image class="" src='https://tnuiimage.tnkjapp.com/tabbar/information_tn.png'></image>
+          <image class="" src='https://resource.tuniaokj.com/images/tabbar/information_tn.png'></image>
         </view>
         <view class="tn-color-gray">圈子</view>
       </view>
@@ -247,7 +247,7 @@
         <view class="bar-icon">
           <!-- <view class="tn-icon-image-text">
           </view> -->
-          <image class="" src='https://tnuiimage.tnkjapp.com/tabbar/case_tn.png'></image>
+          <image class="" src='https://resource.tuniaokj.com/images/tabbar/case_tn.png'></image>
         </view>
         <view class="tn-color-gray">福利</view>
       </view>
@@ -255,7 +255,7 @@
         <view class="bar-icon">
           <!-- <view class="tn-icon-my">
           </view> -->
-          <image class="" src='https://tnuiimage.tnkjapp.com/tabbar/my_tnnew.png'></image>
+          <image class="" src='https://resource.tuniaokj.com/images/tabbar/my_tnnew.png'></image>
         </view>
         <view class="tn-color-black">我的</view>
       </view>
@@ -416,7 +416,7 @@
           opacity: 1;
           transform: scale(1, 1);
           background-size: 100% 100%;
-          background-image: url(https://tnuiimage.tnkjapp.com/cool_bg_image/icon_bg.png);
+          background-image: url(https://resource.tuniaokj.com/images/cool_bg_image/icon_bg.png);
         }
       }
     }
@@ -505,7 +505,7 @@
             opacity: 1;
             transform: scale(1, 1);
             background-size: 100% 100%;
-            // background-image: url(https://tnuiimage.tnkjapp.com/cool_bg_image/icon_bg.png);
+            // background-image: url(https://resource.tuniaokj.com/images/cool_bg_image/icon_bg.png);
     
               
           }
@@ -546,7 +546,7 @@
             opacity: 1;
             transform: scale(1, 1);
             background-size: 100% 100%;
-            background-image: url(https://tnuiimage.tnkjapp.com/cool_bg_image/icon_bg.png);
+            background-image: url(https://resource.tuniaokj.com/images/cool_bg_image/icon_bg.png);
           }
         }
       }

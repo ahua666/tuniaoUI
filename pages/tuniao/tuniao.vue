@@ -2,14 +2,14 @@
   <view class="about tn-safe-area-inset-bottom">
   
     <view class="top-backgroup">
-      <image src='https://tnuiimage.tnkjapp.com/index_bg/about_new.jpg' mode='widthFix' class='backgroud-image'></image>
+      <image src='https://resource.tuniaokj.com/images/index_bg/about_new.jpg' mode='widthFix' class='backgroud-image'></image>
     </view>
     
     <view class="about__wrap">
       <!-- 头像用户信息 -->
       <view class="user-info__container tn-flex tn-flex-direction-column tn-flex-col-center tn-flex-row-center">
         <view class="user-info__avatar tn-bg-grey--light tn-flex tn-flex-col-center tn-flex-row-center">
-          <view class="tn-shadow-blur" style="background-image:url('https://tnuiimage.tnkjapp.com/logo/tuniao.jpg');width: 180rpx;height: 180rpx;background-size: cover;">
+          <view class="tn-shadow-blur" style="background-image:url('https://resource.tuniaokj.com/images/logo/tuniao.jpg');width: 180rpx;height: 180rpx;background-size: cover;">
           </view>
           <!-- <view class="tn-icon-logo-tuniao" style="font-size: 140rpx;color: #01BEFF;"></view> -->
         </view>
@@ -19,7 +19,7 @@
       <!-- banner start-->
       <!-- <view class="tn-flex tn-flex-wrap tn-padding-xs" @click="navTuniaoVue3">
         <view class="" style="width: 100%;">
-          <view class="image-piccapsule tn-shadow-blur" style="background-image:url('https://tnuiimage.tnkjapp.com/capsule-banner/banner-Vue3.png');">
+          <view class="image-piccapsule tn-shadow-blur" style="background-image:url('https://resource.tuniaokj.com/images/capsule-banner/banner-Vue3.png');">
              <view class="image-capsule">
              </view>
            </view>  
@@ -396,7 +396,7 @@
           opacity: 1;
           transform: scale(1, 1);
           background-size: 100% 100%;
-          background-image: url(https://tnuiimage.tnkjapp.com/cool_bg_image/6.png);
+          background-image: url(https://resource.tuniaokj.com/images/cool_bg_image/6.png);
         }
       
       &__left {
@@ -422,7 +422,7 @@
             opacity: 1;
             transform: scale(1, 1);
             background-size: 100% 100%;
-            background-image: url(https://tnuiimage.tnkjapp.com/cool_bg_image/icon_bg5.png);
+            background-image: url(https://resource.tuniaokj.com/images/cool_bg_image/icon_bg5.png);
           }
         }
         
@@ -501,7 +501,7 @@
           opacity: 1;
           transform: scale(1, 1);
           background-size: 100% 100%;
-          background-image: url(https://tnuiimage.tnkjapp.com/cool_bg_image/icon_bg.png);
+          background-image: url(https://resource.tuniaokj.com/images/cool_bg_image/icon_bg.png);
         }
       }
     }
@@ -539,7 +539,7 @@
           opacity: 1;
           transform: scale(1, 1);
           background-size: 100% 100%;
-          background-image: url(https://tnuiimage.tnkjapp.com/cool_bg_image/icon_bg.png);
+          background-image: url(https://resource.tuniaokj.com/images/cool_bg_image/icon_bg.png);
         }
       }
     }

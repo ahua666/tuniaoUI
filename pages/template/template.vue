@@ -2,7 +2,7 @@
   <view class="template tn-safe-area-inset-bottom">
   
     <view class="top-backgroup">
-      <image src='https://tnuiimage.tnkjapp.com/index_bg/template_new.jpg' mode='widthFix' class='backgroud-image'></image>
+      <image src='https://resource.tuniaokj.com/images/index_bg/template_new.jpg' mode='widthFix' class='backgroud-image'></image>
     </view>
     
     <block v-for="(item, index) in navList" :key="index">
@@ -105,7 +105,7 @@
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      background-image: url(https://tnuiimage.tnkjapp.com/title_bg/title44.png);
+      background-image: url(https://resource.tuniaokj.com/images/title_bg/title44.png);
       background-size: cover;
     }
   }

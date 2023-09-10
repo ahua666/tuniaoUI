@@ -23,7 +23,7 @@
       
       <demo-title title="自定义图片">
         <view class="empty__item">
-          <tn-empty icon="https://tnuiimage.tnkjapp.com/empty/alien/2.png" text="空空如也"></tn-empty>
+          <tn-empty icon="https://resource.tuniaokj.com/images/empty/alien/2.png" text="空空如也"></tn-empty>
         </view>
         <block v-for="(value, key, index) in imgEmpty" :key="index">
           <view class="empty__item">
@@ -34,7 +34,7 @@
       
       <demo-title title="隐藏文字">
         <view class="empty__item">
-          <tn-empty icon="https://tnuiimage.tnkjapp.com/empty/alien/2.png" mode=""></tn-empty>
+          <tn-empty icon="https://resource.tuniaokj.com/images/empty/alien/2.png" mode=""></tn-empty>
         </view>
         <view class="empty__item tn-margin-top">
           <tn-empty icon="help" mode=""></tn-empty>
@@ -54,7 +54,7 @@
           <tn-empty icon="moon-fill" text="夜深人静" :iconSize="120" :textSize="34" iconColor="#E6E6E6" textColor="#C6D1D8"></tn-empty>
         </view>
         <view class="empty__item tn-margin-top">
-          <tn-empty icon="https://tnuiimage.tnkjapp.com/empty/alien/2.png" text="空空如也" :imgWidth="200" :imgHeight="200"></tn-empty>
+          <tn-empty icon="https://resource.tuniaokj.com/images/empty/alien/2.png" text="空空如也" :imgWidth="200" :imgHeight="200"></tn-empty>
         </view>
       </demo-title>
       

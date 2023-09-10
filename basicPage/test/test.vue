@@ -39,40 +39,40 @@
     data() {
       return {
         swiperList: [
-          'https://tnuiimage.tnkjapp.com/swiper/spring.jpg',
-          'https://tnuiimage.tnkjapp.com/swiper/summer.jpg',
-          'https://tnuiimage.tnkjapp.com/swiper/autumn.jpg',
-          'https://tnuiimage.tnkjapp.com/swiper/winter.jpg',
-          'https://tnuiimage.tnkjapp.com/swiper/winter.jpg'
+          'https://resource.tuniaokj.com/images/swiper/spring.jpg',
+          'https://resource.tuniaokj.com/images/swiper/summer.jpg',
+          'https://resource.tuniaokj.com/images/swiper/autumn.jpg',
+          'https://resource.tuniaokj.com/images/swiper/winter.jpg',
+          'https://resource.tuniaokj.com/images/swiper/winter.jpg'
         ],
         phoneSwiperList: [{
           id: 0,
           type: 'image',
           name: '总有你想不到的创意',
           text: '海量分享',
-          url: 'https://tnuiimage.tnkjapp.com/swiper/test.jpg',
-          pngurl: 'https://tnuiimage.tnkjapp.com/swiper/c4d1.png'
+          url: 'https://resource.tuniaokj.com/images/swiper/test.jpg',
+          pngurl: 'https://resource.tuniaokj.com/images/swiper/c4d1.png'
         }, {
           id: 1,
           type: 'image',
           name: '寻找一起成长的小伙伴',
           text: '愉快玩耍',
-          url: 'https://tnuiimage.tnkjapp.com/swiper/banner-animate.png',
-          pngurl: 'https://tnuiimage.tnkjapp.com/swiper/c4d4.png'
+          url: 'https://resource.tuniaokj.com/images/swiper/banner-animate.png',
+          pngurl: 'https://resource.tuniaokj.com/images/swiper/c4d4.png'
         }, {
           id: 2,
           type: 'image',
           name: '更多彩蛋等你探索',
           text: '酷炫多彩',
-          url: 'https://tnuiimage.tnkjapp.com/swiper/test.jpg',
-          pngurl: 'https://tnuiimage.tnkjapp.com/swiper/c4d5.png'
+          url: 'https://resource.tuniaokj.com/images/swiper/test.jpg',
+          pngurl: 'https://resource.tuniaokj.com/images/swiper/c4d5.png'
         }, {
           id: 3,
           type: 'image',
           name: '更多彩蛋等你探索',
           text: '酷炫多彩',
-          url: 'https://tnuiimage.tnkjapp.com/swiper/banner-animate.png',
-          pngurl: 'https://tnuiimage.tnkjapp.com/swiper/c4d5.png'
+          url: 'https://resource.tuniaokj.com/images/swiper/banner-animate.png',
+          pngurl: 'https://resource.tuniaokj.com/images/swiper/c4d5.png'
         }],
         currentSwiperIndex: 0,
         phoneCurrentSwiperIndex: 0

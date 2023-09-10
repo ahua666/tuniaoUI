@@ -15,7 +15,7 @@
     </tn-nav-bar>
     
     <view class="bottom-backgroup">
-      <image src='https://tnuiimage.tnkjapp.com/animate/activity.jpg' mode='widthFix' class='backgroud-image'></image>
+      <image src='https://resource.tuniaokj.com/images/animate/activity.jpg' mode='widthFix' class='backgroud-image'></image>
     </view>    
 
     <nav-index-button></nav-index-button>

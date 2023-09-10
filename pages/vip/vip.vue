@@ -1,7 +1,7 @@
 <template>
   <view class="vip tn-safe-area-inset-bottom">
     <view class="top-backgroup">
-      <image src='https://tnuiimage.tnkjapp.com/index_bg/tools_new.jpg' mode='widthFix' class='backgroud-image'></image>
+      <image src='https://resource.tuniaokj.com/images/index_bg/tools_new.jpg' mode='widthFix' class='backgroud-image'></image>
     </view>
     
     <swiper class="card-swiper" :circular="true"
@@ -96,7 +96,7 @@
     <!-- banner start-->
     <view class="tn-flex tn-flex-wrap tn-padding-xs" @click="navTuniaoMoban">
       <view class="" style="width: 100%;">
-        <view class="image-piccapsule tn-shadow-blur" style="background-image:url('https://tnuiimage.tnkjapp.com/capsule-banner/banner-circle2.png');">
+        <view class="image-piccapsule tn-shadow-blur" style="background-image:url('https://resource.tuniaokj.com/images/capsule-banner/banner-circle2.png');">
            <view class="image-capsule">
            </view>
          </view>  
@@ -170,31 +170,31 @@
         swiperList: [{
           id: 0,
           type: 'image',
-          url: 'https://tnuiimage.tnkjapp.com/index_bg/circle1.jpg',
+          url: 'https://resource.tuniaokj.com/images/index_bg/circle1.jpg',
         }, {
           id: 1,
           type: 'image',
-          url: 'https://tnuiimage.tnkjapp.com/index_bg/circle2.jpg',
+          url: 'https://resource.tuniaokj.com/images/index_bg/circle2.jpg',
         }, {
           id: 2,
           type: 'image',
-          url: 'https://tnuiimage.tnkjapp.com/index_bg/circle3.jpg',
+          url: 'https://resource.tuniaokj.com/images/index_bg/circle3.jpg',
         }, {
           id: 3,
           type: 'image',
-          url: 'https://tnuiimage.tnkjapp.com/index_bg/circle4.jpg',
+          url: 'https://resource.tuniaokj.com/images/index_bg/circle4.jpg',
         },{
           id: 4,
           type: 'image',
-          url: 'https://tnuiimage.tnkjapp.com/index_bg/circle5.jpg',
+          url: 'https://resource.tuniaokj.com/images/index_bg/circle5.jpg',
         },{
           id: 5,
           type: 'image',
-          url: 'https://tnuiimage.tnkjapp.com/index_bg/circle6.jpg',
+          url: 'https://resource.tuniaokj.com/images/index_bg/circle6.jpg',
         },{
           id: 6,
           type: 'image',
-          url: 'https://tnuiimage.tnkjapp.com/index_bg/circle7.jpg',
+          url: 'https://resource.tuniaokj.com/images/index_bg/circle7.jpg',
         }
         ],
         // nav菜单列表
@@ -410,7 +410,7 @@
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      background-image: url(https://tnuiimage.tnkjapp.com/title_bg/title44.png);
+      background-image: url(https://resource.tuniaokj.com/images/title_bg/title44.png);
       background-size: cover;
     }
   }

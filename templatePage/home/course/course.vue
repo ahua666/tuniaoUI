@@ -14,7 +14,7 @@
       <view class="custom-nav tn-flex tn-flex-col-center tn-flex-row-left">
         <!-- 图标logo -->
         <view class="custom-nav__back">
-          <view class="logo-pic tn-shadow-blur" style="background-image:url('https://tnuiimage.tnkjapp.com/logo/logo2.png')">
+          <view class="logo-pic tn-shadow-blur" style="background-image:url('https://resource.tuniaokj.com/images/logo/logo2.png')">
             <view class="logo-image">
             </view>
           </view> 
@@ -166,7 +166,7 @@
         <view class="bar-icon">
           <!-- <view class="tn-icon-home-smile">
           </view> -->
-          <image class="" src='https://tnuiimage.tnkjapp.com/tabbar/course-course.png'></image>
+          <image class="" src='https://resource.tuniaokj.com/images/tabbar/course-course.png'></image>
         </view>
         <view class="tn-color-black">课程</view>
       </view>
@@ -174,7 +174,7 @@
         <view class="bar-icon">
           <!-- <view class="tn-icon-watercup tn-color-gray">
           </view> -->
-          <image class="" src='https://tnuiimage.tnkjapp.com/tabbar/course-fire-no.png'></image>
+          <image class="" src='https://resource.tuniaokj.com/images/tabbar/course-fire-no.png'></image>
         </view>
         <view class="tn-color-gray">精选</view>
       </view>
@@ -182,7 +182,7 @@
         <view class="bar-icon">
           <!-- <view class="tn-icon-ticket tn-color-gray">
           </view> -->
-          <image class="" src='https://tnuiimage.tnkjapp.com/tabbar/course-play-no.png'></image>
+          <image class="" src='https://resource.tuniaokj.com/images/tabbar/course-play-no.png'></image>
         </view>
         <view class="tn-color-gray">播放</view>
       </view>
@@ -190,7 +190,7 @@
         <view class="bar-icon">
           <!-- <view class="tn-icon-my tn-color-gray">
           </view> -->
-          <image class="" src='https://tnuiimage.tnkjapp.com/tabbar/course-my-no.png'></image>
+          <image class="" src='https://resource.tuniaokj.com/images/tabbar/course-my-no.png'></image>
         </view>
         <view class="tn-color-gray">我的</view>
       </view>
@@ -213,13 +213,13 @@
     data(){
       return {
         banner: [{
-          image: 'https://tnuiimage.tnkjapp.com/swiper/tnbanner1.jpg'
+          image: 'https://resource.tuniaokj.com/images/swiper/tnbanner1.jpg'
         }, {
-          image: 'https://tnuiimage.tnkjapp.com/swiper/tnbanner2.jpg'
+          image: 'https://resource.tuniaokj.com/images/swiper/tnbanner2.jpg'
         }, {
-          image: 'https://tnuiimage.tnkjapp.com/swiper/tnbanner3.jpg'
+          image: 'https://resource.tuniaokj.com/images/swiper/tnbanner3.jpg'
         }, {
-          image: 'https://tnuiimage.tnkjapp.com/swiper/tnbanner4.jpg'
+          image: 'https://resource.tuniaokj.com/images/swiper/tnbanner4.jpg'
         }],
         tuniaoData: [
           {
@@ -249,18 +249,18 @@
         ],
         content: [
           {
-            userAvatar: 'https://tnuiimage.tnkjapp.com/blogger/avatar_1.jpeg',
+            userAvatar: 'https://resource.tuniaokj.com/images/blogger/avatar_1.jpeg',
             userName: '可我会像',
             date: '2021年12月20日',
             label: ['烤肉','烤肉'],
             desc: '免费开源可商用组件',
-            mainImage: 'https://tnuiimage.tnkjapp.com/shop/prototype2.jpg',
+            mainImage: 'https://resource.tuniaokj.com/images/shop/prototype2.jpg',
             viewUser: {
               latestUserAvatar: [
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_1.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_2.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_3.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_4.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_1.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_2.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_3.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_4.jpeg'},
               ],
               viewUserCount: 129
             },
@@ -269,18 +269,18 @@
             likeCount: 999
           },
           {
-            userAvatar: 'https://tnuiimage.tnkjapp.com/blogger/avatar_1.jpeg',
+            userAvatar: 'https://resource.tuniaokj.com/images/blogger/avatar_1.jpeg',
             userName: '可我会像',
             date: '2021年12月20日',
             label: ['炸串','火锅'],
             desc: '免费开源可商用组件',
-            mainImage: 'https://tnuiimage.tnkjapp.com/shop/prototype1.jpg',
+            mainImage: 'https://resource.tuniaokj.com/images/shop/prototype1.jpg',
             viewUser: {
               latestUserAvatar: [
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_1.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_2.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_3.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_4.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_1.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_2.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_3.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_4.jpeg'},
               ],
               viewUserCount: 129
             },
@@ -289,18 +289,18 @@
             likeCount: 62
           },
           {
-            userAvatar: 'https://tnuiimage.tnkjapp.com/blogger/avatar_1.jpeg',
+            userAvatar: 'https://resource.tuniaokj.com/images/blogger/avatar_1.jpeg',
             userName: '可我会像',
             date: '2021年12月20日',
             label: ['烤肉','烤肉'],
             desc: '免费开源可商用组件',
-            mainImage: 'https://tnuiimage.tnkjapp.com/shop/computer2.jpg',
+            mainImage: 'https://resource.tuniaokj.com/images/shop/computer2.jpg',
             viewUser: {
               latestUserAvatar: [
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_1.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_2.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_3.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_4.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_1.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_2.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_3.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_4.jpeg'},
               ],
               viewUserCount: 129
             },
@@ -309,18 +309,18 @@
             likeCount: 62
           },
           {
-            userAvatar: 'https://tnuiimage.tnkjapp.com/blogger/avatar_1.jpeg',
+            userAvatar: 'https://resource.tuniaokj.com/images/blogger/avatar_1.jpeg',
             userName: '可我会像',
             date: '2021年12月20日',
             label: ['烤肉','烤肉'],
             desc: '免费开源可商用组件',
-            mainImage: 'https://tnuiimage.tnkjapp.com/shop/phonecase1.jpg',
+            mainImage: 'https://resource.tuniaokj.com/images/shop/phonecase1.jpg',
             viewUser: {
               latestUserAvatar: [
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_1.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_2.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_3.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_4.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_1.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_2.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_3.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_4.jpeg'},
               ],
               viewUserCount: 129
             },
@@ -329,18 +329,18 @@
             likeCount: 62
           },
           {
-            userAvatar: 'https://tnuiimage.tnkjapp.com/blogger/avatar_1.jpeg',
+            userAvatar: 'https://resource.tuniaokj.com/images/blogger/avatar_1.jpeg',
             userName: '可我会像',
             date: '2021年12月20日',
             label: ['烤肉','烤肉'],
             desc: '免费开源可商用组件',
-            mainImage: 'https://tnuiimage.tnkjapp.com/shop/phonecase2.jpg',
+            mainImage: 'https://resource.tuniaokj.com/images/shop/phonecase2.jpg',
             viewUser: {
               latestUserAvatar: [
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_1.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_2.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_3.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_4.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_1.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_2.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_3.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_4.jpeg'},
               ],
               viewUserCount: 129
             },
@@ -349,18 +349,18 @@
             likeCount: 62
           },
           {
-            userAvatar: 'https://tnuiimage.tnkjapp.com/blogger/avatar_1.jpeg',
+            userAvatar: 'https://resource.tuniaokj.com/images/blogger/avatar_1.jpeg',
             userName: '可我会像',
             date: '2021年12月20日',
             label: ['烤肉','烤肉'],
             desc: '我们都是好孩子',
-            mainImage: 'https://tnuiimage.tnkjapp.com/shop/watch1.jpg',
+            mainImage: 'https://resource.tuniaokj.com/images/shop/watch1.jpg',
             viewUser: {
               latestUserAvatar: [
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_1.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_2.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_3.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_4.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_1.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_2.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_3.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_4.jpeg'},
               ],
               viewUserCount: 129
             },
@@ -369,18 +369,18 @@
             likeCount: 62
           },
           {
-            userAvatar: 'https://tnuiimage.tnkjapp.com/blogger/avatar_1.jpeg',
+            userAvatar: 'https://resource.tuniaokj.com/images/blogger/avatar_1.jpeg',
             userName: '可我会像',
             date: '2021年12月20日',
             label: ['烤肉','烤肉'],
             desc: '免费开源可商用组件',
-            mainImage: 'https://tnuiimage.tnkjapp.com/shop/sticker.jpg',
+            mainImage: 'https://resource.tuniaokj.com/images/shop/sticker.jpg',
             viewUser: {
               latestUserAvatar: [
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_1.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_2.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_3.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_4.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_1.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_2.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_3.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_4.jpeg'},
               ],
               viewUserCount: 129
             },
@@ -389,18 +389,18 @@
             likeCount: 62
           },
           {
-            userAvatar: 'https://tnuiimage.tnkjapp.com/blogger/avatar_1.jpeg',
+            userAvatar: 'https://resource.tuniaokj.com/images/blogger/avatar_1.jpeg',
             userName: '可我会像',
             date: '2021年12月20日',
             label: ['烤肉','烤肉'],
             desc: '免费开源可商用组件',
-            mainImage: 'https://tnuiimage.tnkjapp.com/shop/card.jpg',
+            mainImage: 'https://resource.tuniaokj.com/images/shop/card.jpg',
             viewUser: {
               latestUserAvatar: [
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_1.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_2.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_3.jpeg'},
-                {src: 'https://tnuiimage.tnkjapp.com/blogger/avatar_4.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_1.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_2.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_3.jpeg'},
+                {src: 'https://resource.tuniaokj.com/images/blogger/avatar_4.jpeg'},
               ],
               viewUserCount: 129
             },
@@ -550,7 +550,7 @@
           opacity: 1;
           transform: scale(1, 1);
           background-size: 100% 100%;
-          background-image: url(https://tnuiimage.tnkjapp.com/cool_bg_image/3.png);
+          background-image: url(https://resource.tuniaokj.com/images/cool_bg_image/3.png);
         }
       
       &__left {
@@ -576,7 +576,7 @@
             opacity: 1;
             transform: scale(1, 1);
             background-size: 100% 100%;
-            background-image: url(https://tnuiimage.tnkjapp.com/cool_bg_image/icon_bg5.png);
+            background-image: url(https://resource.tuniaokj.com/images/cool_bg_image/icon_bg5.png);
           }
         }
         
