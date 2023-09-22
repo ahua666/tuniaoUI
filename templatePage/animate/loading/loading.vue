@@ -90,8 +90,6 @@
     }
   }
 
-  
-  
   /* 加载部分 */
   .components-anloading {
     margin: 0;

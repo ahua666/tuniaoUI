@@ -184,15 +184,45 @@ export default {
       ]
     },
     {
+      title: '加载动画',
+      backgroundColor: 'tn-cool-bg-color-1',
+      list: [
+        {
+          icon: 'send',
+          title: '加载动画1',
+          author: '图鸟北北',
+          url: '/templatePage/animate/loading/loading'
+        },
+        {
+          icon: 'send',
+          title: '加载动画2',
+          author: '图鸟北北',
+          url: '/templatePage/animate/loading/loading2'
+        },
+        {
+          icon: 'send',
+          title: '加载动画3',
+          author: '图鸟北北',
+          url: '/templatePage/animate/loading/loading3'
+        },
+        {
+          icon: 'send',
+          title: '加载动画4',
+          author: '图鸟北北',
+          url: '/templatePage/animate/loading/loading4'
+        },
+        {
+          icon: 'send',
+          title: '加载动画5',
+          author: '图鸟北北',
+          url: '/templatePage/animate/loading/loading5'
+        }
+      ]
+    },
+    {
        title: '动效元素',
        backgroundColor: 'tn-cool-bg-color-1',
        list: [
-         {
-           icon: 'send',
-           title: '加载动画',
-           author: '图鸟北北',
-           url: '/templatePage/animate/loading/loading'
-         },
          {
            icon: 'send',
            title: '流星悬浮',
@@ -258,12 +288,6 @@ export default {
             title: '营销小游戏-魔方',
             author: '最帅的你',
             url: '/templatePage/life/cube/cube'
-          },
-          {
-            icon: 'rocket',
-            title: '图鸟图表(待开源，免费开源)',
-            author: '图鸟北北 & Ucharts秋云',
-            url: '/templatePage/life/candle/candle'
           },
           {
             icon: 'rocket',

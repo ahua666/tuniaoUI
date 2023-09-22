@@ -569,6 +569,30 @@
         "navigationBarTitleText": "加载动画",
         "enablePullDownRefresh": false
       }
+    },{
+      "path": "animate/loading/loading2",
+      "style": {
+        "navigationBarTitleText": "加载动画",
+        "enablePullDownRefresh": false
+      }
+    },{
+      "path": "animate/loading/loading3",
+      "style": {
+        "navigationBarTitleText": "加载动画",
+        "enablePullDownRefresh": false
+      }
+    },{
+      "path": "animate/loading/loading4",
+      "style": {
+        "navigationBarTitleText": "加载动画",
+        "enablePullDownRefresh": false
+      }
+    },{
+      "path": "animate/loading/loading5",
+      "style": {
+        "navigationBarTitleText": "加载动画",
+        "enablePullDownRefresh": false
+      }
     }, {
       "path": "animate/particle/particle",
       "style": {
