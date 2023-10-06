@@ -365,6 +365,7 @@
     right: 0;
     bottom: 0;
     overflow: hidden;
+    z-index: 29091 !important;
     
     &__content {
       /* #ifndef APP-NVUE */
