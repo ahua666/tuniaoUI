@@ -79,7 +79,7 @@ const app = new Vue({
 
 ```js
 // 引入TuniaoUI提供的vuex简写方法
-let vuexStore = require('@/store/$t.mixin.js')
+let vuexStore = require('@/store/$tn.mixin.js')
 Vue.mixin(vuexStore)
 ```
 
@@ -113,7 +113,7 @@ Vue.mixin(vuexStore)
 
 #### 6.配置easycom组件模式
 
-此配置需要在根目录的`page.json`中进行。
+此配置需要在根目录的`pages.json`中进行。
 
 ::: tip 温馨提示
 
