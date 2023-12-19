@@ -344,19 +344,15 @@
 
 <style lang="scss" scoped>
 	.tn-subsection {
-		/* #ifndef APP-PLUS */
 		display: flex;
 		flex-direction: row;
-		/* #endif */
 		align-items: center;
 		overflow: hidden;
 		position: relative;
 
 		&__item {
-			/* #ifndef APP-PLUS */
 			display: flex;
 			flex-direction: row;
-			/* #endif */
 			flex: 1;
 			text-align: center;
 			font-size: 26rpx;
@@ -370,10 +366,8 @@
 			&--text {
 				transition: all 0.3s;
 				color: #FFFFFF;
-				/* #ifndef APP-PLUS */
 				display: flex;
 				flex-direction: row;
-				/* #endif */
 				align-items: center;
 				position: relative;
 				z-index: 3;
