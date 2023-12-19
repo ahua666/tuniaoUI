@@ -33,29 +33,40 @@
       @focus="onFocus"
       @confirm="onConfirm"
     />
-    <input
-      v-else
-      class="tn-input__input"
-      :type="type === 'password' ? 'text' : type"
-      :style="[inputStyle]"
-      :value="defaultValue"
-      :password="type === 'password' && !showPassword"
-      :placeholder="placeholder"
-      :placeholderStyle="placeholderStyle"
-      :disabled="disabled || type === 'select'"
-      :maxlength="maxLength"
-      :focus="focus"
-      :confirmType="confirmType"
-      :selectionStart="elSelectionStart"
-      :selectionEnd="elSelectionEnd"
-      :cursorSpacing="cursorSpacing"
-      :showConfirmBar="showConfirmBar"
-      @input="handleInput"
-      @blur="handleBlur"
-      @focus="onFocus"
-      @confirm="onConfirm"
-    />
-    
+	<view v-else>
+
+		<view
+		 v-if="type === 'select'"
+		 class="tn-input__text"
+		 >
+		 {{defaultValue}}
+		 </view>
+
+		 <input
+		   v-else
+		   class="tn-input__input"
+		   :type="type === 'password' ? 'text' : type"
+		   :style="[inputStyle]"
+		   :value="defaultValue"
+		   :password="type === 'password' && !showPassword"
+		   :placeholder="placeholder"
+		   :placeholderStyle="placeholderStyle"
+		   :disabled="disabled || type === 'select'"
+		   :maxlength="maxLength"
+		   :focus="focus"
+		   :confirmType="confirmType"
+		   :selectionStart="elSelectionStart"
+		   :selectionEnd="elSelectionEnd"
+		   :cursorSpacing="cursorSpacing"
+		   :showConfirmBar="showConfirmBar"
+		   @input="handleInput"
+		   @blur="handleBlur"
+		   @focus="onFocus"
+		   @confirm="onConfirm"
+		 />
+	</view>
+
+
     <!-- 右边的icon -->
     <view class="tn-input__right-icon tn-flex tn-flex-col-center">
       <!-- 清除按钮 -->
@@ -97,7 +108,7 @@
 
 <script>
   import Emitter from '../../libs/utils/emitter.js'
-  
+
   export default {
     mixins: [Emitter],
     name: 'tn-input',
@@ -234,11 +245,11 @@
       inputStyle() {
         let style = {}
         // 如果没有设置高度，根据不同的类型设置一个默认值
-        style.minHeight = this.height ? this.height + 'rpx' : 
+        style.minHeight = this.height ? this.height + 'rpx' :
           this.type === 'textarea' ? this.textareaHeight + 'rpx' : this.inputHeight + 'rpx'
-        
+
         style = Object.assign(style, this.customStyle)
-        
+
         return style
       },
       // 光标起始位置
@@ -307,7 +318,7 @@
           if (this.$tn.string.trim(value) === this.lastValue) return
           this.lastValue = value
           // #endif
-          
+
           // 发送当前的值到form-item进行校验
           this.dispatch('tn-form-item','on-form-change', value)
         }, 40)
@@ -317,12 +328,12 @@
        */
       handleBlur(event) {
         let value = event.detail.value
-        
+
         // 由于点击清除图标也会触发blur事件，导致图标消失从而无法点击
         setTimeout(() => {
           this.focused = false
         }, 100)
-        
+
         // 原生事件
         this.$emit('blur', value)
         // 过一个生命周期再发送事件给tn-form-item，否则this.$emit('blur')更新了父组件的值，但是微信小程序上
@@ -334,7 +345,7 @@
           if (this.$tn.string.trim(value) === this.lastValue) return
           this.lastValue = value
           // #endif
-          
+
           // 发送当前的值到form-item进行校验
           this.dispatch('tn-form-item','on-form-blur', value)
         }, 40)
@@ -370,13 +381,22 @@
     flex-direction: row;
     position: relative;
     flex: 1;
-    
+
     &__input {
       font-size: 28rpx;
       color: $tn-font-color;
       flex: 1;
     }
-    
+
+    &__text {
+      font-size: 28rpx;
+      color: $tn-font-color;
+      flex: 1;
+	  min-width: 296rpx;
+	  max-width: 100%;
+	  text-overflow:clip;
+    }
+
     &__textarea {
       width: auto;
       font-size: 28rpx;
@@ -385,39 +405,39 @@
       line-height: normal;
       flex: 1;
     }
-    
+
     &--border {
       border-radius: 6rpx;
       border: 2rpx solid $tn-border-solid-color;
     }
-    
+
     &--error {
       border-color: $tn-color-red !important;
     }
-    
+
     &__right-icon {
       line-height: 1;
       .icon {
         color: $tn-font-sub-color;
       }
-      
+
       &__item {
         margin-left: 10rpx;
       }
-      
+
       &__clear {
         .icon {
           font-size: 32rpx;
         }
       }
-      
+
       &__select {
         transition: transform .4s;
-        
+
         .icon {
           font-size: 26rpx;
         }
-        
+
         &--reverse {
           transform: rotate(-180deg);
         }
