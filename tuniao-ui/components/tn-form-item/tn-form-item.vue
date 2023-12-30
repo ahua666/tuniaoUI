@@ -53,7 +53,7 @@
             <slot></slot>
           </view>
           <view v-if="$slots.right || rightIcon" class="tn-form-item--right__content__icon tn-flex">
-            <view v-if="rightIcon" :class="[`tn-icon-${rightIcon}`]" :style="rightIconStyle"></view>
+            <view v-if="rightIcon" :class="[`tn-icon-${rightIcon}`]" :style="[rightIconStyle]"></view>
             <slot name="right"></slot>
           </view>
         </view>
