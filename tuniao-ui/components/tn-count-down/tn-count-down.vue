@@ -9,19 +9,19 @@
       <view class="tn-countdown__item__time" :class="[fontColorClass]" :style="[letterStyle]">
         {{ d }}
       </view>
+	  <view
+	    class="tn-countdown__separator"
+	    :style="{
+	      fontSize: separatorSize + 'rpx',
+	      color: separatorColor,
+	      paddingBottom: separator === 'en' ? '4rpx' : 0
+	    }"
+	  >
+	    {{ separator === 'en' ? (showHours || showMinutes || showSeconds ? ':' : '')  : '天'}}
+	  </view>
     </view>
-    <view 
-      v-if="showHours && (hideZeroDay || (!hideZeroDay && d != '00'))"
-      class="tn-countdown__separator"
-      :style="{
-        fontSize: separatorSize + 'rpx',
-        color: separatorColor,
-        paddingBottom: separator === 'en' ? '4rpx' : 0
-      }"
-    >
-      {{ separator === 'en' ? ':' : '天'}}
-    </view>
-    
+
+
     <view
       v-if="showHours"
       class="tn-countdown__item"
@@ -31,19 +31,20 @@
       <view class="tn-countdown__item__time" :class="[fontColorClass]" :style="[letterStyle]">
         {{ h }}
       </view>
+	  <view
+	    v-if="showMinutes"
+	    class="tn-countdown__separator"
+	    :style="{
+	      fontSize: separatorSize + 'rpx',
+	      color: separatorColor,
+	      paddingBottom: separator === 'en' ? '4rpx' : 0
+	    }"
+	  >
+	    {{ separator === 'en' ? ':' : '时'}}
+	  </view>
     </view>
-    <view 
-      v-if="showMinutes"
-      class="tn-countdown__separator"
-      :style="{
-        fontSize: separatorSize + 'rpx',
-        color: separatorColor,
-        paddingBottom: separator === 'en' ? '4rpx' : 0
-      }"
-    >
-      {{ separator === 'en' ? ':' : '时'}}
-    </view>
-    
+
+
     <view
       v-if="showMinutes"
       class="tn-countdown__item"
@@ -53,40 +54,43 @@
       <view class="tn-countdown__item__time" :class="[fontColorClass]" :style="[letterStyle]">
         {{ m }}
       </view>
+		  <view
+			v-if="showSeconds"
+			class="tn-countdown__separator"
+			:style="{
+			  fontSize: separatorSize + 'rpx',
+			  color: separatorColor,
+			  paddingBottom: separator === 'en' ? '4rpx' : 0
+			}"
+		  >
+			{{ separator === 'en' ? ':' : '分'}}
+		</view>
     </view>
-    <view 
-      v-if="showSeconds"
-      class="tn-countdown__separator"
-      :style="{
-        fontSize: separatorSize + 'rpx',
-        color: separatorColor,
-        paddingBottom: separator === 'en' ? '4rpx' : 0
-      }"
-    >
-      {{ separator === 'en' ? ':' : '分'}}
+
+
+	  <view
+	    class="tn-countdown__item"
+	    :class="[backgroundColorClass]"
+	    :style="[itemStyle]"
+	  >
+	    <view class="tn-countdown__item__time" :class="[fontColorClass]" :style="[letterStyle]">
+	      {{ s }}
+	    </view>
+			<view
+			  class="tn-countdown__separator"
+			  :style="{
+				fontSize: separatorSize + 'rpx',
+				color: separatorColor,
+				paddingBottom: separator === 'en' ? '4rpx' : 0
+			  }"
+			>
+			  {{ separator === 'en' ? '' : '秒'}}
+			</view>
+	  </view>
     </view>
-    
-    <view
-      v-if="showSeconds"
-      class="tn-countdown__item"
-      :class="[backgroundColorClass]"
-      :style="[itemStyle]"
-    >
-      <view class="tn-countdown__item__time" :class="[fontColorClass]" :style="[letterStyle]">
-        {{ s }}
-      </view>
-    </view>
-    <view 
-      v-if="showSeconds && separator === 'cn'"
-      class="tn-countdown__separator"
-      :style="{
-        fontSize: separatorSize + 'rpx',
-        color: separatorColor,
-        paddingBottom: separator === 'en' ? '4rpx' : 0
-      }"
-    >
-      秒
-    </view>
+
+
+
   </view>
 </template>
 
@@ -254,7 +258,7 @@
         minute = this.$tn.number.formatNumberAddZero(minute)
         second = this.$tn.number.formatNumberAddZero(second)
         day = this.$tn.number.formatNumberAddZero(day)
-        
+
         this.d = day
         this.h = showHour
         this.m = minute
@@ -277,13 +281,13 @@
 </script>
 
 <style lang="scss" scoped>
-  
+
   .tn-countdown {
     /* #ifndef APP-NVUE */
     display: inline-flex;
     /* #endif */
     align-items: center;
-    
+
     &__item {
       box-sizing: content-box;
       display: flex;
@@ -294,14 +298,14 @@
       border-radius: 6rpx;
       white-space: nowrap;
       transform: translateZ(0);
-      
+
       &__time {
         margin: 0;
         padding: 0;
         line-height: 1;
       }
     }
-    
+
     &__separator {
       display: flex;
       flex-direction: row;
