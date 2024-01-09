@@ -7,6 +7,7 @@
       }"
       @mouseenter="mouseEnterArea"
       @mouseleave="mouseLeaveArea"
+      v-if="show"
     >
       <block
         v-for="(item, index) in lists"
@@ -298,7 +299,8 @@
           y: 0
         },
         timer: null,
-        dragging: false
+        dragging: false,
+        show:true
       }
     },
     watch: {
@@ -551,22 +553,24 @@
         if (index >= 0 && index < this.lists.length) {
           let currentItemIndex = this.lists[index].index
           this.lists.splice(index, 1)
-          // 重新排列列表信息
-          for (let item of this.lists) {
-            if (item.index > currentItemIndex) {
-              item.index -= 1
-              item.x = item.positionX * this.baseData.widthPx
-              item.y = item.positionY * this.baseData.heightPx
-              item.positionX = item.index % this.baseData.columns
-              item.positionY = Math.floor(item.index / this.baseData.columns)
-              this.$nextTick(() => {
+          this.show = false;
+          setTimeout(()=>{
+            // 重新排列列表信息
+            for (let item of this.lists) {
+              if (item.index > currentItemIndex) {
+                item.index -= 1
                 item.x = item.positionX * this.baseData.widthPx
                 item.y = item.positionY * this.baseData.heightPx
-              })
+                item.positionX = item.index % this.baseData.columns
+                item.positionY = Math.floor(item.index / this.baseData.columns)
+                this.$nextTick(() => {
+                  item.x = item.positionX * this.baseData.widthPx
+                  item.y = item.positionY * this.baseData.heightPx
+                })
+              }
             }
-          }
-          
-          this.updateAddBtnPositioin()
+            this.updateAddBtnPositioin()
+          },50)
         }
       },
       // 预览图片
@@ -684,8 +688,10 @@
       updateAddBtnPositioin() {
         if (this.lists.length >= this.maxCount) return
         
-        this.addBtn.x = (this.lists.length % this.baseData.columns) * this.baseData.widthPx
-        this.addBtn.y = Math.floor(this.lists.length / this.baseData.columns) * this.baseData.heightPx
+        setTimeout(()=>{
+          this.addBtn.x = (this.lists.length % this.baseData.columns) * this.baseData.widthPx
+          this.addBtn.y = Math.floor(this.lists.length / this.baseData.columns) * this.baseData.heightPx
+        },50);
       },
       // 获取排序后数据
       sortList() {
