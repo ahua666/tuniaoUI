@@ -555,6 +555,7 @@
           this.lists.splice(index, 1)
           this.show = false;
           setTimeout(()=>{
+            this.show = true;
             // 重新排列列表信息
             for (let item of this.lists) {
               if (item.index > currentItemIndex) {
