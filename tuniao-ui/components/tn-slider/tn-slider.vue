@@ -170,7 +170,6 @@
       },
       // 滑动结束
       touchEnd() {
-		  console.log("结束。。。");
         if(this.disabled) return
         if (this.status === 'moving') {
           this.updateValue(this.newValue, false)
@@ -203,7 +202,6 @@
       },
       // 点击事件
       click(event) {
-		  console.log("开始点击");
         if (this.disabled) return
         // 直接点击的情况，计算方式和touchMove方法一致
         const value = (((event.detail.x - this.sliderRect.left) / this.sliderRect.width) * (this.max - this.min)) + this.min
