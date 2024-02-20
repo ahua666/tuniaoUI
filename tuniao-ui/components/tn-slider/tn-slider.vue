@@ -138,12 +138,12 @@
       touchStart(event) {
         if (this.disabled) return
         if (!event.changedTouches[0]) return
-        
+
         this.startX = 0
         // 触摸点
         this.startX = event.changedTouches[0].pageX
         this.startValue = this.format(this.value)
-        
+
         // 标识当前开始触摸
         this.status = 'start'
       },
@@ -151,23 +151,26 @@
       touchMove(event) {
         if (this.disabled) return
         if (!event.changedTouches[0]) return
-        
+
         // 连续触摸的过程会一直触发本方法，但只有手指触发且移动了才被认为是拖动了，才发出事件
         // 触摸后第一次移动已经将status设置为moving状态，故触摸第二次移动不会触发本事件
         if (this.status === 'start') this.$emit('start')
         let movePageX = event.changedTouches[0].pageX
         // 滑块的左边不一定跟屏幕左边接壤，所以需要减去最外层父元素的左边值
-        this.distanceX = movePageX - this.sliderRect.left
+        let marginLeft = this.sliderRect.left;
+		    marginLeft = marginLeft < 0 ? 0 : marginLeft;
+        this.distanceX = movePageX - marginLeft;
         // 获得移动距离对整个滑块的百分比值，此为带有多位小数的值，不能用此更新视图
         // 否则造成通信阻塞，需要每改变一个step值时修改一次视图
         this.newValue = ((this.distanceX / this.sliderRect.width) * (this.max - this.min)) + this.min
         this.status = 'moving'
         this.$emit('moving')
-        
+
         this.updateValue(this.newValue, true)
       },
       // 滑动结束
       touchEnd() {
+		  console.log("结束。。。");
         if(this.disabled) return
         if (this.status === 'moving') {
           this.updateValue(this.newValue, false)
@@ -193,13 +196,14 @@
           // 非移动期间，删掉对过渡为空的声明，让css中的声明起效
           delete barStyle.transition
         }
-        
+
         // 修改value值
         this.$emit('input', value)
         this.barStyle = barStyle
       },
       // 点击事件
       click(event) {
+		  console.log("开始点击");
         if (this.disabled) return
         // 直接点击的情况，计算方式和touchMove方法一致
         const value = (((event.detail.x - this.sliderRect.left) / this.sliderRect.width) * (this.max - this.min)) + this.min
@@ -224,14 +228,14 @@
     border-color: transparent;
     background-color: $tn-font-holder-color;
     background-clip: content-box;
-    
+
     &__gap {
       position: relative;
       border-radius: inherit;
       transition: width 0.2s;
       background-color: #01BEFF;
     }
-    
+
     &__button {
       width: 30rpx;
       height: 30rpx;
@@ -239,7 +243,7 @@
       box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.6);
       background-color: #FFFFFF;
       cursor: pointer;
-      
+
       &-wrap {
         position: absolute;
         top: 50%;
@@ -247,7 +251,7 @@
         transform: translate3d(50%, -50%, 0);
       }
     }
-    
+
     &--disabled {
       opacity: 0.6;
     }
