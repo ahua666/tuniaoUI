@@ -72,6 +72,7 @@
 	    class="tn-countdown__item"
 	    :class="[backgroundColorClass]"
 	    :style="[itemStyle]"
+      v-if="showSeconds"
 	  >
 	    <view class="tn-countdown__item__time" :class="[fontColorClass]" :style="[letterStyle]">
 	      {{ s }}
@@ -86,7 +87,6 @@
 			>
 			  {{ separator === 'en' ? '' : '秒'}}
 			</view>
-	  </view>
     </view>
 
 
