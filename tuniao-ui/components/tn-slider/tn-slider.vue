@@ -149,6 +149,9 @@
       },
       // 滑动移动中
       touchMove(event) {
+		this._tGetRect('.tn-slider').then(res => {
+		    this.sliderRect = res
+		});
         if (this.disabled) return
         if (!event.changedTouches[0]) return
 
@@ -202,6 +205,9 @@
       },
       // 点击事件
       click(event) {
+		this._tGetRect('.tn-slider').then(res => {
+			this.sliderRect = res
+		})
         if (this.disabled) return
         // 直接点击的情况，计算方式和touchMove方法一致
         const value = (((event.detail.x - this.sliderRect.left) / this.sliderRect.width) * (this.max - this.min)) + this.min
