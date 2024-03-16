@@ -33,7 +33,7 @@
       @focus="onFocus"
       @confirm="onConfirm"
     />
-	<view v-else>
+	<view v-else style="width:100%">
 
 		<view
 		 v-if="type === 'select'"
@@ -117,6 +117,7 @@
         type: [String, Number],
         default: ''
       },
+
       // 输入框的类型
       type: {
         type: String,
