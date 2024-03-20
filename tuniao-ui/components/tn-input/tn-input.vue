@@ -81,7 +81,7 @@
         v-else-if="type === 'text' && !focused && showRightIcon && rightIcon !== ''"
         class="tn-input__right-icon__item tn-input__right-icon__clear"
       >
-        <view class="icon" :class="[`tn-icon-${rightIcon}`]"></view>
+        <tn-button shape="icon" :scene="scene" :block-time="blockTime" @click="rightIconClick"><view class="icon" :class="[`tn-icon-${rightIcon}`]"></view></tn-button>
       </view>
       <!-- 显示密码按钮 -->
       <view
@@ -239,6 +239,16 @@
       rightIcon: {
         type: String,
         default: ''
+      },
+      //场景：debounce ：防抖模式 throttle：节流模式
+      scene:{
+        type: String,
+        default: 'debounce'
+      },
+      // 防抖节流间隔时间（毫秒）
+      blockTime:{
+        type: Number,
+        default: 500
       }
     },
     computed: {
@@ -299,6 +309,9 @@
       this.$on("on-form-item-error", this.onFormItemError)
     },
     methods: {
+      rightIconClick(){
+        this.$emit('rightClick', this.defaultValue)
+      },
       /**
        * input事件
        */
