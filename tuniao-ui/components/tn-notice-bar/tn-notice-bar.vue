@@ -189,6 +189,12 @@
         },
         deep: true
       },
+      list:{
+        handler(value) {
+          this.loadList();
+        },
+        deep: true
+      },
     },
     data() {
       return {
