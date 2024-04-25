@@ -20,7 +20,6 @@ export function throttleFun(func, delay=500) {
 			timer = setTimeout(() => {
 				//执行前清空
 				timer = null;
-				console.log("执行了")
 				func.apply(this, args);
 			}, delay);
 		}
