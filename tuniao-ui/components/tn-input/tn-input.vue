@@ -12,6 +12,12 @@
     }"
     @tap.stop="inputClick"
   >
+    <view
+        v-if="showLeftIcon"
+        class="tn-input__left-icon__item tn-input__left-icon__clear"
+    >
+      <tn-button shape="icon" :scene="scene" :block-time="blockTime" @click="leftIconClick"><view class="icon" :class="[`tn-icon-${leftIcon}`]"></view></tn-button>
+    </view>
     <textarea
       v-if="type === 'textarea'"
       class="tn-input__input tn-input__textarea"
@@ -240,6 +246,16 @@
         type: String,
         default: ''
       },
+      // 是否在输入框内最左边显示图标
+      showLeftIcon: {
+        type: Boolean,
+        default: false
+      },
+      // 最左边图标的名称
+      leftIcon: {
+        type: String,
+        default: ''
+      },
       //场景：debounce ：防抖模式 throttle：节流模式
       scene:{
         type: String,
@@ -309,6 +325,9 @@
       this.$on("on-form-item-error", this.onFormItemError)
     },
     methods: {
+      leftIconClick(){
+        this.$emit('leftClick', this.defaultValue)
+      },
       rightIconClick(){
         this.$emit('rightClick', this.defaultValue)
       },
@@ -429,6 +448,7 @@
       border-color: $tn-color-red !important;
     }
 
+
     &__right-icon {
       line-height: 1;
       .icon {
@@ -442,6 +462,33 @@
       &__clear {
         .icon {
           font-size: 32rpx;
+        }
+      }
+
+      &__select {
+        transition: transform .4s;
+
+        .icon {
+          font-size: 26rpx;
+        }
+
+        &--reverse {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+
+    &__left-icon {
+      line-height: 1;
+      &__item {
+        margin-left: 0rpx;
+        margin-top: 4rpx;
+      }
+
+      &__clear {
+        .icon {
+          font-size: 32rpx;
+          color: $tn-font-sub-color;
         }
       }
 
