@@ -1,6 +1,6 @@
 <template>
   <view class="tn-tabs-class tn-tabs" :class="[backgroundColorClass]" :style="{backgroundColor: backgroundColorStyle, marginTop: $tn.string.getLengthUnitValue(top, 'px')}">
-    
+
     <!-- _tgetRect()对组件根节点无效，因为写了.in(this)，故这里获取内层接点尺寸 -->
     <view :id="id">
       <scroll-view scroll-x class="tn-tabs__scroll-view" :scroll-left="scrollLeft" scroll-with-animation>
@@ -17,7 +17,7 @@
             <tn-badge v-if="item[count] || item['count']" backgroundColor="tn-bg-red" fontColor="#FFFFFF" :absolute="true" :top="badgeOffset[0] || 0" :right="badgeOffset[1] || 0">{{ item[count] || item['count']}}</tn-badge>
             {{ item[name] || item['name'] }}
           </view>
-          
+
           <!-- 底部滑块 -->
           <view v-if="showBar" class="tn-tabs__bar" :style="[tabBarStyle]"></view>
         </view>
@@ -88,6 +88,13 @@
       inactiveColor: {
         type: String,
         default: '#080808'
+      },
+      // 未选中的item样式
+      inactiveItemStyle: {
+        type: Object,
+        default() {
+          return {}
+        }
       },
       // 选中的item样式
       activeItemStyle: {
@@ -171,6 +178,7 @@
             Object.assign(style, this.activeItemStyle)
           } else {
             style.color = this.inactiveColor
+            Object.assign(style, this.inactiveItemStyle)
           }
           return style
         }
@@ -254,7 +262,7 @@
         // 当前获取tab的布局信息
         let tabInfo = this.tabQueryInfo[this.currentIndex]
         if (!tabInfo) return
-        
+
         // 活动tab的宽度
         let tabWidth = tabInfo.width
         // 活动item的左边到组件左边的距离
@@ -262,13 +270,13 @@
         // 计算scroll-view移动的距离
         let scrollLeft = offsetLeft - (this.componentWidth - tabWidth) / 2
         this.scrollLeft = scrollLeft < 0 ? 0 : scrollLeft
-        
+
         // 计算当前滑块需要移动的距离，当前活动item的中点到左边的距离减去滑块宽度的一半
         let left = tabInfo.left + tabInfo.width / 2 - this.componentLeft
-        
+
         // 计算当前活跃item到组件左边的距离
         this.scrollBarLeft = left - uni.upx2px(this.barWidth) / 2
-        
+
         // 防止在计算时出错，所以延迟执行标记不是第一次移动
         if (this.barMoveFirst) {
           setTimeout(() => {
@@ -281,7 +289,7 @@
 </script>
 
 <style lang="scss" scoped>
-  
+
   /* #ifndef APP-NVUE */
   ::-webkit-scrollbar {
     display: none;
@@ -291,7 +299,7 @@
     background: transparent;
   }
   /* #endif */
-  
+
   /* #ifdef H5 */
   // 通过样式穿透，隐藏H5下，scroll-view下的滚动条
   scroll-view ::v-deep ::-webkit-scrollbar {
@@ -302,20 +310,20 @@
   	background: transparent;
   }
   /* #endif */
-  
+
   .tn-tabs {
     &__scroll-view {
       position: relative;
       width: 100%;
       white-space: nowrap;
-      
+
       &__box {
         position: relative;
         /* #ifdef MP-TOUTIAO */
         white-space: nowrap;
         /* #endif */
       }
-      
+
       &__item {
         position: relative;
         /* #ifndef APP-NVUE */
@@ -324,14 +332,14 @@
         text-align: center;
         transition-property: background-color, color;
       }
-      
+
       &--flex {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
       }
     }
-    
+
     &__bar {
       position: absolute;
       bottom: 0;
