@@ -317,13 +317,15 @@
           // 在历遍的过程中，可能由于上一步修改this.columnData，导致产生连锁反应，程序触发columnChange，会有多次调用
           // 只有在最后一次数据稳定后的结果是正确的，此前的历遍中，可能会产生undefined，故需要判断
           columnIndex.map((item, index) => {
-            let data = this.columnData[index][columnIndex[index]]
-            let tmp = {
-              value: data ? data[this.valueName] : null,
-              label: data ? data[this.labelName] : null
+            if (this.columnData[index]){
+              let data = this.columnData[index][columnIndex[index]]
+              let tmp = {
+                value: data ? data[this.valueName] : null,
+                label: data ? data[this.labelName] : null
+              }
+              if (data && data.extra !== undefined) tmp.extra = data.extra
+              this.selectValue.push(tmp)
             }
-            if (data && data.extra !== undefined) tmp.extra = data.extra
-            this.selectValue.push(tmp)
           })
           this.lastSelectIndex = columnIndex
         } else if (this.mode === 'single') {
