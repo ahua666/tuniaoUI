@@ -46,8 +46,8 @@ function propChange(prop, oldProp, ownerInstance, instance) {
       cropper.canvasHeight = +dataset.height
       cropper.imgTop = +dataset.windowheight / 2
       cropper.imgLeft = +dataset.windowwidth / 2
-      cropper.imgWidth = +dataset.imgwidth
-      cropper.imgHeight = +dataset.imgheight
+      cropper.imgWidth = +dataset.width
+      cropper.imgHeight = +dataset.height
       cropper.windowHeight = +dataset.windowheight
       cropper.windowWidth = +dataset.windowwidth
       cropper.init = false
