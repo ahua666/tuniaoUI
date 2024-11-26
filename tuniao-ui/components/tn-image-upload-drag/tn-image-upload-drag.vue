@@ -300,7 +300,9 @@
         },
         timer: null,
         dragging: false,
-        show:true
+        show:true,
+        h5LongPress:false,
+        h5StarDragging:false
       }
     },
     watch: {
@@ -329,7 +331,10 @@
     mounted() {
       this.$nextTick(() => {
         this.updateDragInfo()
-      })
+      });
+      // #ifdef H5
+        this.h5LongPress = true;
+      // #endif
     },
     methods: {
       // 清除列表
@@ -737,7 +742,12 @@
         }
         // #endif
       },
-      movableLongPress(item) {
+      movableLongPress(item,e) {
+        // #ifdef H5
+          //h5必须长按后才允许拖拽
+          this.h5StarDragging = true;
+          this.movableStart(item);
+        // #endif
         // #ifndef H5
           uni.vibrateShort()
           // console.log("LongPress--------------------------------------------------------------");
@@ -804,7 +814,10 @@
         }
       },
       movableStart (item) {
-        // console.log("movableStart");
+        if (this.h5LongPress && !this.h5StarDragging){
+          return
+        }
+        //console.log("movableStart");
         this.lists.forEach(item => {
           item.zIndex = 1
           // #ifdef H5
@@ -825,8 +838,9 @@
         // #endif
       },
       movableEnd (item) {
+        this.h5StarDragging = false;
         if (!this.dragging) return
-        // console.log("movableEnd");
+        //console.log("movableEnd");
         const index = this.lists.findIndex(obj => {
           return obj.id === item.id
         })
@@ -892,6 +906,9 @@
   
   .tn-image-upload {
     position: relative;
+    /*  #ifdef H5 */
+    -webkit-touch-callout:none;
+    /* #endif */
     
     &__movable-area {
       width: 100%;
