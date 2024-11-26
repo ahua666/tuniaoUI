@@ -333,7 +333,8 @@
         this.updateDragInfo()
       });
       // #ifdef H5
-        this.h5LongPress = true;
+      const userAgent = navigator.userAgent.toLowerCase();
+      this.h5LongPress = /ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(userAgent);
       // #endif
     },
     methods: {
