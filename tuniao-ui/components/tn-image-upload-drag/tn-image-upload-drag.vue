@@ -743,7 +743,7 @@
         }
         // #endif
       },
-      movableLongPress(item,e) {
+      movableLongPress(item) {
         // #ifdef H5
           //h5必须长按后才允许拖拽
           this.h5StarDragging = true;
